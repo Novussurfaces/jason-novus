@@ -1,28 +1,50 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { motion } from "framer-motion";
+import {
+  motion,
+  useMotionValue,
+  useSpring,
+  type SpringOptions,
+} from "framer-motion";
+
+const SPRING_DOT: SpringOptions = { stiffness: 500, damping: 28, mass: 0.5 };
+const SPRING_RING: SpringOptions = { stiffness: 200, damping: 20, mass: 0.6 };
 
 export function CustomCursor() {
-  const [position, setPosition] = useState({ x: 0, y: 0 });
   const [isPointer, setIsPointer] = useState(false);
   const [isVisible, setIsVisible] = useState(false);
+  const [isDesktop, setIsDesktop] = useState(false);
+
+  const mouseX = useMotionValue(0);
+  const mouseY = useMotionValue(0);
+
+  const dotX = useSpring(mouseX, SPRING_DOT);
+  const dotY = useSpring(mouseY, SPRING_DOT);
+
+  const ringX = useSpring(mouseX, SPRING_RING);
+  const ringY = useSpring(mouseY, SPRING_RING);
 
   useEffect(() => {
-    // Only on desktop
-    if (typeof window === "undefined" || window.matchMedia("(pointer: coarse)").matches) return;
+    if (typeof window === "undefined") return;
+
+    // Desktop only — detect hover-capable device
+    const canHover = window.matchMedia("(hover: hover)").matches;
+    if (!canHover) return;
+    setIsDesktop(true);
 
     const move = (e: MouseEvent) => {
-      setPosition({ x: e.clientX, y: e.clientY });
+      mouseX.set(e.clientX);
+      mouseY.set(e.clientY);
 
       const target = e.target as HTMLElement;
-      const isClickable =
+      const hovering =
+        target.closest("[data-cursor='pointer']") !== null ||
         target.tagName === "A" ||
         target.tagName === "BUTTON" ||
         target.closest("a") !== null ||
-        target.closest("button") !== null ||
-        window.getComputedStyle(target).cursor === "pointer";
-      setIsPointer(isClickable);
+        target.closest("button") !== null;
+      setIsPointer(hovering);
     };
 
     const enter = () => setIsVisible(true);
@@ -37,32 +59,55 @@ export function CustomCursor() {
       document.removeEventListener("mouseenter", enter);
       document.removeEventListener("mouseleave", leave);
     };
-  }, []);
+  }, [mouseX, mouseY]);
 
-  if (!isVisible) return null;
+  if (!isDesktop || !isVisible) return null;
+
+  const dotSize = 8;
+  const ringSize = 36;
+  const ringHoverSize = ringSize * 1.5; // 54px
 
   return (
     <>
-      {/* Dot */}
+      {/* Dot — 8px */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 z-[9999] h-2 w-2 rounded-full bg-accent mix-blend-difference"
-        animate={{
-          x: position.x - 4,
-          y: position.y - 4,
+        className="pointer-events-none fixed top-0 left-0 z-[9999] rounded-full mix-blend-difference"
+        style={{
+          width: dotSize,
+          height: dotSize,
+          x: dotX,
+          y: dotY,
+          translateX: -(dotSize / 2),
+          translateY: -(dotSize / 2),
+          backgroundColor: isPointer ? "#2563eb" : "white",
         }}
-        transition={{ type: "spring", stiffness: 500, damping: 28, mass: 0.5 }}
       />
-      {/* Ring */}
+
+      {/* Ring — 36px, scales to 1.5x on hover */}
       <motion.div
-        className="pointer-events-none fixed top-0 left-0 z-[9998] rounded-full border border-accent/40 mix-blend-difference"
-        animate={{
-          x: position.x - (isPointer ? 24 : 16),
-          y: position.y - (isPointer ? 24 : 16),
-          width: isPointer ? 48 : 32,
-          height: isPointer ? 48 : 32,
+        className="pointer-events-none fixed top-0 left-0 z-[9998] rounded-full mix-blend-difference"
+        style={{
+          x: ringX,
+          y: ringY,
+          translateX: -(isPointer ? ringHoverSize / 2 : ringSize / 2),
+          translateY: -(isPointer ? ringHoverSize / 2 : ringSize / 2),
         }}
-        transition={{ type: "spring", stiffness: 200, damping: 20, mass: 0.6 }}
-      />
+        animate={{
+          width: isPointer ? ringHoverSize : ringSize,
+          height: isPointer ? ringHoverSize : ringSize,
+          borderColor: isPointer ? "#2563eb" : "rgba(255,255,255,0.4)",
+        }}
+        transition={{ type: "spring", stiffness: 300, damping: 25 }}
+        initial={false}
+      >
+        <div
+          className="h-full w-full rounded-full"
+          style={{
+            border: "1px solid",
+            borderColor: "inherit",
+          }}
+        />
+      </motion.div>
     </>
   );
 }

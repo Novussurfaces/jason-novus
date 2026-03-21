@@ -1,67 +1,61 @@
 "use client";
 
-import { useEffect, useRef } from "react";
-import { gsap } from "gsap";
-import { ScrollTrigger } from "gsap/ScrollTrigger";
-
-gsap.registerPlugin(ScrollTrigger);
+import { useRef } from "react";
+import { motion, useScroll, useTransform } from "framer-motion";
+import { cn } from "@/lib/cn";
 
 type TextRevealProps = {
-  children: string;
+  text: string;
   className?: string;
-  tag?: "h1" | "h2" | "h3" | "h4" | "p" | "span";
-  start?: string;
-  end?: string;
 };
 
-export function TextReveal({
-  children,
-  className,
-  tag: Tag = "p",
-  start = "top 85%",
-  end = "top 35%",
-}: TextRevealProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-
-  useEffect(() => {
-    if (!containerRef.current) return;
-
-    const words = containerRef.current.querySelectorAll(".word");
-
-    gsap.fromTo(
-      words,
-      { opacity: 0.15 },
-      {
-        opacity: 1,
-        stagger: 0.05,
-        ease: "none",
-        scrollTrigger: {
-          trigger: containerRef.current,
-          start,
-          end,
-          scrub: 1,
-        },
-      }
-    );
-
-    return () => {
-      ScrollTrigger.getAll().forEach((st) => {
-        if (st.trigger === containerRef.current) st.kill();
-      });
-    };
-  }, [start, end]);
-
-  const wordsArray = children.split(" ");
+function Word({
+  word,
+  range,
+  progress,
+}: {
+  word: string;
+  range: [number, number];
+  progress: ReturnType<typeof useScroll>["scrollYProgress"];
+}) {
+  const opacity = useTransform(progress, range, [0.15, 1]);
 
   return (
-    <div ref={containerRef}>
-      <Tag className={className}>
-        {wordsArray.map((word, i) => (
-          <span key={i} className="word inline-block mr-[0.25em]">
-            {word}
-          </span>
-        ))}
-      </Tag>
+    <motion.span
+      className="mr-[0.25em] inline-block"
+      style={{ opacity }}
+    >
+      {word}
+    </motion.span>
+  );
+}
+
+export function TextReveal({ text, className }: TextRevealProps) {
+  const containerRef = useRef<HTMLDivElement>(null);
+
+  const { scrollYProgress } = useScroll({
+    target: containerRef,
+    offset: ["start 0.9", "start 0.3"],
+  });
+
+  const words = text.split(" ");
+
+  return (
+    <div ref={containerRef} className={cn("relative", className)}>
+      <p className="flex flex-wrap text-inherit">
+        {words.map((word, i) => {
+          const start = i / words.length;
+          const end = (i + 1) / words.length;
+          return (
+            <Word
+              key={`${word}-${i}`}
+              word={word}
+              range={[start, end]}
+              progress={scrollYProgress}
+            />
+          );
+        })}
+      </p>
     </div>
   );
 }

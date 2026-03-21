@@ -29,16 +29,17 @@ export function SpotlightCard({ children, className }: SpotlightCardProps) {
       onMouseEnter={() => setIsHovered(true)}
       onMouseLeave={() => setIsHovered(false)}
       className={cn(
-        "relative overflow-hidden rounded-2xl border border-border bg-card p-6 transition-colors duration-300 hover:border-accent/30",
+        "relative overflow-hidden rounded-2xl border border-white/[0.08] bg-card p-6 transition-all duration-300",
+        isHovered && "border-accent/30 shadow-[0_0_20px_rgba(37,99,235,0.08)]",
         className
       )}
     >
-      {/* Spotlight gradient */}
+      {/* Spotlight radial gradient */}
       <div
         className="pointer-events-none absolute inset-0 transition-opacity duration-300"
         style={{
           opacity: isHovered ? 1 : 0,
-          background: `radial-gradient(600px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(37,99,235,0.08), transparent 40%)`,
+          background: `radial-gradient(400px circle at ${mousePosition.x}px ${mousePosition.y}px, rgba(37,99,235,0.15), transparent)`,
         }}
       />
       <div className="relative z-10">{children}</div>

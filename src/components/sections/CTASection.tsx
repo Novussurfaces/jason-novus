@@ -22,11 +22,9 @@ export function CTASection() {
       <Container className="relative z-10">
         <div className="text-center max-w-3xl mx-auto">
           <TextReveal
-            tag="h2"
+            text={t("title")}
             className="font-[family-name:var(--font-cabinet)] text-3xl font-bold tracking-tight sm:text-4xl lg:text-5xl"
-          >
-            {t("title")}
-          </TextReveal>
+          />
 
           <motion.p
             initial={{ opacity: 0, y: 20 }}
@@ -45,7 +43,7 @@ export function CTASection() {
             transition={{ duration: 0.6, delay: 0.3 }}
             className="mt-10 inline-block"
           >
-            <MagneticButton strength={0.25}>
+            <MagneticButton>
               <Button href="/soumission" size="lg">
                 {t("button")}
                 <ArrowRight size={20} />
