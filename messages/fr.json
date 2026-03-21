@@ -25,7 +25,8 @@
       "years": "Ans d'expertise",
       "coverage": "Livraison mondiale",
       "satisfaction": "Satisfaction"
-    }
+    },
+    "scroll": "Scroll"
   },
   "products": {
     "title": "Nos systèmes",
@@ -39,7 +40,13 @@
     "dataSheet": "Fiche technique",
     "filterAll": "Tous",
     "category": "Catégorie",
-    "backToProducts": "Retour aux produits"
+    "backToProducts": "Retour aux produits",
+    "thickness": "Épaisseur",
+    "cure": "Cure",
+    "search": "Rechercher un produit...",
+    "noResults": "Aucun produit trouvé pour cette recherche.",
+    "calculatePrice": "Calculer le prix",
+    "features": "Caractéristiques"
   },
   "whyNovus": {
     "title": "Pourquoi Novus Surfaces?",
@@ -110,6 +117,7 @@
       "experience": "+13 ans d'expertise",
       "madeIn": "Fabriqué au Canada"
     },
+    "valuesHeading": "Nos valeurs",
     "values": {
       "quality": {
         "title": "Qualité sans compromis",
@@ -142,7 +150,10 @@
     "info": {
       "email": "info@novussurfaces.com",
       "coverage": "Livraison: Mondiale",
-      "hours": "Lun–Ven: 8h–17h (EST)"
+      "hours": "Lun–Ven: 8h–17h (EST)",
+      "emailLabel": "Courriel",
+      "coverageLabel": "Zone de service",
+      "hoursLabel": "Heures"
     }
   },
   "footer": {
@@ -200,7 +211,10 @@
       "downloadPdf": "Télécharger le PDF",
       "requestQuote": "Demander une soumission détaillée",
       "sqft": "pi²"
-    }
+    },
+    "discount10": "Rabais volume de 10% appliqué!",
+    "discount15": "Rabais volume de 15% appliqué!",
+    "calculating": "Calcul en cours..."
   },
   "blog": {
     "title": "Blog",
@@ -227,6 +241,118 @@
     "countries": "Pays livrés",
     "projects": "Projets complétés",
     "satisfaction": "Satisfaction client"
+  },
+  "testimonials": {
+    "title": "Ce que nos clients disent",
+    "subtitle": "Des entrepreneurs et propriétaires qui ont choisi Novus Surfaces",
+    "item1": {
+      "quote": "Le système SCI Metallic a complètement transformé notre showroom. Les clients sont impressionnés dès qu'ils entrent. Installation impeccable.",
+      "name": "Marc Tremblay",
+      "role": "Concessionnaire automobile, Montréal"
+    },
+    "item2": {
+      "quote": "On a essayé 3 fournisseurs avant Novus. La différence de qualité est flagrante. Le polyuréa résiste au sel québécois comme rien d'autre.",
+      "name": "Sophie Lavoie",
+      "role": "Propriétaire de garage, Québec"
+    },
+    "item3": {
+      "quote": "Support technique exceptionnel. Michael chez SCI nous a guidés à chaque étape. Le résultat est digne d'un magazine.",
+      "name": "Jean-Philippe Côté",
+      "role": "Entrepreneur général, Laval"
+    },
+    "item4": {
+      "quote": "On a fait tout le plancher de notre entrepôt de 15,000 pi². Livraison rapide, produit solide. Ça fait 2 ans et pas une seule fissure.",
+      "name": "David Chen",
+      "role": "Directeur d'usine, Toronto"
+    },
+    "item5": {
+      "quote": "Le calculateur en ligne nous a donné un prix juste. Pas de surprise à la livraison. Exactement ce qu'on cherchait pour notre restaurant.",
+      "name": "Marie-Ève Bouchard",
+      "role": "Restauratrice, Sherbrooke"
+    }
+  },
+  "chatbot": {
+    "greeting": "Bonjour! Je suis Nova, votre assistante Novus Surfaces. Comment puis-je vous aider avec votre projet de revêtement?",
+    "error": "Désolé, je suis momentanément indisponible. Contactez-nous à info@novussurfaces.com!",
+    "online": "En ligne",
+    "placeholder": "Posez votre question..."
+  },
+  "lpGarage": {
+    "badge": "Fabriqué au Canada",
+    "title": "Votre garage mérite un plancher qui",
+    "titleHighlight": "résiste au sel québécois",
+    "subtitle": "Revêtement époxy professionnel à partir de 3 $/pi². Installation disponible en 1 jour. Garanti contre le sel, le calcium et les produits chimiques.",
+    "formTitle": "Soumission gratuite en 24h",
+    "formSubtitle": "Recevez une estimation de prix sans engagement",
+    "formName": "Nom complet",
+    "formEmail": "Courriel",
+    "formPhone": "Téléphone",
+    "formArea": "Superficie garage (pi²)",
+    "formMessage": "Détails du projet (optionnel)",
+    "formSubmit": "Obtenir ma soumission gratuite",
+    "formSending": "Envoi...",
+    "formError": "Erreur, réessayez.",
+    "successTitle": "Demande envoyée!",
+    "successText": "Nous vous contacterons dans les 24 prochaines heures.",
+    "benefit1": "Résiste au sel et au calcium québécois",
+    "benefit2": "Fini antidérapant et facile à nettoyer",
+    "benefit3": "Protection contre l'huile, le sel et les produits chimiques",
+    "benefit4": "Transforme votre garage en espace de vie",
+    "benefit5": "Durée de vie de 15+ ans",
+    "benefit6": "Installation en 1 jour (polyuréa)",
+    "statPrice": "/pi² min",
+    "statDay": "jour install",
+    "statYears": "ans durée",
+    "socialTitle": "Ce que nos clients disent",
+    "review1": "Mon garage a survécu à 2 hivers sans une seule marque. Le sel ne fait rien. Impressionnant.",
+    "review1Name": "Martin L.",
+    "review1City": "Laval",
+    "review2": "On a fait notre garage double en 1 jour avec la polyuréa. Le lendemain le char était dessus. Parfait.",
+    "review2Name": "Sophie B.",
+    "review2City": "Longueuil",
+    "review3": "3 ans plus tard, le plancher est encore comme neuf. Meilleur investissement pour la maison.",
+    "review3Name": "Jean-François R.",
+    "review3City": "Québec",
+    "footerText": "© 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
+  },
+  "lpCommercial": {
+    "b2b": "B2B",
+    "title": "Revêtements de planchers",
+    "titleHighlight": "de grade industriel",
+    "subtitle": "13 systèmes professionnels. Fabriqué à Montréal. Livraison mondiale. Rabais volume disponibles.",
+    "titleSuffix": "pour votre entreprise",
+    "formTitle": "Soumission commerciale",
+    "formSubtitle": "Réponse de notre équipe B2B en 24h",
+    "formName": "Nom",
+    "formCompany": "Entreprise",
+    "formEmail": "Courriel professionnel",
+    "formPhone": "Téléphone",
+    "formProjectType": "Type de projet",
+    "formArea": "Superficie (pi²)",
+    "formMessage": "Détails du projet",
+    "formSubmit": "Demander une soumission commerciale",
+    "formSending": "Envoi...",
+    "formError": "Erreur, réessayez.",
+    "successTitle": "Demande envoyée!",
+    "successText": "Notre équipe commerciale vous contactera sous 24h.",
+    "typeCommercial": "Commercial",
+    "typeIndustrial": "Industriel",
+    "typeFood": "Alimentaire",
+    "typeWarehouse": "Entrepôt",
+    "typeInstitutional": "Institutionnel",
+    "sectorWarehouse": "Entrepôts",
+    "sectorCommercial": "Commerces",
+    "sectorIndustrial": "Usines",
+    "sectorFood": "Alimentaire",
+    "vp1Title": "Qualité industrielle certifiée",
+    "vp1Desc": "Systèmes testés et certifiés USDA/FDA pour les environnements les plus exigeants.",
+    "vp2Title": "Rabais volume jusqu'à 15%",
+    "vp2Desc": "2 500+ pi² = -10%. 5 000+ pi² = -15%. Plus le projet est gros, plus vous économisez.",
+    "vp3Title": "Livraison directe usine",
+    "vp3Desc": "Fabriqué à Montréal par SCI Coatings. Expédition directe, délais minimaux.",
+    "vp4Title": "Support technique complet",
+    "vp4Desc": "Guides d'installation, fiches techniques, support téléphonique pour chaque système.",
+    "footerText": "© 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
   },
   "shipping": {
     "title": "Livraison mondiale",

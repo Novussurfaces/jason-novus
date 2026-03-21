@@ -1,38 +1,42 @@
 "use client";
 
 import { useState } from "react";
-import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import {
   ArrowRight,
   Shield,
-  Clock,
-  Sparkles,
   CheckCircle,
   Star,
-  Send,
   AlertCircle,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { cn } from "@/lib/cn";
 
 const inputClasses =
-  "w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors";
+  "w-full rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/50 transition-all duration-300";
+
+const blurUp = {
+  hidden: { opacity: 0, y: 30, filter: "blur(8px)" },
+  visible: {
+    opacity: 1, y: 0, filter: "blur(0px)",
+    transition: { duration: 0.7, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  },
+};
+
+const stagger = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.08, delayChildren: 0.15 } },
+};
 
 export function GarageLanding() {
-  const locale = useLocale() as "fr" | "en";
-  const isFr = locale === "fr";
+  const t = useTranslations("lpGarage");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    surfaceArea: "",
-    message: "",
+    name: "", email: "", phone: "", surfaceArea: "", message: "",
   });
 
-  const handleChange = (
-    e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ) => {
+  const handleChange = (e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>) => {
     setFormData((prev) => ({ ...prev, [e.target.name]: e.target.value }));
   };
 
@@ -43,12 +47,7 @@ export function GarageLanding() {
       const res = await fetch("/api/quote", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          ...formData,
-          source: "lp-garage",
-          projectType: "garage",
-          locale,
-        }),
+        body: JSON.stringify({ ...formData, source: "lp-garage", projectType: "garage" }),
       });
       setStatus(res.ok ? "success" : "error");
       if (res.ok) setFormData({ name: "", email: "", phone: "", surfaceArea: "", message: "" });
@@ -57,223 +56,132 @@ export function GarageLanding() {
     }
   };
 
-  const benefits = isFr
-    ? [
-        "Résiste au sel et au calcium québécois",
-        "Fini antidérapant et facile à nettoyer",
-        "Protection contre l'huile, le sel et les produits chimiques",
-        "Transforme votre garage en espace de vie",
-        "Durée de vie de 15+ ans",
-        "Installation en 1 jour (polyuréa)",
-      ]
-    : [
-        "Resists Quebec's salt and calcium",
-        "Anti-slip and easy-to-clean finish",
-        "Protection against oil, salt, and chemicals",
-        "Transforms your garage into living space",
-        "15+ year lifespan",
-        "1-day installation (polyurea)",
-      ];
-
-  const testimonials = [
-    {
-      name: "Martin L.",
-      location: "Laval",
-      text: isFr
-        ? "Mon garage a survécu à 2 hivers sans une seule marque. Le sel ne fait rien. Impressionnant."
-        : "My garage survived 2 winters without a single mark. Salt does nothing. Impressive.",
-    },
-    {
-      name: "Sophie B.",
-      location: "Longueuil",
-      text: isFr
-        ? "On a fait notre garage double en 1 jour avec la polyuréa. Le lendemain le char était dessus. Parfait."
-        : "We did our double garage in 1 day with polyurea. Next day the car was on it. Perfect.",
-    },
-    {
-      name: "Jean-François R.",
-      location: "Québec",
-      text: isFr
-        ? "3 ans plus tard, le plancher est encore comme neuf. Meilleur investissement pour la maison."
-        : "3 years later, the floor still looks brand new. Best home investment.",
-    },
-  ];
+  const benefits = [1, 2, 3, 4, 5, 6].map((i) => t(`benefit${i}`));
+  const reviews = [1, 2, 3].map((i) => ({
+    text: t(`review${i}`),
+    name: t(`review${i}Name`),
+    city: t(`review${i}City`),
+  }));
 
   return (
     <div className="min-h-screen bg-background text-foreground">
       {/* Hero */}
       <section className="relative overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-b from-accent/10 via-background to-background" />
-        <div className="absolute top-0 left-1/2 -translate-x-1/2 w-[600px] h-[400px] bg-accent/5 rounded-full blur-3xl" />
+        {/* Aurora-style background */}
+        <div className="absolute inset-0">
+          <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.08] via-background to-background" />
+          <div
+            className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full opacity-[0.06]"
+            style={{ background: "radial-gradient(ellipse, #2563eb 0%, transparent 70%)", filter: "blur(80px)" }}
+          />
+          <div
+            className="absolute top-[20%] right-0 w-[400px] h-[400px] rounded-full opacity-[0.04]"
+            style={{ background: "radial-gradient(circle, #7c3aed 0%, transparent 70%)", filter: "blur(60px)" }}
+          />
+        </div>
 
         <div className="relative z-10 max-w-6xl mx-auto px-4 pt-16 pb-20 sm:px-6">
           {/* Logo */}
-          <div className="flex items-center gap-2 mb-12">
-            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
+          <div className="flex items-center gap-2.5 mb-12">
+            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center shadow-lg shadow-accent/20">
               <span className="text-white font-bold text-sm">N</span>
             </div>
             <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold">
-              Novus<span className="text-accent ml-0.5">Epoxy</span>
+              Novus<span className="text-accent ml-0.5">Surfaces</span>
             </span>
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             {/* Left — Copy */}
-            <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6 }}
-            >
-              <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/10 px-4 py-1.5 text-sm font-medium text-accent mb-6">
-                <Shield size={16} />
-                {isFr ? "Fabriqué au Canada" : "Made in Canada"}
-              </span>
+            <motion.div variants={stagger} initial="hidden" animate="visible">
+              <motion.div variants={blurUp}>
+                <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/[0.07] px-4 py-1.5 text-sm font-medium text-accent mb-6 backdrop-blur-sm">
+                  <Shield size={16} />
+                  {t("badge")}
+                </span>
+              </motion.div>
 
-              <h1 className="font-[family-name:var(--font-cabinet)] text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
-                {isFr ? (
-                  <>
-                    Votre garage mérite un plancher qui{" "}
-                    <span className="bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent">
-                      résiste au sel québécois
-                    </span>
-                  </>
-                ) : (
-                  <>
-                    Your garage deserves a floor that{" "}
-                    <span className="bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent">
-                      resists Quebec's salt
-                    </span>
-                  </>
-                )}
-              </h1>
+              <motion.h1 variants={blurUp} className="font-[family-name:var(--font-cabinet)] text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
+                {t("title")}{" "}
+                <span className="bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent">
+                  {t("titleHighlight")}
+                </span>
+              </motion.h1>
 
-              <p className="mt-6 text-lg text-muted leading-relaxed">
-                {isFr
-                  ? "Revêtement époxy professionnel à partir de 3 $/pi². Installation disponible en 1 jour. Garanti contre le sel, le calcium et les produits chimiques."
-                  : "Professional epoxy coating starting at $3/sq ft. 1-day installation available. Guaranteed against salt, calcium, and chemicals."}
-              </p>
+              <motion.p variants={blurUp} className="mt-6 text-lg text-muted leading-relaxed">
+                {t("subtitle")}
+              </motion.p>
 
               {/* Benefits */}
-              <ul className="mt-8 space-y-3">
+              <motion.ul variants={stagger} className="mt-8 space-y-3">
                 {benefits.map((b) => (
-                  <li key={b} className="flex items-start gap-3 text-sm">
-                    <CheckCircle size={18} className="text-success shrink-0 mt-0.5" />
-                    <span className="text-muted">{b}</span>
-                  </li>
+                  <motion.li key={b} variants={blurUp} className="flex items-start gap-3 text-sm">
+                    <div className="mt-0.5 w-5 h-5 rounded-full bg-success/10 flex items-center justify-center shrink-0">
+                      <CheckCircle size={14} className="text-success" />
+                    </div>
+                    <span className="text-muted/80">{b}</span>
+                  </motion.li>
                 ))}
-              </ul>
+              </motion.ul>
 
               {/* Quick stats */}
-              <div className="mt-8 grid grid-cols-3 gap-4">
-                <div className="text-center rounded-xl bg-card border border-border p-3">
-                  <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">3$</div>
-                  <div className="text-xs text-muted">{isFr ? "/pi² min" : "/sq ft min"}</div>
-                </div>
-                <div className="text-center rounded-xl bg-card border border-border p-3">
-                  <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">1</div>
-                  <div className="text-xs text-muted">{isFr ? "jour install" : "day install"}</div>
-                </div>
-                <div className="text-center rounded-xl bg-card border border-border p-3">
-                  <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">15+</div>
-                  <div className="text-xs text-muted">{isFr ? "ans durée" : "year lifespan"}</div>
-                </div>
-              </div>
+              <motion.div variants={blurUp} className="mt-8 grid grid-cols-3 gap-4">
+                {[
+                  { value: "3$", label: t("statPrice") },
+                  { value: "1", label: t("statDay") },
+                  { value: "15+", label: t("statYears") },
+                ].map((stat) => (
+                  <div key={stat.label} className="text-center rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-3">
+                    <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">{stat.value}</div>
+                    <div className="text-xs text-muted/60">{stat.label}</div>
+                  </div>
+                ))}
+              </motion.div>
             </motion.div>
 
             {/* Right — Form */}
             <motion.div
-              initial={{ opacity: 0, y: 20 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, delay: 0.2 }}
+              initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
+              animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
+              transition={{ duration: 0.7, delay: 0.3 }}
             >
               {status === "success" ? (
-                <div className="rounded-2xl border border-success/30 bg-success/5 p-8 text-center">
-                  <CheckCircle size={48} className="text-success mx-auto mb-4" />
-                  <h3 className="text-xl font-semibold mb-2">
-                    {isFr ? "Demande envoyée!" : "Request sent!"}
-                  </h3>
-                  <p className="text-muted">
-                    {isFr
-                      ? "Nous vous contacterons dans les 24 prochaines heures."
-                      : "We'll contact you within 24 hours."}
-                  </p>
+                <div className="rounded-2xl border border-success/30 bg-success/5 p-8 text-center backdrop-blur-sm">
+                  <div className="w-14 h-14 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-4">
+                    <CheckCircle size={28} className="text-success" />
+                  </div>
+                  <h3 className="text-xl font-semibold mb-2">{t("successTitle")}</h3>
+                  <p className="text-muted/70">{t("successText")}</p>
                 </div>
               ) : (
-                <form
-                  onSubmit={handleSubmit}
-                  className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-4"
-                >
-                  <h2 className="text-xl font-semibold text-center mb-2">
-                    {isFr ? "Soumission gratuite en 24h" : "Free quote in 24h"}
-                  </h2>
-                  <p className="text-sm text-muted text-center mb-4">
-                    {isFr
-                      ? "Recevez une estimation de prix sans engagement"
-                      : "Get a no-obligation price estimate"}
-                  </p>
+                <SpotlightCard className="p-0">
+                  <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-4">
+                    <h2 className="text-xl font-semibold text-center mb-1">{t("formTitle")}</h2>
+                    <p className="text-sm text-muted/60 text-center mb-4">{t("formSubtitle")}</p>
 
-                  <input
-                    type="text"
-                    name="name"
-                    required
-                    placeholder={isFr ? "Nom complet" : "Full name"}
-                    value={formData.name}
-                    onChange={handleChange}
-                    className={inputClasses}
-                  />
-                  <input
-                    type="email"
-                    name="email"
-                    required
-                    placeholder={isFr ? "Courriel" : "Email"}
-                    value={formData.email}
-                    onChange={handleChange}
-                    className={inputClasses}
-                  />
-                  <input
-                    type="tel"
-                    name="phone"
-                    required
-                    placeholder={isFr ? "Téléphone" : "Phone"}
-                    value={formData.phone}
-                    onChange={handleChange}
-                    className={inputClasses}
-                  />
-                  <input
-                    type="text"
-                    name="surfaceArea"
-                    placeholder={isFr ? "Superficie garage (pi²)" : "Garage area (sq ft)"}
-                    value={formData.surfaceArea}
-                    onChange={handleChange}
-                    className={inputClasses}
-                  />
-                  <textarea
-                    name="message"
-                    rows={3}
-                    placeholder={isFr ? "Détails du projet (optionnel)" : "Project details (optional)"}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className={cn(inputClasses, "resize-none")}
-                  />
+                    <input type="text" name="name" required placeholder={t("formName")} value={formData.name} onChange={handleChange} className={inputClasses} />
+                    <input type="email" name="email" required placeholder={t("formEmail")} value={formData.email} onChange={handleChange} className={inputClasses} />
+                    <input type="tel" name="phone" required placeholder={t("formPhone")} value={formData.phone} onChange={handleChange} className={inputClasses} />
+                    <input type="text" name="surfaceArea" placeholder={t("formArea")} value={formData.surfaceArea} onChange={handleChange} className={inputClasses} />
+                    <textarea name="message" rows={3} placeholder={t("formMessage")} value={formData.message} onChange={handleChange} className={cn(inputClasses, "resize-none")} />
 
-                  {status === "error" && (
-                    <div className="flex items-center gap-2 text-sm text-red-400">
-                      <AlertCircle size={16} />
-                      {isFr ? "Erreur, réessayez." : "Error, try again."}
-                    </div>
-                  )}
+                    {status === "error" && (
+                      <div className="flex items-center gap-2 text-sm text-red-400">
+                        <AlertCircle size={16} />
+                        {t("formError")}
+                      </div>
+                    )}
 
-                  <button
-                    type="submit"
-                    disabled={status === "sending"}
-                    className="w-full rounded-xl bg-accent text-white py-3.5 font-medium text-base flex items-center justify-center gap-2 hover:bg-accent-hover transition-all shadow-lg shadow-accent/25 cursor-pointer disabled:opacity-50"
-                  >
-                    {status === "sending"
-                      ? isFr ? "Envoi..." : "Sending..."
-                      : isFr ? "Obtenir ma soumission gratuite" : "Get my free quote"}
-                    <ArrowRight size={18} />
-                  </button>
-                </form>
+                    <button
+                      type="submit"
+                      disabled={status === "sending"}
+                      className="w-full rounded-xl bg-accent text-white py-3.5 font-medium text-base flex items-center justify-center gap-2 hover:bg-accent-hover transition-all shadow-lg shadow-accent/25 cursor-pointer disabled:opacity-50"
+                    >
+                      {status === "sending" ? t("formSending") : t("formSubmit")}
+                      <ArrowRight size={18} />
+                    </button>
+                  </form>
+                </SpotlightCard>
               )}
             </motion.div>
           </div>
@@ -281,43 +189,46 @@ export function GarageLanding() {
       </section>
 
       {/* Social Proof */}
-      <section className="py-16 bg-surface">
+      <section className="py-16 bg-surface/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <h2 className="font-[family-name:var(--font-cabinet)] text-2xl font-bold text-center mb-10">
-            {isFr ? "Ce que nos clients disent" : "What our clients say"}
-          </h2>
+          <motion.h2
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            className="font-[family-name:var(--font-cabinet)] text-2xl font-bold text-center mb-10"
+          >
+            {t("socialTitle")}
+          </motion.h2>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
-            {testimonials.map((t, i) => (
+            {reviews.map((review, i) => (
               <motion.div
                 key={i}
                 initial={{ opacity: 0, y: 20 }}
                 whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
                 transition={{ delay: i * 0.1 }}
-                className="rounded-2xl border border-border bg-card p-6"
               >
-                <div className="flex gap-1 mb-3">
-                  {[1, 2, 3, 4, 5].map((s) => (
-                    <Star key={s} size={16} className="text-yellow-400 fill-yellow-400" />
-                  ))}
-                </div>
-                <p className="text-sm text-muted leading-relaxed mb-4">"{t.text}"</p>
-                <p className="text-sm font-medium">
-                  {t.name} — <span className="text-muted">{t.location}</span>
-                </p>
+                <SpotlightCard>
+                  <div className="flex gap-1 mb-3">
+                    {[1, 2, 3, 4, 5].map((s) => (
+                      <Star key={s} size={14} className="text-amber-400 fill-amber-400" />
+                    ))}
+                  </div>
+                  <p className="text-sm text-muted/70 leading-relaxed mb-4">&ldquo;{review.text}&rdquo;</p>
+                  <p className="text-sm font-medium">
+                    {review.name} — <span className="text-muted/50">{review.city}</span>
+                  </p>
+                </SpotlightCard>
               </motion.div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Footer CTA */}
-      <section className="py-12 text-center">
-        <p className="text-sm text-muted-foreground">
-          {isFr
-            ? "© 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
-            : "© 2026 Novus Surfaces. Made in Canada. Worldwide delivery."}
-        </p>
+      {/* Footer */}
+      <section className="py-10 text-center">
+        <div className="h-px w-full max-w-xs mx-auto bg-gradient-to-r from-transparent via-white/[0.08] to-transparent mb-8" />
+        <p className="text-xs text-muted-foreground/40">{t("footerText")}</p>
       </section>
     </div>
   );

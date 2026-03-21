@@ -125,7 +125,7 @@ export function ProductDetail({ product }: { product: Product }) {
                   <ArrowRight size={18} />
                 </Button>
                 <Button href="/calculateur" variant="secondary" size="lg">
-                  {locale === "fr" ? "Calculer le prix" : "Calculate Price"}
+                  {t("calculatePrice")}
                 </Button>
               </motion.div>
             </motion.div>
@@ -140,7 +140,7 @@ export function ProductDetail({ product }: { product: Product }) {
             {/* Features list */}
             <AnimatedSection>
               <h2 className="font-[family-name:var(--font-cabinet)] text-2xl font-bold mb-6">
-                {locale === "fr" ? "Caractéristiques" : "Features"}
+                {t("features")}
               </h2>
               <ul className="space-y-3">
                 {product.features[locale].map((feature, i) => (

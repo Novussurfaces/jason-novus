@@ -1,7 +1,7 @@
 "use client";
 
 import { useState, useRef, useEffect } from "react";
-import { useLocale } from "next-intl";
+import { useTranslations } from "next-intl";
 import { MessageCircle, X, Send, Bot, User, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
@@ -12,7 +12,7 @@ type Message = {
 };
 
 export function ChatBot() {
-  const locale = useLocale();
+  const t = useTranslations("chatbot");
   const [isOpen, setIsOpen] = useState(false);
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
@@ -41,14 +41,11 @@ export function ChatBot() {
       setMessages([
         {
           role: "assistant",
-          content:
-            locale === "fr"
-              ? "Bonjour! Je suis Nova, votre assistante Novus Surfaces. 👋 Comment puis-je vous aider avec votre projet de revêtement?"
-              : "Hi! I'm Nova, your Novus Surfaces assistant. 👋 How can I help you with your coating project?",
+          content: t("greeting"),
         },
       ]);
     }
-  }, [isOpen, hasGreeted, messages.length, locale]);
+  }, [isOpen, hasGreeted, messages.length, t]);
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
@@ -69,7 +66,6 @@ export function ChatBot() {
             role: m.role,
             content: m.content,
           })),
-          locale,
         }),
       });
 
@@ -82,25 +78,13 @@ export function ChatBot() {
       } else {
         setMessages((prev) => [
           ...prev,
-          {
-            role: "assistant",
-            content:
-              locale === "fr"
-                ? "Désolé, je suis momentanément indisponible. Contactez-nous à info@novussurfaces.com!"
-                : "Sorry, I'm momentarily unavailable. Contact us at info@novussurfaces.com!",
-          },
+          { role: "assistant", content: t("error") },
         ]);
       }
     } catch {
       setMessages((prev) => [
         ...prev,
-        {
-          role: "assistant",
-          content:
-            locale === "fr"
-              ? "Désolé, je suis momentanément indisponible. Contactez-nous à info@novussurfaces.com!"
-              : "Sorry, I'm momentarily unavailable. Contact us at info@novussurfaces.com!",
-        },
+        { role: "assistant", content: t("error") },
       ]);
     }
 
@@ -145,7 +129,7 @@ export function ChatBot() {
                   <p className="text-sm font-semibold">Nova</p>
                   <p className="text-xs text-success flex items-center gap-1">
                     <span className="w-1.5 h-1.5 rounded-full bg-success" />
-                    {locale === "fr" ? "En ligne" : "Online"}
+                    {t("online")}
                   </p>
                 </div>
               </div>
@@ -217,11 +201,7 @@ export function ChatBot() {
                   type="text"
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
-                  placeholder={
-                    locale === "fr"
-                      ? "Posez votre question..."
-                      : "Ask your question..."
-                  }
+                  placeholder={t("placeholder")}
                   disabled={isLoading}
                   className="flex-1 rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors"
                 />

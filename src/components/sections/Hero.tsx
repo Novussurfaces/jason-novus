@@ -433,7 +433,7 @@ export function Hero() {
           style={{ animation: "scroll-bounce 2.5s ease-in-out infinite" }}
         >
           <span className="text-[10px] uppercase tracking-[0.25em] text-muted/40 font-medium">
-            Scroll
+            {t("scroll")}
           </span>
           <div className="w-[1px] h-8 bg-gradient-to-b from-muted/40 to-transparent" />
           <ChevronDown size={16} className="text-muted/40" />

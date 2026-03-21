@@ -54,13 +54,13 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
           {/* Specs preview */}
           <div className="mt-4 grid grid-cols-2 gap-2">
             <div className="rounded-lg bg-surface px-3 py-2">
-              <div className="text-xs text-muted-foreground">Épaisseur</div>
+              <div className="text-xs text-muted-foreground">{t("thickness")}</div>
               <div className="text-sm font-medium">
                 {product.specs.thickness}
               </div>
             </div>
             <div className="rounded-lg bg-surface px-3 py-2">
-              <div className="text-xs text-muted-foreground">Cure</div>
+              <div className="text-xs text-muted-foreground">{t("cure")}</div>
               <div className="text-sm font-medium">
                 {product.specs.cureTime}
               </div>

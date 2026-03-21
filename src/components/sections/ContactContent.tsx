@@ -2,26 +2,41 @@
 
 import { useState } from "react";
 import { useTranslations } from "next-intl";
-import { Send, Mail, MapPin, Clock, CheckCircle, AlertCircle } from "lucide-react";
+import { Send, Mail, MapPin, Clock, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
 import { motion } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
-import { AnimatedSection } from "@/components/ui/AnimatedSection";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
 const inputClasses =
-  "w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors";
+  "w-full rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/50 transition-all duration-300";
+
+const contactCards = [
+  { key: "email" as const, icon: Mail, gradient: "from-blue-500/20 to-blue-600/5" },
+  { key: "coverage" as const, icon: MapPin, gradient: "from-emerald-500/20 to-emerald-600/5" },
+  { key: "hours" as const, icon: Clock, gradient: "from-violet-500/20 to-violet-600/5" },
+] as const;
+
+const containerVariants = {
+  hidden: {},
+  visible: { transition: { staggerChildren: 0.1, delayChildren: 0.1 } },
+};
+
+const cardVariants = {
+  hidden: { opacity: 0, y: 20 },
+  visible: {
+    opacity: 1, y: 0,
+    transition: { duration: 0.5, ease: [0.22, 1, 0.36, 1] as [number, number, number, number] },
+  },
+};
 
 export function ContactContent() {
   const t = useTranslations("contact");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
-    name: "",
-    email: "",
-    phone: "",
-    subject: "",
-    message: "",
+    name: "", email: "", phone: "", subject: "", message: "",
   });
 
   const handleChange = (
@@ -40,160 +55,122 @@ export function ContactContent() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(formData),
       });
-
-      if (response.ok) {
-        setStatus("success");
-        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
-      } else {
-        setStatus("error");
-      }
+      setStatus(response.ok ? "success" : "error");
+      if (response.ok) setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
     } catch {
       setStatus("error");
     }
   };
 
   return (
-    <section className="pt-32 pb-24">
-      <Container>
+    <section className="relative pt-32 pb-24 overflow-hidden">
+      {/* Background glow */}
+      <div
+        className="absolute top-40 right-0 w-[500px] h-[500px] rounded-full opacity-[0.03]"
+        style={{
+          background: "radial-gradient(circle, #2563eb 0%, transparent 70%)",
+          filter: "blur(100px)",
+        }}
+      />
+
+      <Container className="relative z-10">
         <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 
-        <div className="grid grid-cols-1 lg:grid-cols-3 gap-12 max-w-5xl mx-auto">
-          {/* Contact Info */}
-          <AnimatedSection className="lg:col-span-1">
-            <div className="space-y-6">
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <Mail size={20} className="text-accent" />
-                  </div>
-                  <h3 className="font-semibold">Courriel</h3>
-                </div>
-                <a
-                  href="mailto:info@novussurfaces.com"
-                  className="text-sm text-accent hover:underline"
-                >
-                  {t("info.email")}
-                </a>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <MapPin size={20} className="text-accent" />
-                  </div>
-                  <h3 className="font-semibold">Zone de service</h3>
-                </div>
-                <p className="text-sm text-muted">{t("info.coverage")}</p>
-              </div>
-
-              <div className="rounded-2xl border border-border bg-card p-6">
-                <div className="flex items-center gap-3 mb-3">
-                  <div className="w-10 h-10 rounded-xl bg-accent/10 flex items-center justify-center">
-                    <Clock size={20} className="text-accent" />
-                  </div>
-                  <h3 className="font-semibold">Heures</h3>
-                </div>
-                <p className="text-sm text-muted">{t("info.hours")}</p>
-              </div>
-            </div>
-          </AnimatedSection>
+        <div className="grid grid-cols-1 lg:grid-cols-3 gap-8 max-w-5xl mx-auto">
+          {/* Contact Info Cards */}
+          <motion.div
+            variants={containerVariants}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: true }}
+            className="lg:col-span-1 space-y-4"
+          >
+            {contactCards.map((card) => {
+              const Icon = card.icon;
+              return (
+                <motion.div key={card.key} variants={cardVariants}>
+                  <SpotlightCard className="group">
+                    <div className="flex items-center gap-4">
+                      <div className={`w-12 h-12 rounded-xl bg-gradient-to-br ${card.gradient} flex items-center justify-center border border-white/[0.06] transition-all duration-300 group-hover:scale-110`}>
+                        <Icon size={20} className="text-accent" />
+                      </div>
+                      <div>
+                        <h3 className="text-sm font-semibold mb-0.5">{t(`info.${card.key}Label`)}</h3>
+                        {card.key === "email" ? (
+                          <a href="mailto:info@novussurfaces.com" className="text-sm text-accent hover:underline">
+                            {t("info.email")}
+                          </a>
+                        ) : (
+                          <p className="text-sm text-muted/70">{t(`info.${card.key}`)}</p>
+                        )}
+                      </div>
+                    </div>
+                  </SpotlightCard>
+                </motion.div>
+              );
+            })}
+          </motion.div>
 
           {/* Contact Form */}
-          <AnimatedSection delay={0.1} className="lg:col-span-2">
+          <motion.div
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            viewport={{ once: true }}
+            transition={{ delay: 0.2, duration: 0.5 }}
+            className="lg:col-span-2"
+          >
             {status === "success" ? (
-              <motion.div
-                initial={{ opacity: 0, scale: 0.95 }}
-                animate={{ opacity: 1, scale: 1 }}
-                className="rounded-2xl border border-success/30 bg-success/5 p-8 text-center"
-              >
-                <CheckCircle size={48} className="text-success mx-auto mb-4" />
+              <div className="rounded-2xl border border-success/30 bg-success/5 p-10 text-center backdrop-blur-sm">
+                <div className="w-16 h-16 rounded-full bg-success/10 flex items-center justify-center mx-auto mb-5">
+                  <CheckCircle size={32} className="text-success" />
+                </div>
                 <p className="text-lg font-medium">{t("form.success")}</p>
-              </motion.div>
+              </div>
             ) : (
-              <form
-                onSubmit={handleSubmit}
-                className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-5"
-              >
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t("form.name")} *</label>
-                    <input
-                      type="text"
-                      name="name"
-                      required
-                      value={formData.name}
-                      onChange={handleChange}
-                      className={inputClasses}
-                    />
+              <SpotlightCard className="p-0">
+                <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-5">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-muted/80">{t("form.name")} *</label>
+                      <input type="text" name="name" required value={formData.name} onChange={handleChange} className={inputClasses} />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-muted/80">{t("form.email")} *</label>
+                      <input type="email" name="email" required value={formData.email} onChange={handleChange} className={inputClasses} />
+                    </div>
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t("form.email")} *</label>
-                    <input
-                      type="email"
-                      name="email"
-                      required
-                      value={formData.email}
-                      onChange={handleChange}
-                      className={inputClasses}
-                    />
-                  </div>
-                </div>
 
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-muted/80">{t("form.phone")}</label>
+                      <input type="tel" name="phone" value={formData.phone} onChange={handleChange} className={inputClasses} />
+                    </div>
+                    <div>
+                      <label className="block text-sm font-medium mb-2 text-muted/80">{t("form.subject")} *</label>
+                      <input type="text" name="subject" required value={formData.subject} onChange={handleChange} className={inputClasses} />
+                    </div>
+                  </div>
+
                   <div>
-                    <label className="block text-sm font-medium mb-2">{t("form.phone")}</label>
-                    <input
-                      type="tel"
-                      name="phone"
-                      value={formData.phone}
-                      onChange={handleChange}
-                      className={inputClasses}
-                    />
+                    <label className="block text-sm font-medium mb-2 text-muted/80">{t("form.message")} *</label>
+                    <textarea name="message" required rows={5} value={formData.message} onChange={handleChange} className={cn(inputClasses, "resize-none")} />
                   </div>
-                  <div>
-                    <label className="block text-sm font-medium mb-2">{t("form.subject")} *</label>
-                    <input
-                      type="text"
-                      name="subject"
-                      required
-                      value={formData.subject}
-                      onChange={handleChange}
-                      className={inputClasses}
-                    />
-                  </div>
-                </div>
 
-                <div>
-                  <label className="block text-sm font-medium mb-2">{t("form.message")} *</label>
-                  <textarea
-                    name="message"
-                    required
-                    rows={5}
-                    value={formData.message}
-                    onChange={handleChange}
-                    className={cn(inputClasses, "resize-none")}
-                  />
-                </div>
+                  {status === "error" && (
+                    <div className="flex items-center gap-2 text-sm text-red-400">
+                      <AlertCircle size={16} />
+                      {t("form.error")}
+                    </div>
+                  )}
 
-                {status === "error" && (
-                  <div className="flex items-center gap-2 text-sm text-red-400">
-                    <AlertCircle size={16} />
-                    {t("form.error")}
-                  </div>
-                )}
-
-                <Button
-                  type="submit"
-                  size="lg"
-                  className="w-full"
-                  disabled={status === "sending"}
-                >
-                  {status === "sending" ? t("form.sending") : t("form.submit")}
-                  <Send size={18} />
-                </Button>
-              </form>
+                  <Button type="submit" size="lg" className="w-full group" disabled={status === "sending"}>
+                    {status === "sending" ? t("form.sending") : t("form.submit")}
+                    <Send size={18} className="transition-transform group-hover:translate-x-0.5" />
+                  </Button>
+                </form>
+              </SpotlightCard>
             )}
-          </AnimatedSection>
+          </motion.div>
         </div>
       </Container>
     </section>

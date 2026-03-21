@@ -25,7 +25,8 @@
       "years": "Years of expertise",
       "coverage": "Worldwide delivery",
       "satisfaction": "Satisfaction"
-    }
+    },
+    "scroll": "Scroll"
   },
   "products": {
     "title": "Our Systems",
@@ -39,7 +40,13 @@
     "dataSheet": "Data Sheet",
     "filterAll": "All",
     "category": "Category",
-    "backToProducts": "Back to products"
+    "backToProducts": "Back to products",
+    "thickness": "Thickness",
+    "cure": "Cure",
+    "search": "Search products...",
+    "noResults": "No products found for this search.",
+    "calculatePrice": "Calculate Price",
+    "features": "Features"
   },
   "whyNovus": {
     "title": "Why Novus Surfaces?",
@@ -110,6 +117,7 @@
       "experience": "13+ years of expertise",
       "madeIn": "Made in Canada"
     },
+    "valuesHeading": "Our Values",
     "values": {
       "quality": {
         "title": "Uncompromising Quality",
@@ -142,7 +150,10 @@
     "info": {
       "email": "info@novussurfaces.com",
       "coverage": "Delivery: Worldwide",
-      "hours": "Mon–Fri: 8am–5pm (EST)"
+      "hours": "Mon–Fri: 8am–5pm (EST)",
+      "emailLabel": "Email",
+      "coverageLabel": "Service Area",
+      "hoursLabel": "Hours"
     }
   },
   "footer": {
@@ -200,7 +211,10 @@
       "downloadPdf": "Download PDF",
       "requestQuote": "Request a detailed quote",
       "sqft": "sq ft"
-    }
+    },
+    "discount10": "10% volume discount applied!",
+    "discount15": "15% volume discount applied!",
+    "calculating": "Calculating..."
   },
   "blog": {
     "title": "Blog",
@@ -227,6 +241,117 @@
     "countries": "Countries served",
     "projects": "Projects completed",
     "satisfaction": "Client satisfaction"
+  },
+  "testimonials": {
+    "title": "What Our Clients Say",
+    "subtitle": "Contractors and owners who chose Novus Surfaces",
+    "item1": {
+      "quote": "The SCI Metallic system completely transformed our showroom. Customers are impressed the moment they walk in. Flawless installation.",
+      "name": "Marc Tremblay",
+      "role": "Car dealership, Montreal"
+    },
+    "item2": {
+      "quote": "We tried 3 suppliers before Novus. The quality difference is striking. The polyurea stands up to Quebec salt like nothing else.",
+      "name": "Sophie Lavoie",
+      "role": "Garage owner, Quebec City"
+    },
+    "item3": {
+      "quote": "Exceptional technical support. Michael at SCI guided us every step of the way. The result is magazine-worthy.",
+      "name": "Jean-Philippe Côté",
+      "role": "General contractor, Laval"
+    },
+    "item4": {
+      "quote": "We did our entire 15,000 sq ft warehouse floor. Fast delivery, solid product. It's been 2 years and not a single crack.",
+      "name": "David Chen",
+      "role": "Plant manager, Toronto"
+    },
+    "item5": {
+      "quote": "The online calculator gave us a fair price. No surprises at delivery. Exactly what we were looking for for our restaurant.",
+      "name": "Marie-Ève Bouchard",
+      "role": "Restaurant owner, Sherbrooke"
+    }
+  },
+  "chatbot": {
+    "greeting": "Hi! I'm Nova, your Novus Surfaces assistant. How can I help you with your coating project?",
+    "error": "Sorry, I'm momentarily unavailable. Contact us at info@novussurfaces.com!",
+    "online": "Online",
+    "placeholder": "Ask your question..."
+  },
+  "lpGarage": {
+    "badge": "Made in Canada",
+    "title": "Your garage deserves a floor that",
+    "titleHighlight": "resists Quebec's salt",
+    "subtitle": "Professional epoxy coating starting at $3/sq ft. 1-day installation available. Guaranteed against salt, calcium, and chemicals.",
+    "formTitle": "Free quote in 24h",
+    "formSubtitle": "Get a no-obligation price estimate",
+    "formName": "Full name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formArea": "Garage area (sq ft)",
+    "formMessage": "Project details (optional)",
+    "formSubmit": "Get my free quote",
+    "formSending": "Sending...",
+    "formError": "Error, try again.",
+    "successTitle": "Request sent!",
+    "successText": "We'll contact you within 24 hours.",
+    "benefit1": "Resists Quebec's salt and calcium",
+    "benefit2": "Anti-slip and easy-to-clean finish",
+    "benefit3": "Protection against oil, salt, and chemicals",
+    "benefit4": "Transforms your garage into living space",
+    "benefit5": "15+ year lifespan",
+    "benefit6": "1-day installation (polyurea)",
+    "statPrice": "/sq ft min",
+    "statDay": "day install",
+    "statYears": "year lifespan",
+    "socialTitle": "What our clients say",
+    "review1": "My garage survived 2 winters without a single mark. Salt does nothing. Impressive.",
+    "review1Name": "Martin L.",
+    "review1City": "Laval",
+    "review2": "We did our double garage in 1 day with polyurea. Next day the car was on it. Perfect.",
+    "review2Name": "Sophie B.",
+    "review2City": "Longueuil",
+    "review3": "3 years later, the floor still looks brand new. Best home investment.",
+    "review3Name": "Jean-François R.",
+    "review3City": "Quebec City",
+    "footerText": "© 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+  },
+  "lpCommercial": {
+    "b2b": "B2B",
+    "title": "Industrial-grade floor coatings",
+    "titleHighlight": "for your business",
+    "subtitle": "13 professional systems. Made in Montreal. Delivered worldwide. Volume discounts available.",
+    "formTitle": "Commercial Quote",
+    "formSubtitle": "Response from our B2B team in 24h",
+    "formName": "Name",
+    "formCompany": "Company",
+    "formEmail": "Business email",
+    "formPhone": "Phone",
+    "formProjectType": "Project type",
+    "formArea": "Area (sq ft)",
+    "formMessage": "Project details",
+    "formSubmit": "Request commercial quote",
+    "formSending": "Sending...",
+    "formError": "Error, try again.",
+    "successTitle": "Request sent!",
+    "successText": "Our sales team will contact you within 24h.",
+    "typeCommercial": "Commercial",
+    "typeIndustrial": "Industrial",
+    "typeFood": "Food processing",
+    "typeWarehouse": "Warehouse",
+    "typeInstitutional": "Institutional",
+    "sectorWarehouse": "Warehouses",
+    "sectorCommercial": "Retail",
+    "sectorIndustrial": "Factories",
+    "sectorFood": "Food Processing",
+    "vp1Title": "Certified industrial quality",
+    "vp1Desc": "Systems tested and USDA/FDA certified for the most demanding environments.",
+    "vp2Title": "Volume discounts up to 15%",
+    "vp2Desc": "2,500+ sq ft = -10%. 5,000+ sq ft = -15%. Bigger projects save more.",
+    "vp3Title": "Direct factory delivery",
+    "vp3Desc": "Manufactured in Montreal by SCI Coatings. Direct shipping, minimal delays.",
+    "vp4Title": "Complete technical support",
+    "vp4Desc": "Installation guides, data sheets, phone support for every system.",
+    "footerText": "© 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
   },
   "shipping": {
     "title": "Worldwide Shipping",

@@ -19,7 +19,7 @@ import { generateEstimatePDF } from "@/lib/generate-pdf";
 import { cn } from "@/lib/cn";
 
 const inputClasses =
-  "w-full rounded-xl border border-border bg-card px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors";
+  "w-full rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/50 transition-all duration-300";
 
 const projectTypes = [
   "garage",
@@ -156,7 +156,12 @@ export function CalculatorSection() {
         </div>
 
         {/* Form Container */}
-        <div className="max-w-2xl mx-auto">
+        <div className="max-w-2xl mx-auto relative">
+          {/* Background glow */}
+          <div
+            className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[500px] h-[400px] rounded-full opacity-[0.03] -z-10"
+            style={{ background: "radial-gradient(circle, #2563eb 0%, transparent 70%)", filter: "blur(80px)" }}
+          />
           <AnimatePresence mode="wait">
             {/* STEP 1: Project Details */}
             {step === 1 && (
@@ -166,7 +171,7 @@ export function CalculatorSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-2xl border border-border bg-card p-6 md:p-8 space-y-5"
+                className="rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-6 md:p-8 space-y-5"
               >
                 {/* Surface Area */}
                 <div>
@@ -185,12 +190,8 @@ export function CalculatorSection() {
                     <p className="mt-1.5 text-xs text-success flex items-center gap-1">
                       <Shield size={12} />
                       {Number(sqft) >= 5000
-                        ? locale === "fr"
-                          ? "Rabais volume de 15% appliqué!"
-                          : "15% volume discount applied!"
-                        : locale === "fr"
-                          ? "Rabais volume de 10% appliqué!"
-                          : "10% volume discount applied!"}
+                        ? t("discount15")
+                        : t("discount10")}
                     </p>
                   )}
                 </div>
@@ -259,10 +260,10 @@ export function CalculatorSection() {
                 animate={{ opacity: 1, x: 0 }}
                 exit={{ opacity: 0, x: -20 }}
                 transition={{ duration: 0.3 }}
-                className="rounded-2xl border border-border bg-card p-6 md:p-8"
+                className="rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-6 md:p-8"
               >
                 <div className="text-center mb-8">
-                  <div className="w-16 h-16 rounded-2xl bg-accent/10 flex items-center justify-center mx-auto mb-4">
+                  <div className="w-16 h-16 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-4">
                     <FileText size={32} className="text-accent" />
                   </div>
                   <h2 className="text-xl font-semibold">{t("emailGate.title")}</h2>
@@ -327,9 +328,7 @@ export function CalculatorSection() {
                       disabled={submitting}
                     >
                       {submitting
-                        ? locale === "fr"
-                          ? "Calcul en cours..."
-                          : "Calculating..."
+                        ? t("calculating")
                         : t("emailGate.reveal")}
                       <ArrowRight size={18} />
                     </Button>
@@ -345,7 +344,7 @@ export function CalculatorSection() {
                 initial={{ opacity: 0, scale: 0.95 }}
                 animate={{ opacity: 1, scale: 1 }}
                 transition={{ duration: 0.5 }}
-                className="rounded-2xl border border-border bg-card p-6 md:p-8"
+                className="rounded-2xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-6 md:p-8"
               >
                 <div className="text-center mb-8">
                   <h2 className="font-[family-name:var(--font-cabinet)] text-2xl font-bold">

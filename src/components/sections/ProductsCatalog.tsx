@@ -52,11 +52,11 @@ function ProductCard({ product }: { product: Product }) {
         {/* Specs */}
         <div className="mt-4 grid grid-cols-2 gap-2">
           <div className="rounded-lg bg-surface px-3 py-2">
-            <div className="text-xs text-muted-foreground">Épaisseur</div>
+            <div className="text-xs text-muted-foreground">{t("thickness")}</div>
             <div className="text-sm font-medium">{product.specs.thickness}</div>
           </div>
           <div className="rounded-lg bg-surface px-3 py-2">
-            <div className="text-xs text-muted-foreground">Cure</div>
+            <div className="text-xs text-muted-foreground">{t("cure")}</div>
             <div className="text-sm font-medium">{product.specs.cureTime}</div>
           </div>
         </div>
@@ -102,7 +102,7 @@ export function ProductsCatalog() {
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
-              placeholder={locale === "fr" ? "Rechercher un produit..." : "Search products..."}
+              placeholder={t("search")}
               className="w-full rounded-xl border border-border bg-card pl-11 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors"
             />
           </div>
@@ -138,9 +138,7 @@ export function ProductsCatalog() {
         {filtered.length === 0 && (
           <div className="text-center py-20">
             <p className="text-muted text-lg">
-              {locale === "fr"
-                ? "Aucun produit trouvé pour cette recherche."
-                : "No products found for this search."}
+              {t("noResults")}
             </p>
           </div>
         )}

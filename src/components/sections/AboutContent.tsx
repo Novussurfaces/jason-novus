@@ -69,9 +69,7 @@ export function AboutContent() {
                 viewport={{ once: true }}
                 className="font-[family-name:var(--font-cabinet)] text-2xl font-bold text-center mb-8"
               >
-                {t("values.quality.title").includes("Uncompromising")
-                  ? "Our Values"
-                  : "Nos valeurs"}
+                {t("valuesHeading")}
               </motion.h2>
               <div className="grid grid-cols-1 sm:grid-cols-3 gap-6">
                 {values.map((v, i) => {
