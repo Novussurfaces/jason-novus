@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "title": "Novus Surfaces — Premium Surface Coatings | Worldwide Delivery",
+    "description": "Novus Surfaces offers industrial-grade epoxy, polyurea, and quartz coating systems for residential, commercial, and industrial applications. Made in Canada, shipped worldwide."
+  },
+  "nav": {
+    "home": "Home",
+    "products": "Products",
+    "portfolio": "Portfolio",
+    "quote": "Get a Quote",
+    "about": "About",
+    "contact": "Contact",
+    "calculator": "Calculator",
+    "getQuote": "Get a Quote"
+  },
+  "hero": {
+    "badge": "Premium surface coatings",
+    "title": "Surfaces that",
+    "titleHighlight": "perform",
+    "subtitle": "Industrial-grade epoxy, polyurea, and quartz coating systems. Made in Canada. Shipped worldwide.",
+    "cta": "Get a Free Quote",
+    "ctaSecondary": "View Our Products",
+    "stats": {
+      "products": "Systems",
+      "years": "Years of expertise",
+      "coverage": "Worldwide delivery",
+      "satisfaction": "Satisfaction"
+    }
+  },
+  "products": {
+    "title": "Our Systems",
+    "subtitle": "13 professional coating systems for every application",
+    "viewAll": "View all products",
+    "viewProduct": "View product",
+    "requestQuote": "Request a quote",
+    "specifications": "Specifications",
+    "applications": "Applications",
+    "relatedProducts": "Related Products",
+    "dataSheet": "Data Sheet",
+    "filterAll": "All",
+    "category": "Category",
+    "backToProducts": "Back to products"
+  },
+  "whyNovus": {
+    "title": "Why Novus Surfaces?",
+    "subtitle": "Your trusted partner for exceptional coatings",
+    "madeInCanada": {
+      "title": "Made in Canada",
+      "description": "All our products are manufactured in Montreal by SCI Coatings, ensuring quality and performance."
+    },
+    "industrial": {
+      "title": "Industrial Grade",
+      "description": "Proven formulations with over 13 years of performance in the most demanding environments."
+    },
+    "expertise": {
+      "title": "Technical Expertise",
+      "description": "Complete technical support and detailed installation guides for every system."
+    },
+    "delivery": {
+      "title": "Worldwide Delivery",
+      "description": "Direct shipping from our Montreal factory anywhere in the world. By air or by sea."
+    }
+  },
+  "portfolio": {
+    "title": "Our Work",
+    "subtitle": "Discover our completed projects around the world",
+    "beforeAfter": "Before / After",
+    "viewProject": "View project",
+    "filterAll": "All",
+    "residential": "Residential",
+    "commercial": "Commercial",
+    "industrial": "Industrial"
+  },
+  "quote": {
+    "title": "Request a Quote",
+    "subtitle": "Get a free, no-obligation quote within 24 hours",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "company": "Company (optional)",
+      "projectType": "Project type",
+      "projectTypes": {
+        "residential": "Residential",
+        "commercial": "Commercial",
+        "industrial": "Industrial"
+      },
+      "surfaceArea": "Approximate area (sq ft)",
+      "product": "Product of interest",
+      "selectProduct": "Select a product",
+      "message": "Describe your project",
+      "submit": "Submit request",
+      "sending": "Sending...",
+      "success": "Your request has been sent successfully! We will contact you within 24 hours.",
+      "error": "An error occurred. Please try again or contact us directly."
+    }
+  },
+  "about": {
+    "title": "About Novus Surfaces",
+    "subtitle": "Your premium surface coatings distributor — Worldwide delivery",
+    "story": {
+      "title": "Our Story",
+      "p1": "Novus Surfaces was born from the belief that every surface deserves an exceptional coating. In partnership with SCI Coatings, a Montreal-based manufacturer recognized for over 13 years, we offer the world the most high-performance coating systems on the market.",
+      "p2": "Our model is simple: we select the best products, provide impeccable technical support, and deliver directly from the factory to your job site, anywhere in the world."
+    },
+    "partnership": {
+      "title": "SCI Coatings Partnership",
+      "description": "Manufactured in Montreal by SCI Coatings Inc., a Canadian leader in industrial surface coatings since 2011.",
+      "location": "Montreal, Canada",
+      "experience": "13+ years of expertise",
+      "madeIn": "Made in Canada"
+    },
+    "values": {
+      "quality": {
+        "title": "Uncompromising Quality",
+        "description": "Every product is tested and certified for the most demanding environments."
+      },
+      "service": {
+        "title": "Personalized Service",
+        "description": "Tailored support from product selection to installation."
+      },
+      "innovation": {
+        "title": "Continuous Innovation",
+        "description": "Constantly improved formulations pushing the limits of performance."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contact Us",
+    "subtitle": "Our team is available to answer all your questions",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "subject": "Subject",
+      "message": "Message",
+      "submit": "Send",
+      "sending": "Sending...",
+      "success": "Message sent! We'll get back to you shortly.",
+      "error": "An error occurred. Please try again."
+    },
+    "info": {
+      "email": "info@novussurfaces.com",
+      "coverage": "Delivery: Worldwide",
+      "hours": "Mon–Fri: 8am–5pm (EST)"
+    }
+  },
+  "footer": {
+    "description": "Premium surface coatings. Made in Canada, shipped worldwide.",
+    "products": "Products",
+    "company": "Company",
+    "legal": "Legal",
+    "privacy": "Privacy Policy",
+    "terms": "Terms of Use",
+    "copyright": "© {year} Novus Surfaces. All rights reserved.",
+    "madeIn": "Proudly made in Canada"
+  },
+  "cta": {
+    "title": "Ready to transform your surfaces?",
+    "subtitle": "Get a free quote in under 24 hours. Worldwide delivery.",
+    "button": "Request a Quote"
+  },
+  "calculator": {
+    "title": "Price Calculator",
+    "subtitle": "Get an instant estimate for your coating project",
+    "tagline": "Made in Canada — Worldwide Delivery",
+    "step1": "Your project",
+    "step2": "Your details",
+    "step3": "Your estimate",
+    "surfaceArea": "Surface area (sq ft)",
+    "surfacePlaceholder": "E.g.: 600",
+    "projectType": "Project type",
+    "projectTypes": {
+      "garage": "Residential garage",
+      "basement": "Basement",
+      "commercial": "Commercial",
+      "industrial": "Industrial",
+      "restaurant": "Restaurant / kitchen",
+      "warehouse": "Warehouse"
+    },
+    "selectSystem": "Coating system",
+    "selectSystemPlaceholder": "Choose a system",
+    "next": "Next",
+    "back": "Back",
+    "emailGate": {
+      "title": "Your estimate is ready!",
+      "subtitle": "Enter your details to see the estimated price and receive a detailed PDF.",
+      "name": "Full name",
+      "email": "Email",
+      "phone": "Phone",
+      "reveal": "See my estimate"
+    },
+    "result": {
+      "title": "Your project estimate",
+      "system": "System",
+      "area": "Surface area",
+      "priceRange": "Price estimate",
+      "discount": "Volume discount",
+      "note": "* This estimate is provided for informational purposes. Final pricing depends on concrete condition, site access, and selected options.",
+      "downloadPdf": "Download PDF",
+      "requestQuote": "Request a detailed quote",
+      "sqft": "sq ft"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Guides, tips, and trends in surface coatings",
+    "readMore": "Read article",
+    "backToBlog": "Back to blog",
+    "shareArticle": "Share",
+    "relatedArticles": "Related articles",
+    "minRead": "min read",
+    "publishedOn": "Published on"
+  },
+  "beforeAfter": {
+    "title": "Epoxy Transformations",
+    "subtitle": "See the difference before and after applying our coating systems.",
+    "before": "Before",
+    "after": "After",
+    "labels": {
+      "garage": "Residential garage — SCI Flake",
+      "commercial": "Commercial floor — SCI Metallic"
+    }
+  },
+  "shipping": {
+    "title": "Worldwide Shipping",
+    "subtitle": "Made in Canada. Delivered anywhere in the world.",
+    "regions": {
+      "northAmerica": "North America",
+      "northAmericaDesc": "Standard delivery 3–7 business days",
+      "europe": "Europe",
+      "europeDesc": "Ocean or air freight available",
+      "international": "International",
+      "internationalDesc": "Contact us for a custom shipping quote"
+    },
+    "cta": "Request a shipping quote"
+  }
+}

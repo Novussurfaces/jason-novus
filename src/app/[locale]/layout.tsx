@@ -1,0 +1,93 @@
+import type { Metadata } from "next";
+import { notFound } from "next/navigation";
+import { NextIntlClientProvider } from "next-intl";
+import { getTranslations, setRequestLocale } from "next-intl/server";
+import { Inter, Space_Grotesk } from "next/font/google";
+import { routing } from "@/i18n/routing";
+import { Navbar } from "@/components/Navbar";
+import { Footer } from "@/components/Footer";
+import { ChatBot } from "@/components/ChatBot";
+import { SmoothScroll } from "@/components/SmoothScroll";
+import { ScrollProgress } from "@/components/ScrollProgress";
+import { FilmGrain } from "@/components/three/FilmGrain";
+import { CustomCursor } from "@/components/ui/CustomCursor";
+
+const inter = Inter({
+  subsets: ["latin"],
+  variable: "--font-inter",
+  display: "swap",
+});
+
+const spaceGrotesk = Space_Grotesk({
+  subsets: ["latin"],
+  variable: "--font-cabinet",
+  display: "swap",
+  weight: ["700"],
+});
+
+type Props = {
+  children: React.ReactNode;
+  params: Promise<{ locale: string }>;
+};
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "metadata" });
+
+  return {
+    title: {
+      default: t("title"),
+      template: `%s | Novus Surfaces`,
+    },
+    description: t("description"),
+    metadataBase: new URL("https://novussurfaces.com"),
+    alternates: {
+      canonical: `/${locale}`,
+      languages: {
+        fr: "/fr",
+        en: "/en",
+      },
+    },
+    openGraph: {
+      title: t("title"),
+      description: t("description"),
+      siteName: "Novus Surfaces",
+      locale: locale === "fr" ? "fr_CA" : "en_CA",
+      type: "website",
+    },
+  };
+}
+
+export function generateStaticParams() {
+  return routing.locales.map((locale) => ({ locale }));
+}
+
+export default async function LocaleLayout({ children, params }: Props) {
+  const { locale } = await params;
+
+  if (!routing.locales.includes(locale as "fr" | "en")) {
+    notFound();
+  }
+
+  setRequestLocale(locale);
+
+  const messages = (await import(`../../../messages/${locale}.json`)).default;
+
+  return (
+    <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable}`}>
+      <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
+        <NextIntlClientProvider locale={locale} messages={messages}>
+          <SmoothScroll>
+            <ScrollProgress />
+            <FilmGrain />
+            <Navbar />
+            <main className="flex-1">{children}</main>
+            <Footer />
+            <ChatBot />
+            <CustomCursor />
+          </SmoothScroll>
+        </NextIntlClientProvider>
+      </body>
+    </html>
+  );
+}

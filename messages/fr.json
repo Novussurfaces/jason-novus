@@ -1,0 +1,238 @@
+{
+  "metadata": {
+    "title": "Novus Surfaces — Revêtements de surfaces haut de gamme | Livraison mondiale",
+    "description": "Novus Surfaces offre des systèmes de revêtements époxy, polyuréa et quartz de qualité industrielle pour résidentiel, commercial et industriel. Fabriqué au Canada, livraison mondiale."
+  },
+  "nav": {
+    "home": "Accueil",
+    "products": "Produits",
+    "portfolio": "Réalisations",
+    "quote": "Soumission",
+    "about": "À propos",
+    "contact": "Contact",
+    "calculator": "Calculateur",
+    "getQuote": "Obtenir une soumission"
+  },
+  "hero": {
+    "badge": "Revêtements de surfaces haut de gamme",
+    "title": "Des surfaces qui",
+    "titleHighlight": "performent",
+    "subtitle": "Systèmes de revêtements époxy, polyuréa et quartz de qualité industrielle. Fabriqués au Canada. Livraison mondiale.",
+    "cta": "Obtenir une soumission gratuite",
+    "ctaSecondary": "Voir nos produits",
+    "stats": {
+      "products": "Systèmes",
+      "years": "Ans d'expertise",
+      "coverage": "Livraison mondiale",
+      "satisfaction": "Satisfaction"
+    }
+  },
+  "products": {
+    "title": "Nos systèmes",
+    "subtitle": "13 systèmes de revêtements professionnels pour chaque application",
+    "viewAll": "Voir tous les produits",
+    "viewProduct": "Voir le produit",
+    "requestQuote": "Demander une soumission",
+    "specifications": "Spécifications",
+    "applications": "Applications",
+    "relatedProducts": "Produits connexes",
+    "dataSheet": "Fiche technique",
+    "filterAll": "Tous",
+    "category": "Catégorie",
+    "backToProducts": "Retour aux produits"
+  },
+  "whyNovus": {
+    "title": "Pourquoi Novus Surfaces?",
+    "subtitle": "Votre partenaire de confiance pour des revêtements d'exception",
+    "madeInCanada": {
+      "title": "Fabriqué au Canada",
+      "description": "Tous nos produits sont fabriqués à Montréal par SCI Coatings, garantissant qualité et performance."
+    },
+    "industrial": {
+      "title": "Qualité industrielle",
+      "description": "Des formulations éprouvées depuis plus de 13 ans dans les environnements les plus exigeants."
+    },
+    "expertise": {
+      "title": "Expertise technique",
+      "description": "Support technique complet et guides d'installation détaillés pour chaque système."
+    },
+    "delivery": {
+      "title": "Livraison mondiale",
+      "description": "Expédition directe de notre usine de Montréal partout dans le monde. Par avion ou par bateau."
+    }
+  },
+  "portfolio": {
+    "title": "Nos réalisations",
+    "subtitle": "Découvrez nos projets complétés à travers le monde",
+    "beforeAfter": "Avant / Après",
+    "viewProject": "Voir le projet",
+    "filterAll": "Tous",
+    "residential": "Résidentiel",
+    "commercial": "Commercial",
+    "industrial": "Industriel"
+  },
+  "quote": {
+    "title": "Demander une soumission",
+    "subtitle": "Recevez une soumission gratuite et sans engagement en 24h",
+    "form": {
+      "name": "Nom complet",
+      "email": "Courriel",
+      "phone": "Téléphone",
+      "company": "Entreprise (optionnel)",
+      "projectType": "Type de projet",
+      "projectTypes": {
+        "residential": "Résidentiel",
+        "commercial": "Commercial",
+        "industrial": "Industriel"
+      },
+      "surfaceArea": "Superficie approximative (pi²)",
+      "product": "Produit d'intérêt",
+      "selectProduct": "Sélectionnez un produit",
+      "message": "Décrivez votre projet",
+      "submit": "Envoyer la demande",
+      "sending": "Envoi en cours...",
+      "success": "Votre demande a été envoyée avec succès! Nous vous contacterons dans les 24 prochaines heures.",
+      "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement."
+    }
+  },
+  "about": {
+    "title": "À propos de Novus Surfaces",
+    "subtitle": "Votre distributeur de revêtements de surfaces haut de gamme — Livraison mondiale",
+    "story": {
+      "title": "Notre histoire",
+      "p1": "Novus Surfaces est né de la conviction que chaque surface mérite un revêtement d'exception. En partenariat avec SCI Coatings, manufacturier montréalais reconnu depuis plus de 13 ans, nous offrons au monde entier les systèmes de revêtements les plus performants du marché.",
+      "p2": "Notre modèle est simple : nous sélectionnons les meilleurs produits, offrons un support technique irréprochable et livrons directement de l'usine à votre chantier, partout dans le monde."
+    },
+    "partnership": {
+      "title": "Partenariat SCI Coatings",
+      "description": "Fabriqué à Montréal par SCI Coatings Inc., leader canadien des revêtements de surfaces industriels depuis 2011.",
+      "location": "Montréal, Canada",
+      "experience": "+13 ans d'expertise",
+      "madeIn": "Fabriqué au Canada"
+    },
+    "values": {
+      "quality": {
+        "title": "Qualité sans compromis",
+        "description": "Chaque produit est testé et certifié pour les environnements les plus exigeants."
+      },
+      "service": {
+        "title": "Service personnalisé",
+        "description": "Un accompagnement sur mesure de la sélection du produit à l'installation."
+      },
+      "innovation": {
+        "title": "Innovation continue",
+        "description": "Des formulations constamment améliorées pour repousser les limites de la performance."
+      }
+    }
+  },
+  "contact": {
+    "title": "Contactez-nous",
+    "subtitle": "Notre équipe est disponible pour répondre à toutes vos questions",
+    "form": {
+      "name": "Nom complet",
+      "email": "Courriel",
+      "phone": "Téléphone",
+      "subject": "Sujet",
+      "message": "Message",
+      "submit": "Envoyer",
+      "sending": "Envoi en cours...",
+      "success": "Message envoyé! Nous vous répondrons rapidement.",
+      "error": "Une erreur est survenue. Veuillez réessayer."
+    },
+    "info": {
+      "email": "info@novussurfaces.com",
+      "coverage": "Livraison: Mondiale",
+      "hours": "Lun–Ven: 8h–17h (EST)"
+    }
+  },
+  "footer": {
+    "description": "Revêtements de surfaces haut de gamme. Fabriqué au Canada, livraison mondiale.",
+    "products": "Produits",
+    "company": "Entreprise",
+    "legal": "Légal",
+    "privacy": "Politique de confidentialité",
+    "terms": "Conditions d'utilisation",
+    "copyright": "© {year} Novus Surfaces. Tous droits réservés.",
+    "madeIn": "Fabriqué avec fierté au Canada"
+  },
+  "cta": {
+    "title": "Prêt à transformer vos surfaces?",
+    "subtitle": "Obtenez une soumission gratuite en moins de 24 heures. Livraison mondiale.",
+    "button": "Demander une soumission"
+  },
+  "calculator": {
+    "title": "Calculateur de prix",
+    "subtitle": "Obtenez une estimation instantanée pour votre projet de revêtement",
+    "tagline": "Fabriqué au Canada — Livraison mondiale",
+    "step1": "Votre projet",
+    "step2": "Vos coordonnées",
+    "step3": "Votre estimation",
+    "surfaceArea": "Superficie (pi²)",
+    "surfacePlaceholder": "Ex: 600",
+    "projectType": "Type de projet",
+    "projectTypes": {
+      "garage": "Garage résidentiel",
+      "basement": "Sous-sol",
+      "commercial": "Commercial",
+      "industrial": "Industriel",
+      "restaurant": "Restaurant / cuisine",
+      "warehouse": "Entrepôt"
+    },
+    "selectSystem": "Système de revêtement",
+    "selectSystemPlaceholder": "Choisir un système",
+    "next": "Suivant",
+    "back": "Retour",
+    "emailGate": {
+      "title": "Votre estimation est prête!",
+      "subtitle": "Entrez vos coordonnées pour voir le prix estimé et recevoir un PDF détaillé.",
+      "name": "Nom complet",
+      "email": "Courriel",
+      "phone": "Téléphone",
+      "reveal": "Voir mon estimation"
+    },
+    "result": {
+      "title": "Estimation de votre projet",
+      "system": "Système",
+      "area": "Superficie",
+      "priceRange": "Estimation de prix",
+      "discount": "Rabais volume",
+      "note": "* Cette estimation est fournie à titre indicatif. Le prix final dépend de l'état du béton, de l'accès au site et des options choisies.",
+      "downloadPdf": "Télécharger le PDF",
+      "requestQuote": "Demander une soumission détaillée",
+      "sqft": "pi²"
+    }
+  },
+  "blog": {
+    "title": "Blog",
+    "subtitle": "Guides, conseils et tendances en revêtements de surfaces",
+    "readMore": "Lire l'article",
+    "backToBlog": "Retour au blog",
+    "shareArticle": "Partager",
+    "relatedArticles": "Articles connexes",
+    "minRead": "min de lecture",
+    "publishedOn": "Publié le"
+  },
+  "beforeAfter": {
+    "title": "Transformations époxy",
+    "subtitle": "Voyez la différence avant et après l'application de nos systèmes de revêtements.",
+    "before": "Avant",
+    "after": "Après",
+    "labels": {
+      "garage": "Garage résidentiel — SCI Flake",
+      "commercial": "Plancher commercial — SCI Metallic"
+    }
+  },
+  "shipping": {
+    "title": "Livraison mondiale",
+    "subtitle": "Fabriqué au Canada. Livré partout dans le monde.",
+    "regions": {
+      "northAmerica": "Amérique du Nord",
+      "northAmericaDesc": "Livraison standard 3–7 jours ouvrables",
+      "europe": "Europe",
+      "europeDesc": "Expédition maritime ou aérienne disponible",
+      "international": "International",
+      "internationalDesc": "Contactez-nous pour un devis de livraison personnalisé"
+    },
+    "cta": "Demander un devis de livraison"
+  }
+}
