@@ -5,6 +5,7 @@ import { useTranslations } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { Menu, X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { cn } from "@/lib/cn";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
@@ -47,10 +48,15 @@ export function Navbar() {
       <Container>
         <nav className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <Link href="/" className="flex items-center gap-2 group">
-            <div className="w-8 h-8 rounded-lg bg-accent flex items-center justify-center">
-              <span className="text-white font-bold text-sm">N</span>
-            </div>
+          <Link href="/" className="flex items-center gap-2.5 group">
+            <Image
+              src="/logo-icon.svg"
+              alt="Novus Surfaces"
+              width={36}
+              height={36}
+              className="transition-transform duration-300 group-hover:scale-105"
+              priority
+            />
             <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold tracking-tight">
               Novus
               <span className="text-accent ml-0.5">Surfaces</span>

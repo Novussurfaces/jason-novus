@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <radialGradient id="mt-bg" cx="50%" cy="40%" r="70%">
+      <stop offset="0%" stop-color="#2a1a00"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <radialGradient id="mt-glow1" cx="30%" cy="40%" r="35%">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <radialGradient id="mt-glow2" cx="65%" cy="50%" r="30%">
+      <stop offset="0%" stop-color="#f59e0b" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="mt-blur"><feGaussianBlur stdDeviation="35"/></filter>
+    <!-- Metallic swirl pattern -->
+    <linearGradient id="mt-swirl" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#d97706" stop-opacity="0.15"/>
+      <stop offset="25%" stop-color="#f59e0b" stop-opacity="0.08"/>
+      <stop offset="50%" stop-color="#d97706" stop-opacity="0.12"/>
+      <stop offset="75%" stop-color="#b45309" stop-opacity="0.06"/>
+      <stop offset="100%" stop-color="#d97706" stop-opacity="0.1"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#mt-bg)"/>
+  <rect width="800" height="600" fill="url(#mt-glow1)"/>
+  <rect width="800" height="600" fill="url(#mt-glow2)"/>
+  <!-- Metallic swirl shapes -->
+  <ellipse cx="300" cy="300" rx="250" ry="200" fill="url(#mt-swirl)" transform="rotate(-15 300 300)"/>
+  <ellipse cx="500" cy="280" rx="200" ry="180" fill="url(#mt-swirl)" transform="rotate(20 500 280)"/>
+  <!-- Shimmer particles -->
+  <circle cx="200" cy="200" r="2" fill="#f59e0b" opacity="0.5"/>
+  <circle cx="450" cy="150" r="1.5" fill="#fbbf24" opacity="0.4"/>
+  <circle cx="600" cy="250" r="2" fill="#d97706" opacity="0.6"/>
+  <circle cx="350" cy="350" r="1" fill="#f59e0b" opacity="0.3"/>
+  <circle cx="550" cy="400" r="2.5" fill="#fbbf24" opacity="0.4"/>
+  <circle cx="150" cy="350" r="1.5" fill="#d97706" opacity="0.5"/>
+  <circle cx="650" cy="180" r="1" fill="#f59e0b" opacity="0.3"/>
+  <!-- Glowing orbs -->
+  <circle cx="300" cy="280" r="100" fill="#d97706" opacity="0.06" filter="url(#mt-blur)"/>
+  <circle cx="520" cy="320" r="80" fill="#f59e0b" opacity="0.08" filter="url(#mt-blur)"/>
+  <!-- Text -->
+  <text x="400" y="270" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="600" fill="white" opacity="0.6" letter-spacing="8">METALLIC SYSTEM</text>
+  <text x="400" y="300" text-anchor="middle" font-family="system-ui" font-size="11" fill="white" opacity="0.3" letter-spacing="4">DESIGNER FINISH · LUXURY FLOORS</text>
+</svg>

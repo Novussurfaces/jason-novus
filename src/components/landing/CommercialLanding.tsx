@@ -15,6 +15,7 @@ import {
   UtensilsCrossed,
 } from "lucide-react";
 import { motion } from "framer-motion";
+import Image from "next/image";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { cn } from "@/lib/cn";
 
@@ -98,9 +99,7 @@ export function CommercialLanding() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 pt-16 pb-20 sm:px-6">
           {/* Logo */}
           <div className="flex items-center gap-2.5 mb-12">
-            <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center shadow-lg shadow-accent/20">
-              <span className="text-white font-bold text-sm">N</span>
-            </div>
+            <Image src="/logo-icon.svg" alt="Novus Surfaces" width={36} height={36} className="rounded-xl" />
             <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold">
               Novus<span className="text-accent ml-0.5">Surfaces</span>
             </span>

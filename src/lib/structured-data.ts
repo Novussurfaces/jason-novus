@@ -8,7 +8,7 @@ export function getOrganizationSchema() {
     "@type": "Organization",
     name: "Novus Surfaces",
     url: BASE_URL,
-    logo: `${BASE_URL}/images/logo.png`,
+    logo: `${BASE_URL}/logo-icon.svg`,
     email: "info@novussurfaces.com",
     description:
       "Premium surface coatings — epoxy, polyurea, and quartz systems. Made in Canada, shipped worldwide.",

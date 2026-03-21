@@ -41,6 +41,10 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
     description: t("description"),
     metadataBase: new URL("https://novussurfaces.com"),
+    icons: {
+      icon: "/favicon.svg",
+      apple: "/logo-icon.svg",
+    },
     alternates: {
       canonical: `/${locale}`,
       languages: {
@@ -54,6 +58,17 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       siteName: "Novus Surfaces",
       locale: locale === "fr" ? "fr_CA" : "en_CA",
       type: "website",
+      images: [{ url: "/og-image.svg", width: 1200, height: 630, alt: "Novus Surfaces" }],
+    },
+    twitter: {
+      card: "summary_large_image",
+      title: t("title"),
+      description: t("description"),
+      images: ["/og-image.svg"],
+    },
+    robots: {
+      index: false,
+      follow: false,
     },
   };
 }

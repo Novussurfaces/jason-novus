@@ -1,0 +1,37 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <radialGradient id="pa-bg" cx="50%" cy="45%" r="65%">
+      <stop offset="0%" stop-color="#1e1b4b"/>
+      <stop offset="100%" stop-color="#09090b"/>
+    </radialGradient>
+    <radialGradient id="pa-glow" cx="50%" cy="40%" r="40%">
+      <stop offset="0%" stop-color="#6366f1" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <filter id="pa-blur"><feGaussianBlur stdDeviation="35"/></filter>
+    <linearGradient id="pa-streak" x1="0" y1="0" x2="1" y2="0.3">
+      <stop offset="0%" stop-color="transparent"/>
+      <stop offset="50%" stop-color="#6366f1" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </linearGradient>
+  </defs>
+  <rect width="800" height="600" fill="url(#pa-bg)"/>
+  <rect width="800" height="600" fill="url(#pa-glow)"/>
+  <!-- Speed streaks (fast cure) -->
+  <rect x="100" y="220" width="250" height="1" fill="url(#pa-streak)"/>
+  <rect x="200" y="280" width="300" height="1" fill="url(#pa-streak)"/>
+  <rect x="150" y="340" width="200" height="1" fill="url(#pa-streak)"/>
+  <rect x="350" y="250" width="280" height="1" fill="url(#pa-streak)"/>
+  <rect x="300" y="310" width="320" height="1" fill="url(#pa-streak)"/>
+  <!-- Core -->
+  <circle cx="400" cy="280" r="100" fill="#6366f1" opacity="0.07" filter="url(#pa-blur)"/>
+  <circle cx="450" cy="250" r="60" fill="#818cf8" opacity="0.08" filter="url(#pa-blur)"/>
+  <!-- Particles -->
+  <circle cx="300" cy="200" r="2" fill="#818cf8" opacity="0.4"/>
+  <circle cx="520" cy="230" r="1.5" fill="#6366f1" opacity="0.35"/>
+  <circle cx="200" cy="350" r="2" fill="#a5b4fc" opacity="0.25"/>
+  <circle cx="600" cy="300" r="2.5" fill="#6366f1" opacity="0.3"/>
+  <!-- Text -->
+  <text x="400" y="270" text-anchor="middle" font-family="system-ui" font-size="14" font-weight="600" fill="white" opacity="0.6" letter-spacing="8">POLYASPARTIC</text>
+  <text x="400" y="300" text-anchor="middle" font-family="system-ui" font-size="11" fill="white" opacity="0.3" letter-spacing="4">1-DAY INSTALL · UV STABLE</text>
+</svg>

@@ -3,6 +3,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { Link } from "@/i18n/navigation";
 import { MapPin, Mail, Clock, ArrowUpRight } from "lucide-react";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { products } from "@/lib/products";
 
@@ -41,9 +42,13 @@ export function Footer() {
           {/* Brand — wider column */}
           <div className="md:col-span-4">
             <Link href="/" className="inline-flex items-center gap-2.5 mb-5 group">
-              <div className="w-9 h-9 rounded-xl bg-gradient-to-br from-accent to-accent/80 flex items-center justify-center shadow-lg shadow-accent/20 group-hover:shadow-accent/40 transition-shadow duration-300">
-                <span className="text-white font-bold text-sm">N</span>
-              </div>
+              <Image
+                src="/logo-icon.svg"
+                alt="Novus Surfaces"
+                width={36}
+                height={36}
+                className="transition-all duration-300 group-hover:shadow-lg group-hover:shadow-accent/30 rounded-xl"
+              />
               <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold tracking-tight">
                 Novus<span className="text-accent ml-0.5">Surfaces</span>
               </span>

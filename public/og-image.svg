@@ -1,0 +1,44 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" fill="none">
+  <defs>
+    <linearGradient id="og-bg" x1="0" y1="0" x2="1200" y2="630" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#09090b"/>
+      <stop offset="100%" stop-color="#0f0f12"/>
+    </linearGradient>
+    <radialGradient id="og-glow" cx="50%" cy="40%" r="50%">
+      <stop offset="0%" stop-color="#2563eb" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="transparent"/>
+    </radialGradient>
+    <linearGradient id="og-accent" x1="0" y1="0" x2="80" y2="80" gradientUnits="userSpaceOnUse">
+      <stop offset="0%" stop-color="#3b82f6"/>
+      <stop offset="100%" stop-color="#1d4ed8"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="1200" height="630" fill="url(#og-bg)"/>
+  <rect width="1200" height="630" fill="url(#og-glow)"/>
+  <!-- Grid pattern -->
+  <pattern id="og-grid" width="60" height="60" patternUnits="userSpaceOnUse">
+    <rect width="60" height="60" fill="none" stroke="white" stroke-opacity="0.03" stroke-width="0.5"/>
+  </pattern>
+  <rect width="1200" height="630" fill="url(#og-grid)"/>
+  <!-- Border -->
+  <rect x="40" y="40" width="1120" height="550" rx="24" fill="none" stroke="white" stroke-opacity="0.06" stroke-width="1"/>
+  <!-- Logo icon -->
+  <rect x="80" y="80" width="72" height="72" rx="18" fill="url(#og-accent)"/>
+  <path d="M99 120V96h5l15 17.5V96h4v24h-5L103 103V120h-4z" fill="white"/>
+  <!-- Brand text -->
+  <text x="170" y="112" font-family="system-ui, sans-serif" font-size="36" font-weight="700" fill="white" letter-spacing="-0.5">NOVUS</text>
+  <text x="170" y="140" font-family="system-ui, sans-serif" font-size="20" font-weight="500" fill="#2563eb" letter-spacing="3">SURFACES</text>
+  <!-- Tagline -->
+  <text x="80" y="280" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="white" letter-spacing="-1">Revêtements de sol</text>
+  <text x="80" y="350" font-family="system-ui, sans-serif" font-size="56" font-weight="700" fill="white" letter-spacing="-1">haute performance</text>
+  <!-- Accent line -->
+  <rect x="80" y="380" width="120" height="4" rx="2" fill="#2563eb"/>
+  <!-- Sub text -->
+  <text x="80" y="430" font-family="system-ui, sans-serif" font-size="22" fill="#a1a1aa">Époxy · Polyuréa · Quartz · Métallique · Polyaspartique</text>
+  <!-- Stats -->
+  <text x="80" y="520" font-family="system-ui, sans-serif" font-size="18" fill="#71717a">13 systèmes professionnels · Livraison mondiale · Fabriqué à Montréal</text>
+  <!-- Bottom accent -->
+  <rect x="80" y="555" width="1040" height="1" fill="white" opacity="0.06"/>
+  <text x="80" y="580" font-family="system-ui, sans-serif" font-size="14" fill="#71717a">novussurfaces.com</text>
+</svg>
