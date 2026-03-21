@@ -7,6 +7,7 @@ import { SectionHeader } from "@/components/ui/SectionHeader";
 import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Button } from "@/components/ui/Button";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { ProductVisual } from "@/components/ui/ProductVisual";
 import { products, type Product } from "@/lib/products";
 import { Link } from "@/i18n/navigation";
 
@@ -28,12 +29,12 @@ function ProductCard({ product, index }: { product: Product; index: number }) {
         className="group block h-full"
       >
         <SpotlightCard className="h-full transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5">
-          {/* Image placeholder */}
-          <div className="aspect-[4/3] rounded-xl bg-surface mb-5 overflow-hidden flex items-center justify-center">
-            <div className="text-4xl font-bold text-muted-foreground/20 font-[family-name:var(--font-cabinet)]">
-              {product.sciCode}
-            </div>
-          </div>
+          {/* Product visual */}
+          <ProductVisual
+            sciCode={product.sciCode}
+            chemistry={product.specs.chemistry}
+            className="aspect-[4/3] mb-5"
+          />
 
           {/* Category badge */}
           <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent mb-3">

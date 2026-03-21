@@ -222,6 +222,12 @@
       "commercial": "Plancher commercial — SCI Metallic"
     }
   },
+  "trust": {
+    "systems": "Systèmes disponibles",
+    "countries": "Pays livrés",
+    "projects": "Projets complétés",
+    "satisfaction": "Satisfaction client"
+  },
   "shipping": {
     "title": "Livraison mondiale",
     "subtitle": "Fabriqué au Canada. Livré partout dans le monde.",

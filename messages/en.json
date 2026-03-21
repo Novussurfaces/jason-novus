@@ -222,6 +222,12 @@
       "commercial": "Commercial floor — SCI Metallic"
     }
   },
+  "trust": {
+    "systems": "Available systems",
+    "countries": "Countries served",
+    "projects": "Projects completed",
+    "satisfaction": "Client satisfaction"
+  },
   "shipping": {
     "title": "Worldwide Shipping",
     "subtitle": "Made in Canada. Delivered anywhere in the world.",
