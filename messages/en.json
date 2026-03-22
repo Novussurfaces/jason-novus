@@ -79,19 +79,23 @@
     "subtitle": "Your trusted partner for exceptional coatings",
     "madeInCanada": {
       "title": "Made in Canada",
-      "description": "All our products are manufactured in Montreal by SCI Coatings, ensuring quality and performance."
+      "description": "All our products are manufactured in Montreal by SCI Coatings, ensuring quality and performance.",
+      "stat": "systems"
     },
     "industrial": {
       "title": "Industrial Grade",
-      "description": "Proven formulations with over 13 years of performance in the most demanding environments."
+      "description": "Proven formulations with over 13 years of performance in the most demanding environments.",
+      "stat": "years proven"
     },
     "expertise": {
       "title": "Technical Expertise",
-      "description": "Complete technical support and detailed installation guides for every system."
+      "description": "Complete technical support and detailed installation guides for every system.",
+      "stat": "support"
     },
     "delivery": {
       "title": "Worldwide Delivery",
-      "description": "Direct shipping from our Montreal factory anywhere in the world. By air or by sea."
+      "description": "Direct shipping from our Montreal factory anywhere in the world. By air or by sea.",
+      "stat": "countries"
     }
   },
   "portfolio": {
@@ -195,6 +199,7 @@
   "cta": {
     "title": "Ready to transform your surfaces?",
     "subtitle": "Get a free quote in under 24 hours. Worldwide delivery.",
+    "tagline": "Worldwide delivery \u2022 Made in Canada \u2022 13+ systems",
     "button": "Request a Quote"
   },
   "calculator": {
@@ -393,5 +398,26 @@
       "internationalDesc": "Contact us for a custom shipping quote"
     },
     "cta": "Request a shipping quote"
+  },
+  "socialProof": {
+    "from": "from",
+    "timeAgo": "2h ago",
+    "quote": "requested a quote",
+    "order": "ordered SCI-Flake",
+    "pdf": "downloaded a PDF estimate",
+    "pallet": "ordered a SCI-Metallic pallet",
+    "viewing": "is browsing our products"
+  },
+  "exitIntent": {
+    "title": "Wait! 10% off",
+    "subtitle": "Get 10% off your first order. Enter your email below.",
+    "placeholder": "Your email",
+    "cta": "Get my discount",
+    "dismiss": "No thanks",
+    "success": "Discount activated!",
+    "successSub": "Check your email for the promo code."
+  },
+  "stickyCta": {
+    "text": "Free Quote →"
   }
 }

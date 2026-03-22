@@ -79,19 +79,23 @@
     "subtitle": "Votre partenaire de confiance pour des revêtements d'exception",
     "madeInCanada": {
       "title": "Fabriqué au Canada",
-      "description": "Tous nos produits sont fabriqués à Montréal par SCI Coatings, garantissant qualité et performance."
+      "description": "Tous nos produits sont fabriqués à Montréal par SCI Coatings, garantissant qualité et performance.",
+      "stat": "systèmes"
     },
     "industrial": {
       "title": "Qualité industrielle",
-      "description": "Des formulations éprouvées depuis plus de 13 ans dans les environnements les plus exigeants."
+      "description": "Des formulations éprouvées depuis plus de 13 ans dans les environnements les plus exigeants.",
+      "stat": "ans d'expertise"
     },
     "expertise": {
       "title": "Expertise technique",
-      "description": "Support technique complet et guides d'installation détaillés pour chaque système."
+      "description": "Support technique complet et guides d'installation détaillés pour chaque système.",
+      "stat": "support"
     },
     "delivery": {
       "title": "Livraison mondiale",
-      "description": "Expédition directe de notre usine de Montréal partout dans le monde. Par avion ou par bateau."
+      "description": "Expédition directe de notre usine de Montréal partout dans le monde. Par avion ou par bateau.",
+      "stat": "pays"
     }
   },
   "portfolio": {
@@ -195,6 +199,7 @@
   "cta": {
     "title": "Prêt à transformer vos surfaces?",
     "subtitle": "Obtenez une soumission gratuite en moins de 24 heures. Livraison mondiale.",
+    "tagline": "Livraison mondiale \u2022 Fabriqué au Canada \u2022 13+ systèmes",
     "button": "Demander une soumission"
   },
   "calculator": {
@@ -394,5 +399,26 @@
       "internationalDesc": "Contactez-nous pour un devis de livraison personnalisé"
     },
     "cta": "Demander un devis de livraison"
+  },
+  "socialProof": {
+    "from": "de",
+    "timeAgo": "il y a 2h",
+    "quote": "a demandé une soumission",
+    "order": "a commandé SCI-Flake",
+    "pdf": "a téléchargé un estimé PDF",
+    "pallet": "a commandé une palette SCI-Metallic",
+    "viewing": "consulte nos produits"
+  },
+  "exitIntent": {
+    "title": "Attendez! 10% de rabais",
+    "subtitle": "Obtenez 10% de rabais sur votre première commande. Entrez votre courriel.",
+    "placeholder": "Votre courriel",
+    "cta": "Obtenir mon rabais",
+    "dismiss": "Non merci",
+    "success": "Rabais activé!",
+    "successSub": "Vérifiez votre courriel pour le code promo."
+  },
+  "stickyCta": {
+    "text": "Soumission gratuite →"
   }
 }

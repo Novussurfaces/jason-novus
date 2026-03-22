@@ -25,6 +25,7 @@ interface BentoGridItemProps {
   title: string;
   description: string;
   icon?: React.ReactNode;
+  header?: React.ReactNode;
   className?: string;
   children?: React.ReactNode;
 }
@@ -33,6 +34,7 @@ export function BentoGridItem({
   title,
   description,
   icon,
+  header,
   className,
   children,
 }: BentoGridItemProps) {
@@ -49,7 +51,8 @@ export function BentoGridItem({
         className
       )}
     >
-      {children && (
+      {header && <div className="relative w-full">{header}</div>}
+      {children && !header && (
         <div className="relative w-full min-h-[120px] rounded-xl overflow-hidden bg-surface">
           {children}
         </div>

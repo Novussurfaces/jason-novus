@@ -11,6 +11,9 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { FilmGrain } from "@/components/three/FilmGrain";
 import { CustomCursor } from "@/components/ui/CustomCursor";
+import { SocialProof } from "@/components/ui/SocialProof";
+import { ExitIntent } from "@/components/ui/ExitIntent";
+import { StickyCTA } from "@/components/ui/StickyCTA";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -99,6 +102,9 @@ export default async function LocaleLayout({ children, params }: Props) {
             <main className="flex-1">{children}</main>
             <Footer />
             <ChatBot />
+            <SocialProof />
+            <ExitIntent />
+            <StickyCTA />
             <CustomCursor />
           </SmoothScroll>
         </NextIntlClientProvider>
