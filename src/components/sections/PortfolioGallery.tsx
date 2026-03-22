@@ -4,6 +4,7 @@ import { useState } from "react";
 import { useLocale, useTranslations } from "next-intl";
 import { X } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
+import Image from "next/image";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { cn } from "@/lib/cn";
@@ -16,49 +17,48 @@ type Project = {
   image: string;
 };
 
-// Placeholder projects — replace with real photos
 const projects: Project[] = [
   {
     id: 1,
     title: { fr: "Garage résidentiel — Laval", en: "Residential Garage — Laval" },
     category: "residential",
     system: "SCI-Flake",
-    image: "/images/portfolio/project-1.jpg",
+    image: "/images/portfolio/project-1.svg",
   },
   {
     id: 2,
     title: { fr: "Entrepôt commercial — Montréal", en: "Commercial Warehouse — Montreal" },
-    category: "commercial",
-    system: "SCI-100",
-    image: "/images/portfolio/project-2.jpg",
+    category: "industrial",
+    system: "SCI-Polyurea",
+    image: "/images/portfolio/project-2.svg",
   },
   {
     id: 3,
     title: { fr: "Showroom automobile — Québec", en: "Auto Showroom — Quebec City" },
     category: "commercial",
     system: "SCI-Metallic",
-    image: "/images/portfolio/project-3.jpg",
+    image: "/images/portfolio/project-3.svg",
   },
   {
     id: 4,
-    title: { fr: "Sous-sol résidentiel — Longueuil", en: "Residential Basement — Longueuil" },
-    category: "residential",
-    system: "SCI-Flake",
-    image: "/images/portfolio/project-4.jpg",
+    title: { fr: "Cuisine commerciale — Longueuil", en: "Commercial Kitchen — Longueuil" },
+    category: "commercial",
+    system: "SCI-Quartz",
+    image: "/images/portfolio/project-4.svg",
   },
   {
     id: 5,
-    title: { fr: "Usine alimentaire — Anjou", en: "Food Processing — Anjou" },
-    category: "industrial",
-    system: "SCI-CPU",
-    image: "/images/portfolio/project-5.jpg",
+    title: { fr: "Sous-sol résidentiel — Brossard", en: "Residential Basement — Brossard" },
+    category: "residential",
+    system: "SCI-Flake",
+    image: "/images/portfolio/project-5.svg",
   },
   {
     id: 6,
-    title: { fr: "Restaurant haut de gamme — Vieux-Montréal", en: "Upscale Restaurant — Old Montreal" },
-    category: "commercial",
-    system: "SCI-Metallic",
-    image: "/images/portfolio/project-6.jpg",
+    title: { fr: "Usine de fabrication — Anjou", en: "Manufacturing Plant — Anjou" },
+    category: "industrial",
+    system: "SCI-100",
+    image: "/images/portfolio/project-6.svg",
   },
 ];
 
@@ -112,11 +112,13 @@ export function PortfolioGallery() {
                 onClick={() => setSelectedProject(project)}
                 className="group rounded-2xl border border-border bg-card overflow-hidden transition-all duration-300 hover:border-accent/50 hover:shadow-lg hover:shadow-accent/5 text-left cursor-pointer"
               >
-                {/* Image placeholder */}
-                <div className="aspect-[4/3] bg-surface flex items-center justify-center relative overflow-hidden">
-                  <div className="text-3xl font-bold text-muted-foreground/10 font-[family-name:var(--font-cabinet)]">
-                    {project.system}
-                  </div>
+                <div className="aspect-[4/3] bg-surface relative overflow-hidden">
+                  <Image
+                    src={project.image}
+                    alt={project.title[locale]}
+                    fill
+                    className="object-cover transition-transform duration-500 group-hover:scale-105"
+                  />
                   <div className="absolute inset-0 bg-accent/0 group-hover:bg-accent/10 transition-colors duration-300" />
                 </div>
                 <div className="p-5">
@@ -157,10 +159,13 @@ export function PortfolioGallery() {
               >
                 <X size={20} />
               </button>
-              <div className="aspect-video bg-surface flex items-center justify-center">
-                <div className="text-5xl font-bold text-muted-foreground/10 font-[family-name:var(--font-cabinet)]">
-                  {selectedProject.system}
-                </div>
+              <div className="aspect-video bg-surface relative overflow-hidden">
+                <Image
+                  src={selectedProject.image}
+                  alt={selectedProject.title[locale]}
+                  fill
+                  className="object-cover"
+                />
               </div>
               <div className="p-6">
                 <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent mb-2">

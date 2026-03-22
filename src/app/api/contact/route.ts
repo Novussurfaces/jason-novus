@@ -11,17 +11,23 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Send to n8n webhook
-    // const webhookUrl = process.env.N8N_CONTACT_WEBHOOK_URL;
-    // if (webhookUrl) {
-    //   await fetch(webhookUrl, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(data),
-    //   });
-    // }
+    const payload = {
+      ...data,
+      timestamp: new Date().toISOString(),
+      source: "contact-form",
+    };
 
-    console.log("Contact form received:", data);
+    console.log("Contact form received:", payload);
+
+    // Send to n8n webhook (non-blocking)
+    const webhookUrl = process.env.N8N_CONTACT_WEBHOOK_URL;
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(() => {});
+    }
 
     return NextResponse.json({ success: true });
   } catch {

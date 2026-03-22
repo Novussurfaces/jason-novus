@@ -4,7 +4,6 @@ export async function POST(request: Request) {
   try {
     const data = await request.json();
 
-    // Validate required fields
     if (!data.name || !data.email || !data.phone || !data.message) {
       return NextResponse.json(
         { error: "Missing required fields" },
@@ -12,17 +11,25 @@ export async function POST(request: Request) {
       );
     }
 
-    // TODO: Send to n8n webhook
-    // const webhookUrl = process.env.N8N_QUOTE_WEBHOOK_URL;
-    // if (webhookUrl) {
-    //   await fetch(webhookUrl, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(data),
-    //   });
-    // }
+    const payload = {
+      ...data,
+      timestamp: new Date().toISOString(),
+      source: data.source || "quote-form",
+    };
 
-    console.log("Quote request received:", data);
+    console.log("Quote request received:", payload);
+
+    // Send to n8n webhook (non-blocking)
+    const webhookUrl = process.env.N8N_QUOTE_WEBHOOK_URL;
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(() => {
+        // Non-blocking — webhook failure shouldn't break the form
+      });
+    }
 
     return NextResponse.json({ success: true });
   } catch {

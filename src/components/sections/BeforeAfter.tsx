@@ -13,14 +13,14 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 const comparisons = [
   {
     id: "garage",
-    before: "/images/before-garage.jpg",
-    after: "/images/after-garage.jpg",
+    before: "/images/before-garage.svg",
+    after: "/images/after-garage.svg",
     labelKey: "garage",
   },
   {
     id: "commercial",
-    before: "/images/before-commercial.jpg",
-    after: "/images/after-commercial.jpg",
+    before: "/images/before-commercial.svg",
+    after: "/images/after-commercial.svg",
     labelKey: "commercial",
   },
 ];

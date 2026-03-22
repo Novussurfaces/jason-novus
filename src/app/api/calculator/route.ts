@@ -11,8 +11,7 @@ export async function POST(request: Request) {
       );
     }
 
-    // Log for now — will be replaced by n8n webhook
-    console.log("Calculator lead captured:", {
+    const payload = {
       name: data.name,
       email: data.email,
       phone: data.phone,
@@ -23,17 +22,20 @@ export async function POST(request: Request) {
       estimateMax: data.estimateMax,
       locale: data.locale,
       timestamp: new Date().toISOString(),
-    });
+      source: "calculator",
+    };
 
-    // TODO: Send to n8n webhook
-    // const webhookUrl = process.env.N8N_CALCULATOR_WEBHOOK_URL;
-    // if (webhookUrl) {
-    //   await fetch(webhookUrl, {
-    //     method: "POST",
-    //     headers: { "Content-Type": "application/json" },
-    //     body: JSON.stringify(data),
-    //   });
-    // }
+    console.log("Calculator lead captured:", payload);
+
+    // Send to n8n webhook (non-blocking)
+    const webhookUrl = process.env.N8N_CALCULATOR_WEBHOOK_URL;
+    if (webhookUrl) {
+      fetch(webhookUrl, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify(payload),
+      }).catch(() => {});
+    }
 
     return NextResponse.json({ success: true });
   } catch {
