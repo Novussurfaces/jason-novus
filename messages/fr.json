@@ -212,8 +212,10 @@
       "requestQuote": "Demander une soumission détaillée",
       "sqft": "pi²"
     },
+    "discount5": "Rabais volume de 5% appliqué!",
     "discount10": "Rabais volume de 10% appliqué!",
     "discount15": "Rabais volume de 15% appliqué!",
+    "discount20": "Rabais volume de 20% appliqué — meilleur prix!",
     "calculating": "Calcul en cours..."
   },
   "blog": {

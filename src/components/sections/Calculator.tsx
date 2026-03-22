@@ -186,12 +186,16 @@ export function CalculatorSection() {
                     placeholder={t("surfacePlaceholder")}
                     className={inputClasses}
                   />
-                  {Number(sqft) >= 2500 && (
+                  {Number(sqft) >= 1000 && (
                     <p className="mt-1.5 text-xs text-success flex items-center gap-1">
                       <Shield size={12} />
-                      {Number(sqft) >= 5000
+                      {Number(sqft) >= 10000
+                        ? t("discount20")
+                        : Number(sqft) >= 5000
                         ? t("discount15")
-                        : t("discount10")}
+                        : Number(sqft) >= 2500
+                        ? t("discount10")
+                        : t("discount5")}
                     </p>
                   )}
                 </div>

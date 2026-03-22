@@ -212,8 +212,10 @@
       "requestQuote": "Request a detailed quote",
       "sqft": "sq ft"
     },
+    "discount5": "5% volume discount applied!",
     "discount10": "10% volume discount applied!",
     "discount15": "15% volume discount applied!",
+    "discount20": "20% volume discount applied — best price!",
     "calculating": "Calculating..."
   },
   "blog": {
