@@ -23,7 +23,11 @@ function Counter({
   const isInView = useInView(ref, { once: true, margin: "-40px" });
   const motionVal = useMotionValue(0);
   const rounded = useTransform(motionVal, (v) => Math.round(v));
-  const [display, setDisplay] = useState(0);
+  const [display, setDisplay] = useState(end);
+
+  useEffect(() => {
+    setDisplay(0);
+  }, []);
 
   useEffect(() => {
     if (!isInView) return;
