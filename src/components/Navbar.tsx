@@ -10,6 +10,7 @@ import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
 import { MagneticButton } from "@/components/ui/MagneticButton";
 import { LanguageSwitcher } from "@/components/LanguageSwitcher";
+import { AuthButton } from "@/components/AuthButton";
 
 const navLinks = [
   { href: "/", label: "home" },
@@ -185,6 +186,7 @@ export function Navbar() {
 
             {/* ── Desktop Actions ── */}
             <div className="hidden md:flex items-center gap-3">
+              <AuthButton />
               <LanguageSwitcher />
               <MagneticButton>
                 <Button

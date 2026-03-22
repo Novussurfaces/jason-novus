@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { triggerN8nWebhook } from "@/lib/n8n";
 
 export async function POST(request: Request) {
   try {
@@ -17,19 +18,8 @@ export async function POST(request: Request) {
       source: data.source || "quote-form",
     };
 
-    console.log("Quote request received:", payload);
-
-    // Send to n8n webhook (non-blocking)
-    const webhookUrl = process.env.N8N_QUOTE_WEBHOOK_URL;
-    if (webhookUrl) {
-      fetch(webhookUrl, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(payload),
-      }).catch(() => {
-        // Non-blocking — webhook failure shouldn't break the form
-      });
-    }
+    // Send to n8n (non-blocking)
+    triggerN8nWebhook("quote", payload);
 
     return NextResponse.json({ success: true });
   } catch {

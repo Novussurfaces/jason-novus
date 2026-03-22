@@ -137,9 +137,9 @@ export function WorldwideShipping() {
             className="mt-4 inline-flex items-center gap-2 rounded-full border border-white/[0.06] bg-white/[0.02] px-5 py-2 text-sm text-muted backdrop-blur-sm"
           >
             <MapPin size={14} className="text-accent" />
-            <span>Montreal, Canada</span>
+            <span>{t("origin")}</span>
             <span className="text-muted/40">→</span>
-            <span className="text-accent font-medium">Worldwide</span>
+            <span className="text-accent font-medium">{t("worldwide")}</span>
           </motion.div>
         </div>
 

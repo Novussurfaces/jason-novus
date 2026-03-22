@@ -7,6 +7,12 @@ const nextConfig: NextConfig = {
   output: "standalone",
   images: {
     formats: ["image/avif", "image/webp"],
+    remotePatterns: [
+      { protocol: "https", hostname: "images.unsplash.com" },
+      { protocol: "https", hostname: "cdn.shopify.com" },
+      { protocol: "https", hostname: "**.tildacdn.one" },
+      { protocol: "https", hostname: "scicoatings.com" },
+    ],
   },
 };
 

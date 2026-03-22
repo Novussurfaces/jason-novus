@@ -1,4 +1,5 @@
 import { NextResponse } from "next/server";
+import { getSession, getOrCreateConversation, addMessageToConversation } from "@/lib/auth";
 
 const OLLAMA_URL =
   process.env.OLLAMA_URL || "http://100.83.113.25:11434/api/chat";
@@ -21,7 +22,7 @@ Tu connais parfaitement les 13 systèmes de revêtements SCI Coatings:
 12. SCI-Slurry ($7-10/pi²) — Résistance chimique extrême, usines chimiques.
 13. SCI-Mortier Truelle ($7-10/pi²) — Résistance aux impacts maximale, fonderies, zones chariots élévateurs.
 
-Rabais volume: 2500+ pi² = -10%, 5000+ pi² = -15%.
+Rabais volume: 1000+ pi² = -5%, 2500+ pi² = -10%, 5000+ pi² = -15%, 10000+ pi² = -20%.
 
 Tous les produits sont fabriqués à Montréal par SCI Coatings Inc. Livraison mondiale disponible.
 
@@ -47,48 +48,136 @@ You know all 13 SCI Coatings systems perfectly:
 12. SCI-Slurry ($7-10/sq ft) — Extreme chemical resistance, chemical plants.
 13. SCI-Trowel Mortar ($7-10/sq ft) — Maximum impact resistance, foundries, forklift zones.
 
-Volume discounts: 2,500+ sq ft = -10%, 5,000+ sq ft = -15%.
+Volume discounts: 1,000+ sq ft = -5%, 2,500+ sq ft = -10%, 5,000+ sq ft = -15%, 10,000+ sq ft = -20%.
 
 All products manufactured in Montreal by SCI Coatings Inc. Worldwide shipping available.
 
-When the client is qualified (you know project type + approximate area + city/country), suggest filling out the quote form at novussurfaces.com/en/quote or using the calculator at novussurfaces.com/en/calculator.
+When the client is qualified (you know project type + approximate area + city/country), suggest filling out the quote form at novussurfaces.com/en/soumission or using the calculator at novussurfaces.com/en/calculateur.
 
 Be concise, professional but warm. Maximum 3-4 sentences per response.`;
+
+// ── Smart fallback when Ollama is unavailable ──
+function getFallbackResponse(lastMessage: string, locale: string): string {
+  const msg = lastMessage.toLowerCase();
+  const isFr = locale !== "en";
+
+  // Price / cost questions
+  if (msg.includes("prix") || msg.includes("coût") || msg.includes("price") || msg.includes("cost") || msg.includes("combien")) {
+    return isFr
+      ? "Nos prix varient selon le système choisi, de $3/pi² (SCI-Flocons) à $12/pi² (Polyuréthane Cimentaire). Utilisez notre calculateur en ligne pour une estimation instantanée: novussurfaces.com/calculateur — ou demandez une soumission gratuite!"
+      : "Our prices range from $3/sq ft (SCI-Flake) to $12/sq ft (Cementitious Polyurethane). Use our online calculator for an instant estimate: novussurfaces.com/en/calculateur — or request a free quote!";
+  }
+
+  // Garage
+  if (msg.includes("garage")) {
+    return isFr
+      ? "Pour un garage résidentiel, je recommande le SCI-Flocons ($3-5/pi²) — le plus populaire! Si vous voulez une installation rapide en 1 jour, le SCI-Polyuréa est parfait. Quelle est la superficie de votre garage?"
+      : "For a residential garage, I recommend SCI-Flake ($3-5/sq ft) — our most popular! For a fast 1-day install, SCI-Polyurea is perfect. What's your garage size?";
+  }
+
+  // Commercial / industrial
+  if (msg.includes("commercial") || msg.includes("industriel") || msg.includes("industrial") || msg.includes("entrepôt") || msg.includes("warehouse")) {
+    return isFr
+      ? "Pour les projets commerciaux et industriels, nous avons des systèmes comme SCI-100 (époxy 100% solide), SCI-Quartz Broadcast (fort trafic), et SCI-Mortier (impacts lourds). Quel type d'environnement exactement?"
+      : "For commercial and industrial projects, we have systems like SCI-100 (100% solid epoxy), SCI-Quartz Broadcast (high traffic), and SCI-Mortar (heavy impacts). What type of environment exactly?";
+  }
+
+  // Metallic
+  if (msg.includes("métal") || msg.includes("metal") || msg.includes("luxe") || msg.includes("luxury") || msg.includes("showroom")) {
+    return isFr
+      ? "Le SCI-Métallique ($6-10/pi²) crée des effets 3D spectaculaires — chaque plancher est une œuvre d'art unique! Parfait pour les showrooms, résidences haut de gamme et hôtels. Voulez-vous une soumission?"
+      : "SCI-Metallic ($6-10/sq ft) creates spectacular 3D effects — each floor is a unique work of art! Perfect for showrooms, high-end residences, and hotels. Want a quote?";
+  }
+
+  // Delivery / shipping
+  if (msg.includes("livr") || msg.includes("deliv") || msg.includes("ship") || msg.includes("expéd")) {
+    return isFr
+      ? "Nous livrons partout dans le monde! Amérique du Nord: 3-7 jours. Europe: 10-21 jours (maritime ou aérien). Tous nos produits sont fabriqués à Montréal. Où est situé votre projet?"
+      : "We ship worldwide! North America: 3-7 days. Europe: 10-21 days (ocean or air). All products made in Montreal. Where is your project located?";
+  }
+
+  // Default
+  return isFr
+    ? "Merci pour votre message! Je peux vous aider à choisir le bon système de revêtement parmi nos 13 produits. Parlez-moi de votre projet — type de surface, superficie approximative et localisation — et je vous ferai une recommandation personnalisée!"
+    : "Thanks for your message! I can help you choose the right coating system from our 13 products. Tell me about your project — surface type, approximate area, and location — and I'll give you a personalized recommendation!";
+}
 
 export async function POST(request: Request) {
   try {
     const { messages, locale } = await request.json();
+    const lastUserMessage = messages[messages.length - 1]?.content || "";
+
+    // Track conversation if user is logged in
+    const user = await getSession();
+    if (user) {
+      const conv = getOrCreateConversation(user.id);
+      addMessageToConversation(user.id, conv.id, {
+        role: "user",
+        content: lastUserMessage,
+        timestamp: new Date().toISOString(),
+      });
+    }
 
     const systemPrompt = locale === "en" ? SYSTEM_PROMPT_EN : SYSTEM_PROMPT_FR;
 
-    const response = await fetch(OLLAMA_URL, {
-      method: "POST",
-      headers: { "Content-Type": "application/json" },
-      body: JSON.stringify({
-        model: "qwen2.5:14b",
-        messages: [
-          { role: "system", content: systemPrompt },
-          ...messages,
-        ],
-        stream: false,
-        options: {
-          temperature: 0.7,
-          num_predict: 300,
-        },
-      }),
-    });
+    // Try Ollama first
+    try {
+      const controller = new AbortController();
+      const timeout = setTimeout(() => controller.abort(), 8000);
 
-    if (!response.ok) {
-      return NextResponse.json(
-        { error: "Ollama service unavailable" },
-        { status: 503 }
-      );
+      const response = await fetch(OLLAMA_URL, {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({
+          model: "qwen2.5:14b",
+          messages: [
+            { role: "system", content: systemPrompt },
+            ...messages,
+          ],
+          stream: false,
+          options: {
+            temperature: 0.7,
+            num_predict: 300,
+          },
+        }),
+        signal: controller.signal,
+      });
+
+      clearTimeout(timeout);
+
+      if (response.ok) {
+        const data = await response.json();
+        const aiMessage = data.message?.content || "";
+
+        // Save AI response to conversation
+        if (user) {
+          const conv = getOrCreateConversation(user.id);
+          addMessageToConversation(user.id, conv.id, {
+            role: "assistant",
+            content: aiMessage,
+            timestamp: new Date().toISOString(),
+          });
+        }
+
+        return NextResponse.json({ message: aiMessage });
+      }
+    } catch {
+      // Ollama unavailable — use fallback
     }
 
-    const data = await response.json();
-    return NextResponse.json({
-      message: data.message?.content || "",
-    });
+    // Smart fallback
+    const fallback = getFallbackResponse(lastUserMessage, locale || "fr");
+
+    if (user) {
+      const conv = getOrCreateConversation(user.id);
+      addMessageToConversation(user.id, conv.id, {
+        role: "assistant",
+        content: fallback,
+        timestamp: new Date().toISOString(),
+      });
+    }
+
+    return NextResponse.json({ message: fallback });
   } catch {
     return NextResponse.json(
       { error: "Chat service unavailable" },

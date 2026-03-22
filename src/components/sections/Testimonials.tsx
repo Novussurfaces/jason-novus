@@ -22,14 +22,14 @@ export function Testimonials() {
       {/* Subtle background glow */}
       <div className="absolute inset-0">
         <div
-          className="absolute top-0 left-1/4 w-[600px] h-[400px] rounded-full opacity-[0.03]"
+          className="absolute top-0 left-1/4 w-[600px] h-[400px] rounded-full opacity-[0.06]"
           style={{
             background: "radial-gradient(ellipse at center, #7c3aed 0%, transparent 70%)",
             filter: "blur(100px)",
           }}
         />
         <div
-          className="absolute bottom-0 right-1/4 w-[500px] h-[300px] rounded-full opacity-[0.03]"
+          className="absolute bottom-0 right-1/4 w-[500px] h-[300px] rounded-full opacity-[0.06]"
           style={{
             background: "radial-gradient(ellipse at center, #2563eb 0%, transparent 70%)",
             filter: "blur(80px)",

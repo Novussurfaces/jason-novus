@@ -399,7 +399,9 @@
       "international": "International",
       "internationalDesc": "Contactez-nous pour un devis de livraison personnalisé"
     },
-    "cta": "Demander un devis de livraison"
+    "cta": "Demander un devis de livraison",
+    "origin": "Montréal, Canada",
+    "worldwide": "Mondial"
   },
   "tracking": {
     "title": "Suivi de soumission",
@@ -440,5 +442,38 @@
   },
   "stickyCta": {
     "text": "Soumission gratuite →"
+  },
+  "auth": {
+    "login": "Connexion",
+    "logout": "Déconnexion",
+    "myConversations": "Mes conversations",
+    "loginTitle": "Connexion",
+    "loginSubtitle": "Accédez à votre espace Novus Surfaces",
+    "registerTitle": "Créer un compte",
+    "registerSubtitle": "Rejoignez Novus Surfaces pour suivre vos projets",
+    "welcomeBack": "Bon retour!",
+    "accountCreated": "Compte créé!",
+    "redirecting": "Redirection en cours...",
+    "noAccount": "Pas encore de compte?",
+    "hasAccount": "Déjà un compte?",
+    "createAccount": "Créer un compte",
+    "loginInstead": "Se connecter",
+    "form": {
+      "name": "Nom complet",
+      "email": "Courriel",
+      "password": "Mot de passe",
+      "phone": "Téléphone (optionnel)",
+      "company": "Entreprise (optionnel)",
+      "login": "Se connecter",
+      "register": "Créer mon compte"
+    },
+    "errors": {
+      "MISSING_FIELDS": "Veuillez remplir tous les champs obligatoires.",
+      "PASSWORD_TOO_SHORT": "Le mot de passe doit contenir au moins 6 caractères.",
+      "INVALID_EMAIL": "Adresse courriel invalide.",
+      "EMAIL_EXISTS": "Un compte avec ce courriel existe déjà.",
+      "INVALID_CREDENTIALS": "Courriel ou mot de passe incorrect.",
+      "SERVER_ERROR": "Erreur serveur. Veuillez réessayer."
+    }
   }
 }

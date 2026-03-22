@@ -398,7 +398,9 @@
       "international": "International",
       "internationalDesc": "Contact us for a custom shipping quote"
     },
-    "cta": "Request a shipping quote"
+    "cta": "Request a shipping quote",
+    "origin": "Montreal, Canada",
+    "worldwide": "Worldwide"
   },
   "tracking": {
     "title": "Track Your Quote",
@@ -439,5 +441,38 @@
   },
   "stickyCta": {
     "text": "Free Quote →"
+  },
+  "auth": {
+    "login": "Sign in",
+    "logout": "Sign out",
+    "myConversations": "My conversations",
+    "loginTitle": "Sign In",
+    "loginSubtitle": "Access your Novus Surfaces account",
+    "registerTitle": "Create Account",
+    "registerSubtitle": "Join Novus Surfaces to track your projects",
+    "welcomeBack": "Welcome back!",
+    "accountCreated": "Account created!",
+    "redirecting": "Redirecting...",
+    "noAccount": "Don't have an account?",
+    "hasAccount": "Already have an account?",
+    "createAccount": "Create account",
+    "loginInstead": "Sign in instead",
+    "form": {
+      "name": "Full name",
+      "email": "Email",
+      "password": "Password",
+      "phone": "Phone (optional)",
+      "company": "Company (optional)",
+      "login": "Sign in",
+      "register": "Create account"
+    },
+    "errors": {
+      "MISSING_FIELDS": "Please fill in all required fields.",
+      "PASSWORD_TOO_SHORT": "Password must be at least 6 characters.",
+      "INVALID_EMAIL": "Invalid email address.",
+      "EMAIL_EXISTS": "An account with this email already exists.",
+      "INVALID_CREDENTIALS": "Incorrect email or password.",
+      "SERVER_ERROR": "Server error. Please try again."
+    }
   }
 }

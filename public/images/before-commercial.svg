@@ -1,34 +1,29 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
   <defs>
-    <linearGradient id="cb-bg" x1="0" y1="0" x2="0" y2="1">
-      <stop offset="0%" stop-color="#1c1c1c"/>
-      <stop offset="100%" stop-color="#121212"/>
-    </linearGradient>
+    <linearGradient id="cw" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#333"/><stop offset="100%" stop-color="#252525"/></linearGradient>
+    <linearGradient id="cf" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5c5c5c"/><stop offset="100%" stop-color="#484848"/></linearGradient>
+    <filter id="cn"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="4" seed="7"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer><feBlend in="SourceGraphic" mode="overlay"/></filter>
   </defs>
-  <rect width="800" height="600" fill="url(#cb-bg)"/>
-  <filter id="concrete2">
-    <feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="5" seed="7"/>
-    <feColorMatrix type="saturate" values="0"/>
-    <feComponentTransfer>
-      <feFuncR type="linear" slope="0.18" intercept="0.12"/>
-      <feFuncG type="linear" slope="0.17" intercept="0.11"/>
-      <feFuncB type="linear" slope="0.16" intercept="0.10"/>
-    </feComponentTransfer>
-  </filter>
-  <rect width="800" height="600" filter="url(#concrete2)" opacity="0.7"/>
-  <!-- Expansion joints -->
-  <line x1="200" y1="0" x2="200" y2="600" stroke="#0a0a0a" stroke-width="3" opacity="0.5"/>
-  <line x1="400" y1="0" x2="400" y2="600" stroke="#0a0a0a" stroke-width="3" opacity="0.5"/>
-  <line x1="600" y1="0" x2="600" y2="600" stroke="#0a0a0a" stroke-width="3" opacity="0.5"/>
-  <line x1="0" y1="200" x2="800" y2="200" stroke="#0a0a0a" stroke-width="3" opacity="0.5"/>
-  <line x1="0" y1="400" x2="800" y2="400" stroke="#0a0a0a" stroke-width="3" opacity="0.5"/>
-  <!-- Wear marks (tire/forklift) -->
-  <rect x="150" y="250" width="500" height="15" rx="2" fill="#0d0d0d" opacity="0.35"/>
-  <rect x="150" y="330" width="500" height="15" rx="2" fill="#0d0d0d" opacity="0.3"/>
-  <!-- Spalling -->
-  <ellipse cx="300" cy="150" rx="45" ry="30" fill="#1a1a1a" opacity="0.4"/>
-  <ellipse cx="550" cy="450" rx="55" ry="35" fill="#191919" opacity="0.35"/>
-  <!-- Label -->
-  <rect x="24" y="24" width="100" height="32" rx="8" fill="#dc2626" opacity="0.9"/>
-  <text x="74" y="44" text-anchor="middle" font-family="system-ui" font-size="13" font-weight="700" fill="white">AVANT</text>
+  <rect width="800" height="220" fill="url(#cw)"/>
+  <polygon points="0,220 800,220 800,600 0,600" fill="url(#cf)" filter="url(#cn)"/>
+  <!-- Worn tile grid -->
+  <line x1="0" y1="300" x2="800" y2="300" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="380" x2="800" y2="380" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="460" x2="800" y2="460" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
+  <line x1="0" y1="540" x2="800" y2="540" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
+  <line x1="160" y1="220" x2="160" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
+  <line x1="320" y1="220" x2="320" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
+  <line x1="480" y1="220" x2="480" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
+  <line x1="640" y1="220" x2="640" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
+  <!-- Damage -->
+  <path d="M200,250 Q260,310 240,380 Q225,440 290,520" stroke="#3e3e3e" stroke-width="2.5" fill="none" opacity="0.6"/>
+  <path d="M500,240 Q540,300 520,370 Q510,430 560,500" stroke="#3e3e3e" stroke-width="2" fill="none" opacity="0.55"/>
+  <ellipse cx="350" cy="350" rx="70" ry="30" fill="#4a4234" opacity="0.35"/>
+  <ellipse cx="600" cy="430" rx="60" ry="25" fill="#3d3835" opacity="0.3"/>
+  <rect x="100" y="440" width="80" height="50" rx="6" fill="#3a3530" opacity="0.25"/>
+  <!-- Fluorescent light reflections on ceiling -->
+  <rect x="200" y="60" width="400" height="6" rx="3" fill="#666" opacity="0.3"/>
+  <rect x="200" y="130" width="400" height="6" rx="3" fill="#666" opacity="0.3"/>
+  <rect x="20" y="20" width="110" height="34" rx="17" fill="#dc2626" opacity="0.95"/>
+  <text x="75" y="42" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1.5">AVANT</text>
 </svg>
