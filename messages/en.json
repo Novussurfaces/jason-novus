@@ -11,7 +11,8 @@
     "about": "About",
     "contact": "Contact",
     "calculator": "Calculator",
-    "getQuote": "Get a Quote"
+    "getQuote": "Get a Quote",
+    "track": "Track"
   },
   "hero": {
     "badge": "Premium surface coatings",
@@ -398,6 +399,25 @@
       "internationalDesc": "Contact us for a custom shipping quote"
     },
     "cta": "Request a shipping quote"
+  },
+  "tracking": {
+    "title": "Track Your Quote",
+    "subtitle": "Enter your email to check the status of your quote request.",
+    "placeholder": "Your email",
+    "search": "Check Status",
+    "searching": "Searching...",
+    "quoteNumber": "Quote number",
+    "submittedOn": "Submitted on",
+    "productsRequested": "Products requested",
+    "estimatedResponse": "Estimated response",
+    "notFound": "No quote found for this email.",
+    "notFoundSub": "Check the address or contact us directly.",
+    "steps": {
+      "received": "Received",
+      "processing": "Processing",
+      "sent": "Sent",
+      "followup": "Follow-up"
+    }
   },
   "socialProof": {
     "from": "from",

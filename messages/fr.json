@@ -11,7 +11,8 @@
     "about": "À propos",
     "contact": "Contact",
     "calculator": "Calculateur",
-    "getQuote": "Obtenir une soumission"
+    "getQuote": "Obtenir une soumission",
+    "track": "Suivi"
   },
   "hero": {
     "badge": "Revêtements de surfaces haut de gamme",
@@ -399,6 +400,25 @@
       "internationalDesc": "Contactez-nous pour un devis de livraison personnalisé"
     },
     "cta": "Demander un devis de livraison"
+  },
+  "tracking": {
+    "title": "Suivi de soumission",
+    "subtitle": "Entrez votre courriel pour vérifier le statut de votre demande de soumission.",
+    "placeholder": "Votre courriel",
+    "search": "Vérifier",
+    "searching": "Recherche...",
+    "quoteNumber": "Numéro de soumission",
+    "submittedOn": "Soumis le",
+    "productsRequested": "Produits demandés",
+    "estimatedResponse": "Réponse estimée",
+    "notFound": "Aucune soumission trouvée pour ce courriel.",
+    "notFoundSub": "Vérifiez l'adresse ou contactez-nous directement.",
+    "steps": {
+      "received": "Reçue",
+      "processing": "En traitement",
+      "sent": "Envoyée",
+      "followup": "Suivi"
+    }
   },
   "socialProof": {
     "from": "de",

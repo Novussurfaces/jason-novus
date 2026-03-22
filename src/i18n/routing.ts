@@ -50,5 +50,9 @@ export const routing = defineRouting({
       fr: "/lp/commercial",
       en: "/lp/commercial",
     },
+    "/suivi": {
+      fr: "/suivi",
+      en: "/track",
+    },
   },
 });

@@ -18,6 +18,7 @@ const navLinks = [
   { href: "/realisations", label: "portfolio" },
   { href: "/a-propos", label: "about" },
   { href: "/contact", label: "contact" },
+  { href: "/suivi", label: "track" },
 ] as const;
 
 /* ── Hamburger line variants for the X animation ── */
