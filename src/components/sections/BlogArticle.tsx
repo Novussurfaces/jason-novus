@@ -9,6 +9,14 @@ import { Link } from "@/i18n/navigation";
 import { type BlogPost } from "@/lib/blog";
 import { CTASection } from "./CTASection";
 
+function formatDate(dateStr: string, locale: "fr" | "en") {
+  return new Date(dateStr).toLocaleDateString(locale === "fr" ? "fr-CA" : "en-CA", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export function BlogArticle({ post }: { post: BlogPost }) {
   const locale = useLocale() as "fr" | "en";
   const t = useTranslations("blog");
@@ -38,7 +46,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
               </span>
               <span className="flex items-center gap-1">
                 <Calendar size={14} />
-                {post.date}
+                {formatDate(post.date, locale)}
               </span>
               <span className="flex items-center gap-1">
                 <Clock size={14} />

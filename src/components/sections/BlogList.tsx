@@ -8,6 +8,14 @@ import { AnimatedSection } from "@/components/ui/AnimatedSection";
 import { Link } from "@/i18n/navigation";
 import { blogPosts } from "@/lib/blog";
 
+function formatDate(dateStr: string, locale: "fr" | "en") {
+  return new Date(dateStr).toLocaleDateString(locale === "fr" ? "fr-CA" : "en-CA", {
+    year: "numeric",
+    month: "long",
+    day: "numeric",
+  });
+}
+
 export function BlogList() {
   const locale = useLocale() as "fr" | "en";
   const t = useTranslations("blog");
@@ -41,7 +49,7 @@ export function BlogList() {
                       <Clock size={12} />
                       {post.readTime} {t("minRead")}
                     </span>
-                    <span>{post.date}</span>
+                    <span>{formatDate(post.date, locale)}</span>
                   </div>
 
                   {/* Title */}
