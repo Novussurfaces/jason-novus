@@ -5,7 +5,7 @@ export type BlogPost = {
   content: { fr: string; en: string };
   date: string;
   readTime: number;
-  category: string;
+  category: { fr: string; en: string };
   image: string;
 };
 
@@ -22,7 +22,7 @@ export const blogPosts: BlogPost[] = [
     },
     date: "2026-03-15",
     readTime: 12,
-    category: "Guide",
+    category: { fr: "Guide", en: "Guide" },
     image: "/images/blog/prix-epoxy.jpg",
     content: {
       fr: `## Le prix d'un plancher époxy au Québec en 2026
@@ -242,7 +242,7 @@ The fastest way to get an estimate for your project:
     },
     date: "2026-03-10",
     readTime: 10,
-    category: "Comparaison",
+    category: { fr: "Comparaison", en: "Comparison" },
     image: "/images/blog/epoxy-vs-polyurea.jpg",
     content: {
       fr: `## Époxy, polyuréa ou polyaspartique: le guide définitif
@@ -479,7 +479,7 @@ Not sure which system is best for your project? Two options:
     },
     date: "2026-03-18",
     readTime: 8,
-    category: "Guide",
+    category: { fr: "Guide", en: "Guide" },
     image: "/images/blog/prep-beton.jpg",
     content: {
       fr: `## Pourquoi la préparation du béton est tout
@@ -612,7 +612,7 @@ Concrete properly prepared with these 5 steps will guarantee:
     },
     date: "2026-03-20",
     readTime: 10,
-    category: "Comparatif",
+    category: { fr: "Comparatif", en: "Comparison" },
     image: "/images/blog/garage-comparatif.jpg",
     content: {
       fr: `## Le guide ultime pour choisir votre revêtement de garage
@@ -837,7 +837,7 @@ For prestige garages or extreme conditions, the **SCI-Polyurea** with chips is u
     },
     date: "2026-03-21",
     readTime: 9,
-    category: "Guide",
+    category: { fr: "Guide", en: "Guide" },
     image: "/images/blog/restaurant-sol.jpg",
     content: {
       fr: `## Les exigences uniques des cuisines commerciales
@@ -996,7 +996,7 @@ MAPAQ requires floors that are:
     },
     date: "2026-03-21",
     readTime: 8,
-    category: "Guide",
+    category: { fr: "Guide", en: "Guide" },
     image: "/images/blog/industriel-entrepot.jpg",
     content: {
       fr: `## Le défi des planchers industriels

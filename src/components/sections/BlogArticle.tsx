@@ -34,7 +34,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
             {/* Meta */}
             <div className="flex items-center gap-4 text-sm text-muted mb-6">
               <span className="rounded-full bg-accent/10 px-3 py-1 font-medium text-accent">
-                {post.category}
+                {post.category[locale]}
               </span>
               <span className="flex items-center gap-1">
                 <Calendar size={14} />

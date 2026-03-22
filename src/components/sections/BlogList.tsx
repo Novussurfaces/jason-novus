@@ -27,7 +27,7 @@ export function BlogList() {
                 {/* Image placeholder */}
                 <div className="aspect-[16/9] bg-surface flex items-center justify-center">
                   <span className="text-2xl font-bold text-muted-foreground/10 font-[family-name:var(--font-cabinet)]">
-                    {post.category}
+                    {post.category[locale]}
                   </span>
                 </div>
 
@@ -35,7 +35,7 @@ export function BlogList() {
                   {/* Meta */}
                   <div className="flex items-center gap-3 text-xs text-muted mb-3">
                     <span className="rounded-full bg-accent/10 px-2.5 py-0.5 font-medium text-accent">
-                      {post.category}
+                      {post.category[locale]}
                     </span>
                     <span className="flex items-center gap-1">
                       <Clock size={12} />
