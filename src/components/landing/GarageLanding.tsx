@@ -126,7 +126,7 @@ export function GarageLanding() {
               {/* Quick stats */}
               <motion.div variants={blurUp} className="mt-8 grid grid-cols-3 gap-4">
                 {[
-                  { value: "3$", label: t("statPrice") },
+                  { value: "2.75$", label: t("statPrice") },
                   { value: "1", label: t("statDay") },
                   { value: "15+", label: t("statYears") },
                 ].map((stat) => (
