@@ -1,47 +1,71 @@
 // ── n8n Webhook Integration ──
-// Configure these URLs in .env.local
+// Set N8N_WEBHOOK_URL in .env.local (e.g. http://100.83.113.25)
+// If not set, webhooks are skipped silently — forms still work.
+// Sends to both the Novus webhook handler AND n8n cloud for redundancy.
 
-const N8N_BASE_URL = process.env.N8N_WEBHOOK_URL || "https://n8n.novussurfaces.com";
+type WebhookType = "quote" | "contact" | "calculator" | "registration" | "lead";
 
-const WEBHOOKS = {
-  quote: `${N8N_BASE_URL}/webhook/quote`,
-  contact: `${N8N_BASE_URL}/webhook/contact`,
-  calculator: `${N8N_BASE_URL}/webhook/calculator`,
-  registration: `${N8N_BASE_URL}/webhook/registration`,
-  lead: `${N8N_BASE_URL}/webhook/lead`,
-} as const;
-
-type WebhookType = keyof typeof WEBHOOKS;
-
-export async function triggerN8nWebhook(
-  type: WebhookType,
+async function sendWebhook(
+  url: string,
+  label: string,
   data: Record<string, unknown>
 ): Promise<boolean> {
-  const url = WEBHOOKS[type];
-
   try {
     const response = await fetch(url, {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
         "X-Novus-Source": "website",
-        "X-Novus-Webhook-Type": type,
       },
-      body: JSON.stringify({
-        ...data,
-        _meta: {
-          source: "novussurfaces.com",
-          type,
-          timestamp: new Date().toISOString(),
-          version: "1.0",
-        },
-      }),
+      body: JSON.stringify(data),
     });
-
+    if (!response.ok) {
+      console.error(`[webhook] ${label} returned ${response.status}`);
+    }
     return response.ok;
-  } catch {
-    // n8n may be down — log but don't fail the user request
-    console.error(`[n8n] Webhook ${type} failed:`, url);
+  } catch (err) {
+    console.error(`[webhook] ${label} failed:`, err);
     return false;
   }
+}
+
+export async function triggerN8nWebhook(
+  type: WebhookType,
+  data: Record<string, unknown>
+): Promise<boolean> {
+  const payload = {
+    ...data,
+    source: data.source || "novusepoxy.ca",
+    project_type: data.projectType || data.project_type || "",
+    timestamp: data.timestamp || new Date().toISOString(),
+  };
+
+  const results: boolean[] = [];
+
+  // Primary: Novus webhook handler on VPS (Telegram alerts + dashboard)
+  const novusUrl = process.env.NOVUS_WEBHOOK_URL;
+  if (novusUrl) {
+    results.push(await sendWebhook(
+      `${novusUrl}/webhook/novus-lead-v1`,
+      "novus-webhook",
+      payload
+    ));
+  }
+
+  // Secondary: n8n cloud (AI scoring + email responses)
+  const n8nUrl = process.env.N8N_WEBHOOK_URL;
+  if (n8nUrl) {
+    results.push(await sendWebhook(
+      `${n8nUrl}/webhook/novus-lead-v2`,
+      "n8n-cloud",
+      payload
+    ));
+  }
+
+  if (!novusUrl && !n8nUrl) {
+    console.warn(`[webhook] No webhook URLs configured — skipping ${type}`);
+    return false;
+  }
+
+  return results.some(Boolean);
 }

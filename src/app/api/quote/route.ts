@@ -1,5 +1,7 @@
 import { NextResponse } from "next/server";
 import { triggerN8nWebhook } from "@/lib/n8n";
+import { pushLeadToCommandCenter } from "@/lib/command-center";
+import { notifyNewQuote } from "@/lib/email-notify";
 
 export async function POST(request: Request) {
   try {
@@ -12,14 +14,19 @@ export async function POST(request: Request) {
       );
     }
 
+    const userAgent = request.headers.get("user-agent") || "";
+
     const payload = {
       ...data,
       timestamp: new Date().toISOString(),
-      source: data.source || "quote-form",
+      locale: data.locale || "fr",
+      userAgent,
     };
 
-    // Send to n8n (non-blocking)
+    // Forward to n8n + Command Center + direct email (non-blocking, fire-and-forget)
     triggerN8nWebhook("quote", payload);
+    pushLeadToCommandCenter({ ...payload, type: "quote" });
+    notifyNewQuote(payload);
 
     return NextResponse.json({ success: true });
   } catch {
