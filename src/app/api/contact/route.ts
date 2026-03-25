@@ -1,5 +1,6 @@
 import { NextResponse } from "next/server";
 import { triggerN8nWebhook } from "@/lib/n8n";
+import { pushLeadToCommandCenter } from "@/lib/command-center";
 
 export async function POST(request: Request) {
   try {
@@ -12,14 +13,18 @@ export async function POST(request: Request) {
       );
     }
 
+    const userAgent = request.headers.get("user-agent") || "";
+
     const payload = {
       ...data,
       timestamp: new Date().toISOString(),
-      source: "contact-form",
+      locale: data.locale || "fr",
+      userAgent,
     };
 
-    // Send to n8n (non-blocking)
+    // Forward to n8n + Command Center (non-blocking, fire-and-forget)
     triggerN8nWebhook("contact", payload);
+    pushLeadToCommandCenter({ ...payload, type: "contact" });
 
     return NextResponse.json({ success: true });
   } catch {

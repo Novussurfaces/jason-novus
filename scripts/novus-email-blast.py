@@ -38,7 +38,7 @@ TELEGRAM_CHAT_ID = "7562421258"
 
 SCRIPT_DIR = os.path.dirname(os.path.abspath(__file__))
 PROJECT_DIR = os.path.dirname(SCRIPT_DIR)
-LEADS_CSV = os.path.join(PROJECT_DIR, "NOVUS-EMAIL-READY.csv")
+LEADS_CSV = os.environ.get("LEADS_CSV", os.path.join(PROJECT_DIR, "NOVUS-EMAIL-READY.csv"))
 LOG_CSV = os.path.join(SCRIPT_DIR, "email-log.csv")
 
 DEFAULT_DELAY = 30  # seconds between emails
