@@ -22,6 +22,7 @@ import argparse
 import datetime
 import urllib.request
 import urllib.parse
+import dns.resolver
 from email.mime.text import MIMEText
 from email.mime.multipart import MIMEMultipart
 from email.utils import formataddr
@@ -42,6 +43,26 @@ LEADS_CSV = os.environ.get("LEADS_CSV", os.path.join(PROJECT_DIR, "NOVUS-EMAIL-R
 LOG_CSV = os.path.join(SCRIPT_DIR, "email-log.csv")
 
 DEFAULT_DELAY = 30  # seconds between emails
+
+# ─── EMAIL VALIDATION ─────────────────────────────────────────────────────
+
+_MX_CACHE = {}  # domain -> bool
+
+def validate_email_mx(email: str) -> bool:
+    """Check if the email domain has valid MX records (can receive mail)."""
+    domain = email.split("@")[-1].lower()
+    if domain in _MX_CACHE:
+        return _MX_CACHE[domain]
+    try:
+        answers = dns.resolver.resolve(domain, "MX", lifetime=5)
+        valid = len(answers) > 0
+    except (dns.resolver.NXDOMAIN, dns.resolver.NoAnswer, dns.resolver.NoNameservers):
+        valid = False
+    except Exception:
+        # DNS timeout or other — assume valid to avoid false negatives
+        valid = True
+    _MX_CACHE[domain] = valid
+    return valid
 
 # ─── COLORS / BRAND ─────────────────────────────────────────────────────────
 
@@ -363,8 +384,15 @@ Examples:
         print(f"    Priority: {priority} | Template: {template_type}")
         print(f"    Subject:  {subject}")
 
+        # Validate MX before sending or previewing
+        if not validate_email_mx(email):
+            print(f"    Status:   SKIPPED (dead domain — no MX record)")
+            log_sent_email(LOG_CSV, lead, subject, "skipped-bad-mx")
+            print()
+            continue
+
         if args.dry_run:
-            print(f"    Status:   SKIPPED (dry-run)")
+            print(f"    Status:   SKIPPED (dry-run) [MX OK]")
             # In dry-run, save a preview of the first email
             if i == 0:
                 preview_path = os.path.join(SCRIPT_DIR, "email-preview.html")
