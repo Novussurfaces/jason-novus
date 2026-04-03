@@ -1,6 +1,6 @@
 import { NextResponse } from "next/server";
 
-const ARIA_TOKEN = process.env.ARIA_BOT_TOKEN || "8652131717:AAFC93pdaastVdW-OQcRRo_kWbvOElkHlD4";
+const ARIA_TOKEN = process.env.ARIA_BOT_TOKEN || "";
 
 // Nova system prompt — same as chat route for consistency
 const SYSTEM_PROMPT = `Tu es Nova, assistante admin de Novus Epoxy. Tu reponds aux messages des clients et de l'equipe sur Telegram.

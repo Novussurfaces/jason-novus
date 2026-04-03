@@ -11,9 +11,12 @@ import { SmoothScroll } from "@/components/SmoothScroll";
 import { ScrollProgress } from "@/components/ScrollProgress";
 import { FilmGrain } from "@/components/three/FilmGrain";
 import { CustomCursor } from "@/components/ui/CustomCursor";
-import { SocialProof } from "@/components/ui/SocialProof";
+
 import { ExitIntent } from "@/components/ui/ExitIntent";
 import { StickyCTA } from "@/components/ui/StickyCTA";
+import { Preloader } from "@/components/ui/Preloader";
+
+import Script from "next/script";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -43,7 +46,7 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       template: `%s | Novus Surfaces`,
     },
     description: t("description"),
-    metadataBase: new URL("https://novussurfaces.com"),
+    metadataBase: new URL("https://novusepoxy.ca"),
     icons: {
       icon: "/favicon.svg",
       apple: "/logo-icon.svg",
@@ -70,8 +73,8 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
       images: ["/og-image.svg"],
     },
     robots: {
-      index: false,
-      follow: false,
+      index: true,
+      follow: true,
     },
   };
 }
@@ -94,15 +97,25 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
+        {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
+          <Script
+            defer
+            src={process.env.NEXT_PUBLIC_UMAMI_SCRIPT_URL || "https://cloud.umami.is/script.js"}
+            data-website-id={process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID}
+            strategy="afterInteractive"
+          />
+        )}
         <NextIntlClientProvider locale={locale} messages={messages}>
+          <Preloader />
           <SmoothScroll>
             <ScrollProgress />
             <FilmGrain />
+
             <Navbar />
-            <main className="flex-1">{children}</main>
+            <main className="flex-1 pt-16 md:pt-20">{children}</main>
             <Footer />
             <ChatBot />
-            <SocialProof />
+
             <ExitIntent />
             <StickyCTA />
             <CustomCursor />

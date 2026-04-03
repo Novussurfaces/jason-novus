@@ -1,6 +1,6 @@
 import { products, type Product } from "./products";
 
-const BASE_URL = "https://novussurfaces.com";
+const BASE_URL = "https://novusepoxy.ca";
 
 export function getOrganizationSchema() {
   return {
@@ -9,7 +9,7 @@ export function getOrganizationSchema() {
     name: "Novus Surfaces",
     url: BASE_URL,
     logo: `${BASE_URL}/logo-icon.svg`,
-    email: "info@novussurfaces.com",
+    email: "info@novusepoxy.ca",
     description:
       "Premium surface coatings — epoxy, polyurea, and quartz systems. Made in Canada, shipped worldwide.",
     areaServed: [
@@ -32,7 +32,7 @@ export function getLocalBusinessSchema() {
     "@id": `${BASE_URL}/#business`,
     name: "Novus Surfaces",
     url: BASE_URL,
-    email: "info@novussurfaces.com",
+    email: "info@novusepoxy.ca",
     description:
       "Premium epoxy, polyurea, and quartz surface coatings. Made in Canada, worldwide delivery.",
     areaServed: [

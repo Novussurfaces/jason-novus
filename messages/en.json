@@ -12,27 +12,49 @@
     "contact": "Contact",
     "calculator": "Calculator",
     "getQuote": "Get a Quote",
-    "track": "Track"
+    "track": "Track",
+    "installation": "Installation",
+    "productCategories": {
+      "epoxy": "Epoxy",
+      "polyurea": "Polyurea",
+      "metallic": "Metallic",
+      "quartz": "Quartz",
+      "polyurethane": "Polyurethane",
+      "membrane": "Membrane",
+      "overlay": "Overlay",
+      "mortar": "Mortar",
+      "viewAll": "View All Products"
+    }
   },
   "hero": {
-    "badge": "Premium surface coatings",
-    "title": "Surfaces that",
-    "titleHighlight": "perform",
-    "subtitle": "Industrial-grade epoxy, polyurea, and quartz coating systems. Made in Canada. Shipped worldwide.",
-    "cta": "Get a Free Quote",
-    "ctaSecondary": "View Our Products",
+    "badge": "Premium Surface Coatings",
+    "title": "Your surface, reinvented.",
+    "titleHighlight": "reinvented.",
+    "subtitle": "13 epoxy, polyurea, and quartz systems built to last. Manufactured in Montreal. Delivered worldwide.",
+    "cta": "Get a Quote",
+    "ctaSecondary": "View Our Work",
     "stats": {
-      "products": "Systems",
-      "years": "Years of expertise",
-      "coverage": "Worldwide delivery",
-      "satisfaction": "Satisfaction"
+      "products": "Certified systems",
+      "years": "Years of R&D",
+      "coverage": "Global coverage",
+      "satisfaction": "Response in hours",
+      "systems": "Systems",
+      "experience": "Years of expertise",
+      "projects": "Projects",
+      "worldwide": "Satisfaction"
     },
     "scroll": "Scroll"
   },
   "products": {
+    "badge": "Our Featured Products",
+    "fromPrice": "Starting at",
     "title": "Our Systems",
     "subtitle": "13 professional coating systems for every application",
+    "subtitle2prefix": "Engineered for",
+    "subtitle2emphasis": "excellence",
+    "subtitle2suffix": "— trusted by 500+ contractors across Canada",
     "viewAll": "View all products",
+    "learnMore": "Learn more",
     "viewProduct": "View product",
     "requestQuote": "Request a quote",
     "specifications": "Specifications",
@@ -48,16 +70,25 @@
     "noResults": "No products found for this search.",
     "calculatePrice": "Calculate Price",
     "features": "Features",
+    "floatingCta": "Request a Quote",
+    "floatingCtaSub": "Response within 24h",
     "pricing": {
+      "sectionLabel": "Product cost (coating only)",
       "title": "Product Pricing",
       "subtitle": "Direct from factory — best prices guaranteed",
+      "perSqFt": "Per sq ft",
+      "perUnit": "Per unit",
+      "perPallet": "Per pallet",
+      "sqftRange": "{min} – {max}",
+      "sqftUnit": "/sq ft",
+      "installationNote": "Installation available — see our Installation page",
       "unitPrice": "Unit price",
       "palletPrice": "Pallet price",
       "pailSize": "Pail size",
       "onegallon": "1 US Gal (3.78L)",
       "fivegallon": "5 US Gal (18.9L)",
-      "perUnit": "/unit",
-      "perPallet": "/pallet",
+      "perUnitSuffix": "/unit",
+      "perPalletSuffix": "/pallet",
       "coverage": "Coverage",
       "coverageRange": "{min}–{max} sq ft/gal",
       "palletQty": "{qty} units/pallet",
@@ -72,31 +103,50 @@
       "tier1": "1,000+ sq ft — 5% off",
       "tier2": "2,500+ sq ft — 10% off",
       "tier3": "5,000+ sq ft — 15% off",
-      "tier4": "10,000+ sq ft — 20% off"
+      "tier4": "10,000+ sq ft — 20% off",
+      "productOnly": "(product only)"
+    },
+    "tabs": {
+      "sectionTitle": "Why this product",
+      "performance": "Performance",
+      "performanceDesc": "Exceptional chemical and mechanical resistance, engineered for the most demanding environments. Industrial-grade durable finish.",
+      "performanceBullet1": "Chemical and impact resistance",
+      "performanceBullet2": "UV stable — won't yellow over time",
+      "performanceBullet3": "Superior adhesion on prepared concrete",
+      "application": "Application",
+      "applicationDesc": "Fast and efficient installation thanks to our advanced formulation. Reduces downtime and labor costs.",
+      "applicationBullet1": "Easy roller or squeegee application",
+      "applicationBullet2": "Low odor — ideal for occupied spaces",
+      "applicationBullet3": "Fast cure time for express return to service",
+      "warranty": "Warranty",
+      "warrantyDesc": "Every system is backed by our comprehensive warranty and dedicated technical support. Zero compromise on quality.",
+      "warrantyBullet1": "Full manufacturer warranty",
+      "warrantyBullet2": "Technical support available 7 days a week",
+      "warrantyBullet3": "Technical data sheets and installation guides included"
     }
   },
   "whyNovus": {
-    "title": "Why Novus Surfaces?",
-    "subtitle": "Your trusted partner for exceptional coatings",
-    "madeInCanada": {
-      "title": "Made in Canada",
-      "description": "All our products are manufactured in Montreal by SCI Coatings, ensuring quality and performance.",
-      "stat": "systems"
+    "badge": "Why Novus",
+    "title": "Excellence, without compromise",
+    "durable": {
+      "title": "Durable",
+      "description": "UV-stable, scratch-resistant, industrial grade. Built to last decades.",
+      "stat": "Extreme resistance"
     },
-    "industrial": {
-      "title": "Industrial Grade",
-      "description": "Proven formulations with over 13 years of performance in the most demanding environments.",
-      "stat": "years proven"
+    "custom": {
+      "title": "Custom",
+      "description": "Your colors, your finish, your vision. Every project is unique.",
+      "stat": "Unlimited colors"
     },
-    "expertise": {
-      "title": "Technical Expertise",
-      "description": "Complete technical support and detailed installation guides for every system.",
-      "stat": "support"
+    "fast": {
+      "title": "Fast",
+      "description": "One-day installation with our polyurea systems. Back in service the next day.",
+      "stat": " 1-day installation"
     },
-    "delivery": {
-      "title": "Worldwide Delivery",
-      "description": "Direct shipping from our Montreal factory anywhere in the world. By air or by sea.",
-      "stat": "countries"
+    "guaranteed": {
+      "title": "Guaranteed",
+      "description": "Full warranty, certified, zero compromise on quality.",
+      "stat": "Full warranty"
     }
   },
   "portfolio": {
@@ -131,7 +181,8 @@
       "sending": "Sending...",
       "success": "Your request has been sent successfully! We will contact you within 24 hours.",
       "error": "An error occurred. Please try again or contact us directly."
-    }
+    },
+    "trustLine": "Free consultation • No pressure • Response within 24h"
   },
   "about": {
     "title": "About Novus Surfaces",
@@ -179,7 +230,7 @@
       "error": "An error occurred. Please try again."
     },
     "info": {
-      "email": "info@novussurfaces.com",
+      "email": "info@novusepoxy.ca",
       "coverage": "Delivery: Worldwide",
       "hours": "Mon–Fri: 8am–5pm (EST)",
       "emailLabel": "Email",
@@ -188,25 +239,36 @@
     }
   },
   "footer": {
+    "tagline": "Premium surface coatings. Made in Canada, shipped worldwide.",
     "description": "Premium surface coatings. Made in Canada, shipped worldwide.",
     "products": "Products",
     "company": "Company",
+    "contactHeading": "Contact",
+    "phone": "514-907-7722",
+    "email": "info@novusepoxy.ca",
+    "address": "Montreal, QC, Canada",
     "legal": "Legal",
-    "privacy": "Privacy Policy",
-    "terms": "Terms of Use",
-    "copyright": "© {year} Novus Surfaces. All rights reserved.",
+    "privacy": "Privacy",
+    "terms": "Terms",
+    "copyright": " {year} Novus Surfaces. All rights reserved.",
     "madeIn": "Proudly made in Canada"
   },
   "cta": {
-    "title": "Ready to transform your surfaces?",
-    "subtitle": "Get a free quote in under 24 hours. Worldwide delivery.",
-    "tagline": "Worldwide delivery \u2022 Made in Canada \u2022 13+ systems",
-    "button": "Request a Quote"
+    "badge": "Free Consultation",
+    "title": "Ready to transform your space?",
+    "subtitle": "Get a free consultation. No pressure.",
+    "button": "Get Your Free Quote",
+    "phone": "Or call: 514-907-7722",
+    "trust": "514-907-7722 ·  info@novusepoxy.ca ·  Worldwide delivery"
   },
   "calculator": {
     "title": "Price Calculator",
     "subtitle": "Get an instant estimate for your coating project",
     "tagline": "Made in Canada — Worldwide Delivery",
+    "stepLabel1": "Surface Type",
+    "stepLabel2": "Area Size",
+    "stepLabel3": "Your Details",
+    "stepLabel4": "Your Quote",
     "step1": "Your project",
     "step2": "Your details",
     "step3": "Your estimate",
@@ -225,6 +287,14 @@
     "selectSystemPlaceholder": "Choose a system",
     "next": "Next",
     "back": "Back",
+    "livePreview": "Live estimate",
+    "retailValue": "Retail value",
+    "factoryDirect": "Factory direct",
+    "scarcity": "Only 12 priority quotes available this month",
+    "badges": {
+      "premium": "Premium Selection",
+      "smart": "Smart Choice"
+    },
     "emailGate": {
       "title": "Your estimate is ready!",
       "subtitle": "Enter your details to see the estimated price and receive a detailed PDF.",
@@ -234,15 +304,18 @@
       "reveal": "See my estimate"
     },
     "result": {
+      "ready": "Your quote is ready!",
       "title": "Your project estimate",
       "system": "System",
       "area": "Surface area",
       "priceRange": "Price estimate",
       "discount": "Volume discount",
+      "savings": "You save up to 40% vs retail pricing",
       "note": "* This estimate is provided for informational purposes. Final pricing depends on concrete condition, site access, and selected options.",
       "downloadPdf": "Download PDF",
       "requestQuote": "Request a detailed quote",
-      "sqft": "sq ft"
+      "sqft": "sq ft",
+      "priority": "Priority processing — response within 24h"
     },
     "discount5": "5% volume discount applied!",
     "discount10": "10% volume discount applied!",
@@ -265,18 +338,27 @@
     "subtitle": "See the difference before and after applying our coating systems.",
     "before": "Before",
     "after": "After",
+    "labelAvant": "BEFORE",
+    "labelApres": "AFTER",
     "labels": {
       "garage": "Residential garage — SCI Flake",
-      "commercial": "Commercial floor — SCI Metallic"
+      "commercial": "Commercial floor — SCI Metallic",
+      "patio": "Patio & terrace — Polyurea"
+    },
+    "badges": {
+      "badgeGarage": "Residential garage",
+      "badgeCommercial": "Commercial floor",
+      "badgePatio": "Patio & terrace"
     }
   },
   "trust": {
-    "systems": "Available systems",
-    "countries": "Countries served",
+    "systems": "Coating systems",
+    "experience": "Years of expertise",
     "projects": "Projects completed",
-    "satisfaction": "Client satisfaction"
+    "countries": "Countries served"
   },
   "testimonials": {
+    "badge": "Client Reviews",
     "title": "What Our Clients Say",
     "subtitle": "Contractors and owners who chose Novus Surfaces",
     "item1": {
@@ -307,7 +389,7 @@
   },
   "chatbot": {
     "greeting": "Hi! I'm Nova, your Novus Surfaces assistant. How can I help you with your coating project?",
-    "error": "Sorry, I'm momentarily unavailable. Contact us at info@novussurfaces.com!",
+    "error": "Sorry, I'm momentarily unavailable. Contact us at info@novusepoxy.ca!",
     "online": "Online",
     "placeholder": "Ask your question..."
   },
@@ -347,7 +429,7 @@
     "review3": "3 years later, the floor still looks brand new. Best home investment.",
     "review3Name": "Jean-François R.",
     "review3City": "Quebec City",
-    "footerText": "© 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
   },
   "lpCommercial": {
     "b2b": "B2B",
@@ -385,9 +467,198 @@
     "vp3Desc": "Manufactured in Montreal by SCI Coatings. Direct shipping, minimal delays.",
     "vp4Title": "Complete technical support",
     "vp4Desc": "Installation guides, data sheets, phone support for every system.",
-    "footerText": "© 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+  },
+  "lpGym": {
+    "badge": "Fitness",
+    "title": "Performance flooring for",
+    "titleHighlight": "fitness centers",
+    "subtitle": "Epoxy and polyurea coatings designed for gyms, CrossFit boxes, and fitness centers. Anti-slip, impact resistant, easy to clean.",
+    "formTitle": "Free quote in 24h",
+    "formSubtitle": "Get an estimate for your fitness center",
+    "formName": "Full name",
+    "formCompany": "Gym name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formArea": "Area (sq ft)",
+    "formMessage": "Project details (optional)",
+    "formSubmit": "Get my free quote",
+    "formSending": "Sending...",
+    "formError": "Error, try again.",
+    "successTitle": "Request sent!",
+    "successText": "We'll contact you within 24 hours.",
+    "benefit1": "Anti-slip finish even when wet — maximum safety",
+    "benefit2": "Impact resistant to heavy weights and equipment drops",
+    "benefit3": "Easy to clean and disinfect daily",
+    "benefit4": "Custom colors and floor zone markings",
+    "benefit5": "15+ year lifespan under heavy use",
+    "benefit6": "Fast installation — minimal downtime",
+    "vp1Title": "Certified anti-slip",
+    "vp1Desc": "High friction coefficient for athlete safety, even in wet areas.",
+    "vp2Title": "Impact resistance",
+    "vp2Desc": "Withstands drops from weights, dumbbells, and heavy equipment without cracking.",
+    "vp3Title": "Effortless hygiene",
+    "vp3Desc": "Non-porous surface, easy to disinfect. Resistant to cleaning products.",
+    "vp4Title": "Custom colors and zones",
+    "vp4Desc": "Define your training zones with distinct colors and custom floor markings.",
+    "statProjects": "projects completed",
+    "statYears": "years of expertise",
+    "statResponse": "guaranteed response",
+    "socialTitle": "What our clients say",
+    "review1": "We redid the entire floor of our CrossFit box. Athletes love the grip and it's super easy to clean after workouts.",
+    "review1Name": "Alexandre D.",
+    "review1City": "Montreal",
+    "review2": "The gym is open 16 hours a day and the floor holds up perfectly. Weights drop on it daily, zero damage.",
+    "review2Name": "Karine M.",
+    "review2City": "Laval",
+    "review3": "The colors we chose to mark different zones give an ultra-professional look. Our members are impressed.",
+    "review3Name": "Patrick T.",
+    "review3City": "Quebec City",
+    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+  },
+  "lpRestaurant": {
+    "badge": "Food-grade",
+    "title": "Floor coatings for",
+    "titleHighlight": "kitchens and restaurants",
+    "subtitle": "Certified food-grade floor coatings for restaurants, commercial kitchens, and food processing plants. MAPAQ compliant, anti-slip, chemical resistant.",
+    "formTitle": "Free quote in 24h",
+    "formSubtitle": "Get an estimate for your establishment",
+    "formName": "Full name",
+    "formCompany": "Restaurant name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formArea": "Area (sq ft)",
+    "formMessage": "Project details (optional)",
+    "formSubmit": "Get my free quote",
+    "formSending": "Sending...",
+    "formError": "Error, try again.",
+    "successTitle": "Request sent!",
+    "successText": "We'll contact you within 24 hours.",
+    "benefit1": "Food-grade certified — USDA/FDA compliant",
+    "benefit2": "Resistant to chemicals and degreasers",
+    "benefit3": "Anti-slip even in wet and greasy conditions",
+    "benefit4": "Compliant with Quebec MAPAQ standards",
+    "benefit5": "Non-porous surface — no joints or cracks",
+    "benefit6": "Fast installation — back in service in 24-48h",
+    "vp1Title": "Food-grade certified",
+    "vp1Desc": "USDA/FDA compliant systems, safe for food preparation areas.",
+    "vp2Title": "Total chemical resistance",
+    "vp2Desc": "Withstands acids, grease, oils, degreasers, and industrial cleaning products.",
+    "vp3Title": "Guaranteed anti-slip",
+    "vp3Desc": "Quartz aggregate finish for maximum traction in wet and greasy areas.",
+    "vp4Title": "MAPAQ compliance",
+    "vp4Desc": "Meets MAPAQ requirements for food establishments in Quebec.",
+    "statFoodSafe": "food-safe",
+    "statYears": "years of expertise",
+    "statResponse": "guaranteed response",
+    "socialTitle": "What our clients say",
+    "review1": "Our restaurant kitchen passes MAPAQ inspections without issue since installation. The floor is spotless even after the dinner rush.",
+    "review1Name": "Marie-Eve B.",
+    "review1City": "Sherbrooke",
+    "review2": "We needed a floor that could withstand industrial degreasers. 2 years later, it looks brand new. Perfect for our commercial kitchen.",
+    "review2Name": "Jean-Pierre L.",
+    "review2City": "Montreal",
+    "review3": "The anti-slip is remarkable. Even with water and oil on the floor, our employees feel safe.",
+    "review3Name": "Sylvie G.",
+    "review3City": "Gatineau",
+    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+  },
+  "lpEntrepot": {
+    "badge": "Industrial",
+    "title": "Industrial floors",
+    "titleHighlight": "heavy-duty rated",
+    "subtitle": "Floor coatings for warehouses, factories, and distribution centers. Built for forklift traffic, chemical resistant, fast installation.",
+    "formTitle": "Free quote in 24h",
+    "formSubtitle": "Get an estimate for your warehouse",
+    "formName": "Full name",
+    "formCompany": "Company name",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formArea": "Area (sq ft)",
+    "formMessage": "Project details (optional)",
+    "formSubmit": "Get my free quote",
+    "formSending": "Sending...",
+    "formError": "Error, try again.",
+    "successTitle": "Request sent!",
+    "successText": "We'll contact you within 24 hours.",
+    "benefit1": "Withstands forklift and pallet jack traffic",
+    "benefit2": "Chemical resistant to oils, acids, and solvents",
+    "benefit3": "Fast installation — minimal production downtime",
+    "benefit4": "Integrated safety floor markings and zones",
+    "benefit5": "Abrasion and heavy impact resistance",
+    "benefit6": "20+ year lifespan under industrial use",
+    "vp1Title": "Forklift rated",
+    "vp1Desc": "Withstands continuous heavy vehicle traffic without chipping or cracking.",
+    "vp2Title": "Industrial chemical resistance",
+    "vp2Desc": "Impervious to hydraulic oils, acids, solvents, and common industrial chemicals.",
+    "vp3Title": "Express installation",
+    "vp3Desc": "Fast-cure polyurea systems for a return to service in 24-48h. Minimal disruption.",
+    "vp4Title": "Minimal downtime",
+    "vp4Desc": "Phased installation to maintain operations during the work.",
+    "statSqft": "sq ft installed",
+    "statYears": "years of expertise",
+    "statInstall": "back in service",
+    "socialTitle": "What our clients say",
+    "review1": "Our 25,000 sq ft warehouse handles 12 forklifts daily. After 3 years, the floor is still perfect.",
+    "review1Name": "David C.",
+    "review1City": "Toronto",
+    "review2": "Installation was done over the weekend. Monday morning, operations resumed normally. Zero downtime.",
+    "review2Name": "Pierre M.",
+    "review2City": "Montreal",
+    "review3": "We had constant concrete dust problems. Since the epoxy, the air is cleaner and maintenance is minimal.",
+    "review3Name": "Francois B.",
+    "review3City": "Laval",
+    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+  },
+  "lpCondo": {
+    "badge": "Condominiums",
+    "title": "Parking deck and",
+    "titleHighlight": "common area coatings",
+    "subtitle": "Coating solutions for underground parking, lobbies, and condo common areas. Increase your property value with premium finishes.",
+    "formTitle": "Free quote in 24h",
+    "formSubtitle": "Get an estimate for your condominium",
+    "formName": "Full name",
+    "formCompany": "Condo board / management",
+    "formEmail": "Email",
+    "formPhone": "Phone",
+    "formArea": "Area (sq ft)",
+    "formMessage": "Project details (optional)",
+    "formSubmit": "Get my free quote",
+    "formSending": "Sending...",
+    "formError": "Error, try again.",
+    "successTitle": "Request sent!",
+    "successText": "We'll contact you within 24 hours.",
+    "benefit1": "Parking membrane resistant to salt and calcium",
+    "benefit2": "Premium finishes for lobbies and common areas",
+    "benefit3": "Property value increase",
+    "benefit4": "Waterproof protection for parking deck slabs",
+    "benefit5": "Anti-slip for ramps and pedestrian areas",
+    "benefit6": "Phased installation — minimal resident disruption",
+    "vp1Title": "Parking deck coating",
+    "vp1Desc": "Waterproof membrane that protects concrete slabs from salt, calcium, and water infiltration.",
+    "vp2Title": "Common area finishes",
+    "vp2Desc": "Metallic and decorative epoxy for lobbies, corridors, and community rooms.",
+    "vp3Title": "Increased property value",
+    "vp3Desc": "Premium finishes that elevate the condo's image and market value.",
+    "vp4Title": "Guaranteed durability",
+    "vp4Desc": "Systems designed for heavy condo traffic. Full manufacturer warranty.",
+    "statCondos": "condos served",
+    "statYears": "years of expertise",
+    "statResponse": "guaranteed response",
+    "socialTitle": "What our clients say",
+    "review1": "The underground parking of our 120-unit condo was in rough shape. The coating transformed the space and co-owners are thrilled.",
+    "review1Name": "Nathalie R.",
+    "review1City": "Montreal",
+    "review2": "We did the lobby in metallic epoxy. The effect is spectacular, it looks like a luxury hotel. Everyone asks us what it is.",
+    "review2Name": "Michel T.",
+    "review2City": "Laval",
+    "review3": "Installation was done in phases, residents were barely inconvenienced. Very professional from start to finish.",
+    "review3Name": "Caroline L.",
+    "review3City": "Quebec City",
+    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
   },
   "shipping": {
+    "badge": "Global Delivery",
     "title": "Worldwide Shipping",
     "subtitle": "Made in Canada. Delivered anywhere in the world.",
     "regions": {
@@ -401,6 +672,25 @@
     "cta": "Request a shipping quote",
     "origin": "Montreal, Canada",
     "worldwide": "Worldwide"
+  },
+  "dealerMap": {
+    "title": "Find a Service Point",
+    "subtitle": "Main warehouse in Montreal. Certified installer network across Canada.",
+    "searchPlaceholder": "Enter your postal code or city…",
+    "searchButton": "Search",
+    "becomeDealer": "Become a certified Novus installer →",
+    "locations": {
+      "sciHQ": {
+        "name": "SCI Coatings Warehouse",
+        "address": "Anjou, Montreal, QC",
+        "phone": "514-907-7722"
+      },
+      "novusMTL": {
+        "name": "Novus Surfaces — Office",
+        "address": "Montreal, QC",
+        "phone": "514-907-7722"
+      }
+    }
   },
   "tracking": {
     "title": "Track Your Quote",
@@ -430,6 +720,28 @@
     "pallet": "ordered a SCI-Metallic pallet",
     "viewing": "is browsing our products"
   },
+  "liveActivity": {
+    "from": "from",
+    "timeAgo": "a few minutes ago",
+    "name1": "Jean-Marc",
+    "city1": "Laval",
+    "action1": "requested a quote",
+    "name2": "Sophie",
+    "city2": "Quebec City",
+    "action2": "viewed SCI-Metallic",
+    "name3": "Pierre",
+    "city3": "Montreal",
+    "action3": "downloaded a PDF estimate",
+    "name4": "Marie-Eve",
+    "city4": "Sherbrooke",
+    "action4": "ordered SCI-Flake",
+    "name5": "David",
+    "city5": "Toronto",
+    "action5": "ordered a SCI-Polyurea pallet",
+    "name6": "Isabelle",
+    "city6": "Gatineau",
+    "action6": "is browsing our products"
+  },
   "exitIntent": {
     "title": "Wait! 10% off",
     "subtitle": "Get 10% off your first order. Enter your email below.",
@@ -441,6 +753,20 @@
   },
   "stickyCta": {
     "text": "Free Quote →"
+  },
+  "emailValidation": {
+    "invalidFormat": "Please enter a valid email address.",
+    "disposable": "Disposable email addresses are not accepted.",
+    "validating": "Verifying email..."
+  },
+  "currency": {
+    "label": "Select currency",
+    "title": "Currency",
+    "CAD": "Canadian",
+    "USD": "US Dollar",
+    "EUR": "Euro",
+    "GBP": "Pound",
+    "hint": "Exchange rates updated automatically"
   },
   "auth": {
     "login": "Sign in",
@@ -474,5 +800,183 @@
       "INVALID_CREDENTIALS": "Incorrect email or password.",
       "SERVER_ERROR": "Server error. Please try again."
     }
+  },
+  "curingConditions": {
+    "badge": "Curing Conditions",
+    "title": "Your Curing Weather",
+    "subtitle": "Check if conditions are right for applying your epoxy coating. Real-time temperature, humidity, and precipitation data.",
+    "placeholder": "Postal code (e.g. H2X 1Y4)",
+    "search": "Check",
+    "statusIdeal": "Ideal Conditions",
+    "statusCaution": "Hold Off",
+    "statusUnfavorable": "Unfavorable Conditions",
+    "statusDesc_ideal": "Temperature, humidity, and precipitation are all within optimal ranges. You can apply your coating with confidence.",
+    "statusDesc_caution": "Conditions are borderline. Consult a specialist before proceeding with application.",
+    "statusDesc_unfavorable": "It's too cold, too humid, or rain is expected. Postpone application to a more favorable day.",
+    "metricTemp": "Temperature",
+    "metricHumidity": "Humidity",
+    "metricPrecip": "Precipitation 24h",
+    "metricWind": "Wind",
+    "errorNotFound": "Postal code not found. Check format (e.g. H2X 1Y4).",
+    "errorGeneric": "Unable to fetch weather data. Try again in a moment.",
+    "emptyState": "Enter your postal code to check curing conditions in your area.",
+    "tip": "Weather data provided by Open-Meteo. 24h forecast.",
+    "refresh": "Refresh",
+    "disclaimer": "* Displayed conditions are for reference only. Always consult the product data sheet for exact curing specifications."
+  },
+  "installation": {
+    "badge": "Certified Applicators",
+    "title": "Professional Installation",
+    "subtitle": "Expert installation by certified applicators in Quebec and across Canada",
+    "cta": "Request an Installation Quote",
+    "ctaSecondary": "Calculate Your Price",
+    "perSqFt": "/sq ft installed",
+    "pricingTitle": "Installation Pricing",
+    "pricingSubtitle": "Turnkey pricing includes materials, labor, and surface preparation",
+    "pricingDisclaimer": "* Prices are estimates for Quebec region. Final pricing depends on surface condition, accessibility, and project complexity. Contact us for a detailed quote.",
+    "systems": {
+      "flake": {
+        "name": "SCI-Flake System",
+        "description": "Decorative vinyl flake broadcast in epoxy. Ideal for garages, showrooms, and commercial spaces.",
+        "includes": {
+          "0": "Diamond grinding surface prep",
+          "1": "Full flake broadcast in custom colors",
+          "2": "UV-stable polyaspartic top coat"
+        }
+      },
+      "metallic": {
+        "name": "SCI-Metallic System",
+        "description": "High-end metallic epoxy with flowing, 3D-effect finish. A statement floor for luxury spaces.",
+        "includes": {
+          "0": "Concrete profiling and crack repair",
+          "1": "Custom metallic pigment application",
+          "2": "High-gloss clear coat finish"
+        }
+      },
+      "polyurea": {
+        "name": "SCI-Polyurea System",
+        "description": "Fast-cure polyurea for minimal downtime. Returns to service in 24 hours. Extreme durability.",
+        "includes": {
+          "0": "Mechanical surface preparation",
+          "1": "Flexible polyurea base coat",
+          "2": "Chemical-resistant top coat"
+        }
+      },
+      "solidEpoxy": {
+        "name": "SCI-100 Solid Epoxy",
+        "description": "100% solids epoxy for maximum thickness and chemical resistance. Industrial-grade performance.",
+        "includes": {
+          "0": "Shot-blast surface profiling",
+          "1": "100% solids epoxy base coat",
+          "2": "Abrasion-resistant seal coat"
+        }
+      },
+      "quartz": {
+        "name": "SCI-Quartz Broadcast",
+        "description": "Quartz aggregate broadcast for superior slip resistance and texture. Ideal for wet environments.",
+        "includes": {
+          "0": "Concrete grinding and repair",
+          "1": "Full quartz aggregate broadcast",
+          "2": "Multi-layer urethane seal coat"
+        }
+      },
+      "membrane": {
+        "name": "SCI-Membrane System",
+        "description": "Waterproofing membrane system for balconies, rooftops, and parking structures. Complete protection.",
+        "includes": {
+          "0": "Substrate preparation and priming",
+          "1": "Reinforced membrane application",
+          "2": "UV-resistant traffic top coat"
+        }
+      }
+    },
+    "includedTitle": "What's Included",
+    "includedSubtitle": "Every installation includes our complete 5-step process for a flawless, long-lasting finish",
+    "included": {
+      "0": {
+        "title": "Surface Preparation",
+        "description": "Diamond grinding or shot-blasting for optimal adhesion"
+      },
+      "1": {
+        "title": "Primer Coat",
+        "description": "Penetrating primer to seal concrete and prevent outgassing"
+      },
+      "2": {
+        "title": "Base Coat",
+        "description": "Selected system base coat applied by certified technicians"
+      },
+      "3": {
+        "title": "Top Coat",
+        "description": "UV-stable protective finish for long-lasting performance"
+      },
+      "4": {
+        "title": "Final Inspection",
+        "description": "Quality check, clean-up, and care instructions provided"
+      }
+    },
+    "processTitle": "Our Process",
+    "processSubtitle": "From consultation to curing, we handle everything",
+    "process": {
+      "0": {
+        "title": "Consultation",
+        "description": "Free on-site assessment. We evaluate your surface, discuss your needs, and recommend the ideal system."
+      },
+      "1": {
+        "title": "Surface Prep",
+        "description": "Professional diamond grinding or shot-blasting to create the perfect concrete profile for adhesion."
+      },
+      "2": {
+        "title": "Application",
+        "description": "Multi-layer system applied by our certified crew using professional-grade equipment and techniques."
+      },
+      "3": {
+        "title": "Curing",
+        "description": "Controlled curing process. Most systems are walk-ready in 24h and vehicle-ready in 72h."
+      }
+    },
+    "faqTitle": "Frequently Asked Questions",
+    "faqSubtitle": "Everything you need to know about our installation services",
+    "faq": {
+      "0": {
+        "question": "How long does a typical installation take?",
+        "answer": "Most residential installations (garages, basements) are completed in 1-2 days. Larger commercial projects may take 3-5 days depending on the system selected and surface area. Polyurea systems offer the fastest turnaround with 24-hour return to service."
+      },
+      "1": {
+        "question": "Do I need to prepare anything before installation?",
+        "answer": "Simply clear the area of all items and ensure access to power and water. Our team handles all surface preparation, including grinding, crack repair, and cleaning. We'll provide a detailed checklist when you book your installation."
+      },
+      "2": {
+        "question": "What temperature is required for installation?",
+        "answer": "Ideal application temperature is between 10 and 30 degrees Celsius with humidity below 80%. Our team monitors conditions closely and can use fast-cure formulations in borderline conditions. Use our free Curing Conditions tool to check your local weather."
+      },
+      "3": {
+        "question": "How soon can I use my floor after installation?",
+        "answer": "Light foot traffic is typically possible after 24 hours. Vehicle traffic is recommended after 72 hours. Full chemical resistance is achieved after 7 days of curing. Polyurea systems achieve full cure even faster."
+      },
+      "4": {
+        "question": "Do you offer warranties on installations?",
+        "answer": "Yes. All professional installations include a full manufacturer warranty on materials plus our installation workmanship guarantee. Specific warranty terms vary by system — contact us for details on your chosen system."
+      },
+      "5": {
+        "question": "Do you service areas outside of Quebec?",
+        "answer": "Yes! While our primary installation team is based in Quebec, we have certified applicators across Canada. For DIY installations, we ship products nationwide and provide full technical support. Contact us with your location for availability."
+      }
+    },
+    "ctaTitle": "Request an Installation Quote",
+    "ctaSubtitle": "Free on-site consultation. No pressure. Response within 24 hours.",
+    "ctaCall": "514-907-7722",
+    "ctaTrust": "Free consultation — No obligation — Certified applicators — Full warranty"
+  },
+  "hq": {
+    "title": "NOVUS HQ",
+    "subtitle": "AGI Command Center",
+    "tabs": {
+      "warroom": "War Room",
+      "pipeline": "Pipeline",
+      "engine": "AGI Engine"
+    },
+    "loading": "Loading system...",
+    "error": "Connection error",
+    "lastUpdate": "Last update"
   }
 }

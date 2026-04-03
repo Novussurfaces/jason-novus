@@ -12,27 +12,49 @@
     "contact": "Contact",
     "calculator": "Calculateur",
     "getQuote": "Obtenir une soumission",
-    "track": "Suivi"
+    "track": "Suivi",
+    "installation": "Installation",
+    "productCategories": {
+      "epoxy": "Époxy",
+      "polyurea": "Polyuréa",
+      "metallic": "Métallique",
+      "quartz": "Quartz",
+      "polyurethane": "Polyuréthane",
+      "membrane": "Membrane",
+      "overlay": "Recouvrement",
+      "mortar": "Mortier",
+      "viewAll": "Voir tous les produits"
+    }
   },
   "hero": {
-    "badge": "Revêtements de surfaces haut de gamme",
-    "title": "Des surfaces qui",
-    "titleHighlight": "performent",
-    "subtitle": "Systèmes de revêtements époxy, polyuréa et quartz de qualité industrielle. Fabriqués au Canada. Livraison mondiale.",
-    "cta": "Obtenir une soumission gratuite",
-    "ctaSecondary": "Voir nos produits",
+    "badge": "Revêtements haut de gamme",
+    "title": "Votre surface, réinventée.",
+    "titleHighlight": "réinventée.",
+    "subtitle": "13 systèmes époxy, polyuréa et quartz conçus pour durer. Fabriqués à Montréal. Livrés partout dans le monde.",
+    "cta": "Obtenir une soumission",
+    "ctaSecondary": "Voir nos réalisations",
     "stats": {
-      "products": "Systèmes",
-      "years": "Ans d'expertise",
-      "coverage": "Livraison mondiale",
-      "satisfaction": "Satisfaction"
+      "products": "Systèmes certifiés",
+      "years": "Ans de R&D",
+      "coverage": "Couverture mondiale",
+      "satisfaction": "Réponse en heures",
+      "systems": "Systèmes",
+      "experience": "Ans d'expertise",
+      "projects": "Projets",
+      "worldwide": "Satisfaction"
     },
-    "scroll": "Scroll"
+    "scroll": "Défiler"
   },
   "products": {
+    "badge": "Nos produits vedettes",
+    "fromPrice": "À partir de",
     "title": "Nos systèmes",
     "subtitle": "13 systèmes de revêtements professionnels pour chaque application",
+    "subtitle2prefix": "Conçus pour",
+    "subtitle2emphasis": "l'excellence",
+    "subtitle2suffix": "— adoptés par 500+ entrepreneurs au Canada",
     "viewAll": "Voir tous les produits",
+    "learnMore": "En savoir plus",
     "viewProduct": "Voir le produit",
     "requestQuote": "Demander une soumission",
     "specifications": "Spécifications",
@@ -48,16 +70,25 @@
     "noResults": "Aucun produit trouvé pour cette recherche.",
     "calculatePrice": "Calculer le prix",
     "features": "Caractéristiques",
+    "floatingCta": "Demander une soumission",
+    "floatingCtaSub": "Réponse en 24h",
     "pricing": {
+      "sectionLabel": "Prix du produit (revêtement seulement)",
       "title": "Prix du produit",
       "subtitle": "Direct de l'usine — meilleurs prix garantis",
+      "perSqFt": "Par pi²",
+      "perUnit": "Par unité",
+      "perPallet": "Par palette",
+      "sqftRange": "{min} – {max}",
+      "sqftUnit": "/pi²",
+      "installationNote": "Installation disponible — voir notre page Installation",
       "unitPrice": "Prix unitaire",
       "palletPrice": "Prix palette",
       "pailSize": "Format",
       "onegallon": "1 gal US (3,78L)",
       "fivegallon": "5 gal US (18,9L)",
-      "perUnit": "/unité",
-      "perPallet": "/palette",
+      "perUnitSuffix": "/unité",
+      "perPalletSuffix": "/palette",
       "coverage": "Couverture",
       "coverageRange": "{min}–{max} pi²/gal",
       "palletQty": "{qty} unités/palette",
@@ -72,31 +103,50 @@
       "tier1": "1 000+ pi² — 5% de rabais",
       "tier2": "2 500+ pi² — 10% de rabais",
       "tier3": "5 000+ pi² — 15% de rabais",
-      "tier4": "10 000+ pi² — 20% de rabais"
+      "tier4": "10 000+ pi² — 20% de rabais",
+      "productOnly": "(produit seulement)"
+    },
+    "tabs": {
+      "sectionTitle": "Pourquoi ce produit",
+      "performance": "Performance",
+      "performanceDesc": "Résistance chimique et mécanique exceptionnelle, conçu pour les environnements les plus exigeants. Finition durable de qualité industrielle.",
+      "performanceBullet1": "Résistance aux produits chimiques et aux impacts",
+      "performanceBullet2": "Stabilité UV — ne jaunit pas avec le temps",
+      "performanceBullet3": "Adhérence supérieure sur béton préparé",
+      "application": "Application",
+      "applicationDesc": "Installation rapide et efficace grâce à notre formulation avancée. Réduit le temps d'arrêt et les coûts de main-d'œuvre.",
+      "applicationBullet1": "Application facile au rouleau ou au racloir",
+      "applicationBullet2": "Faible odeur — idéal pour les espaces occupés",
+      "applicationBullet3": "Temps de cure rapide pour une remise en service express",
+      "warranty": "Garantie",
+      "warrantyDesc": "Chaque système est soutenu par notre garantie complète et notre support technique dédié. Zéro compromis sur la qualité.",
+      "warrantyBullet1": "Garantie fabricant complète",
+      "warrantyBullet2": "Support technique disponible 7j/7",
+      "warrantyBullet3": "Fiches techniques et guides d'installation inclus"
     }
   },
   "whyNovus": {
-    "title": "Pourquoi Novus Surfaces?",
-    "subtitle": "Votre partenaire de confiance pour des revêtements d'exception",
-    "madeInCanada": {
-      "title": "Fabriqué au Canada",
-      "description": "Tous nos produits sont fabriqués à Montréal par SCI Coatings, garantissant qualité et performance.",
-      "stat": "systèmes"
+    "badge": "Pourquoi Novus",
+    "title": "L'excellence, sans compromis",
+    "durable": {
+      "title": "Durable",
+      "description": "Stabilité UV, résistance aux rayures, qualité industrielle. Conçu pour durer des décennies.",
+      "stat": "Résistance extrême"
     },
-    "industrial": {
-      "title": "Qualité industrielle",
-      "description": "Des formulations éprouvées depuis plus de 13 ans dans les environnements les plus exigeants.",
-      "stat": "ans d'expertise"
+    "custom": {
+      "title": "Sur mesure",
+      "description": "Vos couleurs, votre fini, votre vision. Chaque projet est unique.",
+      "stat": "Couleurs illimitées"
     },
-    "expertise": {
-      "title": "Expertise technique",
-      "description": "Support technique complet et guides d'installation détaillés pour chaque système.",
-      "stat": "support"
+    "fast": {
+      "title": "Rapide",
+      "description": "Installation en une journée avec nos systèmes polyuéa. Retour en service le lendemain.",
+      "stat": " Installation 1 jour"
     },
-    "delivery": {
-      "title": "Livraison mondiale",
-      "description": "Expédition directe de notre usine de Montréal partout dans le monde. Par avion ou par bateau.",
-      "stat": "pays"
+    "guaranteed": {
+      "title": "Garanti",
+      "description": "Garantie complète, certifié, zéro compromis sur la qualité.",
+      "stat": "Garantie complète"
     }
   },
   "portfolio": {
@@ -131,7 +181,8 @@
       "sending": "Envoi en cours...",
       "success": "Votre demande a été envoyée avec succès! Nous vous contacterons dans les 24 prochaines heures.",
       "error": "Une erreur est survenue. Veuillez réessayer ou nous contacter directement."
-    }
+    },
+    "trustLine": "Consultation gratuite • Sans pression • Réponse en 24h"
   },
   "about": {
     "title": "À propos de Novus Surfaces",
@@ -179,7 +230,7 @@
       "error": "Une erreur est survenue. Veuillez réessayer."
     },
     "info": {
-      "email": "info@novussurfaces.com",
+      "email": "info@novusepoxy.ca",
       "coverage": "Livraison: Mondiale",
       "hours": "Lun–Ven: 8h–17h (EST)",
       "emailLabel": "Courriel",
@@ -188,25 +239,36 @@
     }
   },
   "footer": {
+    "tagline": "Revêtements de surfaces haut de gamme. Fabriqué au Canada, livraison mondiale.",
     "description": "Revêtements de surfaces haut de gamme. Fabriqué au Canada, livraison mondiale.",
     "products": "Produits",
     "company": "Entreprise",
+    "contactHeading": "Contact",
+    "phone": "514-907-7722",
+    "email": "info@novusepoxy.ca",
+    "address": "Montréal, QC, Canada",
     "legal": "Légal",
-    "privacy": "Politique de confidentialité",
-    "terms": "Conditions d'utilisation",
-    "copyright": "© {year} Novus Surfaces. Tous droits réservés.",
+    "privacy": "Confidentialité",
+    "terms": "Conditions",
+    "copyright": " {year} Novus Surfaces. Tous droits réservés.",
     "madeIn": "Fabriqué avec fierté au Canada"
   },
   "cta": {
-    "title": "Prêt à transformer vos surfaces?",
-    "subtitle": "Obtenez une soumission gratuite en moins de 24 heures. Livraison mondiale.",
-    "tagline": "Livraison mondiale \u2022 Fabriqué au Canada \u2022 13+ systèmes",
-    "button": "Demander une soumission"
+    "badge": "Consultation gratuite",
+    "title": "Prêt à transformer votre espace?",
+    "subtitle": "Consultation gratuite. Sans pression.",
+    "button": "Obtenir une soumission gratuite",
+    "phone": "Ou appelez : 514-907-7722",
+    "trust": "514-907-7722 ·  info@novusepoxy.ca ·  Livraison mondiale"
   },
   "calculator": {
     "title": "Calculateur de prix",
     "subtitle": "Obtenez une estimation instantanée pour votre projet de revêtement",
     "tagline": "Fabriqué au Canada — Livraison mondiale",
+    "stepLabel1": "Type de surface",
+    "stepLabel2": "Superficie",
+    "stepLabel3": "Coordonnées",
+    "stepLabel4": "Votre prix",
     "step1": "Votre projet",
     "step2": "Vos coordonnées",
     "step3": "Votre estimation",
@@ -225,6 +287,14 @@
     "selectSystemPlaceholder": "Choisir un système",
     "next": "Suivant",
     "back": "Retour",
+    "livePreview": "Estimation en temps réel",
+    "retailValue": "Valeur au détail",
+    "factoryDirect": "Prix usine direct",
+    "scarcity": "Seulement 12 soumissions prioritaires disponibles ce mois-ci",
+    "badges": {
+      "premium": "Sélection Premium",
+      "smart": "Choix Intelligent"
+    },
     "emailGate": {
       "title": "Votre estimation est prête!",
       "subtitle": "Entrez vos coordonnées pour voir le prix estimé et recevoir un PDF détaillé.",
@@ -234,15 +304,18 @@
       "reveal": "Voir mon estimation"
     },
     "result": {
+      "ready": "Votre soumission est prête!",
       "title": "Estimation de votre projet",
       "system": "Système",
       "area": "Superficie",
       "priceRange": "Estimation de prix",
       "discount": "Rabais volume",
+      "savings": "Vous économisez jusqu'à 40% vs prix au détail",
       "note": "* Cette estimation est fournie à titre indicatif. Le prix final dépend de l'état du béton, de l'accès au site et des options choisies.",
       "downloadPdf": "Télécharger le PDF",
       "requestQuote": "Demander une soumission détaillée",
-      "sqft": "pi²"
+      "sqft": "pi²",
+      "priority": "Traitement prioritaire — réponse en 24h"
     },
     "discount5": "Rabais volume de 5% appliqué!",
     "discount10": "Rabais volume de 10% appliqué!",
@@ -265,18 +338,27 @@
     "subtitle": "Voyez la différence avant et après l'application de nos systèmes de revêtements.",
     "before": "Avant",
     "after": "Après",
+    "labelAvant": "AVANT",
+    "labelApres": "APRÈS",
     "labels": {
       "garage": "Garage résidentiel — SCI Flake",
-      "commercial": "Plancher commercial — SCI Metallic"
+      "commercial": "Plancher commercial — SCI Metallic",
+      "patio": "Patio & terrasse — Polyuréa"
+    },
+    "badges": {
+      "badgeGarage": "Garage résidentiel",
+      "badgeCommercial": "Plancher commercial",
+      "badgePatio": "Patio & terrasse"
     }
   },
   "trust": {
-    "systems": "Systèmes disponibles",
-    "countries": "Pays livrés",
+    "systems": "Systèmes de revêtement",
+    "experience": "Ans d'expertise",
     "projects": "Projets complétés",
-    "satisfaction": "Satisfaction client"
+    "countries": "Pays desservis"
   },
   "testimonials": {
+    "badge": "Avis clients",
     "title": "Ce que nos clients disent",
     "subtitle": "Des entrepreneurs et propriétaires qui ont choisi Novus Surfaces",
     "item1": {
@@ -307,7 +389,7 @@
   },
   "chatbot": {
     "greeting": "Bonjour! Je suis Nova, votre assistante Novus Surfaces. Comment puis-je vous aider avec votre projet de revêtement?",
-    "error": "Désolé, je suis momentanément indisponible. Contactez-nous à info@novussurfaces.com!",
+    "error": "Désolé, je suis momentanément indisponible. Contactez-nous à info@novusepoxy.ca!",
     "online": "En ligne",
     "placeholder": "Posez votre question..."
   },
@@ -347,7 +429,7 @@
     "review3": "3 ans plus tard, le plancher est encore comme neuf. Meilleur investissement pour la maison.",
     "review3Name": "Jean-François R.",
     "review3City": "Québec",
-    "footerText": "© 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
+    "footerText": " 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
   },
   "lpCommercial": {
     "b2b": "B2B",
@@ -386,9 +468,198 @@
     "vp3Desc": "Fabriqué à Montréal par SCI Coatings. Expédition directe, délais minimaux.",
     "vp4Title": "Support technique complet",
     "vp4Desc": "Guides d'installation, fiches techniques, support téléphonique pour chaque système.",
-    "footerText": "© 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
+    "footerText": " 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
+  },
+  "lpGym": {
+    "badge": "Fitness",
+    "title": "Planchers performance pour",
+    "titleHighlight": "centres d'entraînement",
+    "subtitle": "Revêtements époxy et polyuréa conçus pour les gyms, CrossFit et centres de conditionnement physique. Antidérapants, résistants aux impacts, faciles à nettoyer.",
+    "formTitle": "Soumission gratuite en 24h",
+    "formSubtitle": "Recevez une estimation pour votre centre d'entraînement",
+    "formName": "Nom complet",
+    "formCompany": "Nom du gym",
+    "formEmail": "Courriel",
+    "formPhone": "Téléphone",
+    "formArea": "Superficie (pi²)",
+    "formMessage": "Détails du projet (optionnel)",
+    "formSubmit": "Obtenir ma soumission gratuite",
+    "formSending": "Envoi...",
+    "formError": "Erreur, réessayez.",
+    "successTitle": "Demande envoyée!",
+    "successText": "Nous vous contacterons dans les 24 prochaines heures.",
+    "benefit1": "Fini antidérapant même mouillé — sécurité maximale",
+    "benefit2": "Résistance aux impacts de poids et équipements lourds",
+    "benefit3": "Surface facile à nettoyer et désinfecter quotidiennement",
+    "benefit4": "Couleurs personnalisées et zones de marquage au sol",
+    "benefit5": "Durée de vie de 15+ ans en usage intensif",
+    "benefit6": "Installation rapide — minimal temps d'arrêt",
+    "vp1Title": "Antidérapant certifié",
+    "vp1Desc": "Coefficient de friction élevé pour la sécurité des athlètes, même en zone humide.",
+    "vp2Title": "Résistance aux impacts",
+    "vp2Desc": "Résiste aux chutes de poids, haltères et équipements lourds sans fissurer.",
+    "vp3Title": "Hygiène sans effort",
+    "vp3Desc": "Surface non-poreuse, facile à désinfecter. Résiste aux produits nettoyants.",
+    "vp4Title": "Couleurs et zones sur mesure",
+    "vp4Desc": "Délimitez vos zones d'entraînement avec des couleurs distinctes et marquage personnalisé.",
+    "statProjects": "projets complétés",
+    "statYears": "ans d'expertise",
+    "statResponse": "réponse garantie",
+    "socialTitle": "Ce que nos clients disent",
+    "review1": "On a refait tout le plancher de notre CrossFit box. Les athlètes adorent le grip et c'est super facile à laver après les entraînements.",
+    "review1Name": "Alexandre D.",
+    "review1City": "Montréal",
+    "review2": "Le gym est ouvert 16h par jour et le plancher tient le coup parfaitement. Les poids tombent dessus quotidiennement, zéro dommage.",
+    "review2Name": "Karine M.",
+    "review2City": "Laval",
+    "review3": "Les couleurs qu'on a choisies pour délimiter les zones donnent un look ultra professionnel. Nos membres sont impressionnés.",
+    "review3Name": "Patrick T.",
+    "review3City": "Québec",
+    "footerText": " 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
+  },
+  "lpRestaurant": {
+    "badge": "Alimentaire",
+    "title": "Revêtements de sol pour",
+    "titleHighlight": "cuisines et restaurants",
+    "subtitle": "Planchers alimentaires certifiés pour restaurants, cuisines commerciales et usines de transformation. Conformes MAPAQ, antidérapants, résistants aux produits chimiques.",
+    "formTitle": "Soumission gratuite en 24h",
+    "formSubtitle": "Recevez une estimation pour votre établissement",
+    "formName": "Nom complet",
+    "formCompany": "Nom du restaurant",
+    "formEmail": "Courriel",
+    "formPhone": "Téléphone",
+    "formArea": "Superficie (pi²)",
+    "formMessage": "Détails du projet (optionnel)",
+    "formSubmit": "Obtenir ma soumission gratuite",
+    "formSending": "Envoi...",
+    "formError": "Erreur, réessayez.",
+    "successTitle": "Demande envoyée!",
+    "successText": "Nous vous contacterons dans les 24 prochaines heures.",
+    "benefit1": "Certifié alimentaire — conforme USDA/FDA",
+    "benefit2": "Résistant aux produits chimiques et dégraissants",
+    "benefit3": "Antidérapant même en conditions humides et grasses",
+    "benefit4": "Conforme aux normes MAPAQ du Québec",
+    "benefit5": "Surface non-poreuse — sans joints ni fissures",
+    "benefit6": "Installation rapide — retour en service en 24-48h",
+    "vp1Title": "Certifié alimentaire",
+    "vp1Desc": "Systèmes conformes USDA/FDA, sécuritaires pour les zones de préparation alimentaire.",
+    "vp2Title": "Résistance chimique totale",
+    "vp2Desc": "Résiste aux acides, graisses, huiles, dégraissants et produits de nettoyage industriels.",
+    "vp3Title": "Antidérapant garanti",
+    "vp3Desc": "Fini agrégat de quartz pour une traction maximale en zone humide et grasse.",
+    "vp4Title": "Conformité MAPAQ",
+    "vp4Desc": "Répond aux exigences du MAPAQ pour les établissements alimentaires au Québec.",
+    "statFoodSafe": "alimentaire",
+    "statYears": "ans d'expertise",
+    "statResponse": "réponse garantie",
+    "socialTitle": "Ce que nos clients disent",
+    "review1": "Notre cuisine de restaurant passe les inspections MAPAQ sans problème depuis l'installation. Le plancher est impeccable même après le rush du soir.",
+    "review1Name": "Marie-Ève B.",
+    "review1City": "Sherbrooke",
+    "review2": "On cherchait un plancher qui résiste aux dégraissants industriels. 2 ans plus tard, il est comme neuf. Parfait pour notre cuisine commerciale.",
+    "review2Name": "Jean-Pierre L.",
+    "review2City": "Montréal",
+    "review3": "L'antidérapant est remarquable. Même avec de l'eau et de l'huile au sol, nos employés se sentent en sécurité.",
+    "review3Name": "Sylvie G.",
+    "review3City": "Gatineau",
+    "footerText": " 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
+  },
+  "lpEntrepot": {
+    "badge": "Industriel",
+    "title": "Planchers industriels",
+    "titleHighlight": "haute résistance",
+    "subtitle": "Revêtements de plancher pour entrepôts, usines et centres de distribution. Conçus pour le trafic de chariots élévateurs, résistants aux produits chimiques, installation rapide.",
+    "formTitle": "Soumission gratuite en 24h",
+    "formSubtitle": "Recevez une estimation pour votre entrepôt",
+    "formName": "Nom complet",
+    "formCompany": "Nom de l'entreprise",
+    "formEmail": "Courriel",
+    "formPhone": "Téléphone",
+    "formArea": "Superficie (pi²)",
+    "formMessage": "Détails du projet (optionnel)",
+    "formSubmit": "Obtenir ma soumission gratuite",
+    "formSending": "Envoi...",
+    "formError": "Erreur, réessayez.",
+    "successTitle": "Demande envoyée!",
+    "successText": "Nous vous contacterons dans les 24 prochaines heures.",
+    "benefit1": "Résiste au trafic de chariots élévateurs et transpalettes",
+    "benefit2": "Résistance chimique aux huiles, acides et solvants",
+    "benefit3": "Installation rapide — minimal temps d'arrêt de production",
+    "benefit4": "Marquage au sol et zones de sécurité intégrées",
+    "benefit5": "Résistance à l'abrasion et aux impacts lourds",
+    "benefit6": "Durée de vie de 20+ ans en usage industriel",
+    "vp1Title": "Grade chariot élévateur",
+    "vp1Desc": "Résiste au trafic continu de véhicules lourds sans écaillage ni fissuration.",
+    "vp2Title": "Résistance chimique industrielle",
+    "vp2Desc": "Imperméable aux huiles hydrauliques, acides, solvants et produits chimiques courants.",
+    "vp3Title": "Installation express",
+    "vp3Desc": "Systèmes polyuréa à cure rapide pour un retour en service en 24-48h. Minimal perturbation.",
+    "vp4Title": "Temps d'arrêt minimal",
+    "vp4Desc": "Installation par sections pour maintenir les opérations pendant les travaux.",
+    "statSqft": "pi² installés",
+    "statYears": "ans d'expertise",
+    "statInstall": "remise en service",
+    "socialTitle": "Ce que nos clients disent",
+    "review1": "Notre entrepôt de 25,000 pi² supporte 12 chariots élévateurs par jour. Après 3 ans, le plancher est encore parfait.",
+    "review1Name": "David C.",
+    "review1City": "Toronto",
+    "review2": "L'installation s'est faite en fin de semaine. Lundi matin, les opérations ont repris normalement. Zéro temps d'arrêt.",
+    "review2Name": "Pierre M.",
+    "review2City": "Montréal",
+    "review3": "On avait des problèmes de poussière de béton constants. Depuis l'époxy, l'air est plus propre et l'entretien est minimal.",
+    "review3Name": "François B.",
+    "review3City": "Laval",
+    "footerText": " 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
+  },
+  "lpCondo": {
+    "badge": "Copropriétés",
+    "title": "Revêtements de stationnement et",
+    "titleHighlight": "espaces communs",
+    "subtitle": "Solutions de revêtement pour stationnements souterrains, halls d'entrée et espaces communs de condos. Augmentez la valeur de votre propriété avec des finitions haut de gamme.",
+    "formTitle": "Soumission gratuite en 24h",
+    "formSubtitle": "Recevez une estimation pour votre copropriété",
+    "formName": "Nom complet",
+    "formCompany": "Nom du syndicat / gestionnaire",
+    "formEmail": "Courriel",
+    "formPhone": "Téléphone",
+    "formArea": "Superficie (pi²)",
+    "formMessage": "Détails du projet (optionnel)",
+    "formSubmit": "Obtenir ma soumission gratuite",
+    "formSending": "Envoi...",
+    "formError": "Erreur, réessayez.",
+    "successTitle": "Demande envoyée!",
+    "successText": "Nous vous contacterons dans les 24 prochaines heures.",
+    "benefit1": "Membrane de stationnement résistante au sel et au calcium",
+    "benefit2": "Finitions haut de gamme pour halls et espaces communs",
+    "benefit3": "Augmentation de la valeur de la propriété",
+    "benefit4": "Protection imperméable pour dalles de stationnement",
+    "benefit5": "Antidérapant pour rampes et zones piétonnes",
+    "benefit6": "Installation par phases — minimal dérangement aux résidents",
+    "vp1Title": "Revêtement de stationnement",
+    "vp1Desc": "Membrane imperméable qui protège la dalle de béton contre le sel, le calcium et l'infiltration d'eau.",
+    "vp2Title": "Finitions espaces communs",
+    "vp2Desc": "Époxy métallique et décoratif pour halls d'entrée, corridors et salles communautaires.",
+    "vp3Title": "Valeur immobilière accrue",
+    "vp3Desc": "Des finitions premium qui rehaussent l'image de la copropriété et sa valeur marchande.",
+    "vp4Title": "Durabilité garantie",
+    "vp4Desc": "Systèmes conçus pour le trafic intensif de copropriétés. Garantie fabricant complète.",
+    "statCondos": "condos desservis",
+    "statYears": "ans d'expertise",
+    "statResponse": "réponse garantie",
+    "socialTitle": "Ce que nos clients disent",
+    "review1": "Le stationnement souterrain de notre condo de 120 unités était en piteux état. Le revêtement a transformé l'espace et les copropriétaires sont ravis.",
+    "review1Name": "Nathalie R.",
+    "review1City": "Montréal",
+    "review2": "On a fait le hall d'entrée en époxy métallique. L'effet est spectaculaire, on dirait un hôtel de luxe. Tout le monde nous demande c'est quoi.",
+    "review2Name": "Michel T.",
+    "review2City": "Laval",
+    "review3": "L'installation s'est faite par phases, les résidents n'ont presque pas été dérangés. Très professionnel du début à la fin.",
+    "review3Name": "Caroline L.",
+    "review3City": "Québec",
+    "footerText": " 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
   },
   "shipping": {
+    "badge": "Expédition globale",
     "title": "Livraison mondiale",
     "subtitle": "Fabriqué au Canada. Livré partout dans le monde.",
     "regions": {
@@ -402,6 +673,25 @@
     "cta": "Demander un devis de livraison",
     "origin": "Montréal, Canada",
     "worldwide": "Mondial"
+  },
+  "dealerMap": {
+    "title": "Trouvez un point de service",
+    "subtitle": "Entrepôt principal à Montréal. Réseau d'installateurs certifiés à travers le Canada.",
+    "searchPlaceholder": "Entrez votre code postal ou ville…",
+    "searchButton": "Chercher",
+    "becomeDealer": "Devenir installateur certifié Novus →",
+    "locations": {
+      "sciHQ": {
+        "name": "Entrepôt SCI Coatings",
+        "address": "Anjou, Montréal, QC",
+        "phone": "514-907-7722"
+      },
+      "novusMTL": {
+        "name": "Novus Surfaces — Bureau",
+        "address": "Montréal, QC",
+        "phone": "514-907-7722"
+      }
+    }
   },
   "tracking": {
     "title": "Suivi de soumission",
@@ -431,6 +721,28 @@
     "pallet": "a commandé une palette SCI-Metallic",
     "viewing": "consulte nos produits"
   },
+  "liveActivity": {
+    "from": "de",
+    "timeAgo": "il y a quelques minutes",
+    "name1": "Jean-Marc",
+    "city1": "Laval",
+    "action1": "a demandé une soumission",
+    "name2": "Sophie",
+    "city2": "Québec",
+    "action2": "consulte SCI-Metallic",
+    "name3": "Pierre",
+    "city3": "Montréal",
+    "action3": "a téléchargé un estimé PDF",
+    "name4": "Marie-Ève",
+    "city4": "Sherbrooke",
+    "action4": "a commandé SCI-Flake",
+    "name5": "David",
+    "city5": "Toronto",
+    "action5": "a commandé une palette SCI-Polyurea",
+    "name6": "Isabelle",
+    "city6": "Gatineau",
+    "action6": "consulte nos produits"
+  },
   "exitIntent": {
     "title": "Attendez! 10% de rabais",
     "subtitle": "Obtenez 10% de rabais sur votre première commande. Entrez votre courriel.",
@@ -442,6 +754,20 @@
   },
   "stickyCta": {
     "text": "Soumission gratuite →"
+  },
+  "emailValidation": {
+    "invalidFormat": "Veuillez entrer une adresse courriel valide.",
+    "disposable": "Les adresses courriel temporaires ne sont pas acceptées.",
+    "validating": "Vérification du courriel..."
+  },
+  "currency": {
+    "label": "Sélectionner la devise",
+    "title": "Devise",
+    "CAD": "Dollar CA",
+    "USD": "Dollar US",
+    "EUR": "Euro",
+    "GBP": "Livre",
+    "hint": "Taux de change mis à jour automatiquement"
   },
   "auth": {
     "login": "Connexion",
@@ -475,5 +801,183 @@
       "INVALID_CREDENTIALS": "Courriel ou mot de passe incorrect.",
       "SERVER_ERROR": "Erreur serveur. Veuillez réessayer."
     }
+  },
+  "curingConditions": {
+    "badge": "Conditions de cure",
+    "title": "Votre météo de cure",
+    "subtitle": "Vérifiez si les conditions sont favorables pour appliquer votre revêtement époxy. Température, humidité et précipitations en temps réel.",
+    "placeholder": "Code postal (ex: H2X 1Y4)",
+    "search": "Vérifier",
+    "statusIdeal": "Conditions idéales",
+    "statusCaution": "Attendez",
+    "statusUnfavorable": "Conditions défavorables",
+    "statusDesc_ideal": "Température, humidité et précipitations sont dans les plages optimales. Vous pouvez appliquer votre revêtement en toute confiance.",
+    "statusDesc_caution": "Les conditions sont limites. Consultez un spécialiste avant de procéder à l'application.",
+    "statusDesc_unfavorable": "Il fait trop froid, trop humide ou de la pluie est prévue. Reportez l'application à une journée plus favorable.",
+    "metricTemp": "Température",
+    "metricHumidity": "Humidité",
+    "metricPrecip": "Précipitations 24h",
+    "metricWind": "Vent",
+    "errorNotFound": "Code postal introuvable. Vérifiez le format (ex: H2X 1Y4).",
+    "errorGeneric": "Impossible de récupérer la météo. Réessayez dans quelques instants.",
+    "emptyState": "Entrez votre code postal pour vérifier les conditions de cure dans votre région.",
+    "tip": "Données météo fournies par Open-Meteo. Prévisions sur 24h.",
+    "refresh": "Actualiser",
+    "disclaimer": "* Les conditions affichées sont à titre indicatif. Consultez toujours la fiche technique du produit pour les spécifications exactes de cure."
+  },
+  "installation": {
+    "badge": "Applicateurs certifiés",
+    "title": "Installation professionnelle",
+    "subtitle": "Installation experte par des applicateurs certifiés au Québec et partout au Canada",
+    "cta": "Demander une soumission d'installation",
+    "ctaSecondary": "Calculer votre prix",
+    "perSqFt": "/pi² installé",
+    "pricingTitle": "Prix d'installation",
+    "pricingSubtitle": "Prix clé en main incluant matériaux, main-d'œuvre et préparation de surface",
+    "pricingDisclaimer": "* Les prix sont des estimations pour la région du Québec. Le prix final dépend de l'état de la surface, de l'accessibilité et de la complexité du projet. Contactez-nous pour une soumission détaillée.",
+    "systems": {
+      "flake": {
+        "name": "Système SCI-Flake",
+        "description": "Flocons de vinyle décoratifs dans l'époxy. Idéal pour garages, salles d'exposition et espaces commerciaux.",
+        "includes": {
+          "0": "Préparation de surface au diamant",
+          "1": "Broadcast complet de flocons couleurs personnalisées",
+          "2": "Couche de finition polyaspartique anti-UV"
+        }
+      },
+      "metallic": {
+        "name": "Système SCI-Metallic",
+        "description": "Époxy métallique haut de gamme avec effet 3D fluide. Un plancher signature pour les espaces de luxe.",
+        "includes": {
+          "0": "Profilage du béton et réparation de fissures",
+          "1": "Application de pigments métalliques personnalisés",
+          "2": "Couche de finition haute brillance"
+        }
+      },
+      "polyurea": {
+        "name": "Système SCI-Polyurea",
+        "description": "Polyuréa à cure rapide pour un temps d'arrêt minimal. Retour en service en 24 heures. Durabilité extrême.",
+        "includes": {
+          "0": "Préparation mécanique de la surface",
+          "1": "Couche de base polyuréa flexible",
+          "2": "Couche de finition résistante aux produits chimiques"
+        }
+      },
+      "solidEpoxy": {
+        "name": "SCI-100 Époxy solide",
+        "description": "Époxy 100% solides pour une épaisseur et résistance chimique maximales. Performance de grade industriel.",
+        "includes": {
+          "0": "Profilage de surface par grenaillage",
+          "1": "Couche de base époxy 100% solides",
+          "2": "Couche de scellement résistante à l'abrasion"
+        }
+      },
+      "quartz": {
+        "name": "SCI-Quartz Broadcast",
+        "description": "Agrégat de quartz pour une résistance au glissement et texture supérieures. Idéal pour environnements humides.",
+        "includes": {
+          "0": "Meulage et réparation du béton",
+          "1": "Broadcast complet d'agrégat de quartz",
+          "2": "Couche de scellement uréthane multicouche"
+        }
+      },
+      "membrane": {
+        "name": "Système SCI-Membrane",
+        "description": "Système de membrane d'imperméabilisation pour balcons, toitures et stationnements. Protection complète.",
+        "includes": {
+          "0": "Préparation et apprêt du substrat",
+          "1": "Application de membrane renforcée",
+          "2": "Couche de circulation résistante aux UV"
+        }
+      }
+    },
+    "includedTitle": "Ce qui est inclus",
+    "includedSubtitle": "Chaque installation comprend notre processus complet en 5 étapes pour une finition impeccable et durable",
+    "included": {
+      "0": {
+        "title": "Préparation de surface",
+        "description": "Meulage au diamant ou grenaillage pour une adhérence optimale"
+      },
+      "1": {
+        "title": "Couche d'apprêt",
+        "description": "Apprêt pénétrant pour sceller le béton et prévenir le dégazage"
+      },
+      "2": {
+        "title": "Couche de base",
+        "description": "Couche de base du système choisi appliquée par des techniciens certifiés"
+      },
+      "3": {
+        "title": "Couche de finition",
+        "description": "Finition protectrice anti-UV pour une performance durable"
+      },
+      "4": {
+        "title": "Inspection finale",
+        "description": "Contrôle qualité, nettoyage et instructions d'entretien fournies"
+      }
+    },
+    "processTitle": "Notre processus",
+    "processSubtitle": "De la consultation à la cure, nous nous occupons de tout",
+    "process": {
+      "0": {
+        "title": "Consultation",
+        "description": "Évaluation gratuite sur place. Nous évaluons votre surface, discutons de vos besoins et recommandons le système idéal."
+      },
+      "1": {
+        "title": "Préparation",
+        "description": "Meulage au diamant ou grenaillage professionnel pour créer le profil de béton parfait pour l'adhérence."
+      },
+      "2": {
+        "title": "Application",
+        "description": "Système multicouche appliqué par notre équipe certifiée avec équipement et techniques professionnels."
+      },
+      "3": {
+        "title": "Cure",
+        "description": "Processus de cure contrôlé. La plupart des systèmes sont praticables à pied en 24h et aux véhicules en 72h."
+      }
+    },
+    "faqTitle": "Questions fréquentes",
+    "faqSubtitle": "Tout ce que vous devez savoir sur nos services d'installation",
+    "faq": {
+      "0": {
+        "question": "Combien de temps dure une installation typique?",
+        "answer": "La plupart des installations résidentielles (garages, sous-sols) sont complétées en 1-2 jours. Les projets commerciaux plus grands peuvent prendre 3-5 jours selon le système choisi et la superficie. Les systèmes polyuréa offrent le délai le plus rapide avec un retour en service en 24 heures."
+      },
+      "1": {
+        "question": "Dois-je préparer quelque chose avant l'installation?",
+        "answer": "Videz simplement la zone de tous les objets et assurez l'accès à l'électricité et à l'eau. Notre équipe s'occupe de toute la préparation de surface, incluant le meulage, la réparation des fissures et le nettoyage. Nous vous fournirons une liste de vérification détaillée lors de la prise de rendez-vous."
+      },
+      "2": {
+        "question": "Quelle température est requise pour l'installation?",
+        "answer": "La température d'application idéale se situe entre 10 et 30 degrés Celsius avec une humidité inférieure à 80%. Notre équipe surveille les conditions de près et peut utiliser des formulations à cure rapide dans des conditions limites. Utilisez notre outil gratuit de Conditions de cure pour vérifier la météo locale."
+      },
+      "3": {
+        "question": "Quand puis-je utiliser mon plancher après l'installation?",
+        "answer": "La circulation piétonnière légère est généralement possible après 24 heures. La circulation de véhicules est recommandée après 72 heures. La résistance chimique complète est atteinte après 7 jours de cure. Les systèmes polyuréa atteignent la cure complète encore plus rapidement."
+      },
+      "4": {
+        "question": "Offrez-vous des garanties sur les installations?",
+        "answer": "Oui. Toutes les installations professionnelles incluent une garantie fabricant complète sur les matériaux plus notre garantie de qualité d'exécution. Les conditions de garantie spécifiques varient selon le système — contactez-nous pour les détails de votre système choisi."
+      },
+      "5": {
+        "question": "Desservez-vous des régions hors du Québec?",
+        "answer": "Oui! Bien que notre équipe d'installation principale soit basée au Québec, nous avons des applicateurs certifiés à travers le Canada. Pour les installations DIY, nous livrons les produits à l'échelle nationale et offrons un support technique complet. Contactez-nous avec votre emplacement pour la disponibilité."
+      }
+    },
+    "ctaTitle": "Demander une soumission d'installation",
+    "ctaSubtitle": "Consultation gratuite sur place. Sans pression. Réponse en 24 heures.",
+    "ctaCall": "514-907-7722",
+    "ctaTrust": "Consultation gratuite — Sans obligation — Applicateurs certifiés — Garantie complète"
+  },
+  "hq": {
+    "title": "NOVUS HQ",
+    "subtitle": "Centre de Commandement AGI",
+    "tabs": {
+      "warroom": "War Room",
+      "pipeline": "Pipeline",
+      "engine": "AGI Engine"
+    },
+    "loading": "Chargement du système...",
+    "error": "Erreur de connexion",
+    "lastUpdate": "Dernière mise à jour"
   }
 }

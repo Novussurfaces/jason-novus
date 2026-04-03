@@ -12,7 +12,7 @@ export function generateEstimatePDF(
   const isFr = locale === "fr";
 
   // Colors
-  const accent = [37, 99, 235]; // #2563eb
+  const accent = [201, 168, 76]; // #C9A84C
   const dark = [9, 9, 11]; // #09090b
   const muted = [113, 113, 122]; // #71717a
 
@@ -145,7 +145,7 @@ export function generateEstimatePDF(
   doc.rect(0, 277, 210, 20, "F");
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(9);
-  doc.text("info@novussurfaces.com | novussurfaces.com", 20, 288);
+  doc.text("info@novusepoxy.ca | novusepoxy.ca", 20, 288);
   doc.text(
     isFr ? "Fabriqué au Canada" : "Made in Canada",
     170,

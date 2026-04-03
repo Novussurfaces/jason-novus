@@ -48,7 +48,7 @@ export default async function BlogPostPage({ params }: Props) {
     publisher: {
       "@type": "Organization",
       name: "Novus Surfaces",
-      url: "https://novussurfaces.com",
+      url: "https://novusepoxy.ca",
     },
   };
 

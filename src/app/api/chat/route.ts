@@ -27,7 +27,7 @@ Rabais volume: 1000+ pi² = -5%, 2500+ pi² = -10%, 5000+ pi² = -15%, 10000+ pi
 
 Tous les produits sont fabriqués à Montréal par SCI Coatings Inc. Livraison mondiale disponible.
 
-Quand le client est qualifié (tu connais le type de projet + surface approximative + ville/pays), propose de remplir le formulaire de soumission à novussurfaces.com/soumission ou d'utiliser le calculateur à novussurfaces.com/calculateur.
+Quand le client est qualifié (tu connais le type de projet + surface approximative + ville/pays), propose de remplir le formulaire de soumission à novusepoxy.ca/soumission ou d'utiliser le calculateur à novusepoxy.ca/calculateur.
 
 Pour les questions techniques complexes ou les commandes spéciales, réfère le client à michael@scicoatings.com.
 
@@ -55,7 +55,7 @@ Volume discounts: 1,000+ sq ft = -5%, 2,500+ sq ft = -10%, 5,000+ sq ft = -15%, 
 
 All products manufactured in Montreal by SCI Coatings Inc. Worldwide shipping available.
 
-When the client is qualified (you know project type + approximate area + city/country), suggest filling out the quote form at novussurfaces.com/en/soumission or using the calculator at novussurfaces.com/en/calculateur.
+When the client is qualified (you know project type + approximate area + city/country), suggest filling out the quote form at novusepoxy.ca/en/soumission or using the calculator at novusepoxy.ca/en/calculateur.
 
 For complex technical questions or special orders, refer the client to michael@scicoatings.com.
 
@@ -69,8 +69,8 @@ function getFallbackResponse(lastMessage: string, locale: string): string {
   // Price / cost questions
   if (msg.includes("prix") || msg.includes("coût") || msg.includes("price") || msg.includes("cost") || msg.includes("combien")) {
     return isFr
-      ? "Nos prix varient selon le système choisi, de $3/pi² (SCI-Flocons) à $12/pi² (Polyuréthane Cimentaire). Utilisez notre calculateur en ligne pour une estimation instantanée: novussurfaces.com/calculateur — ou demandez une soumission gratuite!"
-      : "Our prices range from $3/sq ft (SCI-Flake) to $12/sq ft (Cementitious Polyurethane). Use our online calculator for an instant estimate: novussurfaces.com/en/calculateur — or request a free quote!";
+      ? "Nos prix varient selon le système choisi, de $3/pi² (SCI-Flocons) à $12/pi² (Polyuréthane Cimentaire). Utilisez notre calculateur en ligne pour une estimation instantanée: novusepoxy.ca/calculateur — ou demandez une soumission gratuite!"
+      : "Our prices range from $3/sq ft (SCI-Flake) to $12/sq ft (Cementitious Polyurethane). Use our online calculator for an instant estimate: novusepoxy.ca/en/calculateur — or request a free quote!";
   }
 
   // Garage
@@ -110,8 +110,8 @@ function getFallbackResponse(lastMessage: string, locale: string): string {
 
   // Default — suggest quote form
   return isFr
-    ? "Merci pour votre message! Je peux vous aider à choisir le bon système de revêtement parmi nos 13 produits. Parlez-moi de votre projet — type de surface, superficie approximative et localisation — et je vous ferai une recommandation personnalisée! Vous pouvez aussi remplir notre formulaire de soumission: novussurfaces.com/soumission"
-    : "Thanks for your message! I can help you choose the right coating system from our 13 products. Tell me about your project — surface type, approximate area, and location — and I'll give you a personalized recommendation! You can also fill out our quote form: novussurfaces.com/en/soumission";
+    ? "Merci pour votre message! Je peux vous aider à choisir le bon système de revêtement parmi nos 13 produits. Parlez-moi de votre projet — type de surface, superficie approximative et localisation — et je vous ferai une recommandation personnalisée! Vous pouvez aussi remplir notre formulaire de soumission: novusepoxy.ca/soumission"
+    : "Thanks for your message! I can help you choose the right coating system from our 13 products. Tell me about your project — surface type, approximate area, and location — and I'll give you a personalized recommendation! You can also fill out our quote form: novusepoxy.ca/en/soumission";
 }
 
 export async function POST(request: Request) {
@@ -155,7 +155,7 @@ export async function POST(request: Request) {
       const headers: Record<string, string> = { "Content-Type": "application/json" };
       if (provider === "openrouter") {
         headers["Authorization"] = `Bearer ${OPENROUTER_API_KEY}`;
-        headers["HTTP-Referer"] = "https://novussurfaces.com";
+        headers["HTTP-Referer"] = "https://novusepoxy.ca";
         headers["X-Title"] = "Nova - Novus Surfaces";
       } else if (provider === "openai") {
         headers["Authorization"] = `Bearer ${OPENAI_API_KEY}`;

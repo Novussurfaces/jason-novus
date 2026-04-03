@@ -349,8 +349,8 @@ La pire option? Les "kits d'époxy" de quincaillerie à 50 $. Ils ne sont pas de
 
 Pas certain du meilleur système pour votre projet? Deux options :
 
-1. **Calculateur de prix** — Estimation instantanée basée sur votre projet : [novussurfaces.com/calculateur](/calculateur)
-2. **Soumission gratuite** — Notre équipe technique évalue votre projet : [novussurfaces.com/soumission](/soumission)
+1. **Calculateur de prix** — Estimation instantanée basée sur votre projet : [novusepoxy.ca/calculateur](/calculateur)
+2. **Soumission gratuite** — Notre équipe technique évalue votre projet : [novusepoxy.ca/soumission](/soumission)
 
 ---
 
@@ -459,8 +459,8 @@ The worst option? Hardware store "epoxy kits" at $50. They're not real epoxies �
 
 Not sure which system is best for your project? Two options:
 
-1. **Price Calculator** — Instant estimate based on your project: [novussurfaces.com/en/calculator](/en/calculator)
-2. **Free Quote** — Our technical team evaluates your project: [novussurfaces.com/en/quote](/en/quote)
+1. **Price Calculator** — Instant estimate based on your project: [novusepoxy.ca/en/calculator](/en/calculator)
+2. **Free Quote** — Our technical team evaluates your project: [novusepoxy.ca/en/quote](/en/quote)
 
 ---
 

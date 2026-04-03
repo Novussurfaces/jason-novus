@@ -1,20 +1,21 @@
 "use client";
 
-import { useState } from "react";
-import { useTranslations } from "next-intl";
+import { useState, useCallback, useRef } from "react";
+import { useLocale, useTranslations } from "next-intl";
 import { Send, Mail, MapPin, Clock, CheckCircle, AlertCircle, ArrowRight } from "lucide-react";
-import { motion } from "framer-motion";
+import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
+import { validateEmail } from "@/lib/email-validation";
 
 const inputClasses =
   "w-full rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/50 transition-all duration-300";
 
 const contactCards = [
-  { key: "email" as const, icon: Mail, gradient: "from-blue-500/20 to-blue-600/5" },
+  { key: "email" as const, icon: Mail, gradient: "from-amber-500/20 to-amber-600/5" },
   { key: "coverage" as const, icon: MapPin, gradient: "from-emerald-500/20 to-emerald-600/5" },
   { key: "hours" as const, icon: Clock, gradient: "from-violet-500/20 to-violet-600/5" },
 ] as const;
@@ -33,6 +34,7 @@ const cardVariants = {
 };
 
 export function ContactContent() {
+  const locale = useLocale();
   const t = useTranslations("contact");
   const [status, setStatus] = useState<"idle" | "sending" | "success" | "error">("idle");
   const [formData, setFormData] = useState({
@@ -53,7 +55,7 @@ export function ContactContent() {
       const response = await fetch("/api/contact", {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({ ...formData, locale }),
       });
       setStatus(response.ok ? "success" : "error");
       if (response.ok) setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
@@ -63,12 +65,12 @@ export function ContactContent() {
   };
 
   return (
-    <section className="relative pt-32 pb-24 overflow-hidden">
+    <section className="relative pt-16 pb-24 overflow-hidden">
       {/* Background glow */}
       <div
         className="absolute top-40 right-0 w-[500px] h-[500px] rounded-full opacity-[0.03]"
         style={{
-          background: "radial-gradient(circle, #2563eb 0%, transparent 70%)",
+          background: "radial-gradient(circle, #C9A84C 0%, transparent 70%)",
           filter: "blur(100px)",
         }}
       />
@@ -97,7 +99,7 @@ export function ContactContent() {
                       <div>
                         <h3 className="text-sm font-semibold mb-0.5">{t(`info.${card.key}Label`)}</h3>
                         {card.key === "email" ? (
-                          <a href="mailto:info@novussurfaces.com" className="text-sm text-accent hover:underline">
+                          <a href="mailto:info@novusepoxy.ca" className="text-sm text-accent hover:underline">
                             {t("info.email")}
                           </a>
                         ) : (

@@ -17,7 +17,7 @@ export async function GET(request: NextRequest) {
     estimatedResponse: string;
     clientName: string;
   }> = {
-    "demo@novussurfaces.com": {
+    "demo@novusepoxy.ca": {
       id: "NVS-2026-001",
       status: "processing",
       date: "2026-03-21",

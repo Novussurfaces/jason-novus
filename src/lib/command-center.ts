@@ -44,7 +44,7 @@ export async function pushLeadToCommandCenter(
       },
       body: JSON.stringify({
         ...payload,
-        source: payload.source || "novussurfaces.com",
+        source: payload.source || "novusepoxy.ca",
         timestamp: payload.timestamp || new Date().toISOString(),
       }),
     });

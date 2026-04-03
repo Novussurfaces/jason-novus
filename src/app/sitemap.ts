@@ -1,7 +1,7 @@
 import type { MetadataRoute } from "next";
 import { products } from "@/lib/products";
 
-const BASE_URL = "https://novussurfaces.com";
+const BASE_URL = "https://novusepoxy.ca";
 
 export default function sitemap(): MetadataRoute.Sitemap {
   const staticPages = [

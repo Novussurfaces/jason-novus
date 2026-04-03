@@ -1,8 +1,8 @@
 import { NextResponse } from "next/server";
 
 // Telegram config — Jason DM only (NEVER Luca group -5180507841)
-const TG_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "8715863191:AAEXrjNoFTQJCq214_Hvmh_zD2mSk9x6Af8";
-const TG_CHAT = process.env.TELEGRAM_CHAT_ID || "7562421258";
+const TG_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
+const TG_CHAT = process.env.TELEGRAM_CHAT_ID || "";
 
 // Interest classification
 const POSITIVE = ["oui", "yes", "interesse", "soumission", "prix", "combien", "quand", "disponible", "appeler", "ok", "parfait", "garage", "epoxy", "devis", "rdv", "info"];

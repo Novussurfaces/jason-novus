@@ -36,6 +36,27 @@ export type Conversation = {
 const users = new Map<string, User & { passwordHash: string }>();
 const conversations = new Map<string, Conversation[]>();
 
+// ── Admin bootstrap — seeds admin on first import ──
+let adminSeeded = false;
+async function seedAdmin() {
+  if (adminSeeded) return;
+  adminSeeded = true;
+  const ADMIN_ID = "admin_novus_001";
+  if (!users.has(ADMIN_ID)) {
+    const { hash } = await import("bcryptjs");
+    const passwordHash = await hash("NovusHQ2026!", 12);
+    users.set(ADMIN_ID, {
+      id: ADMIN_ID,
+      email: "jason@novusepoxy.ca",
+      name: "Jason Lanthier",
+      role: "admin",
+      createdAt: "2026-01-01T00:00:00.000Z",
+      passwordHash,
+    });
+  }
+}
+seedAdmin();
+
 // ── Password hashing ──
 export async function hashPassword(password: string): Promise<string> {
   return bcrypt.hash(password, 12);

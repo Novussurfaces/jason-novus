@@ -12,8 +12,8 @@ export function OrganizationSchema() {
     "@context": "https://schema.org",
     "@type": "Organization",
     name: "Novus Surfaces",
-    url: "https://novussurfaces.com",
-    logo: "https://novussurfaces.com/logo-icon.svg",
+    url: "https://novusepoxy.ca",
+    logo: "https://novusepoxy.ca/logo-icon.svg",
     description: "Premium epoxy, polyurea, and polyaspartic floor coating systems. Professional-grade surface solutions manufactured in Montreal, shipped worldwide.",
     address: {
       "@type": "PostalAddress",
@@ -23,7 +23,7 @@ export function OrganizationSchema() {
     },
     contactPoint: {
       "@type": "ContactPoint",
-      email: "info@novussurfaces.com",
+      email: "info@novusepoxy.ca",
       contactType: "sales",
       availableLanguage: ["French", "English"],
     },
@@ -59,9 +59,9 @@ export function LocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     name: "Novus Surfaces",
-    image: "https://novussurfaces.com/logo-icon.svg",
-    url: "https://novussurfaces.com",
-    email: "info@novussurfaces.com",
+    image: "https://novusepoxy.ca/logo-icon.svg",
+    url: "https://novusepoxy.ca",
+    email: "info@novusepoxy.ca",
     address: {
       "@type": "PostalAddress",
       addressLocality: "Montreal",
