@@ -1,8 +1,8 @@
-import { NextResponse } from "next/server";
 import { getSession, getOrCreateConversation, addMessageToConversation } from "@/lib/auth";
 
+const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OLLAMA_URL =
-  process.env.OLLAMA_URL || "http://100.83.113.25:11434/api/chat";
+  process.env.OLLAMA_URL || "http://72.60.26.85:11434/api/chat";
 
 const SYSTEM_PROMPT_FR = `Tu es Nova, assistante virtuelle de Novus Surfaces. Tu aides les clients à choisir le bon système de revêtement pour leur projet, partout dans le monde. Tu parles français québécois naturel et chaleureux.
 
@@ -27,6 +27,8 @@ Rabais volume: 1000+ pi² = -5%, 2500+ pi² = -10%, 5000+ pi² = -15%, 10000+ pi
 Tous les produits sont fabriqués à Montréal par SCI Coatings Inc. Livraison mondiale disponible.
 
 Quand le client est qualifié (tu connais le type de projet + surface approximative + ville/pays), propose de remplir le formulaire de soumission à novussurfaces.com/soumission ou d'utiliser le calculateur à novussurfaces.com/calculateur.
+
+Pour les questions techniques complexes ou les commandes spéciales, réfère le client à michael@scicoatings.com.
 
 Sois concis, professionnel mais chaleureux. Maximum 3-4 phrases par réponse.`;
 
@@ -53,6 +55,8 @@ Volume discounts: 1,000+ sq ft = -5%, 2,500+ sq ft = -10%, 5,000+ sq ft = -15%, 
 All products manufactured in Montreal by SCI Coatings Inc. Worldwide shipping available.
 
 When the client is qualified (you know project type + approximate area + city/country), suggest filling out the quote form at novussurfaces.com/en/soumission or using the calculator at novussurfaces.com/en/calculateur.
+
+For complex technical questions or special orders, refer the client to michael@scicoatings.com.
 
 Be concise, professional but warm. Maximum 3-4 sentences per response.`;
 
@@ -96,10 +100,17 @@ function getFallbackResponse(lastMessage: string, locale: string): string {
       : "We ship worldwide! North America: 3-7 days. Europe: 10-21 days (ocean or air). All products made in Montreal. Where is your project located?";
   }
 
-  // Default
+  // Food / restaurant / brewery
+  if (msg.includes("aliment") || msg.includes("food") || msg.includes("brasser") || msg.includes("brew") || msg.includes("restaurant") || msg.includes("cuisine") || msg.includes("kitchen")) {
+    return isFr
+      ? "Pour l'industrie alimentaire, le SCI-Polyuréthane Cimentaire ($8-12/pi²) est la référence — résiste aux chocs thermiques de -40°C à +120°C et aux lavages haute pression. Contactez michael@scicoatings.com pour les spécifications détaillées!"
+      : "For the food industry, SCI-Cementitious Polyurethane ($8-12/sq ft) is the standard — withstands thermal shock from -40°C to +120°C and high-pressure washdowns. Contact michael@scicoatings.com for detailed specifications!";
+  }
+
+  // Default — suggest quote form
   return isFr
-    ? "Merci pour votre message! Je peux vous aider à choisir le bon système de revêtement parmi nos 13 produits. Parlez-moi de votre projet — type de surface, superficie approximative et localisation — et je vous ferai une recommandation personnalisée!"
-    : "Thanks for your message! I can help you choose the right coating system from our 13 products. Tell me about your project — surface type, approximate area, and location — and I'll give you a personalized recommendation!";
+    ? "Merci pour votre message! Je peux vous aider à choisir le bon système de revêtement parmi nos 13 produits. Parlez-moi de votre projet — type de surface, superficie approximative et localisation — et je vous ferai une recommandation personnalisée! Vous pouvez aussi remplir notre formulaire de soumission: novussurfaces.com/soumission"
+    : "Thanks for your message! I can help you choose the right coating system from our 13 products. Tell me about your project — surface type, approximate area, and location — and I'll give you a personalized recommendation! You can also fill out our quote form: novussurfaces.com/en/soumission";
 }
 
 export async function POST(request: Request) {
@@ -120,52 +131,117 @@ export async function POST(request: Request) {
 
     const systemPrompt = locale === "en" ? SYSTEM_PROMPT_EN : SYSTEM_PROMPT_FR;
 
-    // Try Ollama first
+    // Try OpenAI API first (if key configured), then Ollama fallback
+    const apiUrl = OPENAI_API_KEY
+      ? "https://api.openai.com/v1/chat/completions"
+      : OLLAMA_URL;
+    const isOpenAI = !!OPENAI_API_KEY;
+
     try {
       const controller = new AbortController();
-      const timeout = setTimeout(() => controller.abort(), 8000);
+      const timeout = setTimeout(() => controller.abort(), 15000);
 
-      const response = await fetch(OLLAMA_URL, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          model: "qwen2.5:14b",
-          messages: [
-            { role: "system", content: systemPrompt },
-            ...messages,
-          ],
-          stream: false,
-          options: {
+      const headers: Record<string, string> = { "Content-Type": "application/json" };
+      if (isOpenAI) headers["Authorization"] = `Bearer ${OPENAI_API_KEY}`;
+
+      const body = isOpenAI
+        ? {
+            model: "gpt-4o-mini",
+            messages: [{ role: "system", content: systemPrompt }, ...messages],
+            stream: true,
             temperature: 0.7,
-            num_predict: 300,
-          },
-        }),
+            max_tokens: 400,
+          }
+        : {
+            model: "qwen2.5:14b",
+            messages: [{ role: "system", content: systemPrompt }, ...messages],
+            stream: true,
+            options: { temperature: 0.7, num_predict: 400 },
+          };
+
+      const apiResponse = await fetch(apiUrl, {
+        method: "POST",
+        headers,
+        body: JSON.stringify(body),
         signal: controller.signal,
       });
 
       clearTimeout(timeout);
 
-      if (response.ok) {
-        const data = await response.json();
-        const aiMessage = data.message?.content || "";
+      if (apiResponse.ok && apiResponse.body) {
+        let fullContent = "";
+        const apiBody = apiResponse.body;
 
-        // Save AI response to conversation
-        if (user) {
-          const conv = getOrCreateConversation(user.id);
-          addMessageToConversation(user.id, conv.id, {
-            role: "assistant",
-            content: aiMessage,
-            timestamp: new Date().toISOString(),
-          });
-        }
+        const stream = new ReadableStream({
+          async start(streamController) {
+            const reader = apiBody.getReader();
+            const decoder = new TextDecoder();
 
-        return NextResponse.json({ message: aiMessage });
+            try {
+              while (true) {
+                const { done, value } = await reader.read();
+                if (done) break;
+
+                const chunk = decoder.decode(value, { stream: true });
+                const lines = chunk.split("\n").filter((l) => l.trim());
+
+                for (const line of lines) {
+                  try {
+                    if (isOpenAI) {
+                      // OpenAI SSE format: "data: {...}"
+                      const data = line.replace(/^data: /, "");
+                      if (data === "[DONE]") continue;
+                      const parsed = JSON.parse(data);
+                      const token = parsed.choices?.[0]?.delta?.content || "";
+                      if (token) {
+                        fullContent += token;
+                        streamController.enqueue(new TextEncoder().encode(token));
+                      }
+                    } else {
+                      // Ollama format: newline-delimited JSON
+                      const parsed = JSON.parse(line);
+                      const token = parsed.message?.content || "";
+                      if (token) {
+                        fullContent += token;
+                        streamController.enqueue(new TextEncoder().encode(token));
+                      }
+                    }
+                  } catch {
+                    // skip malformed chunks
+                  }
+                }
+              }
+            } catch {
+              // Stream interrupted
+            } finally {
+              reader.releaseLock();
+              streamController.close();
+
+              if (user && fullContent) {
+                const conv = getOrCreateConversation(user.id);
+                addMessageToConversation(user.id, conv.id, {
+                  role: "assistant",
+                  content: fullContent,
+                  timestamp: new Date().toISOString(),
+                });
+              }
+            }
+          },
+        });
+
+        return new Response(stream, {
+          headers: {
+            "Content-Type": "text/plain; charset=utf-8",
+            "Cache-Control": "no-cache",
+            "Transfer-Encoding": "chunked",
+          },
+        });
       }
     } catch {
-      // Ollama unavailable — use fallback
+      // API unavailable — fall through to fallback
     }
 
-    // Smart fallback
+    // Smart fallback when Ollama is down
     const fallback = getFallbackResponse(lastUserMessage, locale || "fr");
 
     if (user) {
@@ -177,11 +253,13 @@ export async function POST(request: Request) {
       });
     }
 
-    return NextResponse.json({ message: fallback });
+    return new Response(fallback, {
+      headers: {
+        "Content-Type": "text/plain; charset=utf-8",
+      },
+    });
   } catch {
-    return NextResponse.json(
-      { error: "Chat service unavailable" },
-      { status: 503 }
-    );
+    const errorMsg = "Service momentanément indisponible. Veuillez réessayer.";
+    return new Response(errorMsg, { status: 503 });
   }
 }
