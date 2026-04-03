@@ -19,7 +19,6 @@ export default async function middleware(req: NextRequest) {
     const token = req.cookies.get("novus-session")?.value;
 
     if (!token) {
-      // No session → redirect to login or return 401
       const loginUrl = new URL("/", req.url);
       loginUrl.searchParams.set("auth", "required");
       return NextResponse.redirect(loginUrl);
@@ -28,40 +27,38 @@ export default async function middleware(req: NextRequest) {
     try {
       const { payload } = await jwtVerify(token, JWT_SECRET);
       if (payload.role !== "admin") {
-        // Not admin → redirect home
         return NextResponse.redirect(new URL("/", req.url));
       }
     } catch {
-      // Invalid token → redirect
       const loginUrl = new URL("/", req.url);
       loginUrl.searchParams.set("auth", "expired");
       return NextResponse.redirect(loginUrl);
     }
   }
 
-  // ── Skip intl middleware for webhook endpoints (Twilio + Telegram) ──
-  if (pathname.startsWith("/api/sms") || pathname.startsWith("/api/telegram")) {
-    return NextResponse.next();
-  }
-
-  // ── Protect API routes for agents/claw/hq — admin only ──
-  if (
-    pathname.startsWith("/api/agents") ||
-    pathname.startsWith("/api/claw") ||
-    pathname.startsWith("/api/hq")
-  ) {
-    const token = req.cookies.get("novus-session")?.value;
-    if (!token) {
-      return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
-    }
-    try {
-      const { payload } = await jwtVerify(token, JWT_SECRET);
-      if (payload.role !== "admin") {
-        return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+  // ── ALL /api routes bypass intl middleware (it breaks webhooks + API routes) ──
+  if (pathname.startsWith("/api/")) {
+    // Protect admin-only API routes
+    if (
+      pathname.startsWith("/api/agents") ||
+      pathname.startsWith("/api/claw") ||
+      pathname.startsWith("/api/hq")
+    ) {
+      const token = req.cookies.get("novus-session")?.value;
+      if (!token) {
+        return NextResponse.json({ error: "Unauthorized" }, { status: 401 });
       }
-    } catch {
-      return NextResponse.json({ error: "Invalid session" }, { status: 401 });
+      try {
+        const { payload } = await jwtVerify(token, JWT_SECRET);
+        if (payload.role !== "admin") {
+          return NextResponse.json({ error: "Forbidden" }, { status: 403 });
+        }
+      } catch {
+        return NextResponse.json({ error: "Invalid session" }, { status: 401 });
+      }
     }
+    // All API routes skip intlMiddleware — return directly
+    return NextResponse.next();
   }
 
   return intlMiddleware(req);
