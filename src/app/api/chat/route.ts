@@ -1,5 +1,6 @@
 import { getSession, getOrCreateConversation, addMessageToConversation } from "@/lib/auth";
 
+const OPENROUTER_API_KEY = process.env.OPENROUTER_API_KEY || "";
 const OPENAI_API_KEY = process.env.OPENAI_API_KEY || "";
 const OLLAMA_URL =
   process.env.OLLAMA_URL || "http://72.60.26.85:11434/api/chat";
@@ -131,22 +132,38 @@ export async function POST(request: Request) {
 
     const systemPrompt = locale === "en" ? SYSTEM_PROMPT_EN : SYSTEM_PROMPT_FR;
 
-    // Try OpenAI API first (if key configured), then Ollama fallback
-    const apiUrl = OPENAI_API_KEY
-      ? "https://api.openai.com/v1/chat/completions"
-      : OLLAMA_URL;
-    const isOpenAI = !!OPENAI_API_KEY;
+    // Priority: OpenRouter → OpenAI → Ollama → Fallback
+    const provider = OPENROUTER_API_KEY
+      ? "openrouter"
+      : OPENAI_API_KEY
+        ? "openai"
+        : "ollama";
+
+    const apiUrl =
+      provider === "openrouter"
+        ? "https://openrouter.ai/api/v1/chat/completions"
+        : provider === "openai"
+          ? "https://api.openai.com/v1/chat/completions"
+          : OLLAMA_URL;
+
+    const isCloudAPI = provider !== "ollama";
 
     try {
       const controller = new AbortController();
       const timeout = setTimeout(() => controller.abort(), 15000);
 
       const headers: Record<string, string> = { "Content-Type": "application/json" };
-      if (isOpenAI) headers["Authorization"] = `Bearer ${OPENAI_API_KEY}`;
+      if (provider === "openrouter") {
+        headers["Authorization"] = `Bearer ${OPENROUTER_API_KEY}`;
+        headers["HTTP-Referer"] = "https://novussurfaces.com";
+        headers["X-Title"] = "Nova - Novus Surfaces";
+      } else if (provider === "openai") {
+        headers["Authorization"] = `Bearer ${OPENAI_API_KEY}`;
+      }
 
-      const body = isOpenAI
+      const body = isCloudAPI
         ? {
-            model: "gpt-4o-mini",
+            model: provider === "openrouter" ? "deepseek/deepseek-chat-v3-0324" : "gpt-4o-mini",
             messages: [{ role: "system", content: systemPrompt }, ...messages],
             stream: true,
             temperature: 0.7,
@@ -187,8 +204,8 @@ export async function POST(request: Request) {
 
                 for (const line of lines) {
                   try {
-                    if (isOpenAI) {
-                      // OpenAI SSE format: "data: {...}"
+                    if (isCloudAPI) {
+                      // OpenAI/OpenRouter SSE format: "data: {...}"
                       const data = line.replace(/^data: /, "");
                       if (data === "[DONE]") continue;
                       const parsed = JSON.parse(data);
