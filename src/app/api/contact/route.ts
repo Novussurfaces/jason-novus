@@ -1,6 +1,7 @@
 import { NextResponse } from "next/server";
 import { triggerN8nWebhook } from "@/lib/n8n";
 import { pushLeadToCommandCenter } from "@/lib/command-center";
+import { triggerInstantResponse } from "@/lib/instant-response";
 
 export async function POST(request: Request) {
   try {
@@ -22,9 +23,10 @@ export async function POST(request: Request) {
       userAgent,
     };
 
-    // Forward to n8n + Command Center (non-blocking, fire-and-forget)
+    // Forward to n8n + Command Center + instant response (non-blocking)
     triggerN8nWebhook("contact", payload);
     pushLeadToCommandCenter({ ...payload, type: "contact" });
+    triggerInstantResponse({ ...payload, type: "contact" });
 
     return NextResponse.json({ success: true });
   } catch {
