@@ -58,9 +58,9 @@ async function getAIResponse(userMessage: string): Promise<string | null> {
           { role: "user", content: userMessage },
         ],
         temperature: 0.7,
-        max_tokens: 300,
+        max_tokens: 200,
       }),
-      signal: AbortSignal.timeout(12000),
+      signal: AbortSignal.timeout(7000),
     });
     if (!res.ok) return null;
     const data = await res.json();
@@ -70,19 +70,22 @@ async function getAIResponse(userMessage: string): Promise<string | null> {
   }
 }
 
-async function sendTelegramMessage(chatId: number, text: string): Promise<boolean> {
-  if (!ARIA_TOKEN) return false;
+async function sendTelegramMessage(token: string, chatId: number, text: string): Promise<boolean> {
+  if (!token) return false;
   try {
-    const res = await fetch(`https://api.telegram.org/bot${ARIA_TOKEN}/sendMessage`, {
+    const res = await fetch(`https://api.telegram.org/bot${token}/sendMessage`, {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ chat_id: chatId, text, parse_mode: "HTML" }),
+      signal: AbortSignal.timeout(3000),
     });
     return res.ok;
   } catch {
     return false;
   }
 }
+
+export const maxDuration = 10;
 
 export async function POST(request: Request) {
   try {
@@ -96,23 +99,20 @@ export async function POST(request: Request) {
     const text = message.text;
     const firstName = message.from?.first_name || "Client";
 
-    // AI response first, keyword fallback if unavailable
+    // Try AI with 7s timeout — falls back to keywords if too slow
     const aiResponse = await getAIResponse(text);
     const response = aiResponse || getSmartResponse(text);
-    await sendTelegramMessage(chatId, response);
+    await sendTelegramMessage(ARIA_TOKEN, chatId, response);
 
-    // Forward to Jason DM for visibility (non-blocking)
+    // Forward to Jason DM (fire-and-forget, don't await)
     const JASON_CHAT = process.env.TELEGRAM_CHAT_ID || "";
     const BRIDGE_TOKEN = process.env.TELEGRAM_BOT_TOKEN || "";
     if (JASON_CHAT && BRIDGE_TOKEN) {
-      fetch(`https://api.telegram.org/bot${BRIDGE_TOKEN}/sendMessage`, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({
-          chat_id: JASON_CHAT,
-          text: `🤖 Aria a repondu:\n\nDe: ${firstName}\nMsg: ${text.slice(0, 200)}\nReponse: ${response.slice(0, 200)}${aiResponse ? "\n\n✨ AI" : "\n\n📋 Fallback"}`,
-        }),
-      }).catch(() => {});
+      sendTelegramMessage(
+        BRIDGE_TOKEN,
+        Number(JASON_CHAT),
+        `De: ${firstName}\nMsg: ${text.slice(0, 200)}\nReponse: ${response.slice(0, 200)}${aiResponse ? "\n\n✨ AI" : "\n\n📋 Fallback"}`
+      ).catch(() => {});
     }
 
     return NextResponse.json({ ok: true });
@@ -122,5 +122,5 @@ export async function POST(request: Request) {
 }
 
 export async function GET() {
-  return NextResponse.json({ status: "ok", bot: "novus-admin" });
+  return NextResponse.json({ status: "ok", bot: "aria-admin", ts: Date.now() });
 }
