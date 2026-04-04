@@ -182,7 +182,8 @@
       "success": "Your request has been sent successfully! We will contact you within 24 hours.",
       "error": "An error occurred. Please try again or contact us directly."
     },
-    "trustLine": "Free consultation • No pressure • Response within 24h"
+    "trustLine": "Free consultation • No pressure • Response within 24h",
+    "promo": "APRIL PROMO — 20% off all projects!"
   },
   "about": {
     "title": "About Novus Surfaces",
