@@ -1,7 +1,21 @@
 "use client";
 
-import { useEffect, useRef, type ReactNode } from "react";
+import { createContext, useContext, useEffect, useRef, useState, type ReactNode } from "react";
 import Lenis from "lenis";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+/* ─────────────────────────────────────────────
+   LENIS CONTEXT — exposes the instance globally
+   so hooks like useScrollVelocity can subscribe
+   ───────────────────────────────────────────── */
+const LenisContext = createContext<Lenis | null>(null);
+
+export function useLenisInstance() {
+  return useContext(LenisContext);
+}
 
 type SmoothScrollProps = {
   children: ReactNode;
@@ -9,7 +23,7 @@ type SmoothScrollProps = {
 
 export function SmoothScroll({ children }: SmoothScrollProps) {
   const lenisRef = useRef<Lenis | null>(null);
-  const rafRef = useRef<number>(0);
+  const [lenisInstance, setLenisInstance] = useState<Lenis | null>(null);
 
   useEffect(() => {
     const lenis = new Lenis({
@@ -19,20 +33,27 @@ export function SmoothScroll({ children }: SmoothScrollProps) {
     });
 
     lenisRef.current = lenis;
+    setLenisInstance(lenis);
 
-    function raf(time: number) {
-      lenis.raf(time);
-      rafRef.current = requestAnimationFrame(raf);
-    }
+    /* ── Bridge Lenis <-> GSAP ScrollTrigger ── */
+    lenis.on("scroll", ScrollTrigger.update);
 
-    rafRef.current = requestAnimationFrame(raf);
+    gsap.ticker.add((time) => {
+      lenis.raf(time * 1000);
+    });
+
+    gsap.ticker.lagSmoothing(0);
 
     return () => {
-      cancelAnimationFrame(rafRef.current);
       lenis.destroy();
       lenisRef.current = null;
+      setLenisInstance(null);
     };
   }, []);
 
-  return <>{children}</>;
+  return (
+    <LenisContext.Provider value={lenisInstance}>
+      {children}
+    </LenisContext.Provider>
+  );
 }

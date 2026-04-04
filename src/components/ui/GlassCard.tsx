@@ -12,7 +12,7 @@ export function GlassCard({ children, className }: GlassCardProps) {
     <div
       className={cn(
         "rounded-2xl p-6 transition-shadow duration-300",
-        "hover:shadow-[0_0_30px_rgba(37,99,235,0.1)]",
+        "hover:shadow-[0_0_30px_rgba(201,168,76,0.1)]",
         className
       )}
       style={{

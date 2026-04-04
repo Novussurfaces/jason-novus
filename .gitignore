@@ -41,3 +41,21 @@ yarn-error.log*
 next-env.d.ts
 
 .vercel
+.env*.local
+.gitnexus
+
+# Lead data files — NEVER commit
+*.csv
+NOVUS-*.json
+data-permits-*.csv
+leads-*.csv
+scripts/*.csv
+scripts/*.json
+!scripts/seo-structured-data.json
+
+# Misc junk
+COWORK-BRIEFING.md
+screenshots/
+scripts/.lead-cache/
+scripts/.permit-cache/
+scripts/IMG_*

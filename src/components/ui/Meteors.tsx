@@ -28,8 +28,8 @@ export function Meteors({ number = 20 }: MeteorsProps) {
             left: `${m.left}%`,
             width: "2px",
             height: "2px",
-            background: "linear-gradient(135deg, #2563eb 0%, transparent 80%)",
-            boxShadow: "0 0 2px 1px rgba(37, 99, 235, 0.3)",
+            background: "linear-gradient(135deg, #C9A84C 0%, transparent 80%)",
+            boxShadow: "0 0 2px 1px rgba(201, 168, 76, 0.3)",
             animation: `meteor-fall ${m.duration}s linear ${m.delay}s infinite`,
           }}
         />

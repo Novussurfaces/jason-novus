@@ -111,7 +111,7 @@ export function AuthForms({ mode: initialMode = "login" }: { mode?: AuthMode }) 
 
   if (success) {
     return (
-      <LampEffect className="min-h-screen bg-[#09090b] pt-32 pb-24">
+      <LampEffect className="min-h-screen bg-[#09090b] pt-16 pb-24">
         <Container className="relative z-10">
           <motion.div
             initial={{ opacity: 0, scale: 0.9 }}
@@ -132,7 +132,7 @@ export function AuthForms({ mode: initialMode = "login" }: { mode?: AuthMode }) 
   }
 
   return (
-    <LampEffect className="min-h-screen bg-[#09090b] pt-32 pb-24">
+    <LampEffect className="min-h-screen bg-[#09090b] pt-16 pb-24">
       <Container className="relative z-10">
         <motion.div
           initial={{ opacity: 0, y: 30 }}

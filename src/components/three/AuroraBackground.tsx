@@ -5,7 +5,7 @@ import { motion } from "framer-motion";
 export function AuroraBackground() {
   return (
     <div className="absolute inset-0 overflow-hidden -z-10">
-      {/* Primary aurora */}
+      {/* Primary aurora — very subtle ambient glow */}
       <motion.div
         animate={{
           x: [0, 100, -50, 0],
@@ -13,10 +13,10 @@ export function AuroraBackground() {
           scale: [1, 1.2, 0.9, 1],
         }}
         transition={{ duration: 20, repeat: Infinity, ease: "linear" }}
-        className="absolute -top-1/2 -left-1/4 w-[150%] h-[150%] rounded-full opacity-30"
+        className="absolute -top-1/2 -left-1/4 w-[150%] h-[150%] rounded-full opacity-[0.04]"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(37,99,235,0.15) 0%, rgba(37,99,235,0.05) 40%, transparent 70%)",
+            "radial-gradient(ellipse at center, rgba(201,168,76,0.12) 0%, rgba(201,168,76,0.04) 40%, transparent 70%)",
         }}
       />
       {/* Secondary aurora */}
@@ -27,10 +27,10 @@ export function AuroraBackground() {
           scale: [1, 0.85, 1.15, 1],
         }}
         transition={{ duration: 25, repeat: Infinity, ease: "linear" }}
-        className="absolute -top-1/3 -right-1/4 w-[120%] h-[120%] rounded-full opacity-20"
+        className="absolute -top-1/3 -right-1/4 w-[120%] h-[120%] rounded-full opacity-[0.035]"
         style={{
           background:
-            "radial-gradient(ellipse at center, rgba(59,130,246,0.2) 0%, rgba(99,102,241,0.08) 40%, transparent 70%)",
+            "radial-gradient(ellipse at center, rgba(212,183,94,0.15) 0%, rgba(99,102,241,0.05) 40%, transparent 70%)",
         }}
       />
       {/* Accent glow */}
@@ -40,10 +40,10 @@ export function AuroraBackground() {
           y: [0, -30, 50, 0],
         }}
         transition={{ duration: 15, repeat: Infinity, ease: "linear" }}
-        className="absolute top-1/4 left-1/3 w-[600px] h-[600px] rounded-full opacity-20"
+        className="absolute top-1/4 left-1/3 w-[600px] h-[600px] rounded-full opacity-[0.05]"
         style={{
           background:
-            "radial-gradient(circle, rgba(37,99,235,0.25) 0%, transparent 60%)",
+            "radial-gradient(circle, rgba(201,168,76,0.18) 0%, transparent 60%)",
         }}
       />
       {/* Grid overlay */}

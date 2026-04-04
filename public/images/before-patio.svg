@@ -1,0 +1,171 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <!-- Exterior wall - aged stucco/masonry -->
+    <linearGradient id="ext-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#4a4842"/>
+      <stop offset="40%" stop-color="#434138"/>
+      <stop offset="100%" stop-color="#3c3a34"/>
+    </linearGradient>
+    <!-- Cracked outdoor patio concrete -->
+    <linearGradient id="patio-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#6a6a62"/>
+      <stop offset="30%" stop-color="#5e5e56"/>
+      <stop offset="60%" stop-color="#565650"/>
+      <stop offset="100%" stop-color="#4e4e48"/>
+    </linearGradient>
+    <!-- Concrete noise texture -->
+    <filter id="outdoor-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.55" numOctaves="5" seed="33" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.12"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="overlay"/>
+    </filter>
+    <!-- Subtle wall grime filter -->
+    <filter id="wall-grime" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="turbulence" baseFrequency="0.04" numOctaves="3" seed="11"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.07"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <!-- Weathering stain -->
+    <radialGradient id="weather-stain-1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#4a4840" stop-opacity="0.45"/>
+      <stop offset="50%" stop-color="#555550" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#5e5e56" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="weather-stain-2" cx="0.4" cy="0.6" r="0.5">
+      <stop offset="0%" stop-color="#3e3c35" stop-opacity="0.4"/>
+      <stop offset="60%" stop-color="#505048" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#5e5e56" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Moss/algae growth -->
+    <radialGradient id="moss-1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#4a5a3a" stop-opacity="0.35"/>
+      <stop offset="50%" stop-color="#556845" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#565650" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Water pooling -->
+    <radialGradient id="water-pool" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#5a6068" stop-opacity="0.3"/>
+      <stop offset="60%" stop-color="#606268" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#565650" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Depth shadow at wall-floor junction -->
+    <linearGradient id="junction-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Efflorescence (white mineral deposits) -->
+    <radialGradient id="efflor" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#9a9a90" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="#8a8a82" stop-opacity="0.08"/>
+      <stop offset="100%" stop-color="#5e5e56" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+
+  <!-- Exterior wall background -->
+  <rect width="800" height="255" fill="url(#ext-wall)"/>
+
+  <!-- Wall texture overlay -->
+  <rect width="800" height="255" filter="url(#wall-grime)" fill="#555" opacity="0.25"/>
+
+  <!-- Wall surface details - aged stucco lines -->
+  <line x1="0" y1="85" x2="250" y2="85" stroke="#3a3830" stroke-width="1.5" opacity="0.2"/>
+  <line x1="350" y1="130" x2="650" y2="130" stroke="#3a3830" stroke-width="1" opacity="0.15"/>
+  <line x1="500" y1="60" x2="800" y2="60" stroke="#3a3830" stroke-width="1" opacity="0.18"/>
+
+  <!-- Wall water damage streaks -->
+  <path d="M200,0 L205,40 L198,90 L202,140 L196,200 L200,255"
+        stroke="#3a3830" stroke-width="6" fill="none" opacity="0.08"/>
+  <path d="M580,0 L575,50 L582,100 L578,160 L585,220 L580,255"
+        stroke="#3a3830" stroke-width="5" fill="none" opacity="0.07"/>
+
+  <!-- Exterior light fixture (old) -->
+  <rect x="620" y="80" width="40" height="50" rx="3" fill="#3d3b35" stroke="#4a4842" stroke-width="1.5" opacity="0.5"/>
+  <rect x="630" y="90" width="20" height="30" rx="2" fill="#35332d" opacity="0.4"/>
+
+  <!-- Wall-floor junction shadow -->
+  <rect x="0" y="242" width="800" height="25" fill="url(#junction-shadow)"/>
+
+  <!-- Patio concrete slab -->
+  <polygon points="0,250 800,250 800,600 0,600" fill="url(#patio-floor)" filter="url(#outdoor-noise)"/>
+
+  <!-- Major freeze-thaw cracks -->
+  <path d="M100,260 L95,300 L108,340 L92,390 L105,435 L88,485 L100,530 L90,575 L105,600"
+        stroke="#48483e" stroke-width="4" fill="none" opacity="0.7" stroke-linecap="round"/>
+  <path d="M101,260 L96,300 L109,340 L93,390 L106,435 L89,485 L101,530 L91,575 L106,600"
+        stroke="#3a3a32" stroke-width="2" fill="none" opacity="0.4"/>
+
+  <path d="M350,255 L345,310 L358,360 L340,415 L355,465 L342,520 L360,575 L348,600"
+        stroke="#48483e" stroke-width="4.5" fill="none" opacity="0.65" stroke-linecap="round"/>
+  <path d="M351,255 L346,310 L359,360 L341,415 L356,465 L343,520 L361,575 L349,600"
+        stroke="#3a3a32" stroke-width="1.8" fill="none" opacity="0.35"/>
+
+  <path d="M620,258 L610,305 L625,355 L608,410 L622,460 L605,515 L620,570 L612,600"
+        stroke="#48483e" stroke-width="3.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+  <!-- Branching cracks from freeze damage -->
+  <path d="M350,360 L380,375 L420,368 L460,385 L510,375"
+        stroke="#48483e" stroke-width="2.5" fill="none" opacity="0.5"/>
+  <path d="M92,390 L60,405 L30,398"
+        stroke="#48483e" stroke-width="2" fill="none" opacity="0.45"/>
+  <path d="M620,410 L660,425 L700,415 L740,430 L790,422"
+        stroke="#48483e" stroke-width="2" fill="none" opacity="0.45"/>
+
+  <!-- Horizontal expansion joint crack -->
+  <path d="M0,420 L80,418 L180,425 L290,416 L420,423 L540,415 L660,422 L780,417 L800,420"
+        stroke="#4a4a40" stroke-width="2.5" fill="none" opacity="0.5"/>
+
+  <!-- Spider cracks -->
+  <g opacity="0.4">
+    <path d="M220,340 L235,350 L245,345 M235,350 L230,365 M235,350 L248,360" stroke="#48483e" stroke-width="1.5" fill="none"/>
+    <path d="M480,480 L495,490 L505,485 M495,490 L490,505 M495,490 L508,500" stroke="#48483e" stroke-width="1.5" fill="none"/>
+    <path d="M700,320 L715,330 L725,325 M715,330 L710,345 M715,330 L728,340" stroke="#48483e" stroke-width="1.5" fill="none"/>
+  </g>
+
+  <!-- Spalled/chipped concrete areas -->
+  <path d="M250,500 Q268,488 288,498 Q300,512 295,530 Q278,542 258,534 Q245,520 250,500Z"
+        fill="#52524a" stroke="#48483e" stroke-width="1" opacity="0.5"/>
+  <path d="M255,505 Q268,495 282,503 Q290,514 286,526 Q274,534 262,528 Q252,518 255,505Z"
+        fill="#44443c" opacity="0.4"/>
+
+  <path d="M540,290 Q558,278 578,288 Q590,302 585,318 Q568,328 550,320 Q537,308 540,290Z"
+        fill="#52524a" stroke="#48483e" stroke-width="1" opacity="0.45"/>
+
+  <!-- Moss/algae in cracks and edges -->
+  <ellipse cx="100" cy="390" rx="25" ry="15" fill="url(#moss-1)"/>
+  <ellipse cx="350" cy="365" rx="30" ry="18" fill="url(#moss-1)"/>
+  <ellipse cx="40" cy="530" rx="40" ry="25" fill="url(#moss-1)" opacity="0.8"/>
+  <ellipse cx="760" cy="570" rx="35" ry="20" fill="url(#moss-1)" opacity="0.7"/>
+
+  <!-- Water pooling areas -->
+  <ellipse cx="450" cy="480" rx="80" ry="40" fill="url(#water-pool)"/>
+  <ellipse cx="180" cy="560" rx="60" ry="30" fill="url(#water-pool)"/>
+
+  <!-- Weathering/discoloration patches -->
+  <ellipse cx="300" cy="410" rx="100" ry="55" fill="url(#weather-stain-1)"/>
+  <ellipse cx="650" cy="470" rx="90" ry="50" fill="url(#weather-stain-2)"/>
+
+  <!-- Efflorescence (white mineral deposits) -->
+  <ellipse cx="500" cy="380" rx="45" ry="22" fill="url(#efflor)"/>
+  <ellipse cx="200" cy="490" rx="35" ry="17" fill="url(#efflor)"/>
+
+  <!-- Leaf stains / organic discoloration -->
+  <circle cx="400" cy="545" r="8" fill="#4a4838" opacity="0.18"/>
+  <circle cx="420" cy="555" r="6" fill="#484636" opacity="0.15"/>
+  <circle cx="160" cy="430" r="7" fill="#4a4838" opacity="0.16"/>
+
+  <!-- Dust and debris along edges -->
+  <rect x="0" y="575" width="800" height="25" fill="#4a4a42" opacity="0.08"/>
+
+  <!-- Corner grime buildup -->
+  <path d="M0,600 L0,540 Q20,550 40,560 Q30,580 20,600Z" fill="#3a3a34" opacity="0.3"/>
+  <path d="M800,600 L800,540 Q780,550 760,560 Q770,580 780,600Z" fill="#3a3a34" opacity="0.3"/>
+
+  <!-- Overall weathered/dull overlay for depth -->
+  <rect x="0" y="250" width="800" height="350" fill="url(#junction-shadow)" opacity="0.12"/>
+</svg>

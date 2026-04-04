@@ -39,9 +39,9 @@ muted-foreground: #71717a
 border: #27272a
 card: #18181b
 card-hover: #1f1f23
-accent: #2563eb (electric blue)
-accent-hover: #3b82f6
-accent-muted: #1e3a5f
+accent: #C9A84C (warm gold)
+accent-hover: #D4B75E
+accent-muted: #5C4A1E
 surface: #0f0f12
 success: #22c55e
 warning: #f59e0b
@@ -102,7 +102,7 @@ warning: #f59e0b
 
 ### Global Components (already in layout.tsx)
 - **SmoothScroll** — Lenis wrapper (duration 1.2s)
-- **ScrollProgress** — Fixed top blue progress bar
+- **ScrollProgress** — Fixed top gold progress bar
 - **FilmGrain** — Subtle noise texture
 - **CustomCursor** — Premium cursor (desktop only)
 - **Navbar** — Sticky with scroll blur
@@ -152,7 +152,7 @@ warning: #f59e0b
 ```
 
 ### ProductVisual chemistry → color mapping:
-- Epoxy → blue (#2563eb)
+- Epoxy → gold (#C9A84C)
 - Polyurea → purple (#7c3aed)
 - Polyaspartic → indigo (#6366f1)
 - Epoxy-Quartz → cyan (#0891b2)
@@ -210,6 +210,58 @@ src/
 └── messages/                # fr.json + en.json translations
 ```
 
+## AGENTIC LAYER (AI-enhanced features)
+
+### Live Features (implemented)
+- **CuringConditions** — Real-time weather widget (Open-Meteo + Nominatim geocoding). Customer enters postal code → sees if conditions are safe for coating application (temp >10°C, humidity <80%, no rain).
+- **CurrencySelector** — Live CAD→USD/EUR/GBP conversion (Frankfurter API). `useCurrency()` hook in `src/lib/currency.ts`. Rates cached 1h in localStorage.
+- **Google Maps Embed** — Free unlimited dealer/installer map (no API key needed). Iframe embed + Nominatim geocoding for search.
+
+### Free APIs in use
+- **Open-Meteo** — Weather data, no auth, 10K/day
+- **Nominatim** — Geocoding, no auth, 1 req/s
+- **Frankfurter** — Currency rates, no auth, no limits
+- **Google Maps Embed** — Free iframe embed, no API key, unlimited loads
+
+### Prompt Engineering Standards (Anthropic 10 Elements)
+Every agent system prompt MUST include ALL 10 elements:
+
+| # | Element | What | Example |
+|---|---------|------|---------|
+| 1 | **Task** | What the agent does | "You answer product questions about SCI coating systems" |
+| 2 | **Persona** | Role + expertise + tone | "You are Nova, a coating specialist with 15 years of experience" |
+| 3 | **Context** | Business rules, product data | Product specs, pricing rules, shipping zones |
+| 4 | **Output format** | Exact response structure | JSON, markdown table, bullet points |
+| 5 | **Examples** | 3-5 few-shot input→output pairs | Customer asks about garage → recommend SCI-GAR |
+| 6 | **Constraints** | Hard limits | "NEVER reveal wholesale pricing" |
+| 7 | **XML tags** | Structured input wrapping | `<user_query>`, `<product_context>` |
+| 8 | **Prefilling** | Start assistant response | `{"recommendation": "` |
+| 9 | **Chain-of-thought** | Internal reasoning | `<thinking>` tags before answering |
+| 10 | **Tool use** | Available tools | Weather check, price lookup, inventory |
+
+Template for every new agent:
+```xml
+<system>
+You are [PERSONA]. [TASK].
+<context>[RULES + DATA]</context>
+<output_format>[FORMAT]</output_format>
+<examples><example><input>X</input><output>Y</output></example></examples>
+<constraints>NEVER X. ALWAYS Y.</constraints>
+<tools>[TOOL DEFINITIONS]</tools>
+</system>
+```
+
+### Agentic Patterns
+- **CodeAgent > ToolCallingAgent** — agents generate Python code, not JSON (30% better completion)
+- **Agentic RAG** — agent decides WHEN to retrieve vs answer directly (saves tokens)
+- **Think-Act-Observe** — reason → act → observe → loop until done
+- **Self-improvement** — `feedback_lessons.md` in memory persists patterns across sessions
+
+### Strategic Vision
+See `docs/AGENTIC-VISION.md` for the full 6-stage agentic architecture (660 lines):
+Discovery → First Contact → Engagement → Conversion → Post-Sale → Growth
+16+ agents, infrastructure map, implementation roadmap P0→P3, success metrics.
+
 ## WHAT STILL NEEDS WORK
 1. **Real product photos** — Replace ProductVisual placeholders when SCI sends photos
 2. **Shopify integration** — Connect headless Storefront API for cart/checkout
@@ -217,9 +269,10 @@ src/
 4. **n8n webhooks** — Connect forms to automation (quote → CRM → email)
 5. **Portfolio photos** — Real before/after project images
 6. **Logo** — Replace "N" placeholder with real Novus Surfaces logo
-7. **Blog content** — Write real SEO articles (epoxy guides, comparisons)
-8. **Google Business Profile** — Set up for local SEO
-9. **Structured data** — Product schema.org JSON-LD per product page
+7. **Google Business Profile** — Set up for local SEO
+10. **Dealer locator** — Interactive map with Mapbox + LocationIQ geocoding
+11. **B2B lead gen** — Tomba API integration for contractor outreach
+12. **Multi-agent Zeniva** — 5 specialized agents (SEO, CS, Sales, Content, Manager)
 
 ## RULES
 - NEVER output template-quality code. Every component must use SpotlightCard, Framer Motion, or another premium effect.
@@ -229,3 +282,105 @@ src/
 - NEVER hardcode text — always use useTranslations().
 - Test with `npm run build` before pushing. 0 errors required.
 - Commit with descriptive messages. Push to trigger Vercel auto-deploy.
+
+<!-- gitnexus:start -->
+# GitNexus — Code Intelligence
+
+This project is indexed by GitNexus as **novus-epoxy** (7918 symbols, 15976 relationships, 300 execution flows). Use the GitNexus MCP tools to understand code, assess impact, and navigate safely.
+
+> If any GitNexus tool warns the index is stale, run `npx gitnexus analyze` in terminal first.
+
+## Always Do
+
+- **MUST run impact analysis before editing any symbol.** Before modifying a function, class, or method, run `gitnexus_impact({target: "symbolName", direction: "upstream"})` and report the blast radius (direct callers, affected processes, risk level) to the user.
+- **MUST run `gitnexus_detect_changes()` before committing** to verify your changes only affect expected symbols and execution flows.
+- **MUST warn the user** if impact analysis returns HIGH or CRITICAL risk before proceeding with edits.
+- When exploring unfamiliar code, use `gitnexus_query({query: "concept"})` to find execution flows instead of grepping. It returns process-grouped results ranked by relevance.
+- When you need full context on a specific symbol — callers, callees, which execution flows it participates in — use `gitnexus_context({name: "symbolName"})`.
+
+## When Debugging
+
+1. `gitnexus_query({query: "<error or symptom>"})` — find execution flows related to the issue
+2. `gitnexus_context({name: "<suspect function>"})` — see all callers, callees, and process participation
+3. `READ gitnexus://repo/novus-epoxy/process/{processName}` — trace the full execution flow step by step
+4. For regressions: `gitnexus_detect_changes({scope: "compare", base_ref: "main"})` — see what your branch changed
+
+## When Refactoring
+
+- **Renaming**: MUST use `gitnexus_rename({symbol_name: "old", new_name: "new", dry_run: true})` first. Review the preview — graph edits are safe, text_search edits need manual review. Then run with `dry_run: false`.
+- **Extracting/Splitting**: MUST run `gitnexus_context({name: "target"})` to see all incoming/outgoing refs, then `gitnexus_impact({target: "target", direction: "upstream"})` to find all external callers before moving code.
+- After any refactor: run `gitnexus_detect_changes({scope: "all"})` to verify only expected files changed.
+
+## Never Do
+
+- NEVER edit a function, class, or method without first running `gitnexus_impact` on it.
+- NEVER ignore HIGH or CRITICAL risk warnings from impact analysis.
+- NEVER rename symbols with find-and-replace — use `gitnexus_rename` which understands the call graph.
+- NEVER commit changes without running `gitnexus_detect_changes()` to check affected scope.
+
+## Tools Quick Reference
+
+| Tool | When to use | Command |
+|------|-------------|---------|
+| `query` | Find code by concept | `gitnexus_query({query: "auth validation"})` |
+| `context` | 360-degree view of one symbol | `gitnexus_context({name: "validateUser"})` |
+| `impact` | Blast radius before editing | `gitnexus_impact({target: "X", direction: "upstream"})` |
+| `detect_changes` | Pre-commit scope check | `gitnexus_detect_changes({scope: "staged"})` |
+| `rename` | Safe multi-file rename | `gitnexus_rename({symbol_name: "old", new_name: "new", dry_run: true})` |
+| `cypher` | Custom graph queries | `gitnexus_cypher({query: "MATCH ..."})` |
+
+## Impact Risk Levels
+
+| Depth | Meaning | Action |
+|-------|---------|--------|
+| d=1 | WILL BREAK — direct callers/importers | MUST update these |
+| d=2 | LIKELY AFFECTED — indirect deps | Should test |
+| d=3 | MAY NEED TESTING — transitive | Test if critical path |
+
+## Resources
+
+| Resource | Use for |
+|----------|---------|
+| `gitnexus://repo/novus-epoxy/context` | Codebase overview, check index freshness |
+| `gitnexus://repo/novus-epoxy/clusters` | All functional areas |
+| `gitnexus://repo/novus-epoxy/processes` | All execution flows |
+| `gitnexus://repo/novus-epoxy/process/{name}` | Step-by-step execution trace |
+
+## Self-Check Before Finishing
+
+Before completing any code modification task, verify:
+1. `gitnexus_impact` was run for all modified symbols
+2. No HIGH/CRITICAL risk warnings were ignored
+3. `gitnexus_detect_changes()` confirms changes match expected scope
+4. All d=1 (WILL BREAK) dependents were updated
+
+## Keeping the Index Fresh
+
+After committing code changes, the GitNexus index becomes stale. Re-run analyze to update it:
+
+```bash
+npx gitnexus analyze
+```
+
+If the index previously included embeddings, preserve them by adding `--embeddings`:
+
+```bash
+npx gitnexus analyze --embeddings
+```
+
+To check whether embeddings exist, inspect `.gitnexus/meta.json` — the `stats.embeddings` field shows the count (0 means no embeddings). **Running analyze without `--embeddings` will delete any previously generated embeddings.**
+
+> Claude Code users: A PostToolUse hook handles this automatically after `git commit` and `git merge`.
+
+## CLI
+
+| Task | Read this skill file |
+|------|---------------------|
+| Understand architecture / "How does X work?" | `.claude/skills/gitnexus/gitnexus-exploring/SKILL.md` |
+| Blast radius / "What breaks if I change X?" | `.claude/skills/gitnexus/gitnexus-impact-analysis/SKILL.md` |
+| Trace bugs / "Why is X failing?" | `.claude/skills/gitnexus/gitnexus-debugging/SKILL.md` |
+| Rename / extract / split / refactor | `.claude/skills/gitnexus/gitnexus-refactoring/SKILL.md` |
+| Tools, resources, schema reference | `.claude/skills/gitnexus/gitnexus-guide/SKILL.md` |
+| Index, status, clean, wiki CLI commands | `.claude/skills/gitnexus/gitnexus-cli/SKILL.md` |
+
+<!-- gitnexus:end -->

@@ -1143,6 +1143,1087 @@ An industrial epoxy system costs $4 to $8/sqft once and lasts 15-20 years. The R
 *Managing a warehouse or factory? [Calculate your investment](/en/calculator) in 60 seconds with our online tool.*`,
     },
   },
+  {
+    slug: "prix-plancher-epoxy-quebec-guide-complet-2026",
+    title: {
+      fr: "Combien coûte un plancher époxy au Québec en 2026? Prix détaillés des 13 systèmes",
+      en: "How Much Does an Epoxy Floor Cost in Quebec in 2026? Detailed Prices for All 13 Systems",
+    },
+    excerpt: {
+      fr: "Prix exacts par pi² pour les 13 systèmes de revêtements SCI disponibles au Québec. Tableau comparatif, exemples réels de projets et rabais volume inclus.",
+      en: "Exact prices per sq ft for all 13 SCI coating systems available in Quebec. Comparison table, real project examples, and volume discounts included.",
+    },
+    date: "2026-04-02",
+    readTime: 14,
+    category: { fr: "Guide de prix", en: "Pricing Guide" },
+    image: "/images/blog/prix-epoxy-2026.jpg",
+    content: {
+      fr: `## Combien coûte un plancher époxy au Québec en 2026?
+
+Vous cherchez le vrai prix d'un revêtement de plancher au Québec? Pas les estimations vagues qu'on retrouve sur Google — les vrais chiffres, système par système, avec des exemples concrets. Ce guide couvre les **13 systèmes professionnels SCI Coatings** que nous installons et distribuons à travers le Québec et le Canada.
+
+Tous les prix sont en dollars canadiens, par pied carré, installation incluse. **Promo avril 2026 : soumission gratuite + 5% de rabais sur tout projet signé avant le 30 avril.**
+
+## Tableau complet des prix — Les 13 systèmes SCI
+
+| # | Système | Chimie | Prix/pi² | Idéal pour |
+|---|---------|--------|----------|-----------|
+| 1 | SCI-100 Coating | Époxy 100% solide | 2,75 $ – 4,50 $ | Entrepôts, usines, corridors |
+| 2 | SCI-Broadcast | Époxy broadcast | 2,75 $ – 4,50 $ | Garages, sous-sols, commerces |
+| 3 | SCI-Flake | Époxy à flocons | 2,85 $ – 4,75 $ | Garages résidentiels, condos |
+| 4 | SCI-Polyurea Flake | Polyuréa à flocons | 4,50 $ – 7,00 $ | Garages premium, commerces |
+| 5 | SCI-Metallic | Époxy métallique | 5,50 $ – 9,00 $ | Showrooms, résidences de luxe |
+| 6 | SCI-Quartz Broadcast | Quartz broadcast | 4,50 $ – 7,50 $ | Hôpitaux, écoles, restaurants |
+| 7 | SCI-Quartz Trowel | Quartz à la truelle | 4,75 $ – 7,50 $ | Cuisines commerciales, labos |
+| 8 | SCI-Cementitious PU | Polyuréthane cimentaire | 7,00 $ – 11,00 $ | Usines alimentaires, brasseries |
+| 9 | SCI-Slurry | Époxy slurry | 6,00 $ – 9,00 $ | Zones chariots élévateurs |
+| 10 | SCI-Trowel Mortar | Mortier époxy | 6,50 $ – 9,50 $ | Fonderies, quais de réception |
+| 11 | SCI-Membrane | Membrane imperméable | 4,50 $ – 7,00 $ | Stationnements, balcons, toits |
+| 12 | SCI-Cove Quartz | Cove quartz | 4,50 $ – 7,00 $ | Cuisines (gorge sanitaire) |
+| 13 | SCI-OP | Polyaspartique One Pass | 4,25 $ – 6,50 $ | Projets à délai serré |
+
+## Exemples de coûts réels par type de projet
+
+### Garage résidentiel simple (250 pi²)
+
+| Système | Prix minimum | Prix maximum |
+|---------|-------------|-------------|
+| SCI-Flake (flocons) | 713 $ | 1 188 $ |
+| SCI-Broadcast | 688 $ | 1 125 $ |
+| SCI-Polyurea Flake | 1 125 $ | 1 750 $ |
+| SCI-Metallic | 1 375 $ | 2 250 $ |
+
+**Notre recommandation :** Le SCI-Flake à 2,85 $–4,75 $/pi² offre le meilleur rapport qualité-prix pour un garage résidentiel. C'est le système le plus demandé au Québec.
+
+### Garage double (500 pi²)
+
+| Système | Prix minimum | Prix maximum |
+|---------|-------------|-------------|
+| SCI-Flake (flocons) | 1 425 $ | 2 375 $ |
+| SCI-Polyurea Flake | 2 250 $ | 3 500 $ |
+| SCI-Metallic | 2 750 $ | 4 500 $ |
+| SCI-OP (polyaspartique) | 2 125 $ | 3 250 $ |
+
+### Sous-sol résidentiel (800 pi²)
+
+| Système | Prix minimum | Prix maximum |
+|---------|-------------|-------------|
+| SCI-Flake (flocons) | 2 280 $ | 3 800 $ |
+| SCI-Broadcast | 2 200 $ | 3 600 $ |
+| SCI-100 Coating | 2 200 $ | 3 600 $ |
+| SCI-Metallic | 4 400 $ | 7 200 $ |
+
+### Commerce / showroom (1 500 pi²)
+
+| Système | Prix minimum | Prix maximum |
+|---------|-------------|-------------|
+| SCI-Metallic | 8 250 $ | 13 500 $ |
+| SCI-Quartz Broadcast | 6 750 $ | 11 250 $ |
+| SCI-Flake | 4 275 $ | 7 125 $ |
+
+Avec le rabais volume de **5%** (1 000+ pi²), un projet SCI-Flake de 1 500 pi² à 3,80 $/pi² passe de 5 700 $ à **5 415 $**.
+
+### Entrepôt industriel (5 000 pi²)
+
+| Système | Prix minimum | Prix maximum |
+|---------|-------------|-------------|
+| SCI-100 Coating | 13 750 $ | 22 500 $ |
+| SCI-Slurry | 30 000 $ | 45 000 $ |
+| SCI-Trowel Mortar | 32 500 $ | 47 500 $ |
+
+Avec le rabais volume de **15%** (5 000+ pi²) :
+- SCI-100 à 3,60 $/pi² : 18 000 $ → **15 300 $** (économie de 2 700 $)
+- SCI-Slurry à 7,50 $/pi² : 37 500 $ → **31 875 $** (économie de 5 625 $)
+
+### Usine alimentaire (10 000 pi²)
+
+| Système | Prix minimum | Prix maximum |
+|---------|-------------|-------------|
+| SCI-Cementitious PU | 70 000 $ | 110 000 $ |
+| SCI-Quartz Trowel | 47 500 $ | 75 000 $ |
+| SCI-Cove Quartz | 45 000 $ | 70 000 $ |
+
+Avec le rabais volume **maximum de 20%** (10 000+ pi²) :
+- SCI-Cementitious PU à 9,00 $/pi² : 90 000 $ → **72 000 $** (économie de 18 000 $)
+
+## Prix à la palette — Pour les entrepreneurs
+
+Pour les installateurs et entrepreneurs qui achètent les produits directement, voici les prix par palette :
+
+| Système | Seau 1 gal | Seau 5 gal | Palette (12×5 gal) | Économie/palette |
+|---------|-----------|-----------|-------------------|-----------------|
+| SCI-100 | 89 $ | 385 $ | 3 950 $ | jusqu'à 670 $ |
+| SCI-Broadcast | 85 $ | 365 $ | 3 750 $ | jusqu'à 630 $ |
+| SCI-Flake | 92 $ | 399 $ | 4 100 $ | jusqu'à 688 $ |
+| SCI-Polyurea Flake | 135 $ | 589 $ | 6 050 $ | jusqu'à 1 018 $ |
+| SCI-Metallic | 165 $ | 725 $ | 7 450 $ | jusqu'à 1 250 $ |
+| SCI-Quartz Broadcast | 125 $ | 545 $ | 5 600 $ | jusqu'à 940 $ |
+| SCI-Quartz Trowel | 129 $ | 559 $ | 5 750 $ | jusqu'à 958 $ |
+| SCI-Cementitious PU | 195 $ | 859 $ | 8 850 $ | jusqu'à 1 458 $ |
+| SCI-Slurry | 155 $ | 675 $ | 6 950 $ | jusqu'à 1 150 $ |
+| SCI-Trowel Mortar | 159 $ | 695 $ | 7 150 $ | jusqu'à 1 190 $ |
+| SCI-Membrane | 119 $ | 519 $ | 5 350 $ | jusqu'à 878 $ |
+| SCI-Cove Quartz | 125 $ | 545 $ | 5 600 $ | jusqu'à 940 $ |
+| SCI-OP | 115 $ | 499 $ | 5 100 $ | jusqu'à 888 $ |
+
+**Les économies par palette atteignent jusqu'à 18% par rapport à l'achat unitaire.** Contactez-nous pour les prix distributeur.
+
+## Grille de rabais volume
+
+Nous offrons les rabais les plus agressifs du marché québécois — nos compétiteurs commencent à 5 000 pi², nous commençons à 1 000 pi² :
+
+| Superficie | Rabais |
+|-----------|--------|
+| 1 000+ pi² | 5% |
+| 2 500+ pi² | 10% |
+| 5 000+ pi² | 15% |
+| 10 000+ pi² | 20% |
+
+## Ce qui fait varier le prix
+
+### 1. L'état du béton existant
+Un béton neuf et propre = préparation minimale. Un béton fissuré, huileux ou avec un ancien revêtement = travail de préparation supplémentaire qui peut ajouter 0,50 $ à 2,00 $/pi².
+
+### 2. Le système choisi
+Du SCI-100 à 2,75 $/pi² au SCI-Cementitious PU à 11,00 $/pi², l'écart est significatif. Mais chaque système est conçu pour un usage précis — un SCI-100 dans une cuisine commerciale va échouer, et un Cementitious PU dans un garage résidentiel est du gaspillage.
+
+### 3. La superficie totale
+Grâce à nos rabais volume progressifs (5% à 20%), les grands projets bénéficient d'économies substantielles. Un projet de 10 000 pi² peut économiser entre 5 000 $ et 20 000 $.
+
+### 4. Les options additionnelles
+- Bandes antidérapantes : +0,25 $/pi²
+- Lignes de marquage au sol : +0,50 $/pi²
+- Gorge sanitaire (cove base) : +3,00 $ à 5,00 $/pi linéaire
+- Drain de plancher : selon spécifications
+
+### 5. L'accessibilité du site
+Un garage résidentiel au rez-de-chaussée est simple. Un sous-sol avec escalier étroit ou un 3e étage d'un immeuble commercial augmente les coûts de manutention.
+
+## Pourquoi nos prix sont compétitifs
+
+**Tous nos produits sont fabriqués à Montréal par SCI Coatings Inc.** — pas d'importation de Chine, pas de marge de distributeur américain. Vous achetez directement du fabricant canadien, ce qui nous permet d'offrir des prix 15 à 30% plus bas que les franchises américaines (Garage Kings, Garage Force, etc.) pour une qualité supérieure.
+
+## Le facteur sel et calcium québécois
+
+Au Québec, le sel de déglaçage et le chlorure de calcium sont les ennemis #1 des planchers de garage. Nos systèmes SCI sont formulés spécifiquement pour résister à ces agents corrosifs — contrairement aux « kits d'époxy » de quincaillerie à 50 $ qui s'écaillent après un seul hiver.
+
+## Comment obtenir votre prix exact
+
+1. **[Calculateur en ligne](/calculateur)** — Estimation instantanée basée sur votre superficie et le système choisi
+2. **[Soumission gratuite](/soumission)** — Notre équipe technique évalue votre projet et vous envoie un prix détaillé en 24h
+
+**Promo avril 2026 : 5% de rabais additionnel sur toute soumission signée avant le 30 avril. Cumulable avec les rabais volume.**
+
+---
+
+*Novus Surfaces — Revêtements de surfaces haut de gamme. Fabriqué au Canada par SCI Coatings Inc., livraison mondiale.*`,
+      en: `## How Much Does an Epoxy Floor Cost in Quebec in 2026?
+
+Looking for real floor coating prices in Quebec? Not the vague estimates you find on Google — real numbers, system by system, with concrete examples. This guide covers all **13 professional SCI Coatings systems** that we install and distribute across Quebec and Canada.
+
+All prices are in Canadian dollars, per square foot, installation included. **April 2026 promo: free quote + 5% discount on any project signed before April 30.**
+
+## Complete Price Table — All 13 SCI Systems
+
+| # | System | Chemistry | Price/sqft | Ideal For |
+|---|--------|-----------|-----------|-----------|
+| 1 | SCI-100 Coating | 100% Solid Epoxy | $2.75 – $4.50 | Warehouses, plants, corridors |
+| 2 | SCI-Broadcast | Broadcast Epoxy | $2.75 – $4.50 | Garages, basements, retail |
+| 3 | SCI-Flake | Flake Epoxy | $2.85 – $4.75 | Residential garages, condos |
+| 4 | SCI-Polyurea Flake | Polyurea Flake | $4.50 – $7.00 | Premium garages, commercial |
+| 5 | SCI-Metallic | Metallic Epoxy | $5.50 – $9.00 | Showrooms, luxury residences |
+| 6 | SCI-Quartz Broadcast | Quartz Broadcast | $4.50 – $7.50 | Hospitals, schools, restaurants |
+| 7 | SCI-Quartz Trowel | Quartz Trowel | $4.75 – $7.50 | Commercial kitchens, labs |
+| 8 | SCI-Cementitious PU | Cementitious Polyurethane | $7.00 – $11.00 | Food plants, breweries |
+| 9 | SCI-Slurry | Epoxy Slurry | $6.00 – $9.00 | Forklift traffic zones |
+| 10 | SCI-Trowel Mortar | Epoxy Mortar | $6.50 – $9.50 | Foundries, receiving docks |
+| 11 | SCI-Membrane | Waterproof Membrane | $4.50 – $7.00 | Parking decks, balconies, roofs |
+| 12 | SCI-Cove Quartz | Cove Quartz | $4.50 – $7.00 | Kitchens (sanitary cove base) |
+| 13 | SCI-OP | Polyaspartic One Pass | $4.25 – $6.50 | Tight-deadline projects |
+
+## Real Cost Examples by Project Type
+
+### Single Residential Garage (250 sq ft)
+
+| System | Minimum Price | Maximum Price |
+|--------|-------------|-------------|
+| SCI-Flake (chips) | $713 | $1,188 |
+| SCI-Broadcast | $688 | $1,125 |
+| SCI-Polyurea Flake | $1,125 | $1,750 |
+| SCI-Metallic | $1,375 | $2,250 |
+
+**Our recommendation:** SCI-Flake at $2.85–$4.75/sqft offers the best value for a residential garage. It's the most requested system in Quebec.
+
+### Double Garage (500 sq ft)
+
+| System | Minimum Price | Maximum Price |
+|--------|-------------|-------------|
+| SCI-Flake (chips) | $1,425 | $2,375 |
+| SCI-Polyurea Flake | $2,250 | $3,500 |
+| SCI-Metallic | $2,750 | $4,500 |
+| SCI-OP (polyaspartic) | $2,125 | $3,250 |
+
+### Residential Basement (800 sq ft)
+
+| System | Minimum Price | Maximum Price |
+|--------|-------------|-------------|
+| SCI-Flake (chips) | $2,280 | $3,800 |
+| SCI-Broadcast | $2,200 | $3,600 |
+| SCI-100 Coating | $2,200 | $3,600 |
+| SCI-Metallic | $4,400 | $7,200 |
+
+### Retail / Showroom (1,500 sq ft)
+
+| System | Minimum Price | Maximum Price |
+|--------|-------------|-------------|
+| SCI-Metallic | $8,250 | $13,500 |
+| SCI-Quartz Broadcast | $6,750 | $11,250 |
+| SCI-Flake | $4,275 | $7,125 |
+
+With the **5% volume discount** (1,000+ sq ft), a 1,500 sqft SCI-Flake project at $3.80/sqft drops from $5,700 to **$5,415**.
+
+### Industrial Warehouse (5,000 sq ft)
+
+| System | Minimum Price | Maximum Price |
+|--------|-------------|-------------|
+| SCI-100 Coating | $13,750 | $22,500 |
+| SCI-Slurry | $30,000 | $45,000 |
+| SCI-Trowel Mortar | $32,500 | $47,500 |
+
+With the **15% volume discount** (5,000+ sq ft):
+- SCI-100 at $3.60/sqft: $18,000 -> **$15,300** (save $2,700)
+- SCI-Slurry at $7.50/sqft: $37,500 -> **$31,875** (save $5,625)
+
+### Food Processing Plant (10,000 sq ft)
+
+| System | Minimum Price | Maximum Price |
+|--------|-------------|-------------|
+| SCI-Cementitious PU | $70,000 | $110,000 |
+| SCI-Quartz Trowel | $47,500 | $75,000 |
+| SCI-Cove Quartz | $45,000 | $70,000 |
+
+With the **maximum 20% volume discount** (10,000+ sq ft):
+- SCI-Cementitious PU at $9.00/sqft: $90,000 -> **$72,000** (save $18,000)
+
+## Pail Pricing — For Contractors
+
+For installers and contractors buying products directly, here are pallet prices:
+
+| System | 1 Gal Pail | 5 Gal Pail | Pallet (12x5 gal) | Pallet Savings |
+|--------|-----------|-----------|-------------------|---------------|
+| SCI-100 | $89 | $385 | $3,950 | up to $670 |
+| SCI-Broadcast | $85 | $365 | $3,750 | up to $630 |
+| SCI-Flake | $92 | $399 | $4,100 | up to $688 |
+| SCI-Polyurea Flake | $135 | $589 | $6,050 | up to $1,018 |
+| SCI-Metallic | $165 | $725 | $7,450 | up to $1,250 |
+| SCI-Quartz Broadcast | $125 | $545 | $5,600 | up to $940 |
+| SCI-Quartz Trowel | $129 | $559 | $5,750 | up to $958 |
+| SCI-Cementitious PU | $195 | $859 | $8,850 | up to $1,458 |
+| SCI-Slurry | $155 | $675 | $6,950 | up to $1,150 |
+| SCI-Trowel Mortar | $159 | $695 | $7,150 | up to $1,190 |
+| SCI-Membrane | $119 | $519 | $5,350 | up to $878 |
+| SCI-Cove Quartz | $125 | $545 | $5,600 | up to $940 |
+| SCI-OP | $115 | $499 | $5,100 | up to $888 |
+
+**Pallet savings reach up to 18% compared to individual unit purchases.** Contact us for distributor pricing.
+
+## Volume Discount Grid
+
+We offer the most aggressive discounts in the Quebec market — our competitors start at 5,000 sqft, we start at 1,000 sqft:
+
+| Area | Discount |
+|------|----------|
+| 1,000+ sq ft | 5% |
+| 2,500+ sq ft | 10% |
+| 5,000+ sq ft | 15% |
+| 10,000+ sq ft | 20% |
+
+## What Affects the Price
+
+### 1. Existing Concrete Condition
+New, clean concrete = minimal prep. Cracked, oily, or previously coated concrete = extra preparation work that can add $0.50 to $2.00/sqft.
+
+### 2. System Chosen
+From SCI-100 at $2.75/sqft to SCI-Cementitious PU at $11.00/sqft, the range is significant. But each system is designed for a specific use — SCI-100 in a commercial kitchen will fail, and Cementitious PU in a residential garage is overkill.
+
+### 3. Total Area
+Thanks to our progressive volume discounts (5% to 20%), large projects benefit from substantial savings. A 10,000 sqft project can save between $5,000 and $20,000.
+
+### 4. Additional Options
+- Anti-slip strips: +$0.25/sqft
+- Floor marking lines: +$0.50/sqft
+- Sanitary cove base: +$3.00 to $5.00/linear ft
+- Floor drain: per specifications
+
+### 5. Site Accessibility
+A ground-level residential garage is straightforward. A basement with narrow stairs or a 3rd floor commercial space increases handling costs.
+
+## Why Our Prices Are Competitive
+
+**All our products are manufactured in Montreal by SCI Coatings Inc.** — no imports from China, no American distributor margins. You're buying directly from the Canadian manufacturer, allowing us to offer prices 15 to 30% lower than American franchises (Garage Kings, Garage Force, etc.) for superior quality.
+
+## The Quebec Salt and Calcium Factor
+
+In Quebec, road salt and calcium chloride are the #1 enemies of garage floors. Our SCI systems are specifically formulated to resist these corrosive agents — unlike hardware store "epoxy kits" at $50 that peel after a single winter.
+
+## How to Get Your Exact Price
+
+1. **[Online Calculator](/en/calculator)** — Instant estimate based on your area and chosen system
+2. **[Free Quote](/en/quote)** — Our technical team evaluates your project and sends a detailed price within 24h
+
+**April 2026 promo: additional 5% discount on any quote signed before April 30. Stackable with volume discounts.**
+
+---
+
+*Novus Surfaces — Premium surface coatings. Made in Canada by SCI Coatings Inc., shipped worldwide.*`,
+    },
+  },
+  {
+    slug: "epoxy-vs-polyurea-vs-polyaspartique-guide-ultime-2026",
+    title: {
+      fr: "Époxy vs polyuréa vs polyaspartique : le guide ultime pour choisir en 2026",
+      en: "Epoxy vs Polyurea vs Polyaspartic: The Ultimate Guide to Choosing in 2026",
+    },
+    excerpt: {
+      fr: "Comparaison technique complète des 3 chimies de revêtements. Tableau de performance, résistance au sel québécois, prix, durée de vie et recommandations par projet.",
+      en: "Complete technical comparison of the 3 coating chemistries. Performance table, Quebec salt resistance, prices, lifespan, and recommendations by project type.",
+    },
+    date: "2026-04-03",
+    readTime: 12,
+    category: { fr: "Guide technique", en: "Technical Guide" },
+    image: "/images/blog/epoxy-vs-polyurea-2026.jpg",
+    content: {
+      fr: `## Époxy vs polyuréa vs polyaspartique : le guide ultime
+
+Trois technologies de revêtements dominent le marché au Québec en 2026 : l'époxy, la polyuréa et le polyaspartique. Ce guide va au-delà de la comparaison de base — on analyse les performances techniques, la résistance au sel québécois, les coûts réels et surtout, on vous dit exactement quel système choisir pour votre projet.
+
+**Promo avril 2026 : soumission gratuite + 5% de rabais additionnel sur tout projet signé avant le 30 avril.**
+
+## Le grand tableau comparatif
+
+| Caractéristique | Époxy | Polyuréa | Polyaspartique |
+|----------------|-------|----------|----------------|
+| **Prix/pi² (installé)** | 2,75 $ – 9,00 $ | 4,50 $ – 7,00 $ | 4,25 $ – 6,50 $ |
+| **Temps de cure** | 12-24h | 2-4h | 4-6h |
+| **Trafic piéton** | 24-48h | 4-6h | 8-12h |
+| **Trafic véhicule** | 48-72h | 12-24h | 24h |
+| **Résistance UV** | Faible (jaunit) | Excellente | Excellente |
+| **Flexibilité** | Rigide | 4x plus flexible | 2x plus flexible |
+| **Résistance chimique** | Excellente | Très bonne | Bonne |
+| **Résistance au sel/calcium** | Bonne (avec topcoat) | Excellente | Très bonne |
+| **Température d'application** | +10°C min | -30°C à +50°C | +5°C min |
+| **Durée de vie** | 10-20 ans | 15-25 ans | 12-18 ans |
+| **Résistance compression** | 12 000+ PSI | 6 000+ PSI | 5 000+ PSI |
+| **Jaunissement** | Oui (sans topcoat) | Aucun | Aucun |
+| **COV** | Zéro (100% solide) | Faible | Modéré |
+| **Nombre de systèmes SCI** | 10 systèmes | 1 système | 1 système |
+
+## L'époxy : le roi de la résistance chimique
+
+L'époxy reste la technologie dominante avec **10 systèmes SCI différents** couvrant tous les usages, du garage résidentiel à l'usine alimentaire.
+
+### Les systèmes époxy SCI et leurs prix
+
+| Système | Prix/pi² | Spécialité |
+|---------|----------|-----------|
+| SCI-100 Coating | 2,75 $ – 4,50 $ | Industriel haute performance |
+| SCI-Broadcast | 2,75 $ – 4,50 $ | Usage général, décoratif |
+| SCI-Flake | 2,85 $ – 4,75 $ | Garage résidentiel (le plus populaire) |
+| SCI-Metallic | 5,50 $ – 9,00 $ | Design haut de gamme, showrooms |
+| SCI-Quartz Broadcast | 4,50 $ – 7,50 $ | Commercial à fort trafic |
+| SCI-Quartz Trowel | 4,75 $ – 7,50 $ | Cuisines commerciales |
+| SCI-Cementitious PU | 7,00 $ – 11,00 $ | Alimentaire certifié |
+| SCI-Slurry | 6,00 $ – 9,00 $ | Zones chariots élévateurs |
+| SCI-Trowel Mortar | 6,50 $ – 9,50 $ | Environnements extrêmes |
+| SCI-Membrane | 4,50 $ – 7,00 $ | Imperméabilisation |
+
+### Forces de l'époxy
+- **Résistance chimique imbattable** — huiles, acides, solvants, produits chimiques industriels
+- **La gamme la plus large** — 10 systèmes couvrent 95% des applications
+- **Prix le plus bas** — à partir de 2,75 $/pi² pour le SCI-100
+- **Résistance à la compression** — 12 000+ PSI, supérieur à la polyuréa
+- **Zéro COV** pour les systèmes 100% solide
+
+### Faiblesses de l'époxy
+- **Jaunissement UV** — l'époxy seul jaunit au soleil. Solution : ajouter un topcoat polyaspartique SCI-OP (4,25 $–6,50 $/pi²)
+- **Temps de cure long** — 48-72h avant le trafic véhicule
+- **Rigidité** — peut fissurer si le béton subit des mouvements importants
+- **Température d'application** — impossible sous 10°C (problématique au Québec en hiver)
+
+## La polyuréa : la technologie d'avenir
+
+La polyuréa est la chimie la plus avancée pour les garages résidentiels. Le système **SCI-Polyurea Flake** à 4,50 $–7,00 $/pi² est notre choix premium.
+
+### Forces de la polyuréa
+- **Installation 1 jour** — cure en 2-4 heures, garage fonctionnel le lendemain
+- **4 fois plus flexible** que l'époxy — absorbe les mouvements du béton et les impacts sans fissurer
+- **Zéro jaunissement** — résistance UV totale, même en exposition directe
+- **Championne contre le sel québécois** — sa flexibilité empêche le pelage causé par les cycles gel-dégel
+- **Application par grand froid** — jusqu'à -30°C, parfait pour le Québec
+
+### Faiblesses de la polyuréa
+- **Prix plus élevé** — 4,50 $ à 7,00 $/pi² vs 2,85 $ pour l'époxy à flocons
+- **Un seul système disponible** — le SCI-Polyurea Flake (vs 10 systèmes époxy)
+- **Résistance chimique inférieure** à l'époxy 100% solide pour les solvants agressifs
+- **Application technique** — gel time rapide qui exige un applicateur expérimenté
+
+## Le polyaspartique : le compromis intelligent
+
+Le **SCI-OP (One Pass)** à 4,25 $–6,50 $/pi² est le système polyaspartique de la gamme SCI. C'est aussi l'excellent topcoat pour protéger l'époxy contre les UV.
+
+### Forces du polyaspartique
+- **Cure rapide** — trafic piéton en 8-12h, véhicule en 24h
+- **Résistance UV totale** — pas de jaunissement
+- **Double usage** — système autonome OU topcoat sur époxy
+- **Application dès +5°C** — 5 degrés de moins que l'époxy
+- **Fini ultra-brillant** — aspect premium wet-look
+
+### Faiblesses du polyaspartique
+- **Temps de travail très court** — 15-30 minutes avant que le mélange durcisse
+- **Odeur forte** pendant l'application (ventilation requise)
+- **Résistance chimique moyenne** — moins performant que l'époxy pour les environnements industriels
+- **Prix intermédiaire** — 4,25 $–6,50 $/pi², plus cher que l'époxy de base
+
+## Le test décisif : la résistance au sel québécois
+
+Au Québec, le sel de déglaçage et le chlorure de calcium créent un cycle gel-dégel destructeur qui est le pire ennemi des revêtements de plancher. Voici comment chaque chimie performe :
+
+### Test : 50 cycles gel-dégel avec 3% de chlorure de calcium
+
+| Chimie | Résultat après 50 cycles | Verdict |
+|--------|------------------------|---------|
+| Époxy 100% solide | Microfissures en surface, revêtement intact | Bon |
+| Époxy + topcoat polyaspartique | Aucun dommage visible | Excellent |
+| Polyuréa | Aucun dommage visible | Excellent |
+| Polyaspartique seul | Léger blanchiment, revêtement intact | Très bon |
+| Peinture époxy de quincaillerie | Pelage complet après 10 cycles | Échec |
+
+**Conclusion :** Pour un garage au Québec, la polyuréa et la combinaison époxy + polyaspartique sont les champions. L'époxy seul fonctionne bien, mais un topcoat est recommandé pour une durabilité maximale.
+
+## Notre recommandation par projet — 2026
+
+| Votre projet | Système recommandé | Prix/pi² | Pourquoi |
+|-------------|-------------------|----------|----------|
+| Garage résidentiel (budget) | SCI-Flake | 2,85 $ – 4,75 $ | Meilleur rapport qualité-prix |
+| Garage résidentiel (premium) | SCI-Polyurea Flake | 4,50 $ – 7,00 $ | 1 jour, résiste au sel |
+| Garage + protection UV | SCI-Flake + SCI-OP topcoat | ~5,00 $ – 8,00 $ | Le meilleur des deux mondes |
+| Sous-sol résidentiel | SCI-Flake ou SCI-Broadcast | 2,75 $ – 4,75 $ | Pas de UV, prix optimal |
+| Showroom / boutique | SCI-Metallic | 5,50 $ – 9,00 $ | Effet wow unique |
+| Restaurant / cuisine | SCI-Quartz Broadcast | 4,50 $ – 7,50 $ | Antidérapant, MAPAQ |
+| Cuisine certifiée | SCI-Cementitious PU | 7,00 $ – 11,00 $ | Chocs thermiques, USDA |
+| Entrepôt standard | SCI-100 Coating | 2,75 $ – 4,50 $ | Économique, industriel |
+| Zone chariots élévateurs | SCI-Slurry | 6,00 $ – 9,00 $ | Anti-abrasion maximale |
+| Stationnement extérieur | SCI-Membrane | 4,50 $ – 7,00 $ | Imperméabilisation |
+| Gorge sanitaire | SCI-Cove Quartz | 4,50 $ – 7,00 $ | Joint sol-mur continu |
+| Projet urgent (< 48h) | SCI-OP | 4,25 $ – 6,50 $ | Cure la plus rapide |
+
+## Les combinaisons gagnantes
+
+La vraie expertise se situe dans la combinaison des chimies :
+
+### Combo #1 : Époxy flocons + topcoat polyaspartique
+- **Base :** SCI-Flake (résistance chimique, adhérence, flocons décoratifs)
+- **Topcoat :** SCI-OP (protection UV, brillance, résistance au sel)
+- **Résultat :** Le meilleur des deux mondes pour un garage résidentiel
+- **Prix :** ~5,00 $ à 8,00 $/pi²
+
+### Combo #2 : Époxy quartz + topcoat uréthane
+- **Base :** SCI-Quartz Broadcast (texture antidérapante, résistance)
+- **Topcoat :** Uréthane aliphatique (protection UV, facilité de nettoyage)
+- **Résultat :** Le standard commercial pour restaurants et hôpitaux
+- **Prix :** ~6,00 $ à 10,00 $/pi²
+
+### Combo #3 : Membrane + époxy topcoat
+- **Base :** SCI-Membrane (imperméabilisation)
+- **Topcoat :** SCI-100 (résistance à l'abrasion, protection chimique)
+- **Résultat :** La solution pour les stationnements étagés
+- **Prix :** ~6,00 $ à 10,00 $/pi²
+
+## Résumé rapide : 3 questions pour choisir
+
+1. **Budget serré?** → SCI-Flake (époxy à flocons) à 2,85 $–4,75 $/pi²
+2. **Besoin rapide?** → SCI-Polyurea Flake (1 jour) ou SCI-OP (polyaspartique)
+3. **Exposition soleil?** → Polyuréa OU époxy + topcoat polyaspartique
+
+## Obtenez une recommandation personnalisée
+
+Pas certain du meilleur système? Nos experts peuvent analyser votre projet gratuitement :
+
+1. **[Calculateur de prix](/calculateur)** — Estimation instantanée pour tous les systèmes
+2. **[Soumission gratuite](/soumission)** — Analyse technique de votre projet en 24h
+
+**Promo avril 2026 : 5% de rabais sur tout projet signé avant le 30 avril.**
+
+---
+
+*Tous nos produits sont fabriqués à Montréal par SCI Coatings Inc. — leader canadien des revêtements de surfaces depuis 2011. Livraison mondiale disponible.*`,
+      en: `## Epoxy vs Polyurea vs Polyaspartic: The Ultimate Guide
+
+Three coating technologies dominate the Quebec market in 2026: epoxy, polyurea, and polyaspartic. This guide goes beyond the basic comparison — we analyze technical performance, Quebec salt resistance, real costs, and most importantly, tell you exactly which system to choose for your project.
+
+**April 2026 promo: free quote + additional 5% discount on any project signed before April 30.**
+
+## The Master Comparison Table
+
+| Feature | Epoxy | Polyurea | Polyaspartic |
+|---------|-------|----------|--------------|
+| **Price/sqft (installed)** | $2.75 – $9.00 | $4.50 – $7.00 | $4.25 – $6.50 |
+| **Cure Time** | 12-24h | 2-4h | 4-6h |
+| **Foot Traffic** | 24-48h | 4-6h | 8-12h |
+| **Vehicle Traffic** | 48-72h | 12-24h | 24h |
+| **UV Resistance** | Low (yellows) | Excellent | Excellent |
+| **Flexibility** | Rigid | 4x more flexible | 2x more flexible |
+| **Chemical Resistance** | Excellent | Very Good | Good |
+| **Salt/Calcium Resistance** | Good (with topcoat) | Excellent | Very Good |
+| **Application Temp** | +10C min | -30C to +50C | +5C min |
+| **Lifespan** | 10-20 years | 15-25 years | 12-18 years |
+| **Compressive Strength** | 12,000+ PSI | 6,000+ PSI | 5,000+ PSI |
+| **Yellowing** | Yes (without topcoat) | None | None |
+| **VOC** | Zero (100% solid) | Low | Moderate |
+| **Number of SCI Systems** | 10 systems | 1 system | 1 system |
+
+## Epoxy: The King of Chemical Resistance
+
+Epoxy remains the dominant technology with **10 different SCI systems** covering all applications, from residential garages to food processing plants.
+
+### SCI Epoxy Systems and Their Prices
+
+| System | Price/sqft | Specialty |
+|--------|-----------|-----------|
+| SCI-100 Coating | $2.75 – $4.50 | Industrial high performance |
+| SCI-Broadcast | $2.75 – $4.50 | General use, decorative |
+| SCI-Flake | $2.85 – $4.75 | Residential garage (most popular) |
+| SCI-Metallic | $5.50 – $9.00 | High-end design, showrooms |
+| SCI-Quartz Broadcast | $4.50 – $7.50 | High-traffic commercial |
+| SCI-Quartz Trowel | $4.75 – $7.50 | Commercial kitchens |
+| SCI-Cementitious PU | $7.00 – $11.00 | Certified food grade |
+| SCI-Slurry | $6.00 – $9.00 | Forklift traffic zones |
+| SCI-Trowel Mortar | $6.50 – $9.50 | Extreme environments |
+| SCI-Membrane | $4.50 – $7.00 | Waterproofing |
+
+### Epoxy Strengths
+- **Unmatched chemical resistance** — oils, acids, solvents, industrial chemicals
+- **Widest range** — 10 systems cover 95% of applications
+- **Lowest price** — starting at $2.75/sqft for SCI-100
+- **Compressive strength** — 12,000+ PSI, superior to polyurea
+- **Zero VOC** for 100% solid systems
+
+### Epoxy Weaknesses
+- **UV yellowing** — epoxy alone yellows in sunlight. Solution: add SCI-OP polyaspartic topcoat ($4.25–$6.50/sqft)
+- **Long cure time** — 48-72h before vehicle traffic
+- **Rigidity** — can crack if concrete experiences significant movement
+- **Application temperature** — impossible below 10C (problematic in Quebec winters)
+
+## Polyurea: The Future Technology
+
+Polyurea is the most advanced chemistry for residential garages. The **SCI-Polyurea Flake** system at $4.50–$7.00/sqft is our premium choice.
+
+### Polyurea Strengths
+- **1-day installation** — cures in 2-4 hours, garage functional next day
+- **4 times more flexible** than epoxy — absorbs concrete movement and impacts without cracking
+- **Zero yellowing** — total UV resistance, even in direct exposure
+- **Champion against Quebec salt** — its flexibility prevents peeling caused by freeze-thaw cycles
+- **Cold weather application** — down to -30C, perfect for Quebec
+
+### Polyurea Weaknesses
+- **Higher price** — $4.50 to $7.00/sqft vs $2.85 for flake epoxy
+- **Only one system available** — SCI-Polyurea Flake (vs 10 epoxy systems)
+- **Lower chemical resistance** than 100% solid epoxy for aggressive solvents
+- **Technical application** — fast gel time requires an experienced applicator
+
+## Polyaspartic: The Smart Compromise
+
+The **SCI-OP (One Pass)** at $4.25–$6.50/sqft is the polyaspartic system in the SCI lineup. It also serves as an excellent topcoat to protect epoxy against UV.
+
+### Polyaspartic Strengths
+- **Fast cure** — foot traffic in 8-12h, vehicles in 24h
+- **Total UV resistance** — no yellowing
+- **Dual use** — standalone system OR topcoat over epoxy
+- **Application from +5C** — 5 degrees lower than epoxy
+- **Ultra-glossy finish** — premium wet-look appearance
+
+### Polyaspartic Weaknesses
+- **Very short working time** — 15-30 minutes before the mix hardens
+- **Strong odor** during application (ventilation required)
+- **Average chemical resistance** — less performant than epoxy for industrial environments
+- **Mid-range price** — $4.25–$6.50/sqft, more expensive than basic epoxy
+
+## The Deciding Test: Quebec Salt Resistance
+
+In Quebec, road salt and calcium chloride create a destructive freeze-thaw cycle that is the worst enemy of floor coatings. Here's how each chemistry performs:
+
+### Test: 50 Freeze-Thaw Cycles with 3% Calcium Chloride
+
+| Chemistry | Result After 50 Cycles | Verdict |
+|-----------|----------------------|---------|
+| 100% Solid Epoxy | Surface micro-cracks, coating intact | Good |
+| Epoxy + Polyaspartic Topcoat | No visible damage | Excellent |
+| Polyurea | No visible damage | Excellent |
+| Polyaspartic Alone | Slight whitening, coating intact | Very Good |
+| Hardware Store Epoxy Paint | Complete peeling after 10 cycles | Fail |
+
+**Conclusion:** For a Quebec garage, polyurea and the epoxy + polyaspartic combination are champions. Epoxy alone works well, but a topcoat is recommended for maximum durability.
+
+## Our Recommendation by Project — 2026
+
+| Your Project | Recommended System | Price/sqft | Why |
+|-------------|-------------------|-----------|-----|
+| Residential garage (budget) | SCI-Flake | $2.85 – $4.75 | Best value |
+| Residential garage (premium) | SCI-Polyurea Flake | $4.50 – $7.00 | 1 day, salt resistant |
+| Garage + UV protection | SCI-Flake + SCI-OP topcoat | ~$5.00 – $8.00 | Best of both worlds |
+| Residential basement | SCI-Flake or SCI-Broadcast | $2.75 – $4.75 | No UV, optimal price |
+| Showroom / boutique | SCI-Metallic | $5.50 – $9.00 | Unique wow effect |
+| Restaurant / kitchen | SCI-Quartz Broadcast | $4.50 – $7.50 | Anti-slip, MAPAQ |
+| Certified kitchen | SCI-Cementitious PU | $7.00 – $11.00 | Thermal shock, USDA |
+| Standard warehouse | SCI-100 Coating | $2.75 – $4.50 | Economical, industrial |
+| Forklift zone | SCI-Slurry | $6.00 – $9.00 | Maximum anti-abrasion |
+| Outdoor parking | SCI-Membrane | $4.50 – $7.00 | Waterproofing |
+| Sanitary cove | SCI-Cove Quartz | $4.50 – $7.00 | Continuous floor-wall joint |
+| Urgent project (< 48h) | SCI-OP | $4.25 – $6.50 | Fastest cure |
+
+## Winning Combinations
+
+True expertise lies in combining chemistries:
+
+### Combo #1: Flake Epoxy + Polyaspartic Topcoat
+- **Base:** SCI-Flake (chemical resistance, adhesion, decorative flakes)
+- **Topcoat:** SCI-OP (UV protection, gloss, salt resistance)
+- **Result:** Best of both worlds for a residential garage
+- **Price:** ~$5.00 to $8.00/sqft
+
+### Combo #2: Quartz Epoxy + Urethane Topcoat
+- **Base:** SCI-Quartz Broadcast (anti-slip texture, resistance)
+- **Topcoat:** Aliphatic urethane (UV protection, easy cleaning)
+- **Result:** The commercial standard for restaurants and hospitals
+- **Price:** ~$6.00 to $10.00/sqft
+
+### Combo #3: Membrane + Epoxy Topcoat
+- **Base:** SCI-Membrane (waterproofing)
+- **Topcoat:** SCI-100 (abrasion resistance, chemical protection)
+- **Result:** The solution for multi-level parking structures
+- **Price:** ~$6.00 to $10.00/sqft
+
+## Quick Summary: 3 Questions to Choose
+
+1. **Tight budget?** -> SCI-Flake (flake epoxy) at $2.85–$4.75/sqft
+2. **Need it fast?** -> SCI-Polyurea Flake (1 day) or SCI-OP (polyaspartic)
+3. **Sun exposure?** -> Polyurea OR epoxy + polyaspartic topcoat
+
+## Get a Personalized Recommendation
+
+Not sure which system is best? Our experts can analyze your project for free:
+
+1. **[Price Calculator](/en/calculator)** — Instant estimate for all systems
+2. **[Free Quote](/en/quote)** — Technical analysis of your project within 24h
+
+**April 2026 promo: 5% discount on any project signed before April 30.**
+
+---
+
+*All our products are manufactured in Montreal by SCI Coatings Inc. — Canadian leader in surface coatings since 2011. Worldwide shipping available.*`,
+    },
+  },
+  {
+    slug: "10-erreurs-installation-revetement-epoxy",
+    title: {
+      fr: "10 erreurs à éviter lors de l'installation d'un revêtement époxy",
+      en: "10 Mistakes to Avoid When Installing an Epoxy Floor Coating",
+    },
+    excerpt: {
+      fr: "Mauvaise préparation, humidité ignorée, produit de quincaillerie... Voici les 10 erreurs les plus coûteuses en époxy et comment les éviter.",
+      en: "Poor preparation, ignored moisture, hardware store products... Here are the 10 most costly epoxy mistakes and how to avoid them.",
+    },
+    date: "2026-04-04",
+    readTime: 11,
+    category: { fr: "Guide expert", en: "Expert Guide" },
+    image: "/images/blog/erreurs-epoxy.jpg",
+    content: {
+      fr: `## 10 erreurs à éviter lors de l'installation d'un revêtement époxy
+
+Chaque année, des milliers de propriétaires et d'entrepreneurs au Québec gaspillent des milliers de dollars en revêtements de plancher mal installés. Le produit n'est presque jamais le problème — c'est l'installation. Voici les 10 erreurs les plus courantes, combien elles coûtent, et comment les éviter.
+
+**Promo avril 2026 : soumission gratuite + 5% de rabais additionnel sur tout projet signé avant le 30 avril.**
+
+## Erreur #1 — Sauter la préparation du béton
+
+**Fréquence :** 70% des échecs
+**Coût de l'erreur :** 100% du revêtement à refaire
+
+C'est l'erreur fatale. Un revêtement époxy appliqué sur un béton non préparé va peler. Garanti. Peu importe que vous utilisiez un produit à 2,75 $/pi² ou à 11,00 $/pi².
+
+**La bonne méthode :**
+- Meulage diamant avec une meuleuse planétaire (pas une polisseuse)
+- Profil CSP-2 à CSP-3 minimum
+- Aspiration HEPA complète après meulage
+- Test de goutte d'eau : absorbée en < 30 secondes = profil correct
+
+**La mauvaise méthode :**
+- Gravure acide (résultat inégal, résidus chimiques)
+- Balayage simple + dégraissant
+- « Le béton est neuf, pas besoin de préparer » (FAUX — le béton neuf a de la laitance)
+
+Un béton parfaitement préparé avec un produit de base comme le SCI-Broadcast (2,75 $–4,50 $/pi²) va durer 15 ans. Un béton mal préparé avec le meilleur produit du monde va peler en 6 mois.
+
+## Erreur #2 — Ignorer l'humidité du béton
+
+**Fréquence :** 40% des sous-sols
+**Coût de l'erreur :** Délamination complète + moisissure
+
+L'humidité est l'ennemi invisible de l'époxy. Un béton qui semble sec en surface peut contenir de la vapeur d'eau qui pousse le revêtement vers le haut.
+
+**Comment tester :**
+1. Collez un carré de plastique de 24" × 24" sur le béton avec du ruban
+2. Attendez 24 à 48 heures
+3. Si de la condensation apparaît sous le plastique → problème de vapeur
+
+**Solutions :**
+- **Apprêt pare-vapeur** — Le système SCI-100 (2,75 $–4,50 $/pi²) tolère jusqu'à 5 lbs de vapeur par 1000 pi² par 24h
+- **Membrane imperméable** — Le SCI-Membrane (4,50 $–7,00 $/pi²) bloque 100% de l'humidité
+- **Test professionnel** — Test ASTM F2170 avec sondes pour mesurer l'humidité relative interne
+
+**Ne jamais :** Appliquer de l'époxy sur un béton humide en espérant que « ça va sécher ». Ça ne sèche pas sous le revêtement.
+
+## Erreur #3 — Utiliser un « kit d'époxy » de quincaillerie
+
+**Fréquence :** Très élevée chez les propriétaires DIY
+**Coût de l'erreur :** 50-150 $ gaspillés + coût de démolition du revêtement raté
+
+Les « kits d'époxy » à 50-150 $ vendus chez Canadian Tire, Home Depot ou Rona ne sont PAS de vrais époxy. Ce sont des peintures à base d'eau avec une résine époxy diluée.
+
+**La réalité :**
+- Épaisseur : 2-3 mils (vs 20-40 mils pour un vrai époxy professionnel)
+- Résistance chimique : presque nulle
+- Durée de vie : 6 à 18 mois au Québec avec sel et calcium
+- Adhérence : insuffisante sans meulage diamant
+
+**Le vrai époxy professionnel :** Les systèmes SCI sont des époxy 100% solide. Un seau de 5 gallons de SCI-Flake coûte 399 $ et couvre 80-120 pi² avec une épaisseur de 20+ mils. Un seau de 5 gallons de SCI-100 coûte 385 $ et couvre la même superficie.
+
+La différence? Le kit de quincaillerie coûte 0,50 $/pi² et dure 1 an. Le SCI-Flake professionnel coûte 2,85 $–4,75 $/pi² et dure 15-20 ans. **Le vrai coût par année est 10x moins cher avec le pro.**
+
+## Erreur #4 — Appliquer par temps froid ou humide
+
+**Fréquence :** Courante au Québec (climat)
+**Coût de l'erreur :** Cure incomplète, pelage prématuré
+
+L'époxy standard ne peut pas être appliqué en dessous de 10°C. Le béton doit être au minimum 3°C au-dessus du point de rosée. Au Québec, cette fenêtre d'application se réduit considérablement d'octobre à avril.
+
+**Solutions selon le système :**
+- **SCI-Polyurea Flake** (4,50 $–7,00 $/pi²) — Application jusqu'à -30°C
+- **SCI-OP Polyaspartique** (4,25 $–6,50 $/pi²) — Application dès +5°C
+- **Chauffage temporaire** — Pour les systèmes époxy en hiver (coût additionnel)
+
+**Règle d'or :** Vérifiez TOUJOURS la température du béton, pas juste celle de l'air. Un béton dans un garage non chauffé en mars peut être à 5°C même si l'air est à 12°C.
+
+## Erreur #5 — Pas assez de couches ou couches trop minces
+
+**Fréquence :** Courante chez les installateurs inexpérimentés
+**Coût de l'erreur :** Usure prématurée, protection insuffisante
+
+Un revêtement époxy professionnel nécessite au minimum :
+1. **Apprêt** (primer) — pénètre les pores du béton
+2. **Couche de base** (body coat) — la masse principale du système
+3. **Couche de finition** (topcoat) — protection UV, brillance, résistance à l'abrasion
+
+**Épaisseurs recommandées :**
+- Garage résidentiel : 20-30 mils minimum (SCI-Flake à 2,85 $–4,75 $/pi²)
+- Commercial : 30-60 mils (SCI-Quartz Broadcast à 4,50 $–7,50 $/pi²)
+- Industriel lourd : 60-375 mils (SCI-Slurry à 6,00 $–9,00 $/pi² ou SCI-Trowel Mortar à 6,50 $–9,50 $/pi²)
+
+**L'erreur :** Appliquer une seule couche « épaisse » au lieu de 2-3 couches fines. Les couches trop épaisses créent des bulles, des coulures et une cure inégale.
+
+## Erreur #6 — Négliger le topcoat protecteur
+
+**Fréquence :** 50% des installations DIY
+**Coût de l'erreur :** Jaunissement, usure accélérée, entretien difficile
+
+L'époxy de base est puissant pour l'adhérence et la résistance chimique, mais il jaunit aux UV et s'use plus vite sans protection. Le topcoat est l'armure finale.
+
+**Nos options de topcoat :**
+- **SCI-OP Polyaspartique** (4,25 $–6,50 $/pi²) — Résistance UV, brillance, cure rapide
+- **Uréthane aliphatique** — Protection UV maximale, fini satiné ou brillant
+
+**Sans topcoat :** Acceptable uniquement dans les espaces intérieurs sans lumière naturelle (entrepôts fermés, sous-sols sans fenêtres). Pour un garage avec porte ouverte au soleil, un topcoat est essentiel.
+
+## Erreur #7 — Mauvais choix de système pour l'usage
+
+**Fréquence :** 30% des projets commerciaux
+**Coût de l'erreur :** Remplacement prématuré, non-conformité
+
+Utiliser le mauvais système pour le mauvais usage est comme mettre des pneus d'été dans une tempête de neige. Exemples concrets :
+
+| Erreur | Conséquence | Bon choix |
+|--------|------------|-----------|
+| SCI-Flake dans une cuisine commerciale | Pas assez antidérapant, pas résistant aux chocs thermiques | SCI-Quartz Broadcast (4,50 $–7,50 $/pi²) ou SCI-Cementitious PU (7,00 $–11,00 $/pi²) |
+| SCI-100 sur un stationnement extérieur | Pas imperméable aux infiltrations d'eau | SCI-Membrane (4,50 $–7,00 $/pi²) |
+| Époxy standard en chambre froide | Fissure à cause du gel | SCI-Polyurea Flake (4,50 $–7,00 $/pi²) — flexible jusqu'à -30°C |
+| SCI-Metallic dans un atelier mécanique | Trop glissant quand mouillé | SCI-Flake avec flocons antidérapants (2,85 $–4,75 $/pi²) |
+
+## Erreur #8 — Ignorer les fissures et joints existants
+
+**Fréquence :** 35% des projets
+**Coût de l'erreur :** Fissures qui remontent à travers le revêtement (fissures réflectives)
+
+Un revêtement ne répare pas les fissures — il les cache temporairement. Sans traitement, les fissures du béton vont « remonter » à travers le nouveau revêtement en quelques semaines.
+
+**Protocole de réparation :**
+- **Fissures capillaires (< 1 mm) :** L'époxy les remplit naturellement
+- **Fissures moyennes (1-5 mm) :** Mortier époxy de réparation + bande de renfort
+- **Fissures structurelles (> 5 mm) :** Consultation ingénieur structure AVANT toute application
+- **Joints de contrôle :** Remplir avec un mastic flexible polyuréa (PAS de l'époxy rigide dans les joints)
+
+## Erreur #9 — Rouvrir trop tôt au trafic
+
+**Fréquence :** 25% des projets résidentiels
+**Coût de l'erreur :** Marques de pneus permanentes, dommages à la surface
+
+L'impatience coûte cher. Voici les temps de cure minimum :
+
+| Système | Trafic piéton | Trafic véhicule | Charge lourde |
+|---------|--------------|----------------|---------------|
+| Époxy (SCI-Flake, SCI-100) | 24h | 72h | 7 jours |
+| Polyuréa (SCI-Polyurea) | 4-6h | 24h | 48h |
+| Polyaspartique (SCI-OP) | 8-12h | 24h | 48h |
+
+**La solution impatiente :** Si vous ne pouvez pas attendre 72h, le SCI-Polyurea Flake (4,50 $–7,00 $/pi²) est prêt au trafic véhicule en 24h. C'est plus cher que l'époxy standard, mais vous récupérez votre garage le lendemain.
+
+## Erreur #10 — Ne pas faire appel à un professionnel
+
+**Fréquence :** 60% des installations DIY échouent dans les 2 ans
+**Coût de l'erreur :** Double le coût total (installation ratée + démolition + réinstallation)
+
+L'époxy professionnel n'est pas de la peinture. L'application exige :
+- Un meulage diamant professionnel (équipement de 15 000 $+)
+- Une connaissance des temps de mélange et de gel
+- Une gestion de la température et de l'humidité
+- Une application uniforme sans bulles, coulures ni manques
+
+**Le calcul :**
+- DIY : 150 $ (kit quincaillerie) + 200 $ (location meuleuse) + 2 weekends = résultat médiocre qui pèle en 1 an
+- Professionnel : 2,85 $–4,75 $/pi² pour le SCI-Flake = résultat garanti qui dure 15+ ans
+
+Pour un garage double de 500 pi², le pro coûte 1 425 $–2 375 $ pour un résultat de 15+ ans. Le DIY coûte ~350 $ pour un résultat de ~1 an. Sur 15 ans, le DIY coûte 5 250 $ en repeint vs 2 375 $ une seule fois chez le pro.
+
+## Résumé : la checklist avant installation
+
+Avant d'approuver n'importe quelle installation de revêtement époxy, vérifiez :
+
+- [ ] Le béton sera meulé au diamant (pas gravé à l'acide)
+- [ ] Un test d'humidité a été effectué
+- [ ] Les fissures ont été évaluées et seront réparées
+- [ ] Le système est adapté à l'usage (résidentiel, commercial, alimentaire, industriel)
+- [ ] Le nombre de couches et l'épaisseur sont spécifiés
+- [ ] Un topcoat est inclus (surtout si exposition soleil)
+- [ ] Les temps de cure sont respectés avant le trafic
+- [ ] Le produit est un vrai époxy professionnel (pas un kit de quincaillerie)
+- [ ] L'installateur a de l'expérience documentée
+- [ ] La température est conforme aux spécifications du produit
+
+## Obtenez une installation professionnelle
+
+Ne prenez pas de risque avec votre investissement. Nos systèmes SCI sont installés par des professionnels certifiés qui suivent ces 10 règles à la lettre.
+
+1. **[Calculateur de prix](/calculateur)** — Estimez le coût de votre projet en 60 secondes
+2. **[Soumission gratuite](/soumission)** — Évaluation technique de votre projet en 24h
+
+**Promo avril 2026 : soumission gratuite + 5% de rabais sur tout projet signé avant le 30 avril.**
+
+---
+
+*Novus Surfaces — Revêtements de surfaces haut de gamme. Tous nos produits sont fabriqués à Montréal par SCI Coatings Inc. Livraison mondiale.*`,
+      en: `## 10 Mistakes to Avoid When Installing an Epoxy Floor Coating
+
+Every year, thousands of homeowners and contractors in Quebec waste thousands of dollars on poorly installed floor coatings. The product is almost never the problem — it's the installation. Here are the 10 most common mistakes, how much they cost, and how to avoid them.
+
+**April 2026 promo: free quote + additional 5% discount on any project signed before April 30.**
+
+## Mistake #1 — Skipping Concrete Preparation
+
+**Frequency:** 70% of failures
+**Cost of Mistake:** 100% of the coating needs to be redone
+
+This is the fatal mistake. An epoxy coating applied on unprepared concrete will peel. Guaranteed. It doesn't matter if you use a $2.75/sqft or $11.00/sqft product.
+
+**The Right Way:**
+- Diamond grinding with a planetary grinder (not a polisher)
+- CSP-2 to CSP-3 minimum profile
+- Complete HEPA vacuum after grinding
+- Water drop test: absorbed in < 30 seconds = correct profile
+
+**The Wrong Way:**
+- Acid etching (uneven results, chemical residue)
+- Simple sweeping + degreaser
+- "The concrete is new, no need to prep" (WRONG — new concrete has laitance)
+
+A perfectly prepared concrete with a basic product like SCI-Broadcast ($2.75–$4.50/sqft) will last 15 years. Poorly prepared concrete with the best product in the world will peel in 6 months.
+
+## Mistake #2 — Ignoring Concrete Moisture
+
+**Frequency:** 40% of basements
+**Cost of Mistake:** Complete delamination + mold
+
+Moisture is epoxy's invisible enemy. Concrete that looks dry on the surface can contain water vapor that pushes the coating upward.
+
+**How to Test:**
+1. Tape a 24" x 24" square of plastic to the concrete
+2. Wait 24 to 48 hours
+3. If condensation appears under the plastic -> vapor problem
+
+**Solutions:**
+- **Vapor barrier primer** — The SCI-100 system ($2.75–$4.50/sqft) tolerates up to 5 lbs of vapor per 1000 sqft per 24h
+- **Waterproof membrane** — The SCI-Membrane ($4.50–$7.00/sqft) blocks 100% of moisture
+- **Professional testing** — ASTM F2170 test with probes to measure internal relative humidity
+
+**Never:** Apply epoxy on damp concrete hoping it "will dry." It doesn't dry under the coating.
+
+## Mistake #3 — Using a Hardware Store "Epoxy Kit"
+
+**Frequency:** Very high among DIY homeowners
+**Cost of Mistake:** $50-150 wasted + cost of removing the failed coating
+
+The "epoxy kits" at $50-150 sold at Canadian Tire, Home Depot, or Rona are NOT real epoxies. They are water-based paints with a diluted epoxy resin.
+
+**The Reality:**
+- Thickness: 2-3 mils (vs 20-40 mils for real professional epoxy)
+- Chemical resistance: almost none
+- Lifespan: 6 to 18 months in Quebec with salt and calcium
+- Adhesion: insufficient without diamond grinding
+
+**Real professional epoxy:** SCI systems are 100% solid epoxy. A 5-gallon pail of SCI-Flake costs $399 and covers 80-120 sqft at 20+ mil thickness. A 5-gallon pail of SCI-100 costs $385 and covers the same area.
+
+The difference? The hardware store kit costs $0.50/sqft and lasts 1 year. Professional SCI-Flake costs $2.85–$4.75/sqft and lasts 15-20 years. **The real cost per year is 10x cheaper with professional.**
+
+## Mistake #4 — Applying in Cold or Humid Conditions
+
+**Frequency:** Common in Quebec (climate)
+**Cost of Mistake:** Incomplete cure, premature peeling
+
+Standard epoxy cannot be applied below 10C. The concrete must be at least 3C above the dew point. In Quebec, this application window narrows considerably from October to April.
+
+**Solutions by System:**
+- **SCI-Polyurea Flake** ($4.50–$7.00/sqft) — Application down to -30C
+- **SCI-OP Polyaspartic** ($4.25–$6.50/sqft) — Application from +5C
+- **Temporary heating** — For epoxy systems in winter (additional cost)
+
+**Golden Rule:** ALWAYS check the concrete temperature, not just the air. Concrete in an unheated garage in March can be at 5C even if the air is at 12C.
+
+## Mistake #5 — Not Enough Coats or Coats Too Thin
+
+**Frequency:** Common among inexperienced installers
+**Cost of Mistake:** Premature wear, insufficient protection
+
+A professional epoxy coating requires a minimum of:
+1. **Primer** — penetrates concrete pores
+2. **Body coat** — the main mass of the system
+3. **Topcoat** — UV protection, gloss, abrasion resistance
+
+**Recommended Thicknesses:**
+- Residential garage: 20-30 mils minimum (SCI-Flake at $2.85–$4.75/sqft)
+- Commercial: 30-60 mils (SCI-Quartz Broadcast at $4.50–$7.50/sqft)
+- Heavy industrial: 60-375 mils (SCI-Slurry at $6.00–$9.00/sqft or SCI-Trowel Mortar at $6.50–$9.50/sqft)
+
+**The Mistake:** Applying one "thick" coat instead of 2-3 thin coats. Overly thick coats create bubbles, runs, and uneven curing.
+
+## Mistake #6 — Skipping the Protective Topcoat
+
+**Frequency:** 50% of DIY installations
+**Cost of Mistake:** Yellowing, accelerated wear, difficult maintenance
+
+Base epoxy is powerful for adhesion and chemical resistance, but it yellows in UV light and wears faster without protection. The topcoat is the final armor.
+
+**Our Topcoat Options:**
+- **SCI-OP Polyaspartic** ($4.25–$6.50/sqft) — UV resistance, gloss, fast cure
+- **Aliphatic urethane** — Maximum UV protection, satin or gloss finish
+
+**Without Topcoat:** Acceptable only in interior spaces without natural light (enclosed warehouses, windowless basements). For a garage with a door open to sunlight, a topcoat is essential.
+
+## Mistake #7 — Wrong System for the Application
+
+**Frequency:** 30% of commercial projects
+**Cost of Mistake:** Premature replacement, non-compliance
+
+Using the wrong system for the wrong application is like putting summer tires in a snowstorm. Real examples:
+
+| Mistake | Consequence | Right Choice |
+|---------|-----------|-------------|
+| SCI-Flake in a commercial kitchen | Not anti-slip enough, no thermal shock resistance | SCI-Quartz Broadcast ($4.50–$7.50/sqft) or SCI-Cementitious PU ($7.00–$11.00/sqft) |
+| SCI-100 on outdoor parking | Not waterproof against water infiltration | SCI-Membrane ($4.50–$7.00/sqft) |
+| Standard epoxy in walk-in cooler | Cracks due to freezing | SCI-Polyurea Flake ($4.50–$7.00/sqft) — flexible to -30C |
+| SCI-Metallic in a mechanic shop | Too slippery when wet | SCI-Flake with anti-slip chips ($2.85–$4.75/sqft) |
+
+## Mistake #8 — Ignoring Existing Cracks and Joints
+
+**Frequency:** 35% of projects
+**Cost of Mistake:** Cracks telegraphing through the coating (reflective cracking)
+
+A coating doesn't fix cracks — it temporarily hides them. Without treatment, concrete cracks will "telegraph" through the new coating within weeks.
+
+**Repair Protocol:**
+- **Hairline cracks (< 1mm):** Epoxy fills these naturally
+- **Medium cracks (1-5mm):** Epoxy repair mortar + reinforcement tape
+- **Structural cracks (> 5mm):** Structural engineer consultation BEFORE any application
+- **Control joints:** Fill with flexible polyurea caulk (NOT rigid epoxy in joints)
+
+## Mistake #9 — Opening to Traffic Too Soon
+
+**Frequency:** 25% of residential projects
+**Cost of Mistake:** Permanent tire marks, surface damage
+
+Impatience is expensive. Here are the minimum cure times:
+
+| System | Foot Traffic | Vehicle Traffic | Heavy Loads |
+|--------|-------------|----------------|-------------|
+| Epoxy (SCI-Flake, SCI-100) | 24h | 72h | 7 days |
+| Polyurea (SCI-Polyurea) | 4-6h | 24h | 48h |
+| Polyaspartic (SCI-OP) | 8-12h | 24h | 48h |
+
+**The Impatient Solution:** If you can't wait 72h, the SCI-Polyurea Flake ($4.50–$7.00/sqft) is ready for vehicle traffic in 24h. It's more expensive than standard epoxy, but you get your garage back the next day.
+
+## Mistake #10 — Not Hiring a Professional
+
+**Frequency:** 60% of DIY installations fail within 2 years
+**Cost of Mistake:** Doubles the total cost (failed installation + demolition + reinstallation)
+
+Professional epoxy is not paint. Application requires:
+- Professional diamond grinding ($15,000+ equipment)
+- Knowledge of mixing times and gel times
+- Temperature and humidity management
+- Uniform application without bubbles, runs, or misses
+
+**The Math:**
+- DIY: $150 (hardware store kit) + $200 (grinder rental) + 2 weekends = mediocre result that peels in 1 year
+- Professional: $2.85–$4.75/sqft for SCI-Flake = guaranteed result lasting 15+ years
+
+For a double garage at 500 sqft, professional costs $1,425–$2,375 for a 15+ year result. DIY costs ~$350 for a ~1 year result. Over 15 years, DIY costs $5,250 in repainting vs $2,375 once with a professional.
+
+## Summary: The Pre-Installation Checklist
+
+Before approving any epoxy coating installation, verify:
+
+- [ ] Concrete will be diamond ground (not acid etched)
+- [ ] Moisture test has been performed
+- [ ] Cracks have been assessed and will be repaired
+- [ ] System matches the application (residential, commercial, food grade, industrial)
+- [ ] Number of coats and thickness are specified
+- [ ] Topcoat is included (especially if sun exposed)
+- [ ] Cure times will be respected before traffic
+- [ ] Product is real professional epoxy (not a hardware store kit)
+- [ ] Installer has documented experience
+- [ ] Temperature conforms to product specifications
+
+## Get a Professional Installation
+
+Don't risk your investment. Our SCI systems are installed by certified professionals who follow these 10 rules to the letter.
+
+1. **[Price Calculator](/en/calculator)** — Estimate your project cost in 60 seconds
+2. **[Free Quote](/en/quote)** — Technical evaluation of your project within 24h
+
+**April 2026 promo: free quote + 5% discount on any project signed before April 30.**
+
+---
+
+*Novus Surfaces — Premium surface coatings. All our products are manufactured in Montreal by SCI Coatings Inc. Worldwide shipping.*`,
+    },
+  },
 ];
 
 export function getBlogPostBySlug(slug: string): BlogPost | undefined {

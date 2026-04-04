@@ -88,7 +88,7 @@ export function CommercialLanding() {
           <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.08] via-background to-background" />
           <div
             className="absolute top-0 left-1/3 w-[700px] h-[500px] rounded-full opacity-[0.05]"
-            style={{ background: "radial-gradient(ellipse, #2563eb 0%, transparent 70%)", filter: "blur(80px)" }}
+            style={{ background: "radial-gradient(ellipse, #C9A84C 0%, transparent 70%)", filter: "blur(80px)" }}
           />
           <div
             className="absolute top-[30%] right-0 w-[500px] h-[400px] rounded-full opacity-[0.04]"
@@ -113,7 +113,7 @@ export function CommercialLanding() {
             <motion.div variants={stagger} initial="hidden" animate="visible">
               <motion.h1 variants={blurUp} className="font-[family-name:var(--font-cabinet)] text-4xl font-bold tracking-tight sm:text-5xl leading-tight">
                 {t("title")}{" "}
-                <span className="bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-accent to-amber-400 bg-clip-text text-transparent">
                   {t("titleHighlight")}
                 </span>
               </motion.h1>

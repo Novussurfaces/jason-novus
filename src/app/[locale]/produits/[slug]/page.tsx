@@ -2,8 +2,8 @@ import { notFound } from "next/navigation";
 import { setRequestLocale } from "next-intl/server";
 import { products, getProductBySlug } from "@/lib/products";
 import { ProductDetail } from "@/components/sections/ProductDetail";
-import { StructuredData } from "@/components/StructuredData";
-import { getProductSchema, getBreadcrumbSchema } from "@/lib/structured-data";
+import { MultiStructuredData } from "@/components/StructuredData";
+import { getProductSchema, getFAQSchema, getBreadcrumbSchema } from "@/lib/structured-data";
 import type { Metadata } from "next";
 
 type Props = {
@@ -37,16 +37,19 @@ export default async function ProductPage({ params }: Props) {
 
   return (
     <>
-      <StructuredData data={getProductSchema(product, loc)} />
-      <StructuredData
-        data={getBreadcrumbSchema(
-          [
-            { name: loc === "fr" ? "Accueil" : "Home", href: "" },
-            { name: loc === "fr" ? "Produits" : "Products", href: "/produits" },
-            { name: product.name[loc], href: `/produits/${product.slug}` },
-          ],
-          loc
-        )}
+      <MultiStructuredData
+        schemas={[
+          getProductSchema(product, loc),
+          getFAQSchema(loc),
+          getBreadcrumbSchema(
+            [
+              { name: loc === "fr" ? "Accueil" : "Home", href: "" },
+              { name: loc === "fr" ? "Produits" : "Products", href: "/produits" },
+              { name: product.name[loc], href: `/produits/${product.slug}` },
+            ],
+            loc
+          ),
+        ]}
       />
       <ProductDetail product={product} />
     </>

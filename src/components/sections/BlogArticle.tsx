@@ -23,7 +23,7 @@ export function BlogArticle({ post }: { post: BlogPost }) {
 
   return (
     <>
-      <article className="pt-32 pb-24">
+      <article className="pt-16 pb-24">
         <Container>
           <motion.div
             initial={{ opacity: 0, y: 20 }}

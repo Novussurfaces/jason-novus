@@ -10,6 +10,7 @@ import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { validateEmail } from "@/lib/email-validation";
+import { trackContact } from "@/lib/fb-pixel";
 
 const inputClasses =
   "w-full rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/50 transition-all duration-300";
@@ -57,8 +58,13 @@ export function ContactContent() {
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ ...formData, locale }),
       });
-      setStatus(response.ok ? "success" : "error");
-      if (response.ok) setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      if (response.ok) {
+        setStatus("success");
+        trackContact();
+        setFormData({ name: "", email: "", phone: "", subject: "", message: "" });
+      } else {
+        setStatus("error");
+      }
     } catch {
       setStatus("error");
     }

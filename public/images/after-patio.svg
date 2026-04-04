@@ -1,0 +1,145 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
+  <defs>
+    <!-- Clean exterior wall - fresh painted stucco -->
+    <linearGradient id="clean-ext-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#dddbd5"/>
+      <stop offset="50%" stop-color="#d5d3cd"/>
+      <stop offset="100%" stop-color="#cccac4"/>
+    </linearGradient>
+    <!-- Polyurea coated patio surface - warm slate with premium finish -->
+    <linearGradient id="polyurea-base" x1="0" y1="0" x2="0.3" y2="1">
+      <stop offset="0%" stop-color="#7a756e"/>
+      <stop offset="30%" stop-color="#828078"/>
+      <stop offset="60%" stop-color="#7d7870"/>
+      <stop offset="100%" stop-color="#757068"/>
+    </linearGradient>
+    <!-- UV-stable clear coat sheen -->
+    <linearGradient id="uv-sheen" x1="0.1" y1="0" x2="0.6" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="25%" stop-color="white" stop-opacity="0.08"/>
+      <stop offset="45%" stop-color="white" stop-opacity="0.2"/>
+      <stop offset="60%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Warm light reflection -->
+    <linearGradient id="light-reflect" x1="0.3" y1="0" x2="0.7" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0"/>
+      <stop offset="30%" stop-color="white" stop-opacity="0.06"/>
+      <stop offset="50%" stop-color="white" stop-opacity="0.14"/>
+      <stop offset="70%" stop-color="white" stop-opacity="0.05"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Gold accent from warm lighting -->
+    <radialGradient id="patio-gold" cx="0.4" cy="0.35" r="0.4">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0.07"/>
+      <stop offset="50%" stop-color="#C9A84C" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Warm ambient light reflection on surface -->
+    <radialGradient id="warm-reflect" cx="0.35" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="#f5e8c8" stop-opacity="0.06"/>
+      <stop offset="40%" stop-color="#f0e0b8" stop-opacity="0.025"/>
+      <stop offset="100%" stop-color="#f0e0b8" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Subtle slip-resistant texture -->
+    <pattern id="slip-texture" x="0" y="0" width="16" height="16" patternUnits="userSpaceOnUse">
+      <circle cx="4" cy="4" r="0.6" fill="white" opacity="0.03"/>
+      <circle cx="12" cy="12" r="0.6" fill="white" opacity="0.025"/>
+      <circle cx="4" cy="12" r="0.5" fill="white" opacity="0.02"/>
+      <circle cx="12" cy="4" r="0.5" fill="white" opacity="0.025"/>
+      <circle cx="8" cy="8" r="0.4" fill="white" opacity="0.02"/>
+    </pattern>
+    <!-- Wall-floor junction shadow -->
+    <linearGradient id="junction-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Decorative border accent -->
+    <linearGradient id="border-accent" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#C9A84C" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#C9A84C" stop-opacity="0.15"/>
+      <stop offset="50%" stop-color="#D4B75E" stop-opacity="0.2"/>
+      <stop offset="80%" stop-color="#C9A84C" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#C9A84C" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Wall light glow -->
+    <radialGradient id="wall-light" cx="0.5" cy="0.3" r="0.5">
+      <stop offset="0%" stop-color="white" stop-opacity="0.07"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Glossy surface sheen -->
+    <linearGradient id="gloss-sheen" x1="0" y1="0" x2="0.5" y2="1">
+      <stop offset="0%" stop-color="white" stop-opacity="0.15"/>
+      <stop offset="30%" stop-color="white" stop-opacity="0.04"/>
+      <stop offset="60%" stop-color="white" stop-opacity="0.1"/>
+      <stop offset="100%" stop-color="white" stop-opacity="0.02"/>
+    </linearGradient>
+  </defs>
+
+  <!-- Clean painted exterior wall -->
+  <rect width="800" height="255" fill="url(#clean-ext-wall)"/>
+  <rect width="800" height="255" fill="url(#wall-light)"/>
+
+  <!-- Wall baseboard / trim -->
+  <rect x="0" y="240" width="800" height="16" fill="#bfbdb7" opacity="0.5"/>
+  <line x1="0" y1="240" x2="800" y2="240" stroke="#b0aeaa" stroke-width="1" opacity="0.4"/>
+
+  <!-- Modern exterior sconce light -->
+  <rect x="620" y="70" width="36" height="55" rx="4" fill="#c5c3bd" stroke="#b5b3ad" stroke-width="1" opacity="0.4"/>
+  <rect x="628" y="80" width="20" height="35" rx="2" fill="#e8e6e0" opacity="0.25"/>
+  <ellipse cx="638" cy="97" rx="50" ry="60" fill="white" opacity="0.03"/>
+
+  <!-- Subtle wall texture lines -->
+  <line x1="0" y1="90" x2="300" y2="90" stroke="#c5c3bd" stroke-width="0.5" opacity="0.15"/>
+  <line x1="400" y1="145" x2="800" y2="145" stroke="#c5c3bd" stroke-width="0.5" opacity="0.12"/>
+
+  <!-- Wall-floor junction shadow -->
+  <rect x="0" y="253" width="800" height="18" fill="url(#junction-shadow)"/>
+
+  <!-- Polyurea coated patio floor -->
+  <polygon points="0,252 800,252 800,600 0,600" fill="url(#polyurea-base)"/>
+
+  <!-- Slip-resistant micro-texture -->
+  <polygon points="0,252 800,252 800,600 0,600" fill="url(#slip-texture)"/>
+
+  <!-- UV-stable clear coat sheen -->
+  <polygon points="0,252 800,252 800,600 0,600" fill="url(#uv-sheen)"/>
+
+  <!-- Glossy surface layer -->
+  <polygon points="0,252 800,252 800,600 0,600" fill="url(#gloss-sheen)"/>
+
+  <!-- Main light reflection band across floor -->
+  <polygon points="0,252 800,252 800,600 0,600" fill="url(#light-reflect)"/>
+
+  <!-- Warm sunlight patch on floor -->
+  <ellipse cx="350" cy="400" rx="250" ry="140" fill="url(#warm-reflect)"/>
+
+  <!-- Gold accent from warm light -->
+  <ellipse cx="400" cy="420" rx="300" ry="160" fill="url(#patio-gold)"/>
+
+  <!-- Decorative border strip (premium detail) -->
+  <rect x="20" y="265" width="760" height="3" rx="1.5" fill="url(#border-accent)"/>
+
+  <!-- Clean expansion joint lines - perfectly straight -->
+  <line x1="0" y1="425" x2="800" y2="425" stroke="#706b64" stroke-width="1.5" opacity="0.12"/>
+  <line x1="400" y1="252" x2="400" y2="600" stroke="#706b64" stroke-width="1.5" opacity="0.1"/>
+
+  <!-- Secondary light reflections -->
+  <ellipse cx="300" cy="380" rx="150" ry="55" fill="white" opacity="0.035" transform="rotate(-3,300,380)"/>
+  <ellipse cx="560" cy="460" rx="120" ry="45" fill="white" opacity="0.025" transform="rotate(2,560,460)"/>
+
+  <!-- Subtle reflection lines from overhead lighting -->
+  <line x1="150" y1="260" x2="165" y2="590" stroke="white" stroke-width="1.2" opacity="0.035"/>
+  <line x1="380" y1="255" x2="390" y2="595" stroke="white" stroke-width="1.5" opacity="0.04"/>
+  <line x1="600" y1="258" x2="588" y2="592" stroke="white" stroke-width="1.2" opacity="0.035"/>
+
+  <!-- Specular highlights -->
+  <ellipse cx="320" cy="360" rx="80" ry="35" fill="white" opacity="0.02"/>
+  <ellipse cx="550" cy="450" rx="65" ry="30" fill="white" opacity="0.015"/>
+
+  <!-- Clean seamless finish edge -->
+  <line x1="0" y1="255" x2="800" y2="255" stroke="#9a9590" stroke-width="0.8" opacity="0.25"/>
+
+  <!-- Faint ambient glow near wall -->
+  <rect x="0" y="252" width="800" height="35" fill="white" opacity="0.025"/>
+</svg>

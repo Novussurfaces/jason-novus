@@ -79,7 +79,7 @@ export function CustomCursor() {
           y: dotY,
           translateX: -(dotSize / 2),
           translateY: -(dotSize / 2),
-          backgroundColor: isPointer ? "#2563eb" : "white",
+          backgroundColor: isPointer ? "#C9A84C" : "white",
         }}
       />
 
@@ -95,7 +95,7 @@ export function CustomCursor() {
         animate={{
           width: isPointer ? ringHoverSize : ringSize,
           height: isPointer ? ringHoverSize : ringSize,
-          borderColor: isPointer ? "#2563eb" : "rgba(255,255,255,0.4)",
+          borderColor: isPointer ? "#C9A84C" : "rgba(255,255,255,0.4)",
         }}
         transition={{ type: "spring", stiffness: 300, damping: 25 }}
         initial={false}

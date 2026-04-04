@@ -8,10 +8,17 @@ import {
   CheckCircle,
   Star,
   AlertCircle,
+  Phone,
+  Clock,
+  Flame,
 } from "lucide-react";
 import { motion } from "framer-motion";
 import Image from "next/image";
 import { SpotlightCard } from "@/components/ui/SpotlightCard";
+import { MagneticButton } from "@/components/ui/MagneticButton";
+import { ScrollReveal } from "@/components/ui/ScrollReveal";
+import { NumberTicker } from "@/components/ui/NumberTicker";
+import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 
 const inputClasses =
@@ -66,6 +73,25 @@ export function GarageLanding() {
 
   return (
     <div className="min-h-screen bg-background text-foreground">
+      {/* Promo Banner */}
+      <motion.div
+        initial={{ opacity: 0, y: -10 }}
+        animate={{ opacity: 1, y: 0 }}
+        transition={{ duration: 0.5 }}
+        className="relative overflow-hidden border-b border-accent/30 bg-accent/[0.06] backdrop-blur-sm px-4 py-3 text-center"
+      >
+        <div className="absolute inset-0 bg-gradient-to-r from-accent/0 via-accent/[0.08] to-accent/0" />
+        <p className="relative text-sm sm:text-base font-semibold text-accent tracking-wide flex items-center justify-center gap-2">
+          <Flame size={16} className="animate-pulse" />
+          {t("promoBanner")}
+          <Flame size={16} className="animate-pulse" />
+        </p>
+        <p className="relative text-xs text-accent/70 mt-0.5 flex items-center justify-center gap-2">
+          <Clock size={12} />
+          {t("urgency")} — {t("limitedSpots")}
+        </p>
+      </motion.div>
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         {/* Aurora-style background */}
@@ -73,7 +99,7 @@ export function GarageLanding() {
           <div className="absolute inset-0 bg-gradient-to-b from-accent/[0.08] via-background to-background" />
           <div
             className="absolute top-0 left-1/2 -translate-x-1/2 w-[800px] h-[500px] rounded-full opacity-[0.06]"
-            style={{ background: "radial-gradient(ellipse, #2563eb 0%, transparent 70%)", filter: "blur(80px)" }}
+            style={{ background: "radial-gradient(ellipse, #C9A84C 0%, transparent 70%)", filter: "blur(80px)" }}
           />
           <div
             className="absolute top-[20%] right-0 w-[400px] h-[400px] rounded-full opacity-[0.04]"
@@ -81,9 +107,9 @@ export function GarageLanding() {
           />
         </div>
 
-        <div className="relative z-10 max-w-6xl mx-auto px-4 pt-16 pb-20 sm:px-6">
+        <div className="relative z-10 max-w-6xl mx-auto px-4 pt-12 pb-20 sm:px-6">
           {/* Logo */}
-          <div className="flex items-center gap-2.5 mb-12">
+          <div className="flex items-center gap-2.5 mb-10">
             <Image src="/logo-icon.svg" alt="Novus Surfaces" width={36} height={36} className="rounded-xl" />
             <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold">
               Novus<span className="text-accent ml-0.5">Surfaces</span>
@@ -91,7 +117,7 @@ export function GarageLanding() {
           </div>
 
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
-            {/* Left — Copy */}
+            {/* Left -- Copy */}
             <motion.div variants={stagger} initial="hidden" animate="visible">
               <motion.div variants={blurUp}>
                 <span className="inline-flex items-center gap-2 rounded-full border border-accent/30 bg-accent/[0.07] px-4 py-1.5 text-sm font-medium text-accent mb-6 backdrop-blur-sm">
@@ -102,7 +128,7 @@ export function GarageLanding() {
 
               <motion.h1 variants={blurUp} className="font-[family-name:var(--font-cabinet)] text-4xl font-bold tracking-tight sm:text-5xl lg:text-6xl leading-tight">
                 {t("title")}{" "}
-                <span className="bg-gradient-to-r from-accent to-blue-400 bg-clip-text text-transparent">
+                <span className="bg-gradient-to-r from-accent to-amber-400 bg-clip-text text-transparent">
                   {t("titleHighlight")}
                 </span>
               </motion.h1>
@@ -123,22 +149,47 @@ export function GarageLanding() {
                 ))}
               </motion.ul>
 
-              {/* Quick stats */}
+              {/* Stats with NumberTicker */}
               <motion.div variants={blurUp} className="mt-8 grid grid-cols-3 gap-4">
-                {[
-                  { value: "2.75$", label: t("statPrice") },
-                  { value: "1", label: t("statDay") },
-                  { value: "15+", label: t("statYears") },
-                ].map((stat) => (
-                  <div key={stat.label} className="text-center rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-3">
-                    <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">{stat.value}</div>
-                    <div className="text-xs text-muted/60">{stat.label}</div>
+                <div className="text-center rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-3">
+                  <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">
+                    {t("statPriceValue")}$
                   </div>
-                ))}
+                  <div className="text-xs text-muted/60">{t("statPrice")}</div>
+                </div>
+                <div className="text-center rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-3">
+                  <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">
+                    <NumberTicker value={500} suffix="+" delay={0.3} />
+                  </div>
+                  <div className="text-xs text-muted/60">{t("statProjectsLabel")}</div>
+                </div>
+                <div className="text-center rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm p-3">
+                  <div className="text-2xl font-bold font-[family-name:var(--font-cabinet)]">
+                    <NumberTicker value={98} suffix="%" delay={0.5} />
+                  </div>
+                  <div className="text-xs text-muted/60">{t("statSatisfactionLabel")}</div>
+                </div>
+              </motion.div>
+
+              {/* CTA Buttons */}
+              <motion.div variants={blurUp} className="mt-8 flex flex-col sm:flex-row gap-3">
+                <MagneticButton>
+                  <Button href="/soumission" size="lg">
+                    {t("ctaQuote")}
+                    <ArrowRight size={18} />
+                  </Button>
+                </MagneticButton>
+                <a
+                  href="tel:5813072678"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-medium bg-white/[0.06] backdrop-blur-xl text-foreground border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.10] transition-all duration-300 hover:scale-[1.02] active:scale-[0.98]"
+                >
+                  <Phone size={18} className="text-accent" />
+                  {t("ctaPhone")}: {t("ctaPhoneNumber")}
+                </a>
               </motion.div>
             </motion.div>
 
-            {/* Right — Form */}
+            {/* Right -- Form */}
             <motion.div
               initial={{ opacity: 0, y: 20, filter: "blur(6px)" }}
               animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -155,6 +206,14 @@ export function GarageLanding() {
               ) : (
                 <SpotlightCard className="p-0">
                   <form onSubmit={handleSubmit} className="p-6 md:p-8 space-y-4">
+                    {/* Urgency inside form */}
+                    <div className="rounded-lg border border-accent/20 bg-accent/[0.04] px-3 py-2 text-center mb-2">
+                      <p className="text-xs font-semibold text-accent flex items-center justify-center gap-1.5">
+                        <Clock size={12} />
+                        {t("urgency")} — {t("limitedSpots")}
+                      </p>
+                    </div>
+
                     <h2 className="text-xl font-semibold text-center mb-1">{t("formTitle")}</h2>
                     <p className="text-sm text-muted/60 text-center mb-4">{t("formSubtitle")}</p>
 
@@ -179,6 +238,15 @@ export function GarageLanding() {
                       {status === "sending" ? t("formSending") : t("formSubmit")}
                       <ArrowRight size={18} />
                     </button>
+
+                    {/* Phone CTA under form */}
+                    <a
+                      href="tel:5813072678"
+                      className="w-full flex items-center justify-center gap-2 text-sm text-muted/60 hover:text-accent transition-colors pt-1"
+                    >
+                      <Phone size={14} />
+                      {t("ctaPhone")}: {t("ctaPhoneNumber")}
+                    </a>
                   </form>
                 </SpotlightCard>
               )}
@@ -190,23 +258,14 @@ export function GarageLanding() {
       {/* Social Proof */}
       <section className="py-16 bg-surface/50">
         <div className="max-w-6xl mx-auto px-4 sm:px-6">
-          <motion.h2
-            initial={{ opacity: 0, y: 20 }}
-            whileInView={{ opacity: 1, y: 0 }}
-            viewport={{ once: true }}
-            className="font-[family-name:var(--font-cabinet)] text-2xl font-bold text-center mb-10"
-          >
-            {t("socialTitle")}
-          </motion.h2>
+          <ScrollReveal>
+            <h2 className="font-[family-name:var(--font-cabinet)] text-2xl font-bold text-center mb-10">
+              {t("socialTitle")}
+            </h2>
+          </ScrollReveal>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
             {reviews.map((review, i) => (
-              <motion.div
-                key={i}
-                initial={{ opacity: 0, y: 20 }}
-                whileInView={{ opacity: 1, y: 0 }}
-                viewport={{ once: true }}
-                transition={{ delay: i * 0.1 }}
-              >
+              <ScrollReveal key={i} delay={i * 0.1}>
                 <SpotlightCard>
                   <div className="flex gap-1 mb-3">
                     {[1, 2, 3, 4, 5].map((s) => (
@@ -218,9 +277,41 @@ export function GarageLanding() {
                     {review.name} — <span className="text-muted/50">{review.city}</span>
                   </p>
                 </SpotlightCard>
-              </motion.div>
+              </ScrollReveal>
             ))}
           </div>
+        </div>
+      </section>
+
+      {/* Final CTA */}
+      <section className="py-16">
+        <div className="max-w-2xl mx-auto px-4 sm:px-6 text-center">
+          <ScrollReveal>
+            <div className="rounded-2xl border border-accent/20 bg-accent/[0.04] backdrop-blur-sm p-8 sm:p-10">
+              <p className="text-sm font-semibold text-accent mb-3 flex items-center justify-center gap-2">
+                <Flame size={14} />
+                {t("urgency")}
+              </p>
+              <h3 className="font-[family-name:var(--font-cabinet)] text-2xl sm:text-3xl font-bold mb-4">
+                {t("promoBanner")}
+              </h3>
+              <div className="flex flex-col sm:flex-row gap-3 justify-center">
+                <MagneticButton>
+                  <Button href="/soumission" size="lg">
+                    {t("ctaQuote")}
+                    <ArrowRight size={18} />
+                  </Button>
+                </MagneticButton>
+                <a
+                  href="tel:5813072678"
+                  className="inline-flex items-center justify-center gap-2 rounded-full px-7 py-4 text-base font-medium bg-white/[0.06] backdrop-blur-xl text-foreground border border-white/[0.12] hover:border-white/[0.25] hover:bg-white/[0.10] transition-all duration-300"
+                >
+                  <Phone size={18} className="text-accent" />
+                  {t("ctaPhoneNumber")}
+                </a>
+              </div>
+            </div>
+          </ScrollReveal>
         </div>
       </section>
 

@@ -21,7 +21,7 @@ export function BlogList() {
   const t = useTranslations("blog");
 
   return (
-    <section className="pt-32 pb-24">
+    <section className="pt-16 pb-24">
       <Container>
         <SectionHeader title={t("title")} subtitle={t("subtitle")} />
 

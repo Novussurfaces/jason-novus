@@ -21,8 +21,8 @@ function Blob() {
       <mesh ref={meshRef} scale={2.2}>
         <icosahedronGeometry args={[1, 64]} />
         <MeshDistortMaterial
-          color="#2563eb"
-          emissive="#1d4ed8"
+          color="#C9A84C"
+          emissive="#5C4A1E"
           emissiveIntensity={0.4}
           roughness={0.2}
           metalness={0.9}
@@ -45,7 +45,7 @@ export function HeroBlob() {
       >
         <ambientLight intensity={0.5} />
         <directionalLight position={[5, 5, 5]} intensity={1.2} />
-        <pointLight position={[-5, -5, -5]} intensity={0.5} color="#3b82f6" />
+        <pointLight position={[-5, -5, -5]} intensity={0.5} color="#D4B75E" />
         <Blob />
         <EffectComposer>
           <Bloom

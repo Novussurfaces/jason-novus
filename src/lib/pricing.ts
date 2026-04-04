@@ -3,10 +3,26 @@ import { products, type Product } from "./products";
 type PriceRange = { min: number; max: number };
 
 /* ──────────────────────────────────────────────
+   APRIL 2026 PROMO — 20% off all projects
+   Active for the month of April only
+   ────────────────────────────────────────────── */
+export const APRIL_PROMO_PERCENT = 20;
+
+export function isAprilPromoActive(): boolean {
+  const now = new Date();
+  return now.getMonth() === 3 && now.getFullYear() === 2026; // month is 0-indexed
+}
+
+export function applyAprilPromo(amount: number): number {
+  if (!isAprilPromoActive()) return amount;
+  return Math.round(amount * (1 - APRIL_PROMO_PERCENT / 100));
+}
+
+/* ──────────────────────────────────────────────
    PRICE PER SQ FT — installed / applied pricing
    Used by the Calculator for project estimates
    ────────────────────────────────────────────── */
-const pricePerSqFt: Record<string, PriceRange> = {
+export const pricePerSqFt: Record<string, PriceRange> = {
   "sci-100-coating-system": { min: 2.75, max: 4.50 },
   "sci-broadcast-system": { min: 2.75, max: 4.50 },
   "sci-flake-system": { min: 2.85, max: 4.75 },

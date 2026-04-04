@@ -58,7 +58,7 @@ export function QuoteTracker() {
     steps.findIndex((s) => s.key === status);
 
   return (
-    <section className="pt-32 pb-24 relative overflow-hidden min-h-screen">
+    <section className="pt-16 pb-24 relative overflow-hidden min-h-screen">
       <Meteors number={10} />
 
       <Container className="relative z-10">

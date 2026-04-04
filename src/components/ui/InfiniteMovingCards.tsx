@@ -54,7 +54,7 @@ export function InfiniteMovingCards({
       <ul
         ref={scrollerRef}
         className={cn(
-          "flex min-w-full shrink-0 gap-5 py-4 w-max flex-nowrap",
+          "flex min-w-full shrink-0 gap-6 py-4 w-max flex-nowrap",
           start && "animate-scroll"
         )}
         style={
@@ -68,46 +68,37 @@ export function InfiniteMovingCards({
         {items.map((item, idx) => (
           <li
             key={idx}
-            className="group w-[380px] max-w-full relative rounded-2xl border border-white/[0.06] flex-shrink-0 px-8 py-7 md:w-[450px] transition-all duration-500 hover:border-accent/20"
-            style={{
-              background: "linear-gradient(135deg, rgba(255,255,255,0.03) 0%, rgba(255,255,255,0.01) 100%)",
-              backdropFilter: "blur(8px)",
-            }}
+            className="w-[350px] max-w-full relative rounded-2xl flex-shrink-0 md:w-[450px]"
           >
-            {/* Top accent glow on hover */}
-            <div className="absolute inset-0 rounded-2xl opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-              style={{
-                background: "radial-gradient(circle at 50% 0%, rgba(37,99,235,0.06) 0%, transparent 50%)",
-              }}
-            />
-
-            <blockquote className="relative z-10">
-              {/* Star rating */}
-              <div className="flex gap-1 mb-4">
-                {Array.from({ length: 5 }).map((_, i) => (
-                  <Star
-                    key={i}
-                    size={14}
-                    className="text-amber-400 fill-amber-400"
-                  />
-                ))}
-              </div>
-
-              <p className="text-sm leading-relaxed text-muted/80">
-                &ldquo;{item.quote}&rdquo;
-              </p>
-              <div className="mt-5 flex items-center gap-3">
-                <div className="h-10 w-10 rounded-full bg-gradient-to-br from-accent/30 to-accent/10 border border-accent/20 flex items-center justify-center">
-                  <span className="text-sm font-bold text-accent">
-                    {item.name.charAt(0)}
-                  </span>
+            <div className="rounded-2xl px-8 py-8 border border-white/[0.08] bg-white/[0.03] backdrop-blur-xl h-full">
+              <blockquote>
+                {/* Star rating */}
+                <div className="flex gap-1 mb-5">
+                  {Array.from({ length: 5 }).map((_, i) => (
+                    <Star
+                      key={i}
+                      size={16}
+                      className="text-accent fill-accent"
+                    />
+                  ))}
                 </div>
-                <div>
-                  <p className="text-sm font-semibold text-foreground">{item.name}</p>
-                  <p className="text-xs text-muted-foreground">{item.title}</p>
+
+                <p className="text-base leading-relaxed text-foreground/70">
+                  &ldquo;{item.quote}&rdquo;
+                </p>
+                <div className="mt-6 flex items-center gap-3">
+                  <div className="h-10 w-10 rounded-full bg-accent/10 border border-accent/20 flex items-center justify-center">
+                    <span className="text-sm font-semibold text-accent">
+                      {item.name.charAt(0)}
+                    </span>
+                  </div>
+                  <div>
+                    <p className="text-sm font-medium text-foreground">{item.name}</p>
+                    <p className="mt-0.5 text-xs text-foreground/50">{item.title}</p>
+                  </div>
                 </div>
-              </div>
-            </blockquote>
+              </blockquote>
+            </div>
           </li>
         ))}
       </ul>
@@ -115,7 +106,7 @@ export function InfiniteMovingCards({
         dangerouslySetInnerHTML={{
           __html: `
             @keyframes scroll {
-              to { transform: translateX(calc(-50% - 0.625rem)); }
+              to { transform: translateX(calc(-50% - 0.75rem)); }
             }
           `,
         }}

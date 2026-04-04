@@ -54,6 +54,10 @@ export const routing = defineRouting({
       fr: "/suivi",
       en: "/track",
     },
+    "/installation": {
+      fr: "/installation",
+      en: "/installation",
+    },
     "/connexion": {
       fr: "/connexion",
       en: "/sign-in",

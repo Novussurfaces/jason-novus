@@ -57,7 +57,7 @@ export function ExitIntent() {
             className="relative w-full max-w-md rounded-2xl bg-card border border-border overflow-hidden"
           >
             {/* Top gradient bar */}
-            <div className="h-1 bg-gradient-to-r from-accent via-blue-400 to-accent" />
+            <div className="h-1 bg-gradient-to-r from-accent via-amber-400 to-accent" />
 
             <button
               onClick={() => setShow(false)}

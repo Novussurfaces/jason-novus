@@ -10,6 +10,7 @@ interface NumberTickerProps {
   suffix?: string;
   prefix?: string;
   className?: string;
+  onComplete?: () => void;
 }
 
 export function NumberTicker({
@@ -19,9 +20,10 @@ export function NumberTicker({
   suffix = "",
   prefix = "",
   className = "",
+  onComplete,
 }: NumberTickerProps) {
   const ref = useRef<HTMLSpanElement>(null);
-  const isInView = useInView(ref, { once: true, margin: "-100px" });
+  const isInView = useInView(ref, { once: true, margin: "50px" });
   const [displayValue, setDisplayValue] = useState(direction === "down" ? value : 0);
 
   useEffect(() => {
@@ -42,6 +44,8 @@ export function NumberTicker({
 
         if (progress < 1) {
           requestAnimationFrame(animate);
+        } else {
+          onComplete?.();
         }
       };
 
@@ -49,7 +53,7 @@ export function NumberTicker({
     }, delay * 1000);
 
     return () => clearTimeout(timeout);
-  }, [isInView, value, direction, delay]);
+  }, [isInView, value, direction, delay, onComplete]);
 
   return (
     <span ref={ref} className={className}>

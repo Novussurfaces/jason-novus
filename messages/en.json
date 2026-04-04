@@ -322,7 +322,12 @@
     "discount10": "10% volume discount applied!",
     "discount15": "15% volume discount applied!",
     "discount20": "20% volume discount applied — best price!",
-    "calculating": "Calculating..."
+    "calculating": "Calculating...",
+    "promo": "APRIL PROMO — 20% off all projects!",
+    "promoLabel": "April Promo -20%",
+    "promoBefore": "Price before promo",
+    "promoAfter": "With April promo (-20%)",
+    "promoSavings": "You save {amount} with the April promo!"
   },
   "blog": {
     "title": "Blog",
@@ -399,6 +404,12 @@
     "title": "Your garage deserves a floor that",
     "titleHighlight": "resists Quebec's salt",
     "subtitle": "Professional epoxy coating starting at $2.75/sq ft. 1-day installation available. Guaranteed against salt, calcium, and chemicals.",
+    "promoBanner": "APRIL PROMO — 20% off all projects!",
+    "urgency": "Offer ends April 30",
+    "limitedSpots": "Limited spots",
+    "ctaQuote": "Get my free quote",
+    "ctaPhone": "Call now",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Free quote in 24h",
     "formSubtitle": "Get a no-obligation price estimate",
     "formName": "Full name",
@@ -417,9 +428,12 @@
     "benefit4": "Transforms your garage into living space",
     "benefit5": "15+ year lifespan",
     "benefit6": "1-day installation (polyurea)",
+    "statPriceValue": "2.75",
     "statPrice": "/sq ft min",
     "statDay": "day install",
     "statYears": "year lifespan",
+    "statProjectsLabel": "projects completed",
+    "statSatisfactionLabel": "client satisfaction",
     "socialTitle": "What our clients say",
     "review1": "My garage survived 2 winters without a single mark. Salt does nothing. Impressive.",
     "review1Name": "Martin L.",
@@ -474,7 +488,13 @@
     "badge": "Fitness",
     "title": "Performance flooring for",
     "titleHighlight": "fitness centers",
-    "subtitle": "Epoxy and polyurea coatings designed for gyms, CrossFit boxes, and fitness centers. Anti-slip, impact resistant, easy to clean.",
+    "subtitle": "Epoxy and polyurea coatings designed for gyms, CrossFit boxes, and fitness centers. Anti-slip, impact resistant, easy to clean. Starting at $4.50/sq ft.",
+    "promoBanner": "APRIL PROMO — 20% off all projects!",
+    "urgency": "Offer ends April 30",
+    "limitedSpots": "Limited spots",
+    "ctaQuote": "Get my free quote",
+    "ctaPhone": "Call now",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Free quote in 24h",
     "formSubtitle": "Get an estimate for your fitness center",
     "formName": "Full name",
@@ -521,7 +541,13 @@
     "badge": "Food-grade",
     "title": "Floor coatings for",
     "titleHighlight": "kitchens and restaurants",
-    "subtitle": "Certified food-grade floor coatings for restaurants, commercial kitchens, and food processing plants. MAPAQ compliant, anti-slip, chemical resistant.",
+    "subtitle": "Certified food-grade floor coatings for restaurants, commercial kitchens, and food processing plants. MAPAQ compliant, anti-slip, chemical resistant. Starting at $7.00/sq ft.",
+    "promoBanner": "APRIL PROMO — 20% off all projects!",
+    "urgency": "Offer ends April 30",
+    "limitedSpots": "Limited spots",
+    "ctaQuote": "Get my free quote",
+    "ctaPhone": "Call now",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Free quote in 24h",
     "formSubtitle": "Get an estimate for your establishment",
     "formName": "Full name",
@@ -568,7 +594,13 @@
     "badge": "Industrial",
     "title": "Industrial floors",
     "titleHighlight": "heavy-duty rated",
-    "subtitle": "Floor coatings for warehouses, factories, and distribution centers. Built for forklift traffic, chemical resistant, fast installation.",
+    "subtitle": "Floor coatings for warehouses, factories, and distribution centers. Built for forklift traffic, chemical resistant, fast installation. Starting at $4.50/sq ft.",
+    "promoBanner": "APRIL PROMO — 20% off all projects!",
+    "urgency": "Offer ends April 30",
+    "limitedSpots": "Limited spots",
+    "ctaQuote": "Get my free quote",
+    "ctaPhone": "Call now",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Free quote in 24h",
     "formSubtitle": "Get an estimate for your warehouse",
     "formName": "Full name",
@@ -615,7 +647,13 @@
     "badge": "Condominiums",
     "title": "Parking deck and",
     "titleHighlight": "common area coatings",
-    "subtitle": "Coating solutions for underground parking, lobbies, and condo common areas. Increase your property value with premium finishes.",
+    "subtitle": "Coating solutions for underground parking, lobbies, and condo common areas. Increase your property value with premium finishes. Starting at $4.50/sq ft.",
+    "promoBanner": "APRIL PROMO — 20% off all projects!",
+    "urgency": "Offer ends April 30",
+    "limitedSpots": "Limited spots",
+    "ctaQuote": "Get my free quote",
+    "ctaPhone": "Call now",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Free quote in 24h",
     "formSubtitle": "Get an estimate for your condominium",
     "formName": "Full name",
@@ -979,5 +1017,108 @@
     "loading": "Loading system...",
     "error": "Connection error",
     "lastUpdate": "Last update"
+  },
+  "realisations": {
+    "badge": "Completed projects",
+    "title": "Surfaces that speak for themselves",
+    "subtitle": "Over 150 residential, commercial, and industrial projects completed across Quebec and Canada. Every surface tells a story of quality.",
+    "filterAll": "All projects",
+    "filters": {
+      "residential": "Residential",
+      "commercial": "Commercial",
+      "industrial": "Industrial"
+    },
+    "stats": {
+      "totalProjects": "Projects",
+      "totalArea": "Sq ft covered",
+      "cities": "Cities",
+      "systems": "SCI Systems"
+    },
+    "viewDetails": "View details",
+    "noResults": "No projects in this category yet.",
+    "ctaText": "Have a project in mind? Get a free, no-obligation quote in under 24 hours.",
+    "ctaButton": "Start your project",
+    "modal": {
+      "system": "System",
+      "area": "Area",
+      "city": "City",
+      "category": "Type",
+      "cta": "Similar project?",
+      "close": "Close"
+    },
+    "projects": {
+      "project1": {
+        "title": "Residential Garage — Laval",
+        "system": "SCI Flake Premium",
+        "city": "Laval",
+        "description": "Complete transformation of a double garage with the SCI Flake system. Non-slip finish, resistant to Quebec road salt and chemicals. The owner wanted a floor that would survive winters — mission accomplished."
+      },
+      "project2": {
+        "title": "Logistics Warehouse — Montreal",
+        "system": "SCI Industrial Polyurea",
+        "city": "Montreal",
+        "description": "High-performance polyurea application over 12,800 sq ft of warehouse floor. Withstands forklift traffic, heavy impacts, and chemical exposure. Minimal downtime thanks to polyurea's rapid cure time."
+      },
+      "project3": {
+        "title": "Auto Showroom — Quebec City",
+        "system": "SCI Metallic Signature",
+        "city": "Quebec City",
+        "description": "Marbled metallic floor with unique 3D effect. The SCI Metallic system creates a luxurious look that impresses customers the moment they walk in. Every floor is a one-of-a-kind piece."
+      },
+      "project4": {
+        "title": "Fine Dining Restaurant — Sherbrooke",
+        "system": "SCI Non-Slip Quartz",
+        "city": "Sherbrooke",
+        "description": "Epoxy-quartz system with non-slip aggregate for kitchen and dining areas. USDA/FDA certified for food environments. Easy to clean, maximum hygiene."
+      },
+      "project5": {
+        "title": "Family Basement — Brossard",
+        "system": "SCI-100 Solid Epoxy",
+        "city": "Brossard",
+        "description": "100% solid epoxy for a basement transformed into living space. Zero VOC, mirror-gloss finish. The basement became the family's favorite room."
+      },
+      "project6": {
+        "title": "Manufacturing Plant — Anjou",
+        "system": "SCI Polyurea-Polyaspartic",
+        "city": "Anjou",
+        "description": "Hybrid polyurea-polyaspartic coating for a high-performance factory floor. 15,000 sq ft applied in one weekend to minimize production downtime. Exceptional chemical and mechanical resistance."
+      },
+      "project7": {
+        "title": "CrossFit Training Center — Gatineau",
+        "system": "SCI Sport Polyaspartic",
+        "city": "Gatineau",
+        "description": "High-resistance polyaspartic coating for a CrossFit gym. Non-slip surface even when wet, withstands heavy weight drops and equipment impact. Ultra-fast cure — open the next day."
+      },
+      "project8": {
+        "title": "Luxury Condo — Longueuil",
+        "system": "SCI Metallic Designer",
+        "city": "Longueuil",
+        "description": "Marble-effect metallic floor for a high-end condo. Custom colors with exclusive metallic pigments. A unique look impossible to replicate — every application is a work of art."
+      },
+      "project9": {
+        "title": "Pharmaceutical Laboratory — Mirabel",
+        "system": "SCI Sterile Quartz",
+        "city": "Mirabel",
+        "description": "Epoxy-quartz system in a cleanroom environment. Maximum chemical resistance, seamless surface, industrial-grade cleaning. Compliant with pharmaceutical GMP standards."
+      },
+      "project10": {
+        "title": "Fashion Boutique — Tremblant",
+        "system": "SCI Decorative Flake",
+        "city": "Mont-Tremblant",
+        "description": "Decorative flake with custom color palette for an upscale boutique. The floor complements the interior design while delivering the durability needed for commercial traffic."
+      },
+      "project11": {
+        "title": "Triple Garage with Workshop — Repentigny",
+        "system": "SCI Residential Polyurea",
+        "city": "Repentigny",
+        "description": "Polyurea applied to a triple garage with mechanical workshop. The owner is a hobbyist mechanic — resists oil, gasoline, brake fluid. Installation completed in 1 day."
+      },
+      "project12": {
+        "title": "Food Processing Plant — Drummondville",
+        "system": "SCI-100 Food Grade",
+        "city": "Drummondville",
+        "description": "100% solid epoxy certified for food environments. 11,200 sq ft of floor resistant to high-pressure washing, cleaning chemicals, and heavy cart traffic."
+      }
+    }
   }
 }

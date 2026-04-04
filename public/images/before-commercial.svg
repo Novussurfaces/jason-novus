@@ -1,29 +1,146 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
   <defs>
-    <linearGradient id="cw" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#333"/><stop offset="100%" stop-color="#252525"/></linearGradient>
-    <linearGradient id="cf" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#5c5c5c"/><stop offset="100%" stop-color="#484848"/></linearGradient>
-    <filter id="cn"><feTurbulence type="fractalNoise" baseFrequency="0.6" numOctaves="4" seed="7"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.07"/></feComponentTransfer><feBlend in="SourceGraphic" mode="overlay"/></filter>
+    <!-- Industrial wall -->
+    <linearGradient id="ind-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#404040"/>
+      <stop offset="100%" stop-color="#383838"/>
+    </linearGradient>
+    <!-- Worn industrial floor -->
+    <linearGradient id="ind-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#606058"/>
+      <stop offset="35%" stop-color="#565650"/>
+      <stop offset="65%" stop-color="#505048"/>
+      <stop offset="100%" stop-color="#484840"/>
+    </linearGradient>
+    <!-- Heavy wear pattern -->
+    <filter id="wear-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.5" numOctaves="5" seed="99" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.15"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="overlay"/>
+    </filter>
+    <!-- Scuff marks gradient -->
+    <linearGradient id="scuff-1" x1="0" y1="0" x2="1" y2="0">
+      <stop offset="0%" stop-color="#3a3a35" stop-opacity="0"/>
+      <stop offset="20%" stop-color="#3a3a35" stop-opacity="0.4"/>
+      <stop offset="80%" stop-color="#3a3a35" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#3a3a35" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Paint peeling areas -->
+    <radialGradient id="peel-1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#6a6a60" stop-opacity="0.5"/>
+      <stop offset="40%" stop-color="#5a5a52" stop-opacity="0.3"/>
+      <stop offset="100%" stop-color="#505048" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Tire/forklift marks -->
+    <linearGradient id="tire-mark" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#2a2a25" stop-opacity="0.3"/>
+      <stop offset="50%" stop-color="#2a2a25" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#2a2a25" stop-opacity="0.3"/>
+    </linearGradient>
+    <!-- Depth shadow -->
+    <linearGradient id="ind-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
+    <!-- Fluorescent light glow on ceiling -->
+    <radialGradient id="ceiling-light" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#808070" stop-opacity="0.12"/>
+      <stop offset="100%" stop-color="#808070" stop-opacity="0"/>
+    </radialGradient>
   </defs>
-  <rect width="800" height="220" fill="url(#cw)"/>
-  <polygon points="0,220 800,220 800,600 0,600" fill="url(#cf)" filter="url(#cn)"/>
-  <!-- Worn tile grid -->
-  <line x1="0" y1="300" x2="800" y2="300" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
-  <line x1="0" y1="380" x2="800" y2="380" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
-  <line x1="0" y1="460" x2="800" y2="460" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
-  <line x1="0" y1="540" x2="800" y2="540" stroke="#4a4a4a" stroke-width="1" opacity="0.4"/>
-  <line x1="160" y1="220" x2="160" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
-  <line x1="320" y1="220" x2="320" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
-  <line x1="480" y1="220" x2="480" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
-  <line x1="640" y1="220" x2="640" y2="600" stroke="#4a4a4a" stroke-width="1" opacity="0.35"/>
-  <!-- Damage -->
-  <path d="M200,250 Q260,310 240,380 Q225,440 290,520" stroke="#3e3e3e" stroke-width="2.5" fill="none" opacity="0.6"/>
-  <path d="M500,240 Q540,300 520,370 Q510,430 560,500" stroke="#3e3e3e" stroke-width="2" fill="none" opacity="0.55"/>
-  <ellipse cx="350" cy="350" rx="70" ry="30" fill="#4a4234" opacity="0.35"/>
-  <ellipse cx="600" cy="430" rx="60" ry="25" fill="#3d3835" opacity="0.3"/>
-  <rect x="100" y="440" width="80" height="50" rx="6" fill="#3a3530" opacity="0.25"/>
-  <!-- Fluorescent light reflections on ceiling -->
-  <rect x="200" y="60" width="400" height="6" rx="3" fill="#666" opacity="0.3"/>
-  <rect x="200" y="130" width="400" height="6" rx="3" fill="#666" opacity="0.3"/>
-  <rect x="20" y="20" width="110" height="34" rx="17" fill="#dc2626" opacity="0.95"/>
-  <text x="75" y="42" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1.5">AVANT</text>
+
+  <!-- Industrial wall -->
+  <rect width="800" height="250" fill="url(#ind-wall)"/>
+
+  <!-- Concrete block wall texture -->
+  <g opacity="0.15">
+    <line x1="0" y1="50" x2="800" y2="50" stroke="#555" stroke-width="1.5"/>
+    <line x1="0" y1="100" x2="800" y2="100" stroke="#555" stroke-width="1.5"/>
+    <line x1="0" y1="150" x2="800" y2="150" stroke="#555" stroke-width="1.5"/>
+    <line x1="0" y1="200" x2="800" y2="200" stroke="#555" stroke-width="1.5"/>
+    <!-- Vertical joints offset per row -->
+    <line x1="100" y1="0" x2="100" y2="50" stroke="#555" stroke-width="1"/>
+    <line x1="300" y1="0" x2="300" y2="50" stroke="#555" stroke-width="1"/>
+    <line x1="500" y1="0" x2="500" y2="50" stroke="#555" stroke-width="1"/>
+    <line x1="700" y1="0" x2="700" y2="50" stroke="#555" stroke-width="1"/>
+    <line x1="200" y1="50" x2="200" y2="100" stroke="#555" stroke-width="1"/>
+    <line x1="400" y1="50" x2="400" y2="100" stroke="#555" stroke-width="1"/>
+    <line x1="600" y1="50" x2="600" y2="100" stroke="#555" stroke-width="1"/>
+    <line x1="100" y1="100" x2="100" y2="150" stroke="#555" stroke-width="1"/>
+    <line x1="300" y1="100" x2="300" y2="150" stroke="#555" stroke-width="1"/>
+    <line x1="500" y1="100" x2="500" y2="150" stroke="#555" stroke-width="1"/>
+    <line x1="700" y1="100" x2="700" y2="150" stroke="#555" stroke-width="1"/>
+    <line x1="200" y1="150" x2="200" y2="200" stroke="#555" stroke-width="1"/>
+    <line x1="400" y1="150" x2="400" y2="200" stroke="#555" stroke-width="1"/>
+    <line x1="600" y1="150" x2="600" y2="200" stroke="#555" stroke-width="1"/>
+    <line x1="100" y1="200" x2="100" y2="250" stroke="#555" stroke-width="1"/>
+    <line x1="300" y1="200" x2="300" y2="250" stroke="#555" stroke-width="1"/>
+    <line x1="500" y1="200" x2="500" y2="250" stroke="#555" stroke-width="1"/>
+    <line x1="700" y1="200" x2="700" y2="250" stroke="#555" stroke-width="1"/>
+  </g>
+
+  <!-- Fluorescent ceiling light reflection -->
+  <rect x="300" y="10" width="200" height="12" rx="2" fill="#888878" opacity="0.3"/>
+  <ellipse cx="400" cy="16" rx="180" ry="100" fill="url(#ceiling-light)"/>
+
+  <!-- Wall-floor junction -->
+  <rect x="0" y="245" width="800" height="20" fill="url(#ind-shadow)"/>
+
+  <!-- Industrial floor base -->
+  <polygon points="0,250 800,250 800,600 0,600" fill="url(#ind-floor)" filter="url(#wear-noise)"/>
+
+  <!-- Forklift tire tracks - multiple lanes -->
+  <rect x="150" y="260" width="80" height="340" fill="url(#tire-mark)" opacity="0.7"/>
+  <rect x="570" y="260" width="80" height="340" fill="url(#tire-mark)" opacity="0.6"/>
+  <!-- Cross tracks -->
+  <rect x="0" y="370" width="800" height="40" fill="url(#tire-mark)" opacity="0.3" transform="rotate(-2,400,390)"/>
+
+  <!-- Heavy scuff marks -->
+  <path d="M60,310 C150,305 250,320 350,308 C420,302 500,315 560,310"
+        stroke="#3a3a35" stroke-width="8" fill="none" opacity="0.2" stroke-linecap="round"/>
+  <path d="M200,420 C280,415 380,428 480,418 C540,413 620,425 720,420"
+        stroke="#3a3a35" stroke-width="10" fill="none" opacity="0.18" stroke-linecap="round"/>
+  <path d="M100,500 C200,495 300,510 400,498 C480,492 580,505 700,500"
+        stroke="#3a3a35" stroke-width="6" fill="none" opacity="0.15" stroke-linecap="round"/>
+
+  <!-- Paint/coating worn away patches -->
+  <ellipse cx="300" cy="350" rx="90" ry="50" fill="url(#peel-1)"/>
+  <ellipse cx="550" cy="460" rx="80" ry="45" fill="url(#peel-1)"/>
+  <ellipse cx="150" cy="520" rx="65" ry="40" fill="url(#peel-1)"/>
+  <ellipse cx="680" cy="370" rx="70" ry="40" fill="url(#peel-1)"/>
+
+  <!-- Exposed aggregate patches -->
+  <g opacity="0.2">
+    <circle cx="290" cy="340" r="4" fill="#7a7a70"/>
+    <circle cx="305" cy="355" r="3" fill="#757568"/>
+    <circle cx="315" cy="345" r="3.5" fill="#7a7a70"/>
+    <circle cx="285" cy="360" r="2.5" fill="#808075"/>
+    <circle cx="540" cy="455" r="3.5" fill="#7a7a70"/>
+    <circle cx="560" cy="468" r="3" fill="#757568"/>
+    <circle cx="548" cy="442" r="2.5" fill="#808075"/>
+  </g>
+
+  <!-- Cracks in industrial floor -->
+  <path d="M200,265 L195,310 L205,360 L198,410 L210,460 L202,510 L215,560 L208,600"
+        stroke="#42423c" stroke-width="2.5" fill="none" opacity="0.5"/>
+  <path d="M480,270 L475,320 L488,370 L480,420 L492,475 L482,530 L495,580"
+        stroke="#42423c" stroke-width="2" fill="none" opacity="0.45"/>
+
+  <!-- Expansion joints (typical industrial) -->
+  <line x1="0" y1="425" x2="800" y2="425" stroke="#4a4a42" stroke-width="3" opacity="0.3"/>
+  <line x1="400" y1="250" x2="400" y2="600" stroke="#4a4a42" stroke-width="3" opacity="0.25"/>
+
+  <!-- Chemical stain patches -->
+  <ellipse cx="450" cy="320" rx="50" ry="30" fill="#5a5852" opacity="0.25"/>
+  <ellipse cx="200" cy="450" rx="40" ry="25" fill="#585650" opacity="0.2"/>
+
+  <!-- Dust and debris in corners -->
+  <path d="M0,580 Q20,570 50,575 Q30,590 10,600 L0,600Z" fill="#4a4a42" opacity="0.25"/>
+  <path d="M800,580 Q780,570 750,575 Q770,590 790,600 L800,600Z" fill="#4a4a42" opacity="0.25"/>
+
+  <!-- Overall worn/dull appearance overlay -->
+  <polygon points="0,250 800,250 800,600 0,600" fill="#5a5a55" opacity="0.05"/>
 </svg>

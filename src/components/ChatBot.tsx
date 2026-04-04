@@ -1,6 +1,6 @@
 "use client";
 
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { useTranslations, useLocale } from "next-intl";
 import { MessageCircle, X, Send, Bot, User, Loader2 } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
@@ -18,17 +18,19 @@ export function ChatBot() {
   const [messages, setMessages] = useState<Message[]>([]);
   const [input, setInput] = useState("");
   const [isLoading, setIsLoading] = useState(false);
+  const [isStreaming, setIsStreaming] = useState(false);
   const [hasGreeted, setHasGreeted] = useState(false);
   const messagesEndRef = useRef<HTMLDivElement>(null);
   const inputRef = useRef<HTMLInputElement>(null);
+  const abortRef = useRef<AbortController | null>(null);
 
-  const scrollToBottom = () => {
+  const scrollToBottom = useCallback(() => {
     messagesEndRef.current?.scrollIntoView({ behavior: "smooth" });
-  };
+  }, []);
 
   useEffect(() => {
     scrollToBottom();
-  }, [messages]);
+  }, [messages, scrollToBottom]);
 
   useEffect(() => {
     if (isOpen && inputRef.current) {
@@ -50,13 +52,20 @@ export function ChatBot() {
 
   const sendMessage = async (e: React.FormEvent) => {
     e.preventDefault();
-    if (!input.trim() || isLoading) return;
+    if (!input.trim() || isLoading || isStreaming) return;
 
     const userMessage: Message = { role: "user", content: input.trim() };
     const newMessages = [...messages, userMessage];
     setMessages(newMessages);
     setInput("");
     setIsLoading(true);
+
+    // Abort any previous request
+    if (abortRef.current) {
+      abortRef.current.abort();
+    }
+    const controller = new AbortController();
+    abortRef.current = controller;
 
     try {
       const response = await fetch("/api/chat", {
@@ -69,28 +78,83 @@ export function ChatBot() {
           })),
           locale,
         }),
+        signal: controller.signal,
       });
 
-      if (response.ok) {
-        const data = await response.json();
-        setMessages((prev) => [
-          ...prev,
-          { role: "assistant", content: data.message },
-        ]);
-      } else {
+      if (!response.ok) {
         setMessages((prev) => [
           ...prev,
           { role: "assistant", content: t("error") },
         ]);
+        setIsLoading(false);
+        return;
       }
-    } catch {
-      setMessages((prev) => [
-        ...prev,
-        { role: "assistant", content: t("error") },
-      ]);
+
+      // Switch from loading spinner to streaming mode
+      setIsLoading(false);
+      setIsStreaming(true);
+
+      // Add empty assistant message to fill with streamed tokens
+      setMessages((prev) => [...prev, { role: "assistant", content: "" }]);
+
+      if (response.body) {
+        const reader = response.body.getReader();
+        const decoder = new TextDecoder();
+
+        try {
+          while (true) {
+            const { done, value } = await reader.read();
+            if (done) break;
+
+            const chunk = decoder.decode(value, { stream: true });
+            if (chunk) {
+              setMessages((prev) => {
+                const updated = [...prev];
+                const last = updated[updated.length - 1];
+                if (last && last.role === "assistant") {
+                  updated[updated.length - 1] = {
+                    ...last,
+                    content: last.content + chunk,
+                  };
+                }
+                return updated;
+              });
+            }
+          }
+        } catch {
+          // Stream was aborted or errored
+        } finally {
+          reader.releaseLock();
+        }
+      } else {
+        // No body (shouldn't happen, but handle gracefully)
+        const text = await response.text();
+        setMessages((prev) => {
+          const updated = [...prev];
+          const last = updated[updated.length - 1];
+          if (last && last.role === "assistant") {
+            updated[updated.length - 1] = { ...last, content: text };
+          }
+          return updated;
+        });
+      }
+    } catch (err) {
+      if (err instanceof DOMException && err.name === "AbortError") {
+        // User cancelled — no error message
+      } else {
+        setMessages((prev) => {
+          // Remove empty assistant message if present
+          const filtered = prev.filter(
+            (m, i) =>
+              !(i === prev.length - 1 && m.role === "assistant" && !m.content)
+          );
+          return [...filtered, { role: "assistant", content: t("error") }];
+        });
+      }
     }
 
     setIsLoading(false);
+    setIsStreaming(false);
   };
 
   return (
@@ -169,13 +233,18 @@ export function ChatBot() {
                   </div>
                   <div
                     className={cn(
-                      "max-w-[75%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed",
+                      "max-w-[75%] rounded-2xl px-3.5 py-2.5 text-sm leading-relaxed whitespace-pre-wrap",
                       msg.role === "user"
                         ? "bg-accent text-white rounded-br-md"
                         : "bg-card border border-border rounded-bl-md"
                     )}
                   >
                     {msg.content}
+                    {isStreaming &&
+                      i === messages.length - 1 &&
+                      msg.role === "assistant" && (
+                        <span className="inline-block w-1.5 h-4 ml-0.5 bg-accent animate-pulse" />
+                      )}
                   </div>
                 </div>
               ))}
@@ -204,15 +273,15 @@ export function ChatBot() {
                   value={input}
                   onChange={(e) => setInput(e.target.value)}
                   placeholder={t("placeholder")}
-                  disabled={isLoading}
+                  disabled={isLoading || isStreaming}
                   className="flex-1 rounded-xl border border-border bg-background px-3.5 py-2.5 text-sm placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors"
                 />
                 <button
                   type="submit"
-                  disabled={isLoading || !input.trim()}
+                  disabled={isLoading || isStreaming || !input.trim()}
                   className={cn(
                     "w-10 h-10 rounded-xl flex items-center justify-center transition-colors cursor-pointer",
-                    input.trim()
+                    input.trim() && !isLoading && !isStreaming
                       ? "bg-accent text-white hover:bg-accent-hover"
                       : "bg-surface text-muted"
                   )}

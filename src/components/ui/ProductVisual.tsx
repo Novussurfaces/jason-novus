@@ -9,15 +9,15 @@ interface ProductVisualProps {
   className?: string;
 }
 
-const chemistryColors: Record<string, { from: string; to: string; glow: string; accent: string }> = {
-  Epoxy: { from: "#2563eb", to: "#1d4ed8", glow: "rgba(37, 99, 235, 0.3)", accent: "#3b82f6" },
-  "100% Solid Epoxy": { from: "#2563eb", to: "#1d4ed8", glow: "rgba(37, 99, 235, 0.3)", accent: "#3b82f6" },
-  Polyurea: { from: "#7c3aed", to: "#5b21b6", glow: "rgba(124, 58, 237, 0.3)", accent: "#8b5cf6" },
-  "Polyurea-Polyaspartic": { from: "#7c3aed", to: "#4f46e5", glow: "rgba(124, 58, 237, 0.3)", accent: "#a78bfa" },
-  Polyaspartic: { from: "#6366f1", to: "#4338ca", glow: "rgba(99, 102, 241, 0.3)", accent: "#818cf8" },
-  "Epoxy-Quartz": { from: "#0891b2", to: "#0e7490", glow: "rgba(8, 145, 178, 0.3)", accent: "#22d3ee" },
-  "Epoxy-Metallic": { from: "#d97706", to: "#b45309", glow: "rgba(217, 119, 6, 0.3)", accent: "#fbbf24" },
-  "Epoxy-Flake": { from: "#059669", to: "#047857", glow: "rgba(5, 150, 105, 0.3)", accent: "#34d399" },
+const chemistryColors: Record<string, { from: string; to: string; glow: string; accent: string; mid: string }> = {
+  Epoxy: { from: "#C9A84C", to: "#8A6F2E", mid: "#B89840", glow: "rgba(201, 168, 76, 0.3)", accent: "#E0C06A" },
+  "100% Solid Epoxy": { from: "#D4B05A", to: "#8A6F2E", mid: "#BFA048", glow: "rgba(212, 176, 90, 0.3)", accent: "#E8CC78" },
+  Polyurea: { from: "#8B5CF6", to: "#4C1D95", mid: "#6D28D9", glow: "rgba(139, 92, 246, 0.3)", accent: "#A78BFA" },
+  "Polyurea-Polyaspartic": { from: "#8B5CF6", to: "#3730A3", mid: "#6366F1", glow: "rgba(139, 92, 246, 0.28)", accent: "#C4B5FD" },
+  Polyaspartic: { from: "#818CF8", to: "#3730A3", mid: "#6366F1", glow: "rgba(129, 140, 248, 0.3)", accent: "#A5B4FC" },
+  "Epoxy-Quartz": { from: "#06B6D4", to: "#0E4F5C", mid: "#0891B2", glow: "rgba(6, 182, 212, 0.28)", accent: "#67E8F9" },
+  "Epoxy-Metallic": { from: "#F59E0B", to: "#92400E", mid: "#D97706", glow: "rgba(245, 158, 11, 0.3)", accent: "#FCD34D" },
+  "Epoxy-Flake": { from: "#10B981", to: "#064E3B", mid: "#059669", glow: "rgba(16, 185, 129, 0.28)", accent: "#6EE7B7" },
 };
 
 function getColors(chemistry: string) {
@@ -75,14 +75,15 @@ export function ProductVisual({ sciCode, chemistry, className = "" }: ProductVis
 
   return (
     <div className={`relative overflow-hidden rounded-2xl bg-surface group ${className}`}>
-      {/* Multi-layer gradient background */}
+      {/* Multi-layer gradient background — deeper, richer */}
       <div
         className="absolute inset-0 transition-opacity duration-700"
         style={{
           background: `
-            radial-gradient(ellipse at 20% 30%, ${colors.glow} 0%, transparent 50%),
-            radial-gradient(ellipse at 80% 70%, ${colors.glow.replace("0.3", "0.15")} 0%, transparent 50%),
-            radial-gradient(circle at 50% 50%, ${colors.glow.replace("0.3", "0.05")} 0%, transparent 70%)
+            radial-gradient(ellipse at 15% 25%, ${colors.glow} 0%, transparent 45%),
+            radial-gradient(ellipse at 85% 75%, ${colors.glow.replace("0.3", "0.18")} 0%, transparent 50%),
+            radial-gradient(ellipse at 50% 50%, ${colors.glow.replace("0.3", "0.06")} 0%, transparent 65%),
+            radial-gradient(ellipse at 70% 20%, ${colors.glow.replace("0.3", "0.08")} 0%, transparent 40%)
           `,
         }}
       />
@@ -92,27 +93,37 @@ export function ProductVisual({ sciCode, chemistry, className = "" }: ProductVis
         className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-1000"
         style={{
           background: `
-            conic-gradient(from 0deg at 30% 40%, transparent 0deg, ${colors.glow.replace("0.3", "0.08")} 60deg, transparent 120deg),
-            conic-gradient(from 180deg at 70% 60%, transparent 0deg, ${colors.glow.replace("0.3", "0.06")} 60deg, transparent 120deg)
+            conic-gradient(from 0deg at 30% 40%, transparent 0deg, ${colors.glow.replace("0.3", "0.1")} 60deg, transparent 120deg),
+            conic-gradient(from 180deg at 70% 60%, transparent 0deg, ${colors.glow.replace("0.3", "0.08")} 60deg, transparent 120deg),
+            conic-gradient(from 90deg at 50% 80%, transparent 0deg, ${colors.glow.replace("0.3", "0.05")} 40deg, transparent 80deg)
           `,
         }}
       />
 
-      {/* Precision grid */}
+      {/* SVG noise texture overlay for premium feel */}
+      <svg className="absolute inset-0 w-full h-full pointer-events-none opacity-[0.035]" aria-hidden="true">
+        <filter id={`noise-${sciCode}`}>
+          <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="4" stitchTiles="stitch" />
+          <feColorMatrix type="saturate" values="0" />
+        </filter>
+        <rect width="100%" height="100%" filter={`url(#noise-${sciCode})`} />
+      </svg>
+
+      {/* Precision grid — finer */}
       <div
         className="absolute inset-0"
         style={{
           backgroundImage: `
-            linear-gradient(${colors.from}0d 1px, transparent 1px),
-            linear-gradient(90deg, ${colors.from}0d 1px, transparent 1px)
+            linear-gradient(${colors.from}0a 1px, transparent 1px),
+            linear-gradient(90deg, ${colors.from}0a 1px, transparent 1px)
           `,
-          backgroundSize: "32px 32px",
+          backgroundSize: "28px 28px",
         }}
       />
 
       {/* Diagonal accent lines */}
       <div
-        className="absolute inset-0 opacity-[0.02]"
+        className="absolute inset-0 opacity-[0.025]"
         style={{
           backgroundImage: `repeating-linear-gradient(
             45deg,
@@ -124,38 +135,69 @@ export function ProductVisual({ sciCode, chemistry, className = "" }: ProductVis
         }}
       />
 
-      {/* Primary animated orb */}
-      <motion.div
-        className="absolute w-40 h-40 rounded-full"
+      {/* Secondary cross-hatch for depth */}
+      <div
+        className="absolute inset-0 opacity-[0.012]"
         style={{
-          background: `radial-gradient(circle, ${colors.glow} 0%, transparent 70%)`,
-          left: "20%",
-          top: "20%",
-          filter: "blur(40px)",
+          backgroundImage: `repeating-linear-gradient(
+            -45deg,
+            transparent,
+            transparent 120px,
+            ${colors.mid} 120px,
+            ${colors.mid} 121px
+          )`,
+        }}
+      />
+
+      {/* Primary animated orb — larger, richer gradient */}
+      <motion.div
+        className="absolute w-48 h-48 rounded-full"
+        style={{
+          background: `radial-gradient(circle, ${colors.glow} 0%, ${colors.glow.replace("0.3", "0.1")} 40%, transparent 70%)`,
+          left: "15%",
+          top: "15%",
+          filter: "blur(45px)",
         }}
         animate={{
-          x: [0, 40, -30, 10, 0],
-          y: [0, -30, 20, -10, 0],
-          scale: [1, 1.3, 0.8, 1.1, 1],
+          x: [0, 45, -35, 15, 0],
+          y: [0, -35, 25, -12, 0],
+          scale: [1, 1.35, 0.75, 1.15, 1],
         }}
-        transition={{ duration: 10, repeat: Infinity, ease: "easeInOut" }}
+        transition={{ duration: 12, repeat: Infinity, ease: "easeInOut" }}
       />
 
       {/* Secondary orb */}
       <motion.div
-        className="absolute w-24 h-24 rounded-full"
+        className="absolute w-28 h-28 rounded-full"
         style={{
-          background: `radial-gradient(circle, ${colors.glow.replace("0.3", "0.2")} 0%, transparent 70%)`,
-          right: "15%",
-          bottom: "25%",
-          filter: "blur(30px)",
+          background: `radial-gradient(circle, ${colors.glow.replace("0.3", "0.22")} 0%, transparent 70%)`,
+          right: "12%",
+          bottom: "20%",
+          filter: "blur(35px)",
         }}
         animate={{
-          x: [0, -20, 30, 0],
-          y: [0, 20, -15, 0],
-          scale: [0.8, 1.2, 1, 0.8],
+          x: [0, -25, 35, 0],
+          y: [0, 25, -18, 0],
+          scale: [0.8, 1.25, 0.95, 0.8],
         }}
-        transition={{ duration: 7, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+        transition={{ duration: 8, repeat: Infinity, ease: "easeInOut", delay: 1 }}
+      />
+
+      {/* Tertiary accent orb — subtle color shift */}
+      <motion.div
+        className="absolute w-20 h-20 rounded-full"
+        style={{
+          background: `radial-gradient(circle, ${colors.accent}30 0%, transparent 70%)`,
+          left: "55%",
+          top: "60%",
+          filter: "blur(28px)",
+        }}
+        animate={{
+          x: [0, 15, -20, 10, 0],
+          y: [0, -18, 10, -5, 0],
+          scale: [0.9, 1.3, 0.85, 1.1, 0.9],
+        }}
+        transition={{ duration: 9, repeat: Infinity, ease: "easeInOut", delay: 2.5 }}
       />
 
       {/* Flowing connection lines */}
@@ -201,7 +243,7 @@ export function ProductVisual({ sciCode, chemistry, className = "" }: ProductVis
           <div
             className="text-6xl md:text-7xl font-bold font-[family-name:var(--font-cabinet)] tracking-tight relative"
             style={{
-              background: `linear-gradient(135deg, ${colors.accent} 0%, ${colors.from} 40%, ${colors.to} 70%, rgba(255,255,255,0.9) 100%)`,
+              background: `linear-gradient(135deg, ${colors.accent} 0%, ${colors.from} 30%, ${colors.mid} 55%, ${colors.to} 75%, rgba(255,255,255,0.85) 100%)`,
               WebkitBackgroundClip: "text",
               WebkitTextFillColor: "transparent",
               backgroundClip: "text",
@@ -210,16 +252,24 @@ export function ProductVisual({ sciCode, chemistry, className = "" }: ProductVis
             {sciCode}
           </div>
 
+          {/* Shimmer line under SCI code */}
+          <div
+            className="mt-2 h-[1px] w-16 mx-auto rounded-full"
+            style={{
+              background: `linear-gradient(90deg, transparent 0%, ${colors.accent}60 30%, ${colors.from}80 50%, ${colors.accent}60 70%, transparent 100%)`,
+            }}
+          />
+
           {/* Chemistry label with line accents */}
           <div className="flex items-center gap-3 mt-3 justify-center">
-            <div className="h-px w-8" style={{ background: `linear-gradient(to right, transparent, ${colors.from}40)` }} />
+            <div className="h-px w-10" style={{ background: `linear-gradient(to right, transparent, ${colors.from}50)` }} />
             <div
               className="text-[11px] font-semibold tracking-[0.25em] uppercase"
               style={{ color: colors.accent }}
             >
               {chemistry}
             </div>
-            <div className="h-px w-8" style={{ background: `linear-gradient(to left, transparent, ${colors.from}40)` }} />
+            <div className="h-px w-10" style={{ background: `linear-gradient(to left, transparent, ${colors.from}50)` }} />
           </div>
         </motion.div>
 
@@ -252,13 +302,29 @@ export function ProductVisual({ sciCode, chemistry, className = "" }: ProductVis
       </div>
 
       {/* Bottom gradient fade */}
-      <div className="absolute bottom-0 left-0 right-0 h-20 bg-gradient-to-t from-surface via-surface/50 to-transparent" />
+      <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-surface via-surface/60 to-transparent" />
 
-      {/* Corner accent */}
+      {/* Corner accent — top right */}
       <div
-        className="absolute top-0 right-0 w-24 h-24"
+        className="absolute top-0 right-0 w-32 h-32"
         style={{
-          background: `linear-gradient(225deg, ${colors.from}08 0%, transparent 60%)`,
+          background: `linear-gradient(225deg, ${colors.from}0c 0%, ${colors.accent}04 30%, transparent 60%)`,
+        }}
+      />
+
+      {/* Corner accent — bottom left */}
+      <div
+        className="absolute bottom-0 left-0 w-28 h-28"
+        style={{
+          background: `linear-gradient(45deg, ${colors.to}08 0%, transparent 60%)`,
+        }}
+      />
+
+      {/* Top edge highlight */}
+      <div
+        className="absolute top-0 left-0 right-0 h-px"
+        style={{
+          background: `linear-gradient(90deg, transparent 10%, ${colors.from}15 30%, ${colors.accent}20 50%, ${colors.from}15 70%, transparent 90%)`,
         }}
       />
     </div>

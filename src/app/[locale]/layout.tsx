@@ -17,6 +17,8 @@ import { StickyCTA } from "@/components/ui/StickyCTA";
 import { Preloader } from "@/components/ui/Preloader";
 
 import Script from "next/script";
+import { Suspense } from "react";
+import { FacebookPixel } from "@/components/FacebookPixel";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -97,6 +99,9 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
+        <Suspense fallback={null}>
+          <FacebookPixel />
+        </Suspense>
         {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
           <Script
             defer

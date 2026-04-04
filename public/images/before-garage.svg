@@ -1,25 +1,148 @@
 <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 600" fill="none">
   <defs>
-    <linearGradient id="bg1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#2a2a2a"/><stop offset="100%" stop-color="#1e1e1e"/></linearGradient>
-    <linearGradient id="fl1" x1="0" y1="0" x2="0" y2="1"><stop offset="0%" stop-color="#555"/><stop offset="100%" stop-color="#444"/></linearGradient>
-    <filter id="n1"><feTurbulence type="fractalNoise" baseFrequency="0.7" numOctaves="4" seed="1"/><feColorMatrix type="saturate" values="0"/><feComponentTransfer><feFuncA type="linear" slope="0.08"/></feComponentTransfer><feBlend in="SourceGraphic" mode="overlay"/></filter>
+    <!-- Wall gradient - dingy garage wall -->
+    <linearGradient id="bg-wall" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#3a3a38"/>
+      <stop offset="40%" stop-color="#333330"/>
+      <stop offset="100%" stop-color="#2d2d2a"/>
+    </linearGradient>
+    <!-- Floor gradient - old stained concrete -->
+    <linearGradient id="bg-floor" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#5a5a56"/>
+      <stop offset="30%" stop-color="#4e4e4a"/>
+      <stop offset="60%" stop-color="#484844"/>
+      <stop offset="100%" stop-color="#3f3f3b"/>
+    </linearGradient>
+    <!-- Concrete noise texture -->
+    <filter id="concrete-noise" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="fractalNoise" baseFrequency="0.65" numOctaves="6" seed="42" stitchTiles="stitch"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.12"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="overlay"/>
+    </filter>
+    <!-- Subtle dust/grime filter -->
+    <filter id="grime" x="0" y="0" width="100%" height="100%">
+      <feTurbulence type="turbulence" baseFrequency="0.03" numOctaves="3" seed="7"/>
+      <feColorMatrix type="saturate" values="0"/>
+      <feComponentTransfer>
+        <feFuncA type="linear" slope="0.06"/>
+      </feComponentTransfer>
+      <feBlend in="SourceGraphic" mode="multiply"/>
+    </filter>
+    <!-- Oil stain radial -->
+    <radialGradient id="oil-stain-1" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#2a2520" stop-opacity="0.7"/>
+      <stop offset="40%" stop-color="#353025" stop-opacity="0.5"/>
+      <stop offset="70%" stop-color="#403a30" stop-opacity="0.25"/>
+      <stop offset="100%" stop-color="#4e4e4a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="oil-stain-2" cx="0.4" cy="0.6" r="0.5">
+      <stop offset="0%" stop-color="#252018" stop-opacity="0.65"/>
+      <stop offset="50%" stop-color="#302a20" stop-opacity="0.35"/>
+      <stop offset="100%" stop-color="#4e4e4a" stop-opacity="0"/>
+    </radialGradient>
+    <radialGradient id="oil-stain-3" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#1e1a12" stop-opacity="0.5"/>
+      <stop offset="60%" stop-color="#3a3528" stop-opacity="0.2"/>
+      <stop offset="100%" stop-color="#4e4e4a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Moisture/water stain -->
+    <radialGradient id="water-stain" cx="0.5" cy="0.5" r="0.5">
+      <stop offset="0%" stop-color="#5a5a5a" stop-opacity="0.3"/>
+      <stop offset="40%" stop-color="#555555" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#4e4e4a" stop-opacity="0"/>
+    </radialGradient>
+    <!-- Perspective shadow for depth -->
+    <linearGradient id="floor-shadow" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#000" stop-opacity="0.15"/>
+      <stop offset="100%" stop-color="#000" stop-opacity="0"/>
+    </linearGradient>
   </defs>
-  <rect width="800" height="240" fill="url(#bg1)"/>
-  <polygon points="0,240 800,240 800,600 0,600" fill="url(#fl1)" filter="url(#n1)"/>
-  <path d="M80,280 Q150,350 130,430 Q115,500 180,570" stroke="#3a3a3a" stroke-width="3" fill="none" opacity="0.7"/>
-  <path d="M320,260 Q380,320 360,400 Q345,460 400,540" stroke="#3a3a3a" stroke-width="3.5" fill="none" opacity="0.65"/>
-  <path d="M560,270 Q600,340 580,420 Q555,490 620,560" stroke="#3a3a3a" stroke-width="2.5" fill="none" opacity="0.6"/>
-  <path d="M60,380 L280,370 Q400,385 540,372 L740,382" stroke="#3a3a3a" stroke-width="2" fill="none" opacity="0.5"/>
-  <path d="M200,290 Q250,310 220,360" stroke="#3d3d3d" stroke-width="1.5" fill="none" opacity="0.5"/>
-  <ellipse cx="220" cy="370" rx="70" ry="30" fill="#4a4234" opacity="0.45"/>
-  <ellipse cx="500" cy="410" rx="90" ry="40" fill="#3d3d35" opacity="0.4"/>
-  <ellipse cx="130" cy="500" rx="55" ry="25" fill="#454540" opacity="0.4"/>
-  <ellipse cx="680" cy="460" rx="50" ry="22" fill="#464238" opacity="0.35"/>
-  <rect x="350" y="440" width="110" height="65" rx="8" fill="#3a3530" opacity="0.3"/>
-  <rect x="60" y="8" width="680" height="224" rx="3" fill="none" stroke="#3d3d3d" stroke-width="1.5" opacity="0.4"/>
-  <line x1="60" y1="64" x2="740" y2="64" stroke="#3d3d3d" stroke-width="1" opacity="0.3"/>
-  <line x1="60" y1="120" x2="740" y2="120" stroke="#3d3d3d" stroke-width="1" opacity="0.3"/>
-  <line x1="60" y1="176" x2="740" y2="176" stroke="#3d3d3d" stroke-width="1" opacity="0.3"/>
-  <rect x="20" y="20" width="110" height="34" rx="17" fill="#dc2626" opacity="0.95"/>
-  <text x="75" y="42" font-family="system-ui,sans-serif" font-size="13" font-weight="700" fill="white" text-anchor="middle" letter-spacing="1.5">AVANT</text>
+
+  <!-- Background wall -->
+  <rect width="800" height="260" fill="url(#bg-wall)"/>
+
+  <!-- Wall texture overlay -->
+  <rect width="800" height="260" filter="url(#grime)" fill="#555" opacity="0.3"/>
+
+  <!-- Wall-floor junction shadow -->
+  <rect x="0" y="240" width="800" height="30" fill="url(#floor-shadow)"/>
+
+  <!-- Garage wall details - shelf line -->
+  <line x1="40" y1="80" x2="360" y2="80" stroke="#4a4a46" stroke-width="3" opacity="0.5"/>
+  <line x1="40" y1="82" x2="360" y2="82" stroke="#2a2a28" stroke-width="1" opacity="0.4"/>
+  <!-- Wall outlet -->
+  <rect x="580" y="150" width="24" height="30" rx="2" fill="#3d3d3a" stroke="#4a4a46" stroke-width="1" opacity="0.6"/>
+  <!-- Pipe -->
+  <line x1="700" y1="0" x2="700" y2="260" stroke="#4a4a48" stroke-width="8" opacity="0.3"/>
+  <line x1="700" y1="0" x2="700" y2="260" stroke="#555553" stroke-width="6" opacity="0.2"/>
+
+  <!-- Concrete floor base -->
+  <polygon points="0,255 800,255 800,600 0,600" fill="url(#bg-floor)" filter="url(#concrete-noise)"/>
+
+  <!-- Major cracks - jagged realistic paths -->
+  <path d="M120,270 L125,290 L118,320 L130,355 L122,390 L135,430 L128,465 L140,500 L132,540 L145,575 L138,600"
+        stroke="#3a3a36" stroke-width="3.5" fill="none" opacity="0.8" stroke-linecap="round"/>
+  <path d="M121,270 L126,290 L119,320 L131,355 L123,390 L136,430 L129,465 L141,500 L133,540 L146,575 L139,600"
+        stroke="#2d2d28" stroke-width="1.5" fill="none" opacity="0.5"/>
+
+  <path d="M380,260 L375,285 L390,310 L382,345 L395,375 L380,410 L392,445 L385,480 L398,510 L388,555 L400,590"
+        stroke="#3a3a36" stroke-width="4" fill="none" opacity="0.75" stroke-linecap="round"/>
+  <path d="M381,260 L376,285 L391,310 L383,345 L396,375 L381,410 L393,445 L386,480 L399,510 L389,555 L401,590"
+        stroke="#2d2d28" stroke-width="1.5" fill="none" opacity="0.45"/>
+
+  <!-- Branching crack -->
+  <path d="M385,345 L410,365 L440,360 L470,375 L510,370"
+        stroke="#3a3a36" stroke-width="2.5" fill="none" opacity="0.6" stroke-linecap="round"/>
+
+  <path d="M620,265 L610,300 L625,335 L615,370 L630,400 L618,440 L635,475 L622,515 L640,555 L628,600"
+        stroke="#3a3a36" stroke-width="3" fill="none" opacity="0.7" stroke-linecap="round"/>
+
+  <!-- Horizontal crack / expansion joint -->
+  <path d="M0,380 L80,378 L180,385 L290,376 L420,383 L540,375 L660,382 L780,377 L800,380"
+        stroke="#3d3d38" stroke-width="2.5" fill="none" opacity="0.55"/>
+
+  <!-- Small spider cracks -->
+  <path d="M260,310 L275,320 L290,315 M275,320 L270,340 M275,320 L285,335"
+        stroke="#3d3d38" stroke-width="1.5" fill="none" opacity="0.5"/>
+  <path d="M550,440 L565,450 L580,445 M565,450 L560,465 M565,450 L575,462"
+        stroke="#3d3d38" stroke-width="1.5" fill="none" opacity="0.45"/>
+
+  <!-- Oil stains - multiple overlapping -->
+  <ellipse cx="250" cy="380" rx="85" ry="50" fill="url(#oil-stain-1)" transform="rotate(-5,250,380)"/>
+  <ellipse cx="280" cy="400" rx="55" ry="35" fill="url(#oil-stain-2)" transform="rotate(8,280,400)"/>
+
+  <ellipse cx="520" cy="430" rx="100" ry="55" fill="url(#oil-stain-2)" transform="rotate(-3,520,430)"/>
+  <ellipse cx="540" cy="445" rx="60" ry="40" fill="url(#oil-stain-1)" transform="rotate(12,540,445)"/>
+
+  <!-- Small scattered oil spots -->
+  <ellipse cx="150" cy="490" rx="35" ry="22" fill="url(#oil-stain-3)"/>
+  <ellipse cx="680" cy="350" rx="45" ry="28" fill="url(#oil-stain-3)" transform="rotate(-10,680,350)"/>
+  <ellipse cx="400" cy="520" rx="50" ry="30" fill="url(#oil-stain-3)" transform="rotate(5,400,520)"/>
+
+  <!-- Water/moisture stains -->
+  <ellipse cx="700" cy="500" rx="70" ry="45" fill="url(#water-stain)"/>
+  <ellipse cx="100" cy="340" rx="50" ry="30" fill="url(#water-stain)"/>
+
+  <!-- Tire marks -->
+  <path d="M200,280 L200,600" stroke="#3a3630" stroke-width="60" opacity="0.06"/>
+  <path d="M600,280 L600,600" stroke="#3a3630" stroke-width="60" opacity="0.06"/>
+
+  <!-- Spalled/chipped area -->
+  <path d="M440,480 Q455,470 470,478 Q480,490 475,505 Q460,515 445,508 Q435,495 440,480Z"
+        fill="#42423e" stroke="#3d3d38" stroke-width="1" opacity="0.6"/>
+  <path d="M445,485 Q455,478 465,483 Q472,492 468,500 Q458,505 450,500 Q443,493 445,485Z"
+        fill="#383834" opacity="0.5"/>
+
+  <!-- Dust patches -->
+  <rect x="0" y="560" width="800" height="40" fill="#555550" opacity="0.08"/>
+
+  <!-- Subtle edge darkening for depth -->
+  <rect x="0" y="255" width="800" height="345" fill="url(#floor-shadow)" opacity="0.15"/>
+
+  <!-- Corner grime buildup -->
+  <path d="M0,600 L0,520 Q20,530 40,540 Q30,570 20,600Z" fill="#353530" opacity="0.3"/>
+  <path d="M800,600 L800,520 Q780,530 760,540 Q770,570 780,600Z" fill="#353530" opacity="0.3"/>
 </svg>

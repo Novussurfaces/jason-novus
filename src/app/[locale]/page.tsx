@@ -7,8 +7,15 @@ import { BeforeAfter } from "@/components/sections/BeforeAfter";
 import { Testimonials } from "@/components/sections/Testimonials";
 import { WorldwideShipping } from "@/components/sections/WorldwideShipping";
 import { CTASection } from "@/components/sections/CTASection";
-import { StructuredData } from "@/components/StructuredData";
-import { getOrganizationSchema, getBreadcrumbSchema } from "@/lib/structured-data";
+import { MultiStructuredData } from "@/components/StructuredData";
+import {
+  getOrganizationSchema,
+  getLocalBusinessSchema,
+  getWebSiteSchema,
+  getFAQSchema,
+  getPromoOfferSchema,
+  getBreadcrumbSchema,
+} from "@/lib/structured-data";
 
 type Props = {
   params: Promise<{ locale: string }>;
@@ -17,15 +24,22 @@ type Props = {
 export default async function HomePage({ params }: Props) {
   const { locale } = await params;
   setRequestLocale(locale);
+  const loc = locale as "fr" | "en";
 
   return (
     <>
-      <StructuredData data={getOrganizationSchema()} />
-      <StructuredData
-        data={getBreadcrumbSchema(
-          [{ name: locale === "fr" ? "Accueil" : "Home", href: "" }],
-          locale as "fr" | "en"
-        )}
+      <MultiStructuredData
+        schemas={[
+          getOrganizationSchema(),
+          getLocalBusinessSchema(),
+          getWebSiteSchema(),
+          getFAQSchema(loc),
+          getPromoOfferSchema(loc),
+          getBreadcrumbSchema(
+            [{ name: loc === "fr" ? "Accueil" : "Home", href: "" }],
+            loc
+          ),
+        ]}
       />
       <Hero />
       <TrustBar />

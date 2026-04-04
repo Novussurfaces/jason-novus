@@ -4,6 +4,7 @@ export type ProductCategory =
   | "quartz"
   | "metallic"
   | "polyurethane"
+  | "polyaspartic"
   | "membrane"
   | "overlay"
   | "mortar";
@@ -24,6 +25,7 @@ export type Product = {
     trafficReady: string;
   };
   features: { fr: string[]; en: string[] };
+  priceRange: string;
   image: string;
 };
 
@@ -37,6 +39,7 @@ export const categories: {
   { id: "quartz", label: { fr: "Quartz", en: "Quartz" } },
   { id: "metallic", label: { fr: "Métallique", en: "Metallic" } },
   { id: "polyurethane", label: { fr: "Polyuréthane", en: "Polyurethane" } },
+  { id: "polyaspartic", label: { fr: "Polyaspartique", en: "Polyaspartic" } },
   { id: "membrane", label: { fr: "Membrane", en: "Membrane" } },
   { id: "overlay", label: { fr: "Recouvrement", en: "Overlay" } },
   { id: "mortar", label: { fr: "Mortier", en: "Mortar" } },
@@ -96,6 +99,7 @@ export const products: Product[] = [
         "Exceptional concrete adhesion",
       ],
     },
+    priceRange: "$4.50 – $7.00/pi²",
     image: "/images/products/sci-100.jpg",
   },
   {
@@ -151,6 +155,7 @@ export const products: Product[] = [
         "Easy to clean and maintain",
       ],
     },
+    priceRange: "$6.00 – $9.50/pi²",
     image: "/images/products/sci-broadcast.jpg",
   },
   {
@@ -206,6 +211,7 @@ export const products: Product[] = [
         "Antimicrobial",
       ],
     },
+    priceRange: "$12.00 – $18.00/pi²",
     image: "/images/products/sci-cpu.jpg",
   },
   {
@@ -261,6 +267,7 @@ export const products: Product[] = [
         "Easy cleaning",
       ],
     },
+    priceRange: "$8.00 – $12.00/pi²",
     image: "/images/products/sci-cove.jpg",
   },
   {
@@ -316,6 +323,7 @@ export const products: Product[] = [
         "Stain and chemical resistant",
       ],
     },
+    priceRange: "$5.50 – $8.50/pi²",
     image: "/images/products/sci-flake.jpg",
   },
   {
@@ -371,6 +379,7 @@ export const products: Product[] = [
         "Flexible — supports movement",
       ],
     },
+    priceRange: "$7.00 – $11.00/pi²",
     image: "/images/products/sci-membrane.jpg",
   },
   {
@@ -426,6 +435,7 @@ export const products: Product[] = [
         "Stain and scratch resistant",
       ],
     },
+    priceRange: "$8.00 – $14.00/pi²",
     image: "/images/products/sci-metallic.jpg",
   },
   {
@@ -481,6 +491,7 @@ export const products: Product[] = [
         "Quick and economical renovation",
       ],
     },
+    priceRange: "$6.00 – $10.00/pi²",
     image: "/images/products/sci-op.jpg",
   },
   {
@@ -536,6 +547,7 @@ export const products: Product[] = [
         "UV resistant — no yellowing",
       ],
     },
+    priceRange: "$6.50 – $9.00/pi²",
     image: "/images/products/sci-polyurea.jpg",
   },
   {
@@ -591,6 +603,7 @@ export const products: Product[] = [
         "15+ year lifespan",
       ],
     },
+    priceRange: "$7.50 – $12.00/pi²",
     image: "/images/products/sci-quartz-broadcast.jpg",
   },
   {
@@ -646,6 +659,7 @@ export const products: Product[] = [
         "Complete chemical resistance",
       ],
     },
+    priceRange: "$9.00 – $14.00/pi²",
     image: "/images/products/sci-quartz-trowel.jpg",
   },
   {
@@ -701,6 +715,7 @@ export const products: Product[] = [
         "Thick-build application",
       ],
     },
+    priceRange: "$8.00 – $13.00/pi²",
     image: "/images/products/sci-slurry.jpg",
   },
   {
@@ -756,7 +771,64 @@ export const products: Product[] = [
         "Up to 1/2 inch thickness",
       ],
     },
+    priceRange: "$10.00 – $16.00/pi²",
     image: "/images/products/sci-mortar.jpg",
+  },
+  {
+    id: 14,
+    slug: "sci-gar",
+    sciCode: "SCI-GAR",
+    category: "polyaspartic",
+    name: {
+      fr: "Système SCI-GAR Garage",
+      en: "SCI-GAR Garage System",
+    },
+    shortDescription: {
+      fr: "Polyaspartique ultra-rapide pour garages résidentiels et commerciaux — prêt en 1 jour",
+      en: "Ultra-fast polyaspartic for residential and commercial garages — ready in 1 day",
+    },
+    description: {
+      fr: "Le système SCI-GAR est notre solution tout-en-un spécialement formulée pour les planchers de garage. Sa technologie polyaspartique à cure ultra-rapide permet une installation complète en une seule journée. Résistant aux pneus chauds, sel de déglaçage, huile et produits chimiques automobiles. Disponible avec flocons décoratifs ou fini uni.",
+      en: "The SCI-GAR system is our all-in-one solution specially formulated for garage floors. Its ultra-fast cure polyaspartic technology allows complete installation in a single day. Resistant to hot tires, road salt, oil, and automotive chemicals. Available with decorative flakes or solid finish.",
+    },
+    applications: {
+      fr: [
+        "Garages résidentiels",
+        "Garages commerciaux",
+        "Ateliers mécaniques",
+        "Salles d'exposition automobile",
+        "Stationnements intérieurs",
+      ],
+      en: [
+        "Residential garages",
+        "Commercial garages",
+        "Mechanical workshops",
+        "Auto showrooms",
+        "Indoor parking",
+      ],
+    },
+    specs: {
+      chemistry: "Polyaspartic",
+      thickness: "15-25 mils",
+      cureTime: "2-4 hours",
+      trafficReady: "12-24 hours",
+    },
+    features: {
+      fr: [
+        "Résistant aux pneus chauds (hot tire pickup)",
+        "Installation complète en 1 jour",
+        "Résiste au sel de déglaçage et produits chimiques",
+        "Stabilité UV — ne jaunit pas",
+      ],
+      en: [
+        "Hot tire pickup resistant",
+        "Complete installation in 1 day",
+        "Road salt and chemical resistant",
+        "UV stable — no yellowing",
+      ],
+    },
+    priceRange: "$5.00 – $8.00/pi²",
+    image: "/images/products/sci-gar.jpg",
   },
 ];
 

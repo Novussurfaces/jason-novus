@@ -322,7 +322,12 @@
     "discount10": "Rabais volume de 10% appliqué!",
     "discount15": "Rabais volume de 15% appliqué!",
     "discount20": "Rabais volume de 20% appliqué — meilleur prix!",
-    "calculating": "Calcul en cours..."
+    "calculating": "Calcul en cours...",
+    "promo": "PROMO AVRIL — 20% de rabais sur tous les projets!",
+    "promoLabel": "Promo Avril -20%",
+    "promoBefore": "Prix avant promo",
+    "promoAfter": "Avec promo Avril (-20%)",
+    "promoSavings": "Vous économisez {amount} avec la promo Avril!"
   },
   "blog": {
     "title": "Blog",
@@ -399,6 +404,12 @@
     "title": "Votre garage mérite un plancher qui",
     "titleHighlight": "résiste au sel québécois",
     "subtitle": "Revêtement époxy professionnel à partir de 2,75 $/pi². Installation disponible en 1 jour. Garanti contre le sel, le calcium et les produits chimiques.",
+    "promoBanner": "PROMO AVRIL — 20% de rabais sur tous les projets!",
+    "urgency": "Offre se termine le 30 avril",
+    "limitedSpots": "Places limitées",
+    "ctaQuote": "Demander ma soumission gratuite",
+    "ctaPhone": "Appelez maintenant",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Soumission gratuite en 24h",
     "formSubtitle": "Recevez une estimation de prix sans engagement",
     "formName": "Nom complet",
@@ -417,9 +428,12 @@
     "benefit4": "Transforme votre garage en espace de vie",
     "benefit5": "Durée de vie de 15+ ans",
     "benefit6": "Installation en 1 jour (polyuréa)",
+    "statPriceValue": "2,75",
     "statPrice": "/pi² min",
     "statDay": "jour install",
     "statYears": "ans durée",
+    "statProjectsLabel": "projets complétés",
+    "statSatisfactionLabel": "satisfaction client",
     "socialTitle": "Ce que nos clients disent",
     "review1": "Mon garage a survécu à 2 hivers sans une seule marque. Le sel ne fait rien. Impressionnant.",
     "review1Name": "Martin L.",
@@ -475,7 +489,13 @@
     "badge": "Fitness",
     "title": "Planchers performance pour",
     "titleHighlight": "centres d'entraînement",
-    "subtitle": "Revêtements époxy et polyuréa conçus pour les gyms, CrossFit et centres de conditionnement physique. Antidérapants, résistants aux impacts, faciles à nettoyer.",
+    "subtitle": "Revêtements époxy et polyuréa conçus pour les gyms, CrossFit et centres de conditionnement physique. Antidérapants, résistants aux impacts, faciles à nettoyer. A partir de 4,50 $/pi².",
+    "promoBanner": "PROMO AVRIL — 20% de rabais sur tous les projets!",
+    "urgency": "Offre se termine le 30 avril",
+    "limitedSpots": "Places limitées",
+    "ctaQuote": "Demander ma soumission gratuite",
+    "ctaPhone": "Appelez maintenant",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Soumission gratuite en 24h",
     "formSubtitle": "Recevez une estimation pour votre centre d'entraînement",
     "formName": "Nom complet",
@@ -522,7 +542,13 @@
     "badge": "Alimentaire",
     "title": "Revêtements de sol pour",
     "titleHighlight": "cuisines et restaurants",
-    "subtitle": "Planchers alimentaires certifiés pour restaurants, cuisines commerciales et usines de transformation. Conformes MAPAQ, antidérapants, résistants aux produits chimiques.",
+    "subtitle": "Planchers alimentaires certifiés pour restaurants, cuisines commerciales et usines de transformation. Conformes MAPAQ, antidérapants, résistants aux produits chimiques. A partir de 7,00 $/pi².",
+    "promoBanner": "PROMO AVRIL — 20% de rabais sur tous les projets!",
+    "urgency": "Offre se termine le 30 avril",
+    "limitedSpots": "Places limitées",
+    "ctaQuote": "Demander ma soumission gratuite",
+    "ctaPhone": "Appelez maintenant",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Soumission gratuite en 24h",
     "formSubtitle": "Recevez une estimation pour votre établissement",
     "formName": "Nom complet",
@@ -569,7 +595,13 @@
     "badge": "Industriel",
     "title": "Planchers industriels",
     "titleHighlight": "haute résistance",
-    "subtitle": "Revêtements de plancher pour entrepôts, usines et centres de distribution. Conçus pour le trafic de chariots élévateurs, résistants aux produits chimiques, installation rapide.",
+    "subtitle": "Revêtements de plancher pour entrepôts, usines et centres de distribution. Conçus pour le trafic de chariots élévateurs, résistants aux produits chimiques, installation rapide. A partir de 4,50 $/pi².",
+    "promoBanner": "PROMO AVRIL — 20% de rabais sur tous les projets!",
+    "urgency": "Offre se termine le 30 avril",
+    "limitedSpots": "Places limitées",
+    "ctaQuote": "Demander ma soumission gratuite",
+    "ctaPhone": "Appelez maintenant",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Soumission gratuite en 24h",
     "formSubtitle": "Recevez une estimation pour votre entrepôt",
     "formName": "Nom complet",
@@ -616,7 +648,13 @@
     "badge": "Copropriétés",
     "title": "Revêtements de stationnement et",
     "titleHighlight": "espaces communs",
-    "subtitle": "Solutions de revêtement pour stationnements souterrains, halls d'entrée et espaces communs de condos. Augmentez la valeur de votre propriété avec des finitions haut de gamme.",
+    "subtitle": "Solutions de revêtement pour stationnements souterrains, halls d'entrée et espaces communs de condos. Augmentez la valeur de votre propriété avec des finitions haut de gamme. A partir de 4,50 $/pi².",
+    "promoBanner": "PROMO AVRIL — 20% de rabais sur tous les projets!",
+    "urgency": "Offre se termine le 30 avril",
+    "limitedSpots": "Places limitées",
+    "ctaQuote": "Demander ma soumission gratuite",
+    "ctaPhone": "Appelez maintenant",
+    "ctaPhoneNumber": "581-307-2678",
     "formTitle": "Soumission gratuite en 24h",
     "formSubtitle": "Recevez une estimation pour votre copropriété",
     "formName": "Nom complet",
@@ -980,5 +1018,108 @@
     "loading": "Chargement du système...",
     "error": "Erreur de connexion",
     "lastUpdate": "Dernière mise à jour"
+  },
+  "realisations": {
+    "badge": "Projets complétés",
+    "title": "Des surfaces qui parlent d'elles-mêmes",
+    "subtitle": "Plus de 150 projets résidentiels, commerciaux et industriels complétés à travers le Québec et le Canada. Chaque surface raconte une histoire de qualité.",
+    "filterAll": "Tous les projets",
+    "filters": {
+      "residential": "Résidentiel",
+      "commercial": "Commercial",
+      "industrial": "Industriel"
+    },
+    "stats": {
+      "totalProjects": "Projets",
+      "totalArea": "Pi² couverts",
+      "cities": "Villes",
+      "systems": "Systèmes SCI"
+    },
+    "viewDetails": "Voir les détails",
+    "noResults": "Aucun projet dans cette catégorie pour le moment.",
+    "ctaText": "Vous avez un projet en tête? Obtenez une soumission gratuite et sans engagement en moins de 24 heures.",
+    "ctaButton": "Démarrer votre projet",
+    "modal": {
+      "system": "Système",
+      "area": "Superficie",
+      "city": "Ville",
+      "category": "Type",
+      "cta": "Projet similaire?",
+      "close": "Fermer"
+    },
+    "projects": {
+      "project1": {
+        "title": "Garage résidentiel — Laval",
+        "system": "SCI Flake Premium",
+        "city": "Laval",
+        "description": "Transformation complète d'un garage double avec le système SCI Flake. Fini antidérapant, résistant au sel québécois et aux produits chimiques. Le propriétaire voulait un plancher qui allait survivre aux hivers — mission accomplie."
+      },
+      "project2": {
+        "title": "Entrepôt logistique — Montréal",
+        "system": "SCI Polyuréa Industriel",
+        "city": "Montréal",
+        "description": "Application polyuréa haute performance sur 12 800 pi² d'entrepôt. Résiste au trafic de chariots élévateurs, impacts lourds et produits chimiques. Temps d'arrêt minimal grâce au séchage rapide du polyuréa."
+      },
+      "project3": {
+        "title": "Showroom automobile — Québec",
+        "system": "SCI Metallic Signature",
+        "city": "Québec",
+        "description": "Plancher métallique marbré avec effet 3D unique. Le système SCI Metallic crée un look luxueux qui impressionne les clients dès l'entrée. Chaque plancher est une œuvre unique."
+      },
+      "project4": {
+        "title": "Restaurant gastronomique — Sherbrooke",
+        "system": "SCI Quartz Antidérapant",
+        "city": "Sherbrooke",
+        "description": "Système époxy-quartz avec agrégat antidérapant pour la cuisine et la salle à manger. Certifié USDA/FDA pour les environnements alimentaires. Nettoyage facile, hygiène maximale."
+      },
+      "project5": {
+        "title": "Sous-sol familial — Brossard",
+        "system": "SCI-100 Époxy Solide",
+        "city": "Brossard",
+        "description": "Époxy 100% solide pour un sous-sol transformé en espace de vie. Zéro COV, fini brillant miroir. Le sous-sol est devenu la pièce préférée de la famille."
+      },
+      "project6": {
+        "title": "Usine de fabrication — Anjou",
+        "system": "SCI Polyuréa-Polyaspartique",
+        "city": "Anjou",
+        "description": "Revêtement polyuréa-polyaspartique hybride pour plancher d'usine à haute performance. 15 000 pi² appliqués en un weekend pour minimiser l'interruption de production. Résistance chimique et mécanique exceptionnelle."
+      },
+      "project7": {
+        "title": "Centre d'entraînement CrossFit — Gatineau",
+        "system": "SCI Polyaspartique Sport",
+        "city": "Gatineau",
+        "description": "Revêtement polyaspartique haute résistance pour un gym CrossFit. Surface antidérapante même mouillée, résiste aux impacts de poids lourds et aux équipements. Séchage ultra-rapide — ouvert le lendemain."
+      },
+      "project8": {
+        "title": "Condo de luxe — Longueuil",
+        "system": "SCI Metallic Designer",
+        "city": "Longueuil",
+        "description": "Plancher métallique effet marbre pour un condo haut de gamme. Couleurs personnalisées avec pigments métalliques exclusifs. Un look unique impossible à reproduire — chaque application est une œuvre d'art."
+      },
+      "project9": {
+        "title": "Laboratoire pharmaceutique — Mirabel",
+        "system": "SCI Quartz Stérile",
+        "city": "Mirabel",
+        "description": "Système époxy-quartz en environnement de salle blanche. Résistance chimique maximale, surface sans joint, nettoyage industriel. Conforme aux normes GMP pharmaceutiques."
+      },
+      "project10": {
+        "title": "Boutique de mode — Tremblant",
+        "system": "SCI Flake Décoratif",
+        "city": "Mont-Tremblant",
+        "description": "Flake décoratif avec palette de couleurs personnalisée pour une boutique haut de gamme. Le plancher complète le design intérieur tout en offrant la durabilité nécessaire pour le trafic commercial."
+      },
+      "project11": {
+        "title": "Garage triple avec atelier — Repentigny",
+        "system": "SCI Polyuréa Résidentiel",
+        "city": "Repentigny",
+        "description": "Polyuréa appliqué sur un garage triple avec atelier mécanique. Le propriétaire est mécanicien amateur — résiste à l'huile, l'essence, le liquide de frein. Installation complétée en 1 jour."
+      },
+      "project12": {
+        "title": "Usine agroalimentaire — Drummondville",
+        "system": "SCI-100 Grade Alimentaire",
+        "city": "Drummondville",
+        "description": "Époxy 100% solide certifié pour environnement alimentaire. 11 200 pi² de plancher résistant aux lavages à haute pression, produits chimiques de nettoyage et trafic intensif de chariots."
+      }
+    }
   }
 }

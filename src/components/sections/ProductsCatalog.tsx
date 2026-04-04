@@ -6,74 +6,116 @@ import { ArrowRight, Search } from "lucide-react";
 import { motion, AnimatePresence } from "framer-motion";
 import { Container } from "@/components/ui/Container";
 import { SectionHeader } from "@/components/ui/SectionHeader";
+import { SpotlightCard } from "@/components/ui/SpotlightCard";
 import { ProductVisual } from "@/components/ui/ProductVisual";
 import { products, categories, type ProductCategory, type Product } from "@/lib/products";
+import { pricePerSqFt } from "@/lib/pricing";
 import { Link } from "@/i18n/navigation";
 import { cn } from "@/lib/cn";
 
-function ProductCard({ product }: { product: Product }) {
+/* ─── Stagger + blur entrance for each card ─── */
+const cardVariants = {
+  hidden: { opacity: 0, y: 24, filter: "blur(8px)" },
+  visible: (i: number) => ({
+    opacity: 1,
+    y: 0,
+    filter: "blur(0px)",
+    transition: {
+      duration: 0.5,
+      delay: i * 0.07,
+      ease: [0.22, 1, 0.36, 1] as const,
+    },
+  }),
+  exit: {
+    opacity: 0,
+    y: -12,
+    filter: "blur(6px)",
+    transition: { duration: 0.25 },
+  },
+};
+
+/* ─── Single product card ─── */
+function ProductCard({ product, index }: { product: Product; index: number }) {
   const locale = useLocale() as "fr" | "en";
   const t = useTranslations("products");
 
   return (
     <motion.div
       layout
-      initial={{ opacity: 0, scale: 0.95 }}
-      animate={{ opacity: 1, scale: 1 }}
-      exit={{ opacity: 0, scale: 0.95 }}
-      transition={{ duration: 0.3 }}
+      custom={index}
+      variants={cardVariants}
+      initial="hidden"
+      animate="visible"
+      exit="exit"
+      className="h-full"
     >
       <Link
         href={{ pathname: "/produits/[slug]", params: { slug: product.slug } }}
-        className="group block rounded-2xl border border-border bg-card p-6 transition-all duration-300 hover:border-accent/50 hover:bg-card-hover hover:shadow-lg hover:shadow-accent/5 h-full"
+        className="group block h-full"
       >
-        {/* Product visual */}
-        <ProductVisual
-          sciCode={product.sciCode}
-          chemistry={product.specs.chemistry}
-          className="aspect-[4/3] mb-5"
-        />
-
-        {/* Category */}
-        <span className="inline-block rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent mb-3">
-          {product.specs.chemistry}
-        </span>
-
-        {/* Name */}
-        <h3 className="text-lg font-semibold group-hover:text-accent transition-colors">
-          {product.name[locale]}
-        </h3>
-
-        {/* Description */}
-        <p className="mt-2 text-sm text-muted line-clamp-2">
-          {product.shortDescription[locale]}
-        </p>
-
-        {/* Specs */}
-        <div className="mt-4 grid grid-cols-2 gap-2">
-          <div className="rounded-lg bg-surface px-3 py-2">
-            <div className="text-xs text-muted-foreground">{t("thickness")}</div>
-            <div className="text-sm font-medium">{product.specs.thickness}</div>
-          </div>
-          <div className="rounded-lg bg-surface px-3 py-2">
-            <div className="text-xs text-muted-foreground">{t("cure")}</div>
-            <div className="text-sm font-medium">{product.specs.cureTime}</div>
-          </div>
-        </div>
-
-        {/* CTA */}
-        <div className="mt-5 flex items-center gap-2 text-sm font-medium text-accent">
-          {t("viewProduct")}
-          <ArrowRight
-            size={16}
-            className="transition-transform group-hover:translate-x-1"
+        <SpotlightCard className="h-full flex flex-col !p-0 overflow-hidden">
+          {/* Product visual */}
+          <ProductVisual
+            sciCode={product.sciCode}
+            chemistry={product.specs.chemistry}
+            className="aspect-[4/3]"
           />
-        </div>
+
+          {/* Card body */}
+          <div className="flex flex-col flex-1 p-5 pt-4">
+            {/* Chemistry badge */}
+            <span className="inline-flex self-start rounded-full bg-accent/10 px-3 py-1 text-xs font-medium text-accent mb-3">
+              {product.specs.chemistry}
+            </span>
+
+            {/* Name */}
+            <h3 className="text-lg font-semibold group-hover:text-accent transition-colors leading-snug">
+              {product.name[locale]}
+            </h3>
+
+            {/* Description */}
+            <p className="mt-2 text-sm text-foreground/60 line-clamp-2">
+              {product.shortDescription[locale]}
+            </p>
+
+            {/* Price — clear product-only label */}
+            <div className="mt-3">
+              <div className="flex items-baseline gap-1.5">
+                <span className="text-xs text-foreground/40">{t("fromPrice")}</span>
+                <span className="text-sm font-semibold text-accent">
+                  {(() => {
+                    const price = pricePerSqFt[product.slug];
+                    return price
+                      ? `$${price.min.toFixed(2)}/${locale === "fr" ? "pi²" : "sq ft"}`
+                      : product.priceRange;
+                  })()}
+                </span>
+                <span className="text-[10px] text-foreground/30">{t("pricing.productOnly")}</span>
+              </div>
+            </div>
+
+            {/* Spacer to push CTA to bottom */}
+            <div className="flex-1 min-h-3" />
+
+            {/* Divider */}
+            <div className="h-px w-full bg-white/[0.06] mt-4 mb-3" />
+
+            {/* CTA */}
+            <div className="flex items-center gap-2 text-sm font-medium text-accent">
+              {t("learnMore")}
+              <ArrowRight
+                size={15}
+                className="transition-transform duration-300 group-hover:translate-x-1.5"
+              />
+            </div>
+          </div>
+        </SpotlightCard>
       </Link>
     </motion.div>
   );
 }
 
+/* ─── Main catalog section ─── */
 export function ProductsCatalog() {
   const locale = useLocale() as "fr" | "en";
   const t = useTranslations("products");
@@ -90,57 +132,76 @@ export function ProductsCatalog() {
   });
 
   return (
-    <section className="pt-32 pb-24">
+    <section className="py-24 md:py-32">
       <Container>
-        <SectionHeader title={t("title")} subtitle={t("subtitle")} />
+        {/* ── Header with gradient title ── */}
+        <SectionHeader title={t("title")} subtitle={t("subtitle")} gradient />
 
-        {/* Search */}
-        <div className="max-w-md mx-auto mb-8">
+        {/* ── Search bar — glass morphism ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.15 }}
+          className="max-w-md mx-auto mb-10"
+        >
           <div className="relative">
-            <Search size={18} className="absolute left-4 top-1/2 -translate-y-1/2 text-muted" />
+            <Search
+              size={18}
+              className="absolute left-4 top-1/2 -translate-y-1/2 text-foreground/40 pointer-events-none"
+            />
             <input
               type="text"
               value={searchQuery}
               onChange={(e) => setSearchQuery(e.target.value)}
               placeholder={t("search")}
-              className="w-full rounded-xl border border-border bg-card pl-11 pr-4 py-3 text-sm text-foreground placeholder:text-muted-foreground focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent transition-colors"
+              className="w-full rounded-full bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] pl-11 pr-5 py-3 text-sm text-foreground placeholder:text-foreground/30 focus:border-accent/40 focus:outline-none focus:ring-1 focus:ring-accent/30 transition-all duration-300"
             />
           </div>
-        </div>
+        </motion.div>
 
-        {/* Category Filters */}
-        <div className="flex flex-wrap items-center justify-center gap-2 mb-12">
+        {/* ── Category filter pills ── */}
+        <motion.div
+          initial={{ opacity: 0, y: 12 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.5, delay: 0.2 }}
+          className="flex flex-wrap items-center justify-center gap-2 mb-14"
+        >
           {categories.map((cat) => (
             <button
               key={cat.id}
               onClick={() => setActiveCategory(cat.id)}
               className={cn(
-                "rounded-full px-4 py-2 text-sm font-medium transition-all duration-200 cursor-pointer",
+                "rounded-full px-4 py-2 text-sm font-medium transition-all duration-300 cursor-pointer",
                 activeCategory === cat.id
-                  ? "bg-accent text-white shadow-lg shadow-accent/25"
-                  : "bg-card text-muted border border-border hover:text-foreground hover:border-muted-foreground"
+                  ? "bg-accent/20 border border-accent/30 text-accent shadow-[0_0_16px_rgba(201,168,76,0.12)]"
+                  : "bg-white/[0.06] backdrop-blur-xl border border-white/[0.12] text-foreground/50 hover:text-foreground/80 hover:border-white/[0.2] hover:bg-white/[0.09]"
               )}
             >
               {cat.label[locale]}
             </button>
           ))}
-        </div>
+        </motion.div>
 
-        {/* Products Grid */}
+        {/* ── Products grid ── */}
         <motion.div layout className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
           <AnimatePresence mode="popLayout">
-            {filtered.map((product) => (
-              <ProductCard key={product.id} product={product} />
+            {filtered.map((product, i) => (
+              <ProductCard key={product.id} product={product} index={i} />
             ))}
           </AnimatePresence>
         </motion.div>
 
+        {/* ── Empty state ── */}
         {filtered.length === 0 && (
-          <div className="text-center py-20">
-            <p className="text-muted text-lg">
-              {t("noResults")}
-            </p>
-          </div>
+          <motion.div
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-center py-24"
+          >
+            <p className="text-foreground/40 text-lg">{t("noResults")}</p>
+          </motion.div>
         )}
       </Container>
     </section>
