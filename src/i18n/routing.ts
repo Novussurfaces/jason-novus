@@ -58,6 +58,10 @@ export const routing = defineRouting({
       fr: "/installation",
       en: "/installation",
     },
+    "/avis": {
+      fr: "/avis",
+      en: "/reviews",
+    },
     "/connexion": {
       fr: "/connexion",
       en: "/sign-in",

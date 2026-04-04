@@ -6,19 +6,21 @@ import { Inter, Space_Grotesk } from "next/font/google";
 import { routing } from "@/i18n/routing";
 import { Navbar } from "@/components/Navbar";
 import { Footer } from "@/components/Footer";
-import { ChatBot } from "@/components/ChatBot";
 import { SmoothScroll } from "@/components/SmoothScroll";
 import { ScrollProgress } from "@/components/ScrollProgress";
-import { FilmGrain } from "@/components/three/FilmGrain";
-import { CustomCursor } from "@/components/ui/CustomCursor";
-
-import { ExitIntent } from "@/components/ui/ExitIntent";
-import { StickyCTA } from "@/components/ui/StickyCTA";
-import { Preloader } from "@/components/ui/Preloader";
 
 import Script from "next/script";
-import { Suspense } from "react";
-import { FacebookPixel } from "@/components/FacebookPixel";
+
+/* ── Lazy-loaded client components (ssr: false must be in a "use client" file) ── */
+import {
+  ChatBot,
+  FilmGrain,
+  CustomCursor,
+  ExitIntent,
+  StickyCTA,
+  Preloader,
+  FacebookPixel,
+} from "@/components/ClientDynamics";
 
 const inter = Inter({
   subsets: ["latin"],
@@ -99,9 +101,7 @@ export default async function LocaleLayout({ children, params }: Props) {
   return (
     <html lang={locale} className={`${inter.variable} ${spaceGrotesk.variable}`}>
       <body className="min-h-screen flex flex-col bg-background text-foreground antialiased">
-        <Suspense fallback={null}>
-          <FacebookPixel />
-        </Suspense>
+        <FacebookPixel />
         {process.env.NEXT_PUBLIC_UMAMI_WEBSITE_ID && (
           <Script
             defer

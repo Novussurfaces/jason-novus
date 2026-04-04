@@ -3,6 +3,40 @@
     "title": "Novus Surfaces — Revêtements de surfaces haut de gamme | Livraison mondiale",
     "description": "Novus Surfaces offre des systèmes de revêtements époxy, polyuréa et quartz de qualité industrielle pour résidentiel, commercial et industriel. Fabriqué au Canada, livraison mondiale."
   },
+  "pagesMeta": {
+    "about": {
+      "title": "À propos de Novus Surfaces — Notre histoire et mission",
+      "description": "Découvrez Novus Surfaces : systèmes de revêtements industriels haut de gamme fabriqués au Canada. Notre partenariat avec SCI Coatings et notre engagement qualité."
+    },
+    "contact": {
+      "title": "Contactez Novus Surfaces — Conseils d'experts",
+      "description": "Joignez nos spécialistes en revêtements pour vos questions produits, conseils projets ou demandes de gros. Service au Canada et livraison mondiale."
+    },
+    "products": {
+      "title": "Produits de revêtement professionnel — Systèmes époxy, polyuréa et quartz",
+      "description": "Parcourez 13 systèmes de revêtement certifiés : époxy, polyuréa, polyaspartique, quartz et finis métalliques. Formulations industrielles pour toute surface."
+    },
+    "quote": {
+      "title": "Soumission gratuite — Estimation de revêtement sur mesure",
+      "description": "Demandez une soumission gratuite personnalisée pour votre projet de revêtement. Réponse rapide, sans obligation. Solutions résidentielles, commerciales et industrielles."
+    },
+    "calculator": {
+      "title": "Calculateur de prix — Estimation instantanée",
+      "description": "Calculez le coût de votre projet de revêtement en quelques secondes. Sélectionnez votre système, entrez votre superficie et obtenez un prix précis instantanément."
+    },
+    "portfolio": {
+      "title": "Nos réalisations — Transformations avant et après",
+      "description": "Voyez de vraies transformations par Novus Surfaces. Photos avant et après de garages résidentiels, planchers commerciaux et installations industrielles."
+    },
+    "blog": {
+      "title": "Conseils et tendances — Blog Novus Surfaces",
+      "description": "Articles d'experts sur les revêtements époxy, la préparation de surfaces, conseils d'entretien et tendances de l'industrie."
+    },
+    "installation": {
+      "title": "Guide d'installation — Application de revêtement étape par étape",
+      "description": "Guides d'installation complets pour tous les systèmes Novus. Préparation de surface, techniques d'application, conditions de cure et conseils de pro."
+    }
+  },
   "nav": {
     "home": "Accueil",
     "products": "Produits",
@@ -14,6 +48,7 @@
     "getQuote": "Obtenir une soumission",
     "track": "Suivi",
     "installation": "Installation",
+    "reviews": "Avis",
     "productCategories": {
       "epoxy": "Époxy",
       "polyurea": "Polyuréa",
@@ -190,53 +225,177 @@
     "subtitle": "Votre distributeur de revêtements de surfaces haut de gamme — Livraison mondiale",
     "story": {
       "title": "Notre histoire",
-      "p1": "Novus Surfaces est né de la conviction que chaque surface mérite un revêtement d'exception. En partenariat avec SCI Coatings, manufacturier montréalais reconnu depuis plus de 13 ans, nous offrons au monde entier les systèmes de revêtements les plus performants du marché.",
-      "p2": "Notre modèle est simple : nous sélectionnons les meilleurs produits, offrons un support technique irréprochable et livrons directement de l'usine à votre chantier, partout dans le monde."
+      "p1": "Novus Surfaces est né de la conviction que chaque surface mérite un revêtement d'exception. Fondé au Québec, notre entreprise est le fruit d'une passion pour les matériaux de haute performance et d'un partenariat stratégique avec SCI Coatings, manufacturier montréalais reconnu depuis plus de 15 ans.",
+      "p2": "Notre mission est claire : rendre les revêtements de calibre industriel accessibles à chaque projet, qu'il soit résidentiel, commercial ou industriel. De votre garage à votre usine, nous apportons la même excellence.",
+      "p3": "Notre modèle est simple : nous sélectionnons les meilleurs produits, offrons un support technique irréprochable et livrons directement de l'usine à votre chantier, partout dans le monde."
     },
     "partnership": {
       "title": "Partenariat SCI Coatings",
-      "description": "Fabriqué à Montréal par SCI Coatings Inc., leader canadien des revêtements de surfaces industriels depuis 2011.",
-      "location": "Montréal, Canada",
-      "experience": "+13 ans d'expertise",
-      "madeIn": "Fabriqué au Canada"
+      "subtitle": "Fabriqué à Montréal avec fierté",
+      "description": "SCI Coatings Inc., basé à Anjou (Montréal), est un leader canadien dans la fabrication de revêtements de surfaces industriels depuis 2011. Leurs installations de pointe produisent des systèmes testés et certifiés pour les environnements les plus exigeants.",
+      "description2": "En tant que distributeur exclusif, Novus Surfaces vous donne un accès direct à toute la gamme SCI — du résidentiel à l'industriel lourd — avec un support technique personnalisé.",
+      "location": "Anjou, Montréal, QC",
+      "experience": "+15 ans d'expertise",
+      "madeIn": "Fabriqué au Canada",
+      "factory": "Usine certifiée",
+      "rd": "R&D continue"
+    },
+    "team": {
+      "title": "Notre équipe",
+      "subtitle": "Les experts derrière chaque projet réussi",
+      "jason": {
+        "name": "Jason Lanthier",
+        "role": "Fondateur",
+        "bio": "Visionnaire et entrepreneur, Jason a fondé Novus Surfaces avec l'ambition de démocratiser les revêtements haut de gamme à l'échelle mondiale."
+      },
+      "michael": {
+        "name": "Michael",
+        "role": "Directeur technique, SCI Coatings",
+        "bio": "Avec plus de 15 ans d'expérience en formulation chimique, Michael supervise la R&D et assure la qualité de chaque système SCI."
+      },
+      "luca": {
+        "name": "Luca",
+        "role": "Opérations",
+        "bio": "Stratège opérationnel, Luca optimise chaque processus pour garantir une expérience client fluide et efficace."
+      }
     },
     "valuesHeading": "Nos valeurs",
+    "valuesSubtitle": "Les principes qui guident chacune de nos actions",
     "values": {
       "quality": {
         "title": "Qualité sans compromis",
-        "description": "Chaque produit est testé et certifié pour les environnements les plus exigeants."
-      },
-      "service": {
-        "title": "Service personnalisé",
-        "description": "Un accompagnement sur mesure de la sélection du produit à l'installation."
+        "description": "Chaque produit est testé et certifié pour les environnements les plus exigeants. Aucun raccourci."
       },
       "innovation": {
         "title": "Innovation continue",
-        "description": "Des formulations constamment améliorées pour repousser les limites de la performance."
+        "description": "Des formulations constamment améliorées, développées dans notre laboratoire montréalais."
+      },
+      "service": {
+        "title": "Service personnalisé",
+        "description": "Un accompagnement sur mesure de la sélection du produit à l'installation, partout dans le monde."
+      },
+      "durability": {
+        "title": "Durabilité éprouvée",
+        "description": "Des revêtements conçus pour résister des décennies, même dans les conditions les plus sévères."
       }
+    },
+    "stats": {
+      "projects": "projets complétés",
+      "systems": "systèmes de revêtement",
+      "experience": "années d'expérience",
+      "shipping": "Livraison mondiale"
+    },
+    "coverage": {
+      "title": "Zone de couverture",
+      "subtitle": "Du Québec au monde entier",
+      "quebec": "Québec",
+      "quebecDesc": "Service complet, livraison rapide et support technique sur place.",
+      "canada": "Canada",
+      "canadaDesc": "Livraison partout au Canada avec suivi et support à distance.",
+      "northAmerica": "Amérique du Nord",
+      "northAmericaDesc": "Expédition aux États-Unis et au Mexique via nos partenaires logistiques.",
+      "worldwide": "Mondial",
+      "worldwideDesc": "Expédition internationale par voie aérienne et maritime, partout dans le monde."
+    },
+    "timeline": {
+      "title": "Notre parcours",
+      "subtitle": "Les jalons qui ont façonné notre expertise",
+      "items": {
+        "founding": {
+          "year": "2011",
+          "title": "Fondation de SCI Coatings",
+          "description": "Début de la fabrication de revêtements industriels à Montréal."
+        },
+        "expansion": {
+          "year": "2015",
+          "title": "Expansion de la gamme",
+          "description": "Lancement des systèmes polyuréa et polyaspartique."
+        },
+        "novus": {
+          "year": "2023",
+          "title": "Naissance de Novus Surfaces",
+          "description": "Partenariat stratégique pour distribuer SCI au monde entier."
+        },
+        "international": {
+          "year": "2024",
+          "title": "Expansion internationale",
+          "description": "Premières expéditions vers l'Europe et le Moyen-Orient."
+        },
+        "future": {
+          "year": "2025",
+          "title": "L'avenir",
+          "description": "Nouvelles formulations éco-responsables et réseau de distributeurs mondial."
+        }
+      }
+    },
+    "aboutCta": {
+      "title": "Prêt pour votre projet?",
+      "subtitle": "Contactez notre équipe pour une soumission gratuite ou appelez-nous directement.",
+      "button": "Demander une soumission",
+      "phone": "581-307-2678"
     }
   },
   "contact": {
     "title": "Contactez-nous",
     "subtitle": "Notre équipe est disponible pour répondre à toutes vos questions",
+    "promo": "PROMO AVRIL — 20% de rabais sur tous les projets!",
+    "responsePromise": "Réponse en moins de 2 heures",
+    "responseHours": "2",
+    "responseUnit": "heures",
+    "responseLabel": "Temps de réponse moyen",
+    "projectsCompleted": "500",
+    "projectsLabel": "Projets complétés",
+    "satisfactionRate": "98",
+    "satisfactionLabel": "Taux de satisfaction",
+    "methods": {
+      "phoneLabel": "Appelez Jason",
+      "phoneNumber": "581-307-2678",
+      "phoneDesc": "Parlez directement à un expert",
+      "emailLabel": "Écrivez-nous",
+      "emailAddress": "gestionnovusepoxy@gmail.com",
+      "emailDesc": "Réponse rapide garantie",
+      "formLabel": "Formulaire",
+      "formDesc": "Envoyez-nous un message détaillé"
+    },
+    "hours": {
+      "title": "Heures d'ouverture",
+      "weekdays": "Lundi – Vendredi: 8h – 17h",
+      "saturday": "Samedi: Sur rendez-vous",
+      "sunday": "Dimanche: Fermé"
+    },
+    "location": {
+      "title": "Notre emplacement",
+      "city": "Québec, QC, Canada",
+      "serviceArea": "Service: Tout le Québec + livraison mondiale",
+      "mapTitle": "Trouvez-nous"
+    },
     "form": {
+      "title": "Envoyez-nous un message",
       "name": "Nom complet",
       "email": "Courriel",
       "phone": "Téléphone",
-      "subject": "Sujet",
-      "message": "Message",
-      "submit": "Envoyer",
+      "message": "Votre message",
+      "messagePlaceholder": "Décrivez votre projet ou posez-nous vos questions...",
+      "submit": "Envoyer le message",
       "sending": "Envoi en cours...",
-      "success": "Message envoyé! Nous vous répondrons rapidement.",
+      "success": "Message envoyé! Nous vous répondrons dans les 2 prochaines heures.",
       "error": "Une erreur est survenue. Veuillez réessayer."
     },
-    "info": {
-      "email": "info@novusepoxy.ca",
-      "coverage": "Livraison: Mondiale",
-      "hours": "Lun–Ven: 8h–17h (EST)",
-      "emailLabel": "Courriel",
-      "coverageLabel": "Zone de service",
-      "hoursLabel": "Heures"
+    "faq": {
+      "title": "Questions fréquentes",
+      "q1": "Quels sont vos délais de livraison?",
+      "a1": "Nous livrons partout au Québec en 3-5 jours ouvrables. Pour le reste du Canada, comptez 5-10 jours. La livraison internationale est disponible par voie aérienne et maritime.",
+      "q2": "Offrez-vous l'installation?",
+      "a2": "Oui! Nous avons un réseau d'installateurs certifiés à travers le Québec. Nous pouvons aussi former votre équipe pour une application autonome.",
+      "q3": "Quelle est la durée de vie de vos revêtements?",
+      "a3": "Nos systèmes SCI sont conçus pour durer 15-25 ans selon le type de revêtement et l'usage. Tous nos produits sont garantis et testés en laboratoire.",
+      "q4": "Comment obtenir une soumission?",
+      "a4": "Remplissez notre formulaire de soumission en ligne ou appelez Jason directement au 581-307-2678. Vous recevrez une estimation détaillée en 24 heures, sans engagement."
+    },
+    "cta": {
+      "title": "Soumission gratuite en 24h",
+      "subtitle": "Recevez une estimation détaillée pour votre projet sans aucun engagement.",
+      "button": "Demander une soumission"
     }
   },
   "footer": {
@@ -448,20 +607,32 @@
   },
   "lpCommercial": {
     "b2b": "B2B",
+    "badge": "Grade commercial",
     "title": "Revêtements de planchers",
     "titleHighlight": "de grade industriel",
-    "subtitle": "13 systèmes professionnels. Fabriqué à Montréal. Livraison mondiale. Rabais volume disponibles.",
-    "titleSuffix": "pour votre entreprise",
-    "formTitle": "Soumission commerciale",
-    "formSubtitle": "Réponse de notre équipe B2B en 24h",
-    "formName": "Nom",
+    "subtitle": "13 systèmes professionnels SCI Coatings. Entrepôts, commerces, restaurants, hôpitaux, bureaux. À partir de 2,75 $/pi². Rabais volume jusqu'à 20%.",
+    "promoBanner": "PROMO AVRIL — 20% de rabais sur tous les projets commerciaux!",
+    "urgency": "Offre se termine le 30 avril",
+    "limitedSpots": "Places limitées",
+    "ctaQuote": "Demander ma soumission gratuite",
+    "ctaPhone": "Appelez maintenant",
+    "ctaPhoneNumber": "581-307-2678",
+    "benefit1": "Résiste aux chariots élévateurs et au trafic lourd",
+    "benefit2": "Fini antidérapant conforme aux normes commerciales",
+    "benefit3": "Certifié USDA/FDA pour les environnements alimentaires",
+    "benefit4": "Installation rapide — minimise les temps d'arrêt",
+    "benefit5": "Durée de vie 15+ ans en environnement commercial",
+    "benefit6": "Entretien facile — résiste aux produits chimiques industriels",
+    "formTitle": "Soumission commerciale gratuite en 24h",
+    "formSubtitle": "Recevez une estimation de prix sans engagement",
+    "formName": "Nom complet",
     "formCompany": "Entreprise",
     "formEmail": "Courriel professionnel",
     "formPhone": "Téléphone",
     "formProjectType": "Type de projet",
     "formArea": "Superficie (pi²)",
-    "formMessage": "Détails du projet",
-    "formSubmit": "Demander une soumission commerciale",
+    "formMessage": "Détails du projet (optionnel)",
+    "formSubmit": "Obtenir ma soumission commerciale",
     "formSending": "Envoi...",
     "formError": "Erreur, réessayez.",
     "successTitle": "Demande envoyée!",
@@ -475,14 +646,43 @@
     "sectorCommercial": "Commerces",
     "sectorIndustrial": "Usines",
     "sectorFood": "Alimentaire",
+    "sectorOffice": "Bureaux",
+    "sectorHospital": "Hôpitaux",
     "vp1Title": "Qualité industrielle certifiée",
     "vp1Desc": "Systèmes testés et certifiés USDA/FDA pour les environnements les plus exigeants.",
-    "vp2Title": "Rabais volume jusqu'à 15%",
-    "vp2Desc": "2 500+ pi² = -10%. 5 000+ pi² = -15%. Plus le projet est gros, plus vous économisez.",
+    "vp2Title": "Rabais volume jusqu'à 20%",
+    "vp2Desc": "1 000+ pi² = -5%. 2 500+ = -10%. 5 000+ = -15%. 10 000+ pi² = -20%.",
     "vp3Title": "Livraison directe usine",
     "vp3Desc": "Fabriqué à Montréal par SCI Coatings. Expédition directe, délais minimaux.",
     "vp4Title": "Support technique complet",
     "vp4Desc": "Guides d'installation, fiches techniques, support téléphonique pour chaque système.",
+    "statPriceValue": "2,75",
+    "statPrice": "$/pi² min",
+    "statProjectsLabel": "projets complétés",
+    "statSatisfactionLabel": "satisfaction client",
+    "pricingTitle": "Systèmes commerciaux populaires",
+    "priceSCI100": "SCI-100 Coating",
+    "priceSCI100Range": "2,75 $ — 4,50 $/pi²",
+    "priceSCI100Desc": "Revêtement de base pour entrepôts et stationnements",
+    "priceBroadcast": "Broadcast System",
+    "priceBroadcastRange": "2,75 $ — 4,50 $/pi²",
+    "priceBroadcastDesc": "Système broadcast pour commerces et bureaux",
+    "priceQuartz": "Quartz Broadcast",
+    "priceQuartzRange": "4,50 $ — 7,50 $/pi²",
+    "priceQuartzDesc": "Fini quartz pour restaurants et hôpitaux",
+    "priceCementitious": "Cementitious Polyurethane",
+    "priceCementitiousRange": "7,00 $ — 11,00 $/pi²",
+    "priceCementitiousDesc": "Grade alimentaire — cuisines, brasseries, usines",
+    "socialTitle": "Ce que nos clients commerciaux disent",
+    "review1": "On a fait 12 000 pi² d'entrepôt avec le SCI-100. Deux ans plus tard, les chariots élévateurs roulent dessus chaque jour et zéro problème.",
+    "review1Name": "Marc D.",
+    "review1City": "Montréal",
+    "review2": "Notre restaurant a besoin d'un plancher facile à nettoyer. Le quartz SCI est parfait — conforme FDA et beau en même temps.",
+    "review2Name": "Isabelle T.",
+    "review2City": "Laval",
+    "review3": "3 succursales de notre commerce au détail faites avec Novus. Les prix volume nous ont sauvé plus de 15%. Service impeccable.",
+    "review3Name": "Philippe M.",
+    "review3City": "Québec",
     "footerText": " 2026 Novus Surfaces. Fabriqué au Canada. Livraison mondiale."
   },
   "lpGym": {
@@ -1121,5 +1321,417 @@
         "description": "Époxy 100% solide certifié pour environnement alimentaire. 11 200 pi² de plancher résistant aux lavages à haute pression, produits chimiques de nettoyage et trafic intensif de chariots."
       }
     }
+  },
+  "reviews": {
+    "badge": "Avis clients",
+    "title": "Ce que nos clients en pensent",
+    "subtitle": "Des entrepreneurs et propriétaires du Québec qui font confiance à Novus Surfaces",
+    "statsAverage": "4.9/5 moyenne",
+    "statsCount": "50+ avis",
+    "statsSatisfaction": "98% satisfaction",
+    "statsAverageLabel": "Note moyenne",
+    "statsCountLabel": "Avis vérifiés",
+    "statsSatisfactionLabel": "Taux de satisfaction",
+    "filterAll": "Tous",
+    "filterResidential": "Résidentiel",
+    "filterCommercial": "Commercial",
+    "filterIndustrial": "Industriel",
+    "ctaTitle": "Votre projet commence ici",
+    "ctaSubtitle": "Obtenez une soumission gratuite et rejoignez nos clients satisfaits",
+    "ctaButton": "Demander une soumission",
+    "seoTitle": "Avis clients — Novus Surfaces",
+    "seoDescription": "Découvrez les avis de nos clients satisfaits. 4.9/5 étoiles, 50+ avis vérifiés pour nos revêtements époxy, polyuréa et quartz au Québec.",
+    "item1": {
+      "quote": "Le système SCI Metallic a complètement transformé notre showroom. Les clients sont impressionnés dès qu'ils entrent. Installation impeccable et finition miroir.",
+      "name": "Marc Tremblay",
+      "city": "Montréal",
+      "category": "commercial",
+      "project": "Plancher métallique showroom",
+      "rating": 5
+    },
+    "item2": {
+      "quote": "On a essayé 3 fournisseurs avant Novus. La différence de qualité est flagrante. Le polyuréa résiste au sel québécois comme rien d'autre.",
+      "name": "Sophie Lavoie",
+      "city": "Québec",
+      "category": "residential",
+      "project": "Plancher de garage résidentiel",
+      "rating": 5
+    },
+    "item3": {
+      "quote": "Support technique exceptionnel. Michael chez SCI nous a guidés à chaque étape. Le résultat est digne d'un magazine de design.",
+      "name": "Jean-Philippe Côté",
+      "city": "Laval",
+      "category": "commercial",
+      "project": "Revêtement commercial bureau",
+      "rating": 5
+    },
+    "item4": {
+      "quote": "On a fait tout le plancher de notre entrepôt de 15 000 pi². Livraison rapide, produit solide. Ça fait 2 ans et pas une seule fissure.",
+      "name": "David Chen",
+      "city": "Toronto",
+      "category": "industrial",
+      "project": "Plancher d'entrepôt industriel",
+      "rating": 5
+    },
+    "item5": {
+      "quote": "Le calculateur en ligne nous a donné un prix juste. Pas de surprise à la livraison. Exactement ce qu'on cherchait pour notre restaurant.",
+      "name": "Marie-Ève Bouchard",
+      "city": "Sherbrooke",
+      "category": "commercial",
+      "project": "Plancher de restaurant",
+      "rating": 5
+    },
+    "item6": {
+      "quote": "J'ai fait mon garage double avec le SCI-GAR. Résiste au sel, à l'huile, au calcium. Mes voisins veulent tous le même. Trois fois moins cher qu'un installateur local.",
+      "name": "Patrick Gagnon",
+      "city": "Trois-Rivières",
+      "category": "residential",
+      "project": "Garage double résidentiel",
+      "rating": 5
+    },
+    "item7": {
+      "quote": "Notre clinique vétérinaire avait besoin d'un plancher résistant aux produits chimiques. Le quartz SCI est parfait — facile à nettoyer et antidérapant.",
+      "name": "Dre Isabelle Morin",
+      "city": "Gatineau",
+      "category": "commercial",
+      "project": "Clinique vétérinaire",
+      "rating": 5
+    },
+    "item8": {
+      "quote": "On a recouvert 8 000 pi² de notre usine avec le SCI-IND. Le plancher résiste aux chariots élévateurs et aux déversements acides. Aucun entretien depuis 18 mois.",
+      "name": "François Pelletier",
+      "city": "Drummondville",
+      "category": "industrial",
+      "project": "Plancher d'usine manufacturière",
+      "rating": 5
+    },
+    "item9": {
+      "quote": "Le fini métallique dans notre salon de coiffure est magnifique. Nos clientes le commentent à chaque visite. Investissement qui en vaut la peine.",
+      "name": "Nathalie Bergeron",
+      "city": "Longueuil",
+      "category": "commercial",
+      "project": "Salon de coiffure",
+      "rating": 4
+    },
+    "item10": {
+      "quote": "Deuxième commande chez Novus pour notre chaîne de gyms. Le polyaspartique sèche en 24h, on n'a presque pas fermé. Service 5 étoiles.",
+      "name": "Alexandre Dubois",
+      "city": "Lévis",
+      "category": "commercial",
+      "project": "Centre d'entraînement",
+      "rating": 5
+    },
+    "item11": {
+      "quote": "Le sous-sol de notre maison est devenu une vraie salle de jeux. L'époxy flake est superbe et les enfants peuvent jouer sans qu'on s'inquiète des taches.",
+      "name": "Caroline Thibault",
+      "city": "Saint-Jérôme",
+      "category": "residential",
+      "project": "Sous-sol résidentiel",
+      "rating": 5
+    },
+    "item12": {
+      "quote": "On gère un parc de 3 entrepôts frigorifiques. Le SCI-100 tient même à -20°C. Zéro délaminage après un hiver complet. Impressionnant.",
+      "name": "Martin Lessard",
+      "city": "Saguenay",
+      "category": "industrial",
+      "project": "Entrepôt frigorifique",
+      "rating": 5
+    }
+  },
+  "faq": {
+    "title": "Questions fréquentes",
+    "subtitle": "Tout ce que vous devez savoir sur nos systèmes de revêtement époxy, polyuréa et quartz.",
+    "searchPlaceholder": "Rechercher une question...",
+    "noResults": "Aucun résultat trouvé. Contactez-nous pour plus d'informations.",
+    "ctaTitle": "Vous avez d'autres questions?",
+    "ctaDescription": "Notre équipe est disponible pour répondre à toutes vos questions et vous guider vers le meilleur système pour votre projet.",
+    "ctaButton": "Contactez-nous",
+    "ctaQuote": "Demander une soumission",
+    "categories": {
+      "all": "Toutes",
+      "pricing": "Prix",
+      "installation": "Installation",
+      "durability": "Durabilité",
+      "maintenance": "Entretien",
+      "shipping": "Livraison",
+      "products": "Produits",
+      "promo": "Promotions",
+      "process": "Processus",
+      "warranty": "Garantie",
+      "diy": "DIY vs Pro"
+    },
+    "items": {
+      "q1": {
+        "question": "Combien coûte un plancher époxy au pied carré?",
+        "answer": "Les prix varient de 2,75$ à 11,00$ le pied carré selon le système choisi. Le SCI-100 Coating commence à 2,75$/pi², le système Flake à 2,85$/pi², le Polyuréa Flake à 4,50$/pi², le Métallique à 5,50$/pi², et le Polyuréthane Cimentaire peut atteindre 11,00$/pi². Demandez une soumission gratuite pour un prix exact adapté à votre projet.",
+        "category": "pricing"
+      },
+      "q2": {
+        "question": "Y a-t-il des rabais pour les gros volumes?",
+        "answer": "Oui. Nous offrons des rabais progressifs sur tous les systèmes : 5% à partir de 1 000 pi², 10% à 2 500 pi², 15% à 5 000 pi², et 20% à 10 000 pi² et plus. De plus, nos prix palette offrent des économies supplémentaires de 14-18% par rapport à l'achat unitaire.",
+        "category": "pricing"
+      },
+      "q3": {
+        "question": "Quelle est la promotion en cours?",
+        "answer": "En avril 2026, nous offrons 20% de rabais sur tous les systèmes de revêtement SCI. Cette promotion est valide jusqu'au 30 avril 2026 et s'applique à tous les produits, incluant les systèmes époxy, polyuréa, quartz et métallique. Combinable avec les rabais volume.",
+        "category": "promo"
+      },
+      "q4": {
+        "question": "Combien de temps dure un plancher époxy?",
+        "answer": "Un plancher époxy professionnel Novus Surfaces dure entre 10 et 20 ans selon le système, le trafic et l'entretien. Les systèmes quartz comme le SCI-Quartz Broadcast ont une durée de vie de 15+ ans même dans les zones à très fort trafic. Les systèmes polyuréthane cimentaire sont les plus durables avec 20+ ans de vie utile.",
+        "category": "durability"
+      },
+      "q5": {
+        "question": "Est-ce que l'époxy résiste aux produits chimiques?",
+        "answer": "Oui. Tous nos systèmes offrent une résistance chimique. Pour les environnements industriels agressifs (acides, solvants), nous recommandons le SCI-Slurry (6,00$-9,00$/pi²) ou le SCI-CPU polyuréthane cimentaire (7,00$-11,00$/pi²) qui offrent une résistance chimique de grade supérieur.",
+        "category": "durability"
+      },
+      "q6": {
+        "question": "Comment entretenir un plancher époxy?",
+        "answer": "L'entretien est simple : balayez régulièrement et lavez avec un nettoyant neutre et de l'eau tiède. Évitez les produits abrasifs et les nettoyeurs à haute pression directement sur la surface. Pour les taches tenaces, utilisez un nettoyant doux non acide. Aucune cire ou scellant supplémentaire n'est nécessaire.",
+        "category": "maintenance"
+      },
+      "q7": {
+        "question": "Peut-on réparer un plancher époxy endommagé?",
+        "answer": "Oui. Les éclats et rayures mineures peuvent être réparés localement sans refaire tout le plancher. Pour les dommages plus importants, un resurfaçage partiel est possible. Contactez-nous pour évaluer la réparation nécessaire — nous pouvons fournir les produits de retouche compatibles avec votre système existant.",
+        "category": "maintenance"
+      },
+      "q8": {
+        "question": "Livrez-vous partout au Canada et à l'international?",
+        "answer": "Oui. Novus Surfaces livre partout au Canada, aux États-Unis, en Europe et dans le monde entier par voie aérienne et maritime. Tous nos produits sont fabriqués par SCI Coatings à Montréal, Québec. La livraison au Canada prend généralement 3-7 jours ouvrables, et 7-14 jours pour l'international.",
+        "category": "shipping"
+      },
+      "q9": {
+        "question": "Quels sont les frais de livraison?",
+        "answer": "Les frais varient selon la destination et le poids de la commande. Les commandes palettes bénéficient de tarifs avantageux grâce à nos ententes avec les transporteurs. Contactez-nous pour un devis de livraison précis inclus dans votre soumission gratuite.",
+        "category": "shipping"
+      },
+      "q10": {
+        "question": "Quelle est la différence entre époxy et polyuréa?",
+        "answer": "L'époxy (à partir de 2,75$/pi²) offre une excellente résistance chimique et une finition brillante, mais nécessite 24-72h de cure. Le polyuréa (4,50$-7,00$/pi²) cure en 2-4 heures, est 4x plus flexible et résistant aux UV. Le système SCI-Polyuréa permet une installation complète en 1 jour — idéal pour les projets nécessitant un retour rapide au service.",
+        "category": "products"
+      },
+      "q11": {
+        "question": "Quel système recommandez-vous pour un garage résidentiel?",
+        "answer": "Pour un garage résidentiel, nous recommandons le système SCI-Flake (2,85$-4,75$/pi²) ou le SCI-Polyuréa Flake (4,50$-7,00$/pi²). Le Flake offre un excellent rapport qualité-prix avec une finition décorative. Le Polyuréa Flake ajoute une résistance supérieure aux chocs thermiques et aux sels de déglaçage — parfait pour le Québec.",
+        "category": "products"
+      },
+      "q12": {
+        "question": "Peut-on installer l'époxy soi-même (DIY)?",
+        "answer": "Novus Surfaces vend directement aux professionnels et aux propriétaires. Nos produits SCI sont de grade professionnel avec des instructions détaillées. Un gallon de SCI-100 (89$) couvre 80-120 pi². Pour les meilleurs résultats, nous recommandons une installation par un professionnel certifié — la préparation du béton est critique pour l'adhérence à long terme.",
+        "category": "diy"
+      },
+      "q13": {
+        "question": "Quelles sont les conditions idéales pour appliquer un revêtement?",
+        "answer": "La température idéale est entre 10°C et 30°C avec un taux d'humidité inférieur à 80%. Le béton doit être sec (test de l'humidité < 4%), propre et exempt de contaminants. Utilisez notre outil de conditions de cure sur novusepoxy.ca pour vérifier si les conditions sont favorables dans votre région en temps réel.",
+        "category": "installation"
+      },
+      "q14": {
+        "question": "Combien de temps prend l'installation?",
+        "answer": "Le temps varie selon le système et la surface. Un garage standard (400-600 pi²) prend 2-3 jours avec un système époxy classique (incluant la préparation, le primaire, la couche de base et le scellant). Le système SCI-Polyuréa permet de compléter en 1 jour grâce à sa cure rapide de 2-4 heures entre les couches.",
+        "category": "installation"
+      },
+      "q15": {
+        "question": "Offrez-vous une garantie sur vos produits?",
+        "answer": "Tous les produits SCI Coatings sont couverts par une garantie fabricant. La durée varie selon le système : les systèmes résidentiels sont garantis 5-10 ans, et les systèmes commerciaux/industriels 3-5 ans. La garantie couvre les défauts de fabrication lorsque le produit est appliqué selon les spécifications techniques fournies.",
+        "category": "warranty"
+      },
+      "q16": {
+        "question": "Quel est le processus pour obtenir une soumission?",
+        "answer": "C'est simple et gratuit : 1) Remplissez le formulaire de soumission en ligne avec les détails de votre projet (surface, type d'usage, système souhaité). 2) Notre équipe vous contacte sous 24h avec une soumission détaillée. 3) Vous approuvez et nous planifions la livraison. Vous pouvez aussi utiliser notre calculateur de prix en ligne pour une estimation instantanée.",
+        "category": "process"
+      },
+      "q17": {
+        "question": "Les produits SCI sont-ils fabriqués au Canada?",
+        "answer": "Oui. Tous les systèmes de revêtement sont fabriqués par SCI Coatings Inc. à Anjou, Montréal (Québec). SCI est un fabricant canadien spécialisé en revêtements de sol haute performance depuis plus de 15 ans. Novus Surfaces est le distributeur exclusif de la marque, avec livraison mondiale.",
+        "category": "products"
+      }
+    }
+  },
+  "installationGuide": {
+    "heroBadge": "Guide d'installation complet",
+    "heroTitle": "Guide d'installation de revêtement",
+    "heroSubtitle": "Tout ce que vous devez savoir pour préparer, appliquer et entretenir un revêtement époxy, polyuréa ou quartz professionnel.",
+    "heroStats": {
+      "0": "Étapes de préparation",
+      "1": "Systèmes comparés",
+      "2": "Couches d'application"
+    },
+    "navLinks": {
+      "0": "Préparation",
+      "1": "Application",
+      "2": "Temps de cure",
+      "3": "Conditions",
+      "4": "Erreurs à éviter"
+    },
+    "section1Badge": "Étape 1 — Préparation",
+    "section1Title": "Préparation du béton",
+    "section1Subtitle": "La préparation de la surface est l'étape la plus critique. Un béton mal préparé est la cause #1 de délaminage et d'échec du revêtement.",
+    "prep": {
+      "0": {
+        "title": "Inspection visuelle",
+        "description": "Inspectez toute la surface pour détecter les fissures, joints de dilatation, huile, graisse, peinture ancienne, efflorescence ou tout contaminant. Notez les zones endommagées qui nécessitent une réparation avant le meulage.",
+        "tip": "Faites le test de la goutte d'eau : si l'eau perle au lieu d'être absorbée, un scellant ou contaminant bloque l'adhérence."
+      },
+      "1": {
+        "title": "Meulage au diamant",
+        "description": "Meulage mécanique avec des segments diamantés pour créer le profil de surface CSP 2-3 requis par le fabricant. Cette étape retire la laitance du béton et ouvre les pores pour une pénétration optimale de l'apprêt.",
+        "tip": "Utilisez un aspirateur HEPA industriel pour capturer la poussière de béton pendant le meulage."
+      },
+      "2": {
+        "title": "Réparation des défauts",
+        "description": "Réparez toutes les fissures avec un époxy de réparation flexible. Comblez les trous et nids-de-poule avec un mortier de nivellement. Assurez-vous que les réparations sont de niveau avec la surface environnante.",
+        "tip": "Laissez sécher les réparations 12-24 heures avant d'appliquer l'apprêt."
+      },
+      "3": {
+        "title": "Nettoyage complet",
+        "description": "Dégraissez la surface avec un nettoyant alcalin. Rincez abondamment à l'eau claire. Aspirez toute poussière résiduelle avec un aspirateur industriel. La surface doit être parfaitement propre et sèche.",
+        "tip": "Ne jamais utiliser d'acide muriaque — cela nuit à l'adhérence de l'époxy."
+      },
+      "4": {
+        "title": "Test d'humidité",
+        "description": "Effectuez un test d'humidité du béton avec la méthode du chlorure de calcium ou une sonde in-situ. Le taux d'humidité doit être inférieur à 4% pour la plupart des systèmes. L'humidité excessive cause le dégazage et le cloquage.",
+        "tip": "Température du béton minimum : 10°C et au moins 3°C au-dessus du point de rosée."
+      }
+    },
+    "section2Badge": "Étape 2 — Application",
+    "section2Title": "Application étape par étape",
+    "section2Subtitle": "Chaque système nécessite un processus multicouche précis. Respectez les temps de recouvrement entre chaque couche.",
+    "app": {
+      "0": {
+        "title": "Couche d'apprêt",
+        "description": "L'apprêt pénétrant époxy scelle le béton, prévient le dégazage et crée un pont d'adhérence pour la couche de base. Appliquez au rouleau ou raclette à épandeur.",
+        "details": {
+          "0": "Épaisseur : 3-5 mils humides",
+          "1": "Temps de recouvrement : 8-16 heures selon le produit"
+        }
+      },
+      "1": {
+        "title": "Couche de base",
+        "description": "La couche de base constitue le corps principal du système. Appliquez à l'épaisseur spécifiée par la fiche technique. L'épaisseur varie de 10 à 40 mils selon le système.",
+        "details": {
+          "0": "Mélangez les composants A et B selon le ratio exact",
+          "1": "Durée de vie du mélange : 20-45 minutes selon la température"
+        }
+      },
+      "2": {
+        "title": "Broadcast / finition décorative",
+        "description": "Selon le système, appliquez les flocons de vinyle, l'agrégat de quartz ou les pigments métalliques dans la couche de base encore humide. Pour le broadcast complet, saturez la surface uniformément.",
+        "details": {
+          "0": "Flocons : broadcast à refus pour couverture complète",
+          "1": "Métallique : manipulez avec une raclette dentée pour l'effet 3D"
+        }
+      },
+      "3": {
+        "title": "Couche de finition",
+        "description": "La couche de finition protectrice scelle le système et apporte la résistance UV, chimique et à l'abrasion. Utilisez un polyaspartique ou polyuréthane selon le système choisi.",
+        "details": {
+          "0": "Appliquez 2 couches de finition pour une protection optimale",
+          "1": "Antidérapant optionnel : ajoutez du micro-agrégat à la dernière couche"
+        }
+      }
+    },
+    "section3Badge": "Référence technique",
+    "section3Title": "Temps de cure — Tous les systèmes",
+    "section3Subtitle": "Comparez les temps de cure, épaisseurs et prix de nos 14 systèmes de revêtement SCI. Données directement des fiches techniques.",
+    "tableHeaders": {
+      "system": "Système",
+      "thickness": "Épaisseur",
+      "cureTime": "Cure initiale",
+      "trafficReady": "Trafic",
+      "price": "Prix/pi²"
+    },
+    "tableDisclaimer": "* Les temps de cure sont à 23°C et 50% d'humidité relative. Des températures plus basses allongent les temps de cure. Prix en dollars canadiens.",
+    "fastCureTitle": "Besoin d'un retour rapide en service?",
+    "fastCureDescription": "Les systèmes SCI-Polyuréa ($4,50–$7,00/pi²) et SCI-GAR ($4,25–$6,50/pi²) offrent une cure en 2-4 heures et un retour au trafic en 8-24 heures. Installation complète en 1 jour — idéal pour les garages et commerces qui ne peuvent pas fermer longtemps.",
+    "section4Badge": "Conditions critiques",
+    "section4Title": "Conditions optimales d'application",
+    "section4Subtitle": "Le respect de ces conditions est essentiel pour la performance et la durabilité de votre revêtement. Ne jamais appliquer hors de ces paramètres.",
+    "conditions": {
+      "0": {
+        "title": "Température",
+        "value": "> 10°C",
+        "description": "La température ambiante ET du béton doit être supérieure à 10°C. Idéalement entre 15°C et 25°C. Au-dessus de 30°C, le pot life diminue considérablement."
+      },
+      "1": {
+        "title": "Humidité",
+        "value": "< 80%",
+        "description": "L'humidité relative doit être inférieure à 80%. Une humidité élevée ralentit la cure et peut provoquer du rougissement (amine blush) sur les époxy."
+      },
+      "2": {
+        "title": "Ventilation",
+        "value": "Essentielle",
+        "description": "Assurez une ventilation adéquate pendant et après l'application. Ouvrez les portes et fenêtres. Utilisez des ventilateurs pour accélérer l'évaporation des solvants résiduels."
+      }
+    },
+    "conditionsDo": "À faire",
+    "conditionsDoList": {
+      "0": "Vérifiez la météo 48h avant l'application avec notre outil de conditions de cure",
+      "1": "Mesurez la température du béton avec un thermomètre infrarouge — pas seulement l'air",
+      "2": "Attendez que le béton soit au moins 3°C au-dessus du point de rosée",
+      "3": "Planifiez l'application tôt le matin quand la température monte (béton se réchauffe)"
+    },
+    "conditionsDont": "À ne pas faire",
+    "conditionsDontList": {
+      "0": "N'appliquez jamais si de la pluie est prévue dans les 24 prochaines heures",
+      "1": "N'appliquez pas en fin de journée quand la température descend (condensation)",
+      "2": "Ne chauffez pas le béton artificiellement — cela crée de l'humidité par condensation",
+      "3": "N'ignorez pas le point de rosée — c'est la cause #1 de défaillance sur le terrain"
+    },
+    "conditionsCta": "Vérifier les conditions de cure dans votre région",
+    "section5Badge": "Top 5 des erreurs",
+    "section5Title": "Erreurs à éviter",
+    "section5Subtitle": "Ces erreurs courantes sont responsables de 90% des échecs de revêtement. Apprenez à les éviter pour un résultat professionnel.",
+    "mistakeLabel": "Erreur",
+    "mistakes": {
+      "0": {
+        "title": "Sauter la préparation de surface",
+        "description": "La cause #1 d'échec. Appliquer un revêtement sur du béton non meulé, contaminé ou humide mène invariablement au délaminage en quelques mois.",
+        "solution": "Solution : Meulage au diamant CSP 2-3 obligatoire. Aucun raccourci."
+      },
+      "1": {
+        "title": "Ignorer l'humidité du béton",
+        "description": "L'humidité piégée sous le revêtement crée une pression de vapeur qui cause des cloques et le décollement. Les dalles sur sol sont les plus à risque.",
+        "solution": "Solution : Test d'humidité obligatoire. Taux < 4%. Utilisez un pare-vapeur époxy si nécessaire."
+      },
+      "2": {
+        "title": "Ne pas respecter les temps de recouvrement",
+        "description": "Appliquer la couche suivante trop tôt emprisonne les solvants et crée une cure molle. Trop tard crée un manque d'adhérence intercouche.",
+        "solution": "Solution : Suivez exactement la fiche technique. Fenêtre typique : 12-24h à 23°C."
+      },
+      "3": {
+        "title": "Mauvais ratio de mélange",
+        "description": "Un ratio A:B incorrect produit une cure incomplète — le revêtement reste mou, collant ou ne durcit jamais. Erreur irréversible qui nécessite un retrait complet.",
+        "solution": "Solution : Mesurez avec précision. Utilisez des seaux calibrés. Mélangez 3 minutes minimum."
+      },
+      "4": {
+        "title": "Appliquer par temps froid ou humide",
+        "description": "En dessous de 10°C, la plupart des époxy ne curent pas correctement. L'humidité élevée cause le rougissement (surface blanchâtre et poudreuse).",
+        "solution": "Solution : Attendez les conditions idéales. Utilisez notre outil de conditions de cure."
+      }
+    },
+    "recsTitle": "Systèmes recommandés pour débutants",
+    "recsSubtitle": "Nos trois systèmes les plus populaires pour une première installation réussie",
+    "recs": {
+      "0": {
+        "name": "Système SCI-Flocons",
+        "description": "Le plus populaire. Flocons décoratifs sur base époxy. Dissimule les imperfections, fini antidérapant. Idéal pour garages et sous-sols."
+      },
+      "1": {
+        "name": "Système SCI-Polyuréa Flocons",
+        "description": "Installation en 1 jour. Cure ultra-rapide, 4x plus flexible que l'époxy. Résistant aux UV. Parfait quand le temps est limité."
+      },
+      "2": {
+        "name": "Système SCI-Métallique",
+        "description": "Effets 3D spectaculaires. Chaque installation est unique. Le choix premium pour les espaces où l'esthétique compte."
+      }
+    },
+    "perSqFt": "/pi²",
+    "viewProduct": "Voir le produit",
+    "ctaTitle": "Faites appel à un professionnel",
+    "ctaSubtitle": "Nos applicateurs certifiés garantissent un résultat impeccable. Consultation gratuite, sans obligation.",
+    "ctaButton": "Demander une soumission",
+    "ctaPhone": "581-307-2678",
+    "ctaTrust": "Consultation gratuite — Applicateurs certifiés — Garantie complète — Réponse en 24h"
   }
 }

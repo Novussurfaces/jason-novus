@@ -1,6 +1,5 @@
 "use client";
 
-import { jsPDF } from "jspdf";
 import {
   type PriceEstimate,
   formatPrice,
@@ -9,11 +8,12 @@ import {
   APRIL_PROMO_PERCENT,
 } from "./pricing";
 
-export function generateEstimatePDF(
+export async function generateEstimatePDF(
   estimate: PriceEstimate,
   locale: "fr" | "en",
   contactInfo: { name: string; email: string; phone: string }
-): void {
+): Promise<void> {
+  const { jsPDF } = await import("jspdf");
   const doc = new jsPDF();
   const isFr = locale === "fr";
 

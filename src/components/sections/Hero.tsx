@@ -5,8 +5,16 @@ import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
 import { Container } from "@/components/ui/Container";
 import { Button } from "@/components/ui/Button";
-import { AuroraBackground } from "@/components/three/AuroraBackground";
 import { cn } from "@/lib/cn";
+import dynamic from "next/dynamic";
+
+const AuroraBackground = dynamic(
+  () =>
+    import("@/components/three/AuroraBackground").then(
+      (m) => m.AuroraBackground
+    ),
+  { ssr: false }
+);
 
 /* ── Premium cubic-bezier: Apple-style deceleration ── */
 const premiumEase = [0.22, 1, 0.36, 1] as const;

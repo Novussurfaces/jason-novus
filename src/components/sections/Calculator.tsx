@@ -423,9 +423,9 @@ export function CalculatorSection() {
     setTimeout(() => setShowCelebration(false), 3500);
   };
 
-  const handleDownloadPDF = () => {
+  const handleDownloadPDF = async () => {
     if (!estimate) return;
-    generateEstimatePDF(estimate, locale, contactInfo);
+    await generateEstimatePDF(estimate, locale, contactInfo);
     trackInitiateCheckout({ value: estimate.totalMin });
   };
 

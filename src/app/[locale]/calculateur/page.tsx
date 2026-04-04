@@ -1,4 +1,5 @@
-import { setRequestLocale } from "next-intl/server";
+import type { Metadata } from "next";
+import { getTranslations, setRequestLocale } from "next-intl/server";
 import { CalculatorSection } from "@/components/sections/Calculator";
 import { CuringConditions } from "@/components/sections/CuringConditions";
 import { MultiStructuredData } from "@/components/StructuredData";
@@ -11,6 +12,19 @@ import {
 type Props = {
   params: Promise<{ locale: string }>;
 };
+
+export async function generateMetadata({ params }: Props): Promise<Metadata> {
+  const { locale } = await params;
+  const t = await getTranslations({ locale, namespace: "pagesMeta.calculator" });
+  return {
+    title: t("title"),
+    description: t("description"),
+    alternates: {
+      canonical: `/${locale}/calculateur`,
+      languages: { fr: "/fr/calculateur", en: "/en/calculateur" },
+    },
+  };
+}
 
 export default async function CalculatorPage({ params }: Props) {
   const { locale } = await params;

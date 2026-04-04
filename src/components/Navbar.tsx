@@ -28,6 +28,7 @@ const navLinks = [
   { href: "/", label: "home" },
   { href: "/calculateur", label: "calculator" },
   { href: "/realisations", label: "portfolio" },
+  { href: "/avis", label: "reviews" },
   { href: "/installation", label: "installation" },
   { href: "/a-propos", label: "about" },
   { href: "/contact", label: "contact" },
@@ -158,6 +159,7 @@ export function Navbar() {
     { href: "/produits" as const, label: "products", hasChildren: true },
     { href: "/calculateur" as const, label: "calculator" },
     { href: "/realisations" as const, label: "portfolio" },
+    { href: "/avis" as const, label: "reviews" },
     { href: "/installation" as const, label: "installation" },
     { href: "/a-propos" as const, label: "about" },
     { href: "/contact" as const, label: "contact" },
@@ -568,7 +570,7 @@ function DesktopLink({
   label,
   isActive,
 }: {
-  href: "/" | "/calculateur" | "/realisations" | "/installation" | "/a-propos" | "/contact";
+  href: "/" | "/calculateur" | "/realisations" | "/avis" | "/installation" | "/a-propos" | "/contact";
   label: string;
   isActive: boolean;
 }) {

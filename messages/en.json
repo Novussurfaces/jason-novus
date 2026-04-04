@@ -3,6 +3,40 @@
     "title": "Novus Surfaces — Premium Surface Coatings | Worldwide Delivery",
     "description": "Novus Surfaces offers industrial-grade epoxy, polyurea, and quartz coating systems for residential, commercial, and industrial applications. Made in Canada, shipped worldwide."
   },
+  "pagesMeta": {
+    "about": {
+      "title": "About Novus Surfaces — Our Story & Mission",
+      "description": "Discover Novus Surfaces: premium industrial-grade coating systems crafted in Canada. Learn about our partnership with SCI Coatings and our commitment to quality."
+    },
+    "contact": {
+      "title": "Contact Novus Surfaces — Get Expert Advice",
+      "description": "Reach our coating specialists for product questions, project guidance, or wholesale inquiries. Serving Canada and shipping worldwide."
+    },
+    "products": {
+      "title": "Professional Coating Products — Epoxy, Polyurea & Quartz Systems",
+      "description": "Browse 13 certified coating systems: epoxy, polyurea, polyaspartic, quartz, and metallic finishes. Industrial-grade formulations for every surface."
+    },
+    "quote": {
+      "title": "Free Quote — Custom Coating Estimate",
+      "description": "Request a free personalized quote for your coating project. Fast response, no obligation. Residential, commercial, and industrial solutions."
+    },
+    "calculator": {
+      "title": "Coating Price Calculator — Instant Estimate",
+      "description": "Calculate the cost of your coating project in seconds. Select your system, enter your area, and get an accurate price estimate instantly."
+    },
+    "portfolio": {
+      "title": "Our Work — Before & After Transformations",
+      "description": "See real coating transformations by Novus Surfaces. Before and after photos of residential garages, commercial floors, and industrial facilities."
+    },
+    "blog": {
+      "title": "Coating Tips & Industry Insights — Novus Blog",
+      "description": "Expert articles on epoxy coatings, floor preparation, maintenance tips, and industry trends. Learn from our coating specialists."
+    },
+    "installation": {
+      "title": "Installation Guide — Step-by-Step Coating Application",
+      "description": "Complete installation guides for all Novus coating systems. Surface preparation, application techniques, curing conditions, and pro tips."
+    }
+  },
   "nav": {
     "home": "Home",
     "products": "Products",
@@ -14,6 +48,7 @@
     "getQuote": "Get a Quote",
     "track": "Track",
     "installation": "Installation",
+    "reviews": "Reviews",
     "productCategories": {
       "epoxy": "Epoxy",
       "polyurea": "Polyurea",
@@ -190,53 +225,177 @@
     "subtitle": "Your premium surface coatings distributor — Worldwide delivery",
     "story": {
       "title": "Our Story",
-      "p1": "Novus Surfaces was born from the belief that every surface deserves an exceptional coating. In partnership with SCI Coatings, a Montreal-based manufacturer recognized for over 13 years, we offer the world the most high-performance coating systems on the market.",
-      "p2": "Our model is simple: we select the best products, provide impeccable technical support, and deliver directly from the factory to your job site, anywhere in the world."
+      "p1": "Novus Surfaces was born from the belief that every surface deserves an exceptional coating. Founded in Quebec, our company is the result of a passion for high-performance materials and a strategic partnership with SCI Coatings, a Montreal-based manufacturer recognized for over 15 years.",
+      "p2": "Our mission is clear: to make industrial-grade coatings accessible to every project, whether residential, commercial, or industrial. From your garage to your factory floor, we bring the same level of excellence.",
+      "p3": "Our model is simple: we select the best products, provide impeccable technical support, and deliver directly from the factory to your job site, anywhere in the world."
     },
     "partnership": {
       "title": "SCI Coatings Partnership",
-      "description": "Manufactured in Montreal by SCI Coatings Inc., a Canadian leader in industrial surface coatings since 2011.",
-      "location": "Montreal, Canada",
-      "experience": "13+ years of expertise",
-      "madeIn": "Made in Canada"
+      "subtitle": "Proudly Made in Montreal",
+      "description": "SCI Coatings Inc., based in Anjou (Montreal), is a Canadian leader in manufacturing industrial surface coatings since 2011. Their state-of-the-art facilities produce systems tested and certified for the most demanding environments.",
+      "description2": "As an exclusive distributor, Novus Surfaces gives you direct access to the full SCI range — from residential to heavy industrial — with personalized technical support.",
+      "location": "Anjou, Montreal, QC",
+      "experience": "15+ years of expertise",
+      "madeIn": "Made in Canada",
+      "factory": "Certified facility",
+      "rd": "Continuous R&D"
+    },
+    "team": {
+      "title": "Our Team",
+      "subtitle": "The experts behind every successful project",
+      "jason": {
+        "name": "Jason Lanthier",
+        "role": "Founder",
+        "bio": "A visionary entrepreneur, Jason founded Novus Surfaces with the ambition of making premium coatings accessible worldwide."
+      },
+      "michael": {
+        "name": "Michael",
+        "role": "Technical Director, SCI Coatings",
+        "bio": "With over 15 years of experience in chemical formulation, Michael oversees R&D and ensures the quality of every SCI system."
+      },
+      "luca": {
+        "name": "Luca",
+        "role": "Operations",
+        "bio": "An operational strategist, Luca optimizes every process to ensure a smooth and efficient client experience."
+      }
     },
     "valuesHeading": "Our Values",
+    "valuesSubtitle": "The principles that guide every decision we make",
     "values": {
       "quality": {
         "title": "Uncompromising Quality",
-        "description": "Every product is tested and certified for the most demanding environments."
-      },
-      "service": {
-        "title": "Personalized Service",
-        "description": "Tailored support from product selection to installation."
+        "description": "Every product is tested and certified for the most demanding environments. No shortcuts."
       },
       "innovation": {
         "title": "Continuous Innovation",
-        "description": "Constantly improved formulations pushing the limits of performance."
+        "description": "Constantly improved formulations, developed in our Montreal laboratory."
+      },
+      "service": {
+        "title": "Personalized Service",
+        "description": "Tailored support from product selection to installation, anywhere in the world."
+      },
+      "durability": {
+        "title": "Proven Durability",
+        "description": "Coatings engineered to withstand decades, even in the harshest conditions."
       }
+    },
+    "stats": {
+      "projects": "projects completed",
+      "systems": "coating systems",
+      "experience": "years of experience",
+      "shipping": "Worldwide shipping"
+    },
+    "coverage": {
+      "title": "Coverage Area",
+      "subtitle": "From Quebec to the world",
+      "quebec": "Quebec",
+      "quebecDesc": "Full service, fast delivery, and on-site technical support.",
+      "canada": "Canada",
+      "canadaDesc": "Delivery across Canada with tracking and remote support.",
+      "northAmerica": "North America",
+      "northAmericaDesc": "Shipping to the US and Mexico through our logistics partners.",
+      "worldwide": "Worldwide",
+      "worldwideDesc": "International shipping by air and sea, anywhere in the world."
+    },
+    "timeline": {
+      "title": "Our Journey",
+      "subtitle": "The milestones that shaped our expertise",
+      "items": {
+        "founding": {
+          "year": "2011",
+          "title": "SCI Coatings Founded",
+          "description": "Industrial coating manufacturing begins in Montreal."
+        },
+        "expansion": {
+          "year": "2015",
+          "title": "Product Line Expansion",
+          "description": "Launch of polyurea and polyaspartic systems."
+        },
+        "novus": {
+          "year": "2023",
+          "title": "Novus Surfaces is Born",
+          "description": "Strategic partnership to distribute SCI worldwide."
+        },
+        "international": {
+          "year": "2024",
+          "title": "International Expansion",
+          "description": "First shipments to Europe and the Middle East."
+        },
+        "future": {
+          "year": "2025",
+          "title": "The Future",
+          "description": "New eco-friendly formulations and global distributor network."
+        }
+      }
+    },
+    "aboutCta": {
+      "title": "Ready for your project?",
+      "subtitle": "Contact our team for a free quote or call us directly.",
+      "button": "Request a Quote",
+      "phone": "581-307-2678"
     }
   },
   "contact": {
     "title": "Contact Us",
     "subtitle": "Our team is available to answer all your questions",
+    "promo": "APRIL PROMO — 20% off all projects!",
+    "responsePromise": "Response in under 2 hours",
+    "responseHours": "2",
+    "responseUnit": "hours",
+    "responseLabel": "Average response time",
+    "projectsCompleted": "500",
+    "projectsLabel": "Projects completed",
+    "satisfactionRate": "98",
+    "satisfactionLabel": "Satisfaction rate",
+    "methods": {
+      "phoneLabel": "Call Jason",
+      "phoneNumber": "581-307-2678",
+      "phoneDesc": "Speak directly with an expert",
+      "emailLabel": "Email Us",
+      "emailAddress": "gestionnovusepoxy@gmail.com",
+      "emailDesc": "Fast response guaranteed",
+      "formLabel": "Contact Form",
+      "formDesc": "Send us a detailed message"
+    },
+    "hours": {
+      "title": "Business Hours",
+      "weekdays": "Monday – Friday: 8am – 5pm",
+      "saturday": "Saturday: By appointment",
+      "sunday": "Sunday: Closed"
+    },
+    "location": {
+      "title": "Our Location",
+      "city": "Quebec City, QC, Canada",
+      "serviceArea": "Service: All of Quebec + worldwide shipping",
+      "mapTitle": "Find Us"
+    },
     "form": {
+      "title": "Send Us a Message",
       "name": "Full name",
       "email": "Email",
       "phone": "Phone",
-      "subject": "Subject",
-      "message": "Message",
-      "submit": "Send",
+      "message": "Your message",
+      "messagePlaceholder": "Describe your project or ask us your questions...",
+      "submit": "Send Message",
       "sending": "Sending...",
-      "success": "Message sent! We'll get back to you shortly.",
+      "success": "Message sent! We'll get back to you within the next 2 hours.",
       "error": "An error occurred. Please try again."
     },
-    "info": {
-      "email": "info@novusepoxy.ca",
-      "coverage": "Delivery: Worldwide",
-      "hours": "Mon–Fri: 8am–5pm (EST)",
-      "emailLabel": "Email",
-      "coverageLabel": "Service Area",
-      "hoursLabel": "Hours"
+    "faq": {
+      "title": "Frequently Asked Questions",
+      "q1": "What are your delivery times?",
+      "a1": "We deliver throughout Quebec in 3-5 business days. For the rest of Canada, allow 5-10 days. International shipping is available by air and sea.",
+      "q2": "Do you offer installation?",
+      "a2": "Yes! We have a network of certified installers across Quebec. We can also train your team for autonomous application.",
+      "q3": "How long do your coatings last?",
+      "a3": "Our SCI systems are designed to last 15-25 years depending on the coating type and usage. All our products are guaranteed and laboratory tested.",
+      "q4": "How do I get a quote?",
+      "a4": "Fill out our online quote form or call Jason directly at 581-307-2678. You'll receive a detailed estimate within 24 hours, no obligation."
+    },
+    "cta": {
+      "title": "Free Quote in 24h",
+      "subtitle": "Receive a detailed estimate for your project with no obligation.",
+      "button": "Request a Quote"
     }
   },
   "footer": {
@@ -448,19 +607,32 @@
   },
   "lpCommercial": {
     "b2b": "B2B",
+    "badge": "Commercial grade",
     "title": "Industrial-grade floor coatings",
     "titleHighlight": "for your business",
-    "subtitle": "13 professional systems. Made in Montreal. Delivered worldwide. Volume discounts available.",
-    "formTitle": "Commercial Quote",
-    "formSubtitle": "Response from our B2B team in 24h",
-    "formName": "Name",
+    "subtitle": "13 professional SCI Coatings systems. Warehouses, retail, restaurants, hospitals, offices. Starting at $2.75/sq ft. Volume discounts up to 20%.",
+    "promoBanner": "APRIL PROMO — 20% off all commercial projects!",
+    "urgency": "Offer ends April 30",
+    "limitedSpots": "Limited spots",
+    "ctaQuote": "Get my free quote",
+    "ctaPhone": "Call now",
+    "ctaPhoneNumber": "581-307-2678",
+    "benefit1": "Withstands forklifts and heavy traffic",
+    "benefit2": "Anti-slip finish meets commercial standards",
+    "benefit3": "USDA/FDA certified for food environments",
+    "benefit4": "Fast installation — minimal downtime",
+    "benefit5": "15+ year lifespan in commercial settings",
+    "benefit6": "Easy maintenance — resists industrial chemicals",
+    "formTitle": "Free commercial quote in 24h",
+    "formSubtitle": "Get a no-obligation price estimate",
+    "formName": "Full name",
     "formCompany": "Company",
     "formEmail": "Business email",
     "formPhone": "Phone",
     "formProjectType": "Project type",
     "formArea": "Area (sq ft)",
-    "formMessage": "Project details",
-    "formSubmit": "Request commercial quote",
+    "formMessage": "Project details (optional)",
+    "formSubmit": "Get my commercial quote",
     "formSending": "Sending...",
     "formError": "Error, try again.",
     "successTitle": "Request sent!",
@@ -474,14 +646,43 @@
     "sectorCommercial": "Retail",
     "sectorIndustrial": "Factories",
     "sectorFood": "Food Processing",
+    "sectorOffice": "Offices",
+    "sectorHospital": "Hospitals",
     "vp1Title": "Certified industrial quality",
     "vp1Desc": "Systems tested and USDA/FDA certified for the most demanding environments.",
-    "vp2Title": "Volume discounts up to 15%",
-    "vp2Desc": "2,500+ sq ft = -10%. 5,000+ sq ft = -15%. Bigger projects save more.",
+    "vp2Title": "Volume discounts up to 20%",
+    "vp2Desc": "1,000+ sq ft = -5%. 2,500+ = -10%. 5,000+ = -15%. 10,000+ sq ft = -20%.",
     "vp3Title": "Direct factory delivery",
     "vp3Desc": "Manufactured in Montreal by SCI Coatings. Direct shipping, minimal delays.",
     "vp4Title": "Complete technical support",
     "vp4Desc": "Installation guides, data sheets, phone support for every system.",
+    "statPriceValue": "2.75",
+    "statPrice": "$/sq ft min",
+    "statProjectsLabel": "projects completed",
+    "statSatisfactionLabel": "client satisfaction",
+    "pricingTitle": "Popular commercial systems",
+    "priceSCI100": "SCI-100 Coating",
+    "priceSCI100Range": "$2.75 — $4.50/sq ft",
+    "priceSCI100Desc": "Base coating for warehouses and parking",
+    "priceBroadcast": "Broadcast System",
+    "priceBroadcastRange": "$2.75 — $4.50/sq ft",
+    "priceBroadcastDesc": "Broadcast system for retail and offices",
+    "priceQuartz": "Quartz Broadcast",
+    "priceQuartzRange": "$4.50 — $7.50/sq ft",
+    "priceQuartzDesc": "Quartz finish for restaurants and hospitals",
+    "priceCementitious": "Cementitious Polyurethane",
+    "priceCementitiousRange": "$7.00 — $11.00/sq ft",
+    "priceCementitiousDesc": "Food grade — kitchens, breweries, factories",
+    "socialTitle": "What our commercial clients say",
+    "review1": "We did 12,000 sq ft of warehouse with SCI-100. Two years later, forklifts run on it daily and zero issues.",
+    "review1Name": "Marc D.",
+    "review1City": "Montreal",
+    "review2": "Our restaurant needs easy-to-clean floors. SCI quartz is perfect — FDA compliant and good-looking at the same time.",
+    "review2Name": "Isabelle T.",
+    "review2City": "Laval",
+    "review3": "3 retail locations done with Novus. Volume pricing saved us over 15%. Flawless service.",
+    "review3Name": "Philippe M.",
+    "review3City": "Quebec City",
     "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
   },
   "lpGym": {
@@ -1120,5 +1321,417 @@
         "description": "100% solid epoxy certified for food environments. 11,200 sq ft of floor resistant to high-pressure washing, cleaning chemicals, and heavy cart traffic."
       }
     }
+  },
+  "reviews": {
+    "badge": "Client Reviews",
+    "title": "What Our Clients Think",
+    "subtitle": "Contractors and property owners across Quebec who trust Novus Surfaces",
+    "statsAverage": "4.9/5 average",
+    "statsCount": "50+ reviews",
+    "statsSatisfaction": "98% satisfaction",
+    "statsAverageLabel": "Average rating",
+    "statsCountLabel": "Verified reviews",
+    "statsSatisfactionLabel": "Satisfaction rate",
+    "filterAll": "All",
+    "filterResidential": "Residential",
+    "filterCommercial": "Commercial",
+    "filterIndustrial": "Industrial",
+    "ctaTitle": "Your project starts here",
+    "ctaSubtitle": "Get a free quote and join our satisfied clients",
+    "ctaButton": "Request a quote",
+    "seoTitle": "Client Reviews — Novus Surfaces",
+    "seoDescription": "Discover what our satisfied clients have to say. 4.9/5 stars, 50+ verified reviews for our epoxy, polyurea and quartz coatings in Quebec.",
+    "item1": {
+      "quote": "The SCI Metallic system completely transformed our showroom. Customers are impressed the moment they walk in. Flawless installation and mirror finish.",
+      "name": "Marc Tremblay",
+      "city": "Montreal",
+      "category": "commercial",
+      "project": "Showroom metallic floor",
+      "rating": 5
+    },
+    "item2": {
+      "quote": "We tried 3 suppliers before Novus. The quality difference is striking. The polyurea stands up to Quebec salt like nothing else.",
+      "name": "Sophie Lavoie",
+      "city": "Quebec City",
+      "category": "residential",
+      "project": "Residential garage floor",
+      "rating": 5
+    },
+    "item3": {
+      "quote": "Exceptional technical support. Michael at SCI guided us every step of the way. The result is worthy of a design magazine.",
+      "name": "Jean-Philippe Côté",
+      "city": "Laval",
+      "category": "commercial",
+      "project": "Commercial office coating",
+      "rating": 5
+    },
+    "item4": {
+      "quote": "We did our entire 15,000 sq ft warehouse floor. Fast delivery, solid product. It's been 2 years and not a single crack.",
+      "name": "David Chen",
+      "city": "Toronto",
+      "category": "industrial",
+      "project": "Industrial warehouse floor",
+      "rating": 5
+    },
+    "item5": {
+      "quote": "The online calculator gave us a fair price. No surprises at delivery. Exactly what we were looking for our restaurant.",
+      "name": "Marie-Ève Bouchard",
+      "city": "Sherbrooke",
+      "category": "commercial",
+      "project": "Restaurant floor",
+      "rating": 5
+    },
+    "item6": {
+      "quote": "I did my double garage with SCI-GAR. Stands up to salt, oil, calcium. All my neighbors want the same. Three times cheaper than a local installer.",
+      "name": "Patrick Gagnon",
+      "city": "Trois-Rivières",
+      "category": "residential",
+      "project": "Double residential garage",
+      "rating": 5
+    },
+    "item7": {
+      "quote": "Our veterinary clinic needed a floor that resists chemicals. SCI quartz is perfect — easy to clean and slip-resistant.",
+      "name": "Dr. Isabelle Morin",
+      "city": "Gatineau",
+      "category": "commercial",
+      "project": "Veterinary clinic",
+      "rating": 5
+    },
+    "item8": {
+      "quote": "We covered 8,000 sq ft of our plant with SCI-IND. The floor handles forklifts and acid spills. Zero maintenance for 18 months.",
+      "name": "François Pelletier",
+      "city": "Drummondville",
+      "category": "industrial",
+      "project": "Manufacturing plant floor",
+      "rating": 5
+    },
+    "item9": {
+      "quote": "The metallic finish in our hair salon is gorgeous. Our clients comment on it every visit. An investment worth every penny.",
+      "name": "Nathalie Bergeron",
+      "city": "Longueuil",
+      "category": "commercial",
+      "project": "Hair salon",
+      "rating": 4
+    },
+    "item10": {
+      "quote": "Second order with Novus for our gym chain. Polyaspartic dries in 24h, we barely had to close. 5-star service.",
+      "name": "Alexandre Dubois",
+      "city": "Lévis",
+      "category": "commercial",
+      "project": "Fitness center",
+      "rating": 5
+    },
+    "item11": {
+      "quote": "Our basement became a real playroom. The flake epoxy is stunning and the kids can play without us worrying about stains.",
+      "name": "Caroline Thibault",
+      "city": "Saint-Jérôme",
+      "category": "residential",
+      "project": "Residential basement",
+      "rating": 5
+    },
+    "item12": {
+      "quote": "We manage 3 cold storage warehouses. SCI-100 holds even at -20°C. Zero delamination after a full winter. Impressive.",
+      "name": "Martin Lessard",
+      "city": "Saguenay",
+      "category": "industrial",
+      "project": "Cold storage warehouse",
+      "rating": 5
+    }
+  },
+  "faq": {
+    "title": "Frequently Asked Questions",
+    "subtitle": "Everything you need to know about our epoxy, polyurea, and quartz coating systems.",
+    "searchPlaceholder": "Search for a question...",
+    "noResults": "No results found. Contact us for more information.",
+    "ctaTitle": "Have more questions?",
+    "ctaDescription": "Our team is available to answer all your questions and guide you to the best system for your project.",
+    "ctaButton": "Contact us",
+    "ctaQuote": "Request a quote",
+    "categories": {
+      "all": "All",
+      "pricing": "Pricing",
+      "installation": "Installation",
+      "durability": "Durability",
+      "maintenance": "Maintenance",
+      "shipping": "Shipping",
+      "products": "Products",
+      "promo": "Promotions",
+      "process": "Process",
+      "warranty": "Warranty",
+      "diy": "DIY vs Pro"
+    },
+    "items": {
+      "q1": {
+        "question": "How much does an epoxy floor cost per square foot?",
+        "answer": "Prices range from $2.75 to $11.00 per square foot depending on the system chosen. The SCI-100 Coating starts at $2.75/sqft, the Flake system at $2.85/sqft, Polyurea Flake at $4.50/sqft, Metallic at $5.50/sqft, and Cementitious Polyurethane can reach $11.00/sqft. Request a free quote for an exact price tailored to your project.",
+        "category": "pricing"
+      },
+      "q2": {
+        "question": "Do you offer volume discounts?",
+        "answer": "Yes. We offer progressive discounts on all systems: 5% from 1,000 sqft, 10% at 2,500 sqft, 15% at 5,000 sqft, and 20% at 10,000 sqft and above. Additionally, our pallet pricing offers extra savings of 14-18% compared to individual unit purchases.",
+        "category": "pricing"
+      },
+      "q3": {
+        "question": "What is the current promotion?",
+        "answer": "In April 2026, we are offering 20% off all SCI coating systems. This promotion is valid until April 30, 2026 and applies to all products, including epoxy, polyurea, quartz, and metallic systems. Combinable with volume discounts.",
+        "category": "promo"
+      },
+      "q4": {
+        "question": "How long does an epoxy floor last?",
+        "answer": "A professional Novus Surfaces epoxy floor lasts between 10 and 20 years depending on the system, traffic, and maintenance. Quartz systems like the SCI-Quartz Broadcast have a 15+ year lifespan even in very high-traffic areas. Cementitious polyurethane systems are the most durable with 20+ years of useful life.",
+        "category": "durability"
+      },
+      "q5": {
+        "question": "Is epoxy resistant to chemicals?",
+        "answer": "Yes. All our systems offer chemical resistance. For aggressive industrial environments (acids, solvents), we recommend the SCI-Slurry ($6.00-$9.00/sqft) or the SCI-CPU cementitious polyurethane ($7.00-$11.00/sqft) which provide superior-grade chemical resistance.",
+        "category": "durability"
+      },
+      "q6": {
+        "question": "How do you maintain an epoxy floor?",
+        "answer": "Maintenance is simple: sweep regularly and mop with a neutral cleaner and warm water. Avoid abrasive products and high-pressure cleaners directly on the surface. For stubborn stains, use a mild non-acidic cleaner. No additional wax or sealant is needed.",
+        "category": "maintenance"
+      },
+      "q7": {
+        "question": "Can a damaged epoxy floor be repaired?",
+        "answer": "Yes. Minor chips and scratches can be repaired locally without redoing the entire floor. For more significant damage, partial resurfacing is possible. Contact us to evaluate the necessary repair -- we can provide touch-up products compatible with your existing system.",
+        "category": "maintenance"
+      },
+      "q8": {
+        "question": "Do you ship across Canada and internationally?",
+        "answer": "Yes. Novus Surfaces ships across Canada, the United States, Europe, and worldwide via air and sea freight. All our products are manufactured by SCI Coatings in Montreal, Quebec. Delivery within Canada typically takes 3-7 business days, and 7-14 days for international.",
+        "category": "shipping"
+      },
+      "q9": {
+        "question": "What are the shipping costs?",
+        "answer": "Costs vary depending on the destination and order weight. Pallet orders benefit from competitive rates through our carrier agreements. Contact us for a precise shipping quote included in your free estimate.",
+        "category": "shipping"
+      },
+      "q10": {
+        "question": "What is the difference between epoxy and polyurea?",
+        "answer": "Epoxy (starting at $2.75/sqft) offers excellent chemical resistance and a glossy finish, but requires 24-72h cure time. Polyurea ($4.50-$7.00/sqft) cures in 2-4 hours, is 4x more flexible, and UV resistant. The SCI-Polyurea system allows complete installation in 1 day -- ideal for projects requiring rapid return to service.",
+        "category": "products"
+      },
+      "q11": {
+        "question": "Which system do you recommend for a residential garage?",
+        "answer": "For a residential garage, we recommend the SCI-Flake system ($2.85-$4.75/sqft) or the SCI-Polyurea Flake ($4.50-$7.00/sqft). The Flake offers excellent value with a decorative finish. The Polyurea Flake adds superior resistance to thermal shock and de-icing salts -- perfect for Canadian winters.",
+        "category": "products"
+      },
+      "q12": {
+        "question": "Can you install epoxy yourself (DIY)?",
+        "answer": "Novus Surfaces sells directly to professionals and property owners. Our SCI products are professional-grade with detailed instructions. One gallon of SCI-100 ($89) covers 80-120 sqft. For best results, we recommend installation by a certified professional -- concrete preparation is critical for long-term adhesion.",
+        "category": "diy"
+      },
+      "q13": {
+        "question": "What are the ideal conditions for applying a coating?",
+        "answer": "The ideal temperature is between 10C and 30C with humidity below 80%. The concrete must be dry (moisture test < 4%), clean, and free of contaminants. Use our curing conditions tool on novusepoxy.ca to check if conditions are favorable in your area in real time.",
+        "category": "installation"
+      },
+      "q14": {
+        "question": "How long does installation take?",
+        "answer": "Time varies depending on the system and surface area. A standard garage (400-600 sqft) takes 2-3 days with a classic epoxy system (including preparation, primer, base coat, and sealer). The SCI-Polyurea system can be completed in 1 day thanks to its rapid 2-4 hour cure time between coats.",
+        "category": "installation"
+      },
+      "q15": {
+        "question": "Do you offer a warranty on your products?",
+        "answer": "All SCI Coatings products are covered by a manufacturer warranty. Duration varies by system: residential systems are warranted for 5-10 years, and commercial/industrial systems for 3-5 years. The warranty covers manufacturing defects when the product is applied according to the provided technical specifications.",
+        "category": "warranty"
+      },
+      "q16": {
+        "question": "What is the process for getting a quote?",
+        "answer": "It's simple and free: 1) Fill out the online quote form with your project details (surface area, usage type, desired system). 2) Our team contacts you within 24h with a detailed estimate. 3) You approve and we schedule delivery. You can also use our online price calculator for an instant estimate.",
+        "category": "process"
+      },
+      "q17": {
+        "question": "Are SCI products manufactured in Canada?",
+        "answer": "Yes. All coating systems are manufactured by SCI Coatings Inc. in Anjou, Montreal (Quebec). SCI is a Canadian manufacturer specializing in high-performance floor coatings for over 15 years. Novus Surfaces is the exclusive brand distributor, with worldwide shipping.",
+        "category": "products"
+      }
+    }
+  },
+  "installationGuide": {
+    "heroBadge": "Complete Installation Guide",
+    "heroTitle": "Coating Installation Guide",
+    "heroSubtitle": "Everything you need to know to prepare, apply, and maintain a professional epoxy, polyurea, or quartz coating.",
+    "heroStats": {
+      "0": "Preparation Steps",
+      "1": "Systems Compared",
+      "2": "Application Layers"
+    },
+    "navLinks": {
+      "0": "Preparation",
+      "1": "Application",
+      "2": "Cure Times",
+      "3": "Conditions",
+      "4": "Mistakes to Avoid"
+    },
+    "section1Badge": "Step 1 — Preparation",
+    "section1Title": "Concrete Preparation",
+    "section1Subtitle": "Surface preparation is the most critical step. Poorly prepared concrete is the #1 cause of delamination and coating failure.",
+    "prep": {
+      "0": {
+        "title": "Visual Inspection",
+        "description": "Inspect the entire surface for cracks, expansion joints, oil, grease, old paint, efflorescence, or any contaminants. Note damaged areas that need repair before grinding.",
+        "tip": "Perform the water drop test: if water beads instead of being absorbed, a sealer or contaminant is blocking adhesion."
+      },
+      "1": {
+        "title": "Diamond Grinding",
+        "description": "Mechanical grinding with diamond segments to create the CSP 2-3 surface profile required by the manufacturer. This step removes concrete laitance and opens pores for optimal primer penetration.",
+        "tip": "Use an industrial HEPA vacuum to capture concrete dust during grinding."
+      },
+      "2": {
+        "title": "Defect Repair",
+        "description": "Repair all cracks with a flexible epoxy repair compound. Fill holes and pitting with a leveling mortar. Ensure repairs are level with the surrounding surface.",
+        "tip": "Allow repairs to dry 12-24 hours before applying primer."
+      },
+      "3": {
+        "title": "Thorough Cleaning",
+        "description": "Degrease the surface with an alkaline cleaner. Rinse thoroughly with clean water. Vacuum all residual dust with an industrial vacuum. The surface must be perfectly clean and dry.",
+        "tip": "Never use muriatic acid — it harms epoxy adhesion."
+      },
+      "4": {
+        "title": "Moisture Testing",
+        "description": "Perform a concrete moisture test using the calcium chloride method or in-situ probe. Moisture levels must be below 4% for most systems. Excessive moisture causes outgassing and blistering.",
+        "tip": "Concrete temperature minimum: 10°C (50°F) and at least 3°C above dew point."
+      }
+    },
+    "section2Badge": "Step 2 — Application",
+    "section2Title": "Step-by-Step Application",
+    "section2Subtitle": "Each system requires a precise multi-layer process. Respect recoat windows between each layer.",
+    "app": {
+      "0": {
+        "title": "Primer Coat",
+        "description": "The penetrating epoxy primer seals the concrete, prevents outgassing, and creates an adhesion bridge for the base coat. Apply by roller or squeegee.",
+        "details": {
+          "0": "Thickness: 3-5 wet mils",
+          "1": "Recoat window: 8-16 hours depending on product"
+        }
+      },
+      "1": {
+        "title": "Base Coat",
+        "description": "The base coat is the main body of the system. Apply at the thickness specified by the technical data sheet. Thickness varies from 10 to 40 mils depending on the system.",
+        "details": {
+          "0": "Mix Part A and Part B at the exact ratio",
+          "1": "Pot life: 20-45 minutes depending on temperature"
+        }
+      },
+      "2": {
+        "title": "Broadcast / Decorative Finish",
+        "description": "Depending on the system, apply vinyl flakes, quartz aggregate, or metallic pigments into the still-wet base coat. For full broadcast, saturate the surface uniformly.",
+        "details": {
+          "0": "Flakes: broadcast to rejection for full coverage",
+          "1": "Metallic: manipulate with a notched squeegee for 3D effect"
+        }
+      },
+      "3": {
+        "title": "Top Coat",
+        "description": "The protective top coat seals the system and provides UV, chemical, and abrasion resistance. Use a polyaspartic or polyurethane depending on the chosen system.",
+        "details": {
+          "0": "Apply 2 coats of top coat for optimal protection",
+          "1": "Anti-slip optional: add micro-aggregate to the final coat"
+        }
+      }
+    },
+    "section3Badge": "Technical Reference",
+    "section3Title": "Cure Times — All Systems",
+    "section3Subtitle": "Compare cure times, thicknesses, and prices for all 14 SCI coating systems. Data directly from technical data sheets.",
+    "tableHeaders": {
+      "system": "System",
+      "thickness": "Thickness",
+      "cureTime": "Initial Cure",
+      "trafficReady": "Traffic",
+      "price": "Price/sq ft"
+    },
+    "tableDisclaimer": "* Cure times are at 23°C (73°F) and 50% relative humidity. Lower temperatures extend cure times. Prices in Canadian dollars.",
+    "fastCureTitle": "Need fast return to service?",
+    "fastCureDescription": "The SCI-Polyurea ($4.50–$7.00/sq ft) and SCI-GAR ($4.25–$6.50/sq ft) systems offer 2-4 hour cure times and return to traffic in 8-24 hours. Complete installation in 1 day — ideal for garages and businesses that can't shut down for long.",
+    "section4Badge": "Critical Conditions",
+    "section4Title": "Optimal Application Conditions",
+    "section4Subtitle": "Following these conditions is essential for coating performance and durability. Never apply outside these parameters.",
+    "conditions": {
+      "0": {
+        "title": "Temperature",
+        "value": "> 10°C / 50°F",
+        "description": "Both ambient AND concrete temperature must be above 10°C (50°F). Ideally between 15°C and 25°C. Above 30°C, pot life decreases significantly."
+      },
+      "1": {
+        "title": "Humidity",
+        "value": "< 80%",
+        "description": "Relative humidity must be below 80%. High humidity slows curing and can cause amine blush (whitish haze) on epoxy coatings."
+      },
+      "2": {
+        "title": "Ventilation",
+        "value": "Essential",
+        "description": "Ensure adequate ventilation during and after application. Open doors and windows. Use fans to accelerate evaporation of residual solvents."
+      }
+    },
+    "conditionsDo": "Do",
+    "conditionsDoList": {
+      "0": "Check the weather 48h before application with our curing conditions tool",
+      "1": "Measure concrete temperature with an infrared thermometer — not just air temp",
+      "2": "Wait until concrete is at least 3°C (5°F) above dew point",
+      "3": "Plan application early morning when temperature is rising (concrete warming up)"
+    },
+    "conditionsDont": "Don't",
+    "conditionsDontList": {
+      "0": "Never apply if rain is expected within 24 hours",
+      "1": "Don't apply late in the day when temperature drops (condensation risk)",
+      "2": "Don't heat concrete artificially — it creates moisture through condensation",
+      "3": "Don't ignore dew point — it's the #1 cause of field failure"
+    },
+    "conditionsCta": "Check curing conditions in your area",
+    "section5Badge": "Top 5 Mistakes",
+    "section5Title": "Mistakes to Avoid",
+    "section5Subtitle": "These common mistakes are responsible for 90% of coating failures. Learn to avoid them for a professional result.",
+    "mistakeLabel": "Mistake",
+    "mistakes": {
+      "0": {
+        "title": "Skipping Surface Preparation",
+        "description": "The #1 cause of failure. Applying a coating on unground, contaminated, or wet concrete invariably leads to delamination within months.",
+        "solution": "Solution: CSP 2-3 diamond grinding is mandatory. No shortcuts."
+      },
+      "1": {
+        "title": "Ignoring Concrete Moisture",
+        "description": "Moisture trapped under the coating creates vapor pressure that causes blisters and peeling. Slabs-on-grade are most at risk.",
+        "solution": "Solution: Mandatory moisture test. Rate < 4%. Use an epoxy vapor barrier if needed."
+      },
+      "2": {
+        "title": "Not Respecting Recoat Windows",
+        "description": "Applying the next coat too early traps solvents and creates a soft cure. Too late creates inter-coat adhesion failure.",
+        "solution": "Solution: Follow the technical data sheet exactly. Typical window: 12-24h at 23°C."
+      },
+      "3": {
+        "title": "Wrong Mix Ratio",
+        "description": "An incorrect A:B ratio produces incomplete cure — the coating stays soft, tacky, or never hardens. An irreversible error requiring complete removal.",
+        "solution": "Solution: Measure precisely. Use calibrated buckets. Mix for 3 minutes minimum."
+      },
+      "4": {
+        "title": "Applying in Cold or Humid Weather",
+        "description": "Below 10°C, most epoxies don't cure properly. High humidity causes amine blush (whitish, powdery surface).",
+        "solution": "Solution: Wait for ideal conditions. Use our curing conditions tool."
+      }
+    },
+    "recsTitle": "Recommended Systems for Beginners",
+    "recsSubtitle": "Our three most popular systems for a successful first installation",
+    "recs": {
+      "0": {
+        "name": "SCI-Flake System",
+        "description": "Our most popular. Decorative flakes on epoxy base. Hides imperfections, non-slip finish. Ideal for garages and basements."
+      },
+      "1": {
+        "name": "SCI-Polyurea Flake System",
+        "description": "1-day installation. Ultra-fast cure, 4x more flexible than epoxy. UV resistant. Perfect when time is limited."
+      },
+      "2": {
+        "name": "SCI-Metallic System",
+        "description": "Spectacular 3D effects. Each installation is unique. The premium choice for spaces where aesthetics matter."
+      }
+    },
+    "perSqFt": "/sq ft",
+    "viewProduct": "View Product",
+    "ctaTitle": "Call in a Professional",
+    "ctaSubtitle": "Our certified applicators guarantee a flawless result. Free consultation, no obligation.",
+    "ctaButton": "Request a Quote",
+    "ctaPhone": "581-307-2678",
+    "ctaTrust": "Free consultation — Certified applicators — Full warranty — Response within 24h"
   }
 }
