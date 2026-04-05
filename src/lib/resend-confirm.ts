@@ -66,7 +66,7 @@ function buildConfirmationHtml(data: QuoteData): string {
 
     <!-- Header -->
     <div style="text-align:center;padding:24px 0;border-bottom:1px solid #27272a;">
-      <h1 style="margin:0;font-size:28px;color:#C9A84C;letter-spacing:2px;">NOVUS SURFACES</h1>
+      <h1 style="margin:0;font-size:28px;color:#C9A84C;letter-spacing:2px;">NOVUS EPOXY</h1>
       <p style="margin:4px 0 0;font-size:12px;color:#71717a;letter-spacing:3px;">REVETEMENTS HAUT DE GAMME</p>
     </div>
 
@@ -104,7 +104,7 @@ function buildConfirmationHtml(data: QuoteData): string {
     <!-- Closing -->
     <div style="padding:16px 0;border-top:1px solid #27272a;">
       <p style="color:#fafafa;font-size:14px;margin:0;">${closing}</p>
-      <p style="color:#71717a;font-size:12px;margin:8px 0 0;">— ${isFr ? "L'equipe" : "The team"} Novus Surfaces</p>
+      <p style="color:#71717a;font-size:12px;margin:8px 0 0;">— ${isFr ? "L'equipe" : "The team"} Novus Epoxy</p>
     </div>
 
   </div>
@@ -127,8 +127,8 @@ export async function sendCustomerConfirmation(data: QuoteData): Promise<boolean
 
   const isFr = !data.locale || data.locale === "fr";
   const subject = isFr
-    ? `Novus Surfaces — Votre demande de soumission a ete recue`
-    : `Novus Surfaces — Your quote request has been received`;
+    ? `Novus Epoxy — Votre demande de soumission a ete recue`
+    : `Novus Epoxy — Your quote request has been received`;
 
   try {
     const response = await fetch("https://api.resend.com/emails", {
@@ -138,7 +138,7 @@ export async function sendCustomerConfirmation(data: QuoteData): Promise<boolean
         "Content-Type": "application/json",
       },
       body: JSON.stringify({
-        from: "Novus Surfaces <noreply@novusepoxy.shop>",
+        from: "Novus Epoxy <noreply@novusepoxy.shop>",
         to: [data.email],
         reply_to: "gestionnovusepoxy@gmail.com",
         subject,

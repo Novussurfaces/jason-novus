@@ -6,7 +6,7 @@ import { jwtVerify } from "jose";
 const intlMiddleware = createMiddleware(routing);
 
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "novus-surfaces-secret-key-change-in-production-2026"
+  process.env.JWT_SECRET || "MISSING-JWT-SECRET-SET-ENV-VAR"
 );
 
 const PROTECTED_PATHS = ["/hq", "/en/hq", "/fr/hq"];

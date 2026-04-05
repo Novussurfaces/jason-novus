@@ -25,6 +25,7 @@ import { NumberTicker } from "@/components/ui/NumberTicker";
 import { Button } from "@/components/ui/Button";
 import { cn } from "@/lib/cn";
 import { trackContact } from "@/lib/fb-pixel";
+import { trackContactSubmission } from "@/lib/gtag";
 
 const inputClasses =
   "w-full rounded-xl border border-white/[0.06] bg-white/[0.02] backdrop-blur-sm px-4 py-3 text-sm text-foreground placeholder:text-muted-foreground/50 focus:border-accent focus:outline-none focus:ring-1 focus:ring-accent/50 transition-all duration-300";
@@ -100,6 +101,7 @@ export function ContactContent() {
       if (response.ok) {
         setStatus("success");
         trackContact();
+        trackContactSubmission();
         setFormData({ name: "", email: "", phone: "", message: "" });
       } else {
         setStatus("error");
@@ -428,7 +430,7 @@ export function ContactContent() {
                   allowFullScreen
                   loading="lazy"
                   referrerPolicy="no-referrer-when-downgrade"
-                  title="Novus Surfaces — Quebec City"
+                  title="Novus Epoxy — Quebec City"
                 />
               </div>
               <div className="pointer-events-none absolute inset-0 rounded-2xl ring-1 ring-white/[0.06]" />

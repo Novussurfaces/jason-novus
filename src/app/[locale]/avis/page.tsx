@@ -13,7 +13,7 @@ function getAggregateRatingSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": "https://novusepoxy.ca/#business",
-    name: "Novus Surfaces",
+    name: "Novus Epoxy",
     image: "https://novusepoxy.ca/logo-icon.svg",
     url: "https://novusepoxy.ca",
     telephone: "+1-581-307-2678",

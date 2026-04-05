@@ -2,7 +2,7 @@
 
 import { useState, useEffect, useRef } from "react";
 import { motion, AnimatePresence } from "framer-motion";
-import { X, Gift } from "lucide-react";
+import { X, Handshake } from "lucide-react";
 import { useTranslations } from "next-intl";
 
 export function ExitIntent() {
@@ -68,7 +68,7 @@ export function ExitIntent() {
 
             <div className="p-8 text-center">
               <div className="w-14 h-14 rounded-2xl bg-accent/10 border border-accent/20 flex items-center justify-center mx-auto mb-5">
-                <Gift size={28} className="text-accent" />
+                <Handshake size={28} className="text-accent" />
               </div>
 
               {!submitted ? (

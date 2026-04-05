@@ -2,8 +2,12 @@ import { SignJWT, jwtVerify } from "jose";
 import bcrypt from "bcryptjs";
 import { cookies } from "next/headers";
 
+const JWT_SECRET_RAW = process.env.JWT_SECRET;
+if (!JWT_SECRET_RAW) {
+  console.error("[auth] CRITICAL: JWT_SECRET env var is not set. Auth will fail.");
+}
 const JWT_SECRET = new TextEncoder().encode(
-  process.env.JWT_SECRET || "novus-surfaces-secret-key-change-in-production-2026"
+  JWT_SECRET_RAW || "MISSING-JWT-SECRET-SET-ENV-VAR"
 );
 
 const COOKIE_NAME = "novus-session";
@@ -43,11 +47,16 @@ async function seedAdmin() {
   adminSeeded = true;
   const ADMIN_ID = "admin_novus_001";
   if (!users.has(ADMIN_ID)) {
+    const adminPassword = process.env.ADMIN_PASSWORD;
+    if (!adminPassword) {
+      console.error("[auth] CRITICAL: ADMIN_PASSWORD env var not set. Admin login disabled.");
+      return;
+    }
     const { hash } = await import("bcryptjs");
-    const passwordHash = await hash("NovusHQ2026!", 12);
+    const passwordHash = await hash(adminPassword, 12);
     users.set(ADMIN_ID, {
       id: ADMIN_ID,
-      email: "jason@novusepoxy.ca",
+      email: process.env.ADMIN_EMAIL || "jason@novusepoxy.ca",
       name: "Jason Lanthier",
       role: "admin",
       createdAt: "2026-01-01T00:00:00.000Z",

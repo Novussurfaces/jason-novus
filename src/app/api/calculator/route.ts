@@ -1,6 +1,9 @@
 import { NextResponse } from "next/server";
 import { triggerN8nWebhook } from "@/lib/n8n";
 import { pushLeadToCommandCenter } from "@/lib/command-center";
+import { triggerInstantResponse } from "@/lib/instant-response";
+import { notifyAllTelegram } from "@/lib/telegram-notify";
+import { sendCustomerConfirmation } from "@/lib/resend-confirm";
 
 export async function POST(request: Request) {
   try {
@@ -27,9 +30,21 @@ export async function POST(request: Request) {
       source: "calculator",
     };
 
-    // Send to n8n + Command Center (non-blocking)
-    triggerN8nWebhook("calculator", payload);
-    pushLeadToCommandCenter({ ...payload, type: "calculator", area: data.sqft });
+    // All notifications fire in parallel, non-blocking
+    Promise.allSettled([
+      triggerN8nWebhook("calculator", payload),
+      pushLeadToCommandCenter({ ...payload, type: "calculator", area: data.sqft }),
+      triggerInstantResponse({ ...payload, type: "calculator" }),
+      notifyAllTelegram({
+        ...payload,
+        surfaceArea: String(data.sqft),
+        message: `Estimation: $${data.estimateMin}-$${data.estimateMax}`,
+      }),
+      sendCustomerConfirmation({
+        ...payload,
+        surfaceArea: String(data.sqft),
+      }),
+    ]).catch(() => {});
 
     return NextResponse.json({ success: true });
   } catch {

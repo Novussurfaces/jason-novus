@@ -30,7 +30,7 @@ export async function generateEstimatePDF(
   doc.setTextColor(255, 255, 255);
   doc.setFontSize(24);
   doc.setFont("helvetica", "bold");
-  doc.text("NOVUS SURFACES", 20, 22);
+  doc.text("NOVUS EPOXY", 20, 22);
 
   doc.setFontSize(10);
   doc.setFont("helvetica", "normal");
@@ -225,6 +225,6 @@ export async function generateEstimatePDF(
 
   // Save
   doc.save(
-    `novus-surfaces-${isFr ? "estimation" : "estimate"}-${Date.now()}.pdf`
+    `novus-epoxy-${isFr ? "estimation" : "estimate"}-${Date.now()}.pdf`
   );
 }

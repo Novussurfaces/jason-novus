@@ -66,7 +66,7 @@ function DarkGoogleMap({
           allowFullScreen
           loading="lazy"
           referrerPolicy="no-referrer-when-downgrade"
-          title="Novus Surfaces Map"
+          title="Novus Epoxy Map"
         />
       </div>
       {/* Simple border — no heavy vignette */}
@@ -88,7 +88,7 @@ async function geocodeAddress(query: string): Promise<GeoResult | null> {
   try {
     const res = await fetch(
       `https://nominatim.openstreetmap.org/search?q=${encodeURIComponent(query)}&format=json&limit=1&countrycodes=ca,us,fr,gb,de`,
-      { headers: { "User-Agent": "NovusSurfaces/1.0" } }
+      { headers: { "User-Agent": "NovusEpoxy/1.0" } }
     );
     const data: GeoResult[] = await res.json();
     return data[0] ?? null;

@@ -5,7 +5,7 @@ import { motion, AnimatePresence } from "framer-motion";
 import { cn } from "@/lib/cn";
 
 /* ──────────────────────────────────────────────
-   NOVUS SURFACES — Simple Preloader
+   NOVUS EPOXY — Simple Preloader
    Dark screen, centered text, counter, progress bar, fade out.
    ────────────────────────────────────────────── */
 
@@ -106,7 +106,7 @@ export function Preloader() {
       >
         {/* ── Center content ── */}
         <div className="flex flex-col items-center gap-8">
-          {/* NOVUS SURFACES — shown from start */}
+          {/* NOVUS EPOXY — shown from start */}
           <span
             className={cn(
               "font-[family-name:var(--font-cabinet)] font-bold tracking-[0.35em]",
@@ -114,7 +114,7 @@ export function Preloader() {
               "text-white/80"
             )}
           >
-            NOVUS SURFACES
+            NOVUS EPOXY
           </span>
 
           {/* Progress section */}

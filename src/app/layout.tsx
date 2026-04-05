@@ -2,7 +2,7 @@ import type { Metadata } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
-  title: "Novus Surfaces",
+  title: "Novus Epoxy",
   description: "Premium surface coatings — Worldwide delivery",
 };
 

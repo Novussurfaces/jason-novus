@@ -2,17 +2,17 @@ import { products, type Product } from "./products";
 import { pricePerSqFt } from "./pricing";
 
 const BASE_URL = "https://novusepoxy.ca";
-const ALT_URL = "https://novussurfaces.com";
+const ALT_URL = "https://novusepoxy.ca";
 
 /* ──────────────────────────────────────────────
-   ORGANIZATION — Novus Surfaces corporate entity
+   ORGANIZATION — Novus Epoxy corporate entity
    ────────────────────────────────────────────── */
 export function getOrganizationSchema() {
   return {
     "@context": "https://schema.org",
     "@type": "Organization",
     "@id": `${BASE_URL}/#organization`,
-    name: "Novus Surfaces",
+    name: "Novus Epoxy",
     alternateName: "Novus Epoxy",
     url: BASE_URL,
     logo: {
@@ -25,7 +25,7 @@ export function getOrganizationSchema() {
     email: "gestionnovusepoxy@gmail.com",
     telephone: "+1-581-307-2678",
     description:
-      "Premium surface coatings — epoxy, polyurea, polyaspartic, and quartz systems. Manufactured by SCI Coatings in Montreal, branded and sold worldwide by Novus Surfaces.",
+      "Premium surface coatings — epoxy, polyurea, polyaspartic, and quartz systems. Manufactured by SCI Coatings in Montreal, branded and sold worldwide by Novus Epoxy.",
     foundingLocation: {
       "@type": "Place",
       address: {
@@ -67,11 +67,11 @@ export function getOrganizationSchema() {
     ],
     brand: {
       "@type": "Brand",
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
       logo: `${BASE_URL}/logo-icon.svg`,
     },
     sameAs: [
-      "https://www.facebook.com/novussurfaces",
+      "https://www.facebook.com/novusepoxy",
       ALT_URL,
     ],
     knowsAbout: [
@@ -101,7 +101,7 @@ export function getLocalBusinessSchema() {
     "@context": "https://schema.org",
     "@type": "LocalBusiness",
     "@id": `${BASE_URL}/#business`,
-    name: "Novus Surfaces",
+    name: "Novus Epoxy",
     alternateName: "Novus Epoxy",
     url: BASE_URL,
     image: `${BASE_URL}/og-image.svg`,
@@ -183,7 +183,7 @@ export function getProductSchema(product: Product, locale: "fr" | "en") {
     url: `${BASE_URL}/${locale}/produits/${product.slug}`,
     seller: {
       "@type": "Organization",
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
       url: BASE_URL,
     },
     shippingDetails: {
@@ -224,7 +224,7 @@ export function getProductSchema(product: Product, locale: "fr" | "en") {
       url: `${BASE_URL}/${locale}/produits/${product.slug}`,
       seller: {
         "@type": "Organization",
-        name: "Novus Surfaces",
+        name: "Novus Epoxy",
       },
       itemCondition: "https://schema.org/NewCondition",
     });
@@ -242,7 +242,7 @@ export function getProductSchema(product: Product, locale: "fr" | "en") {
     url: `${BASE_URL}/${locale}/produits/${product.slug}`,
     brand: {
       "@type": "Brand",
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
     },
     manufacturer: {
       "@type": "Organization",
@@ -285,7 +285,7 @@ export function getAllProductsSchema(locale: "fr" | "en") {
   return {
     "@context": "https://schema.org",
     "@type": "ItemList",
-    name: locale === "fr" ? "Produits Novus Surfaces" : "Novus Surfaces Products",
+    name: locale === "fr" ? "Produits Novus Epoxy" : "Novus Epoxy Products",
     description:
       locale === "fr"
         ? "13 systemes de revetement SCI — epoxy, polyurea, polyaspartique, quartz, metallique"
@@ -302,7 +302,7 @@ export function getAllProductsSchema(locale: "fr" | "en") {
         description: p.shortDescription[locale],
         sku: p.sciCode,
         image: `${BASE_URL}${p.image}`,
-        brand: { "@type": "Brand", name: "Novus Surfaces" },
+        brand: { "@type": "Brand", name: "Novus Epoxy" },
         offers: pricePerSqFt[p.slug]
           ? {
               "@type": "Offer",
@@ -343,14 +343,14 @@ export function getWebSiteSchema() {
     "@context": "https://schema.org",
     "@type": "WebSite",
     "@id": `${BASE_URL}/#website`,
-    name: "Novus Surfaces",
+    name: "Novus Epoxy",
     alternateName: "Novus Epoxy",
     url: BASE_URL,
     inLanguage: ["fr-CA", "en-CA"],
     publisher: {
       "@type": "Organization",
       "@id": `${BASE_URL}/#organization`,
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
     },
     potentialAction: {
       "@type": "SearchAction",
@@ -385,8 +385,8 @@ const faqItems: FAQItem[] = [
       en: "How long does an epoxy floor last?",
     },
     answer: {
-      fr: "Un plancher epoxy professionnel Novus Surfaces dure entre 10 et 20 ans selon le systeme, le trafic et l'entretien. Les systemes quartz comme le SCI-Quartz Broadcast ont une duree de vie de 15+ ans meme dans les zones a tres fort trafic.",
-      en: "A professional Novus Surfaces epoxy floor lasts between 10 and 20 years depending on the system, traffic, and maintenance. Quartz systems like the SCI-Quartz Broadcast have a 15+ year lifespan even in very high-traffic areas.",
+      fr: "Un plancher epoxy professionnel Novus Epoxy dure entre 10 et 20 ans selon le systeme, le trafic et l'entretien. Les systemes quartz comme le SCI-Quartz Broadcast ont une duree de vie de 15+ ans meme dans les zones a tres fort trafic.",
+      en: "A professional Novus Epoxy epoxy floor lasts between 10 and 20 years depending on the system, traffic, and maintenance. Quartz systems like the SCI-Quartz Broadcast have a 15+ year lifespan even in very high-traffic areas.",
     },
   },
   {
@@ -405,8 +405,8 @@ const faqItems: FAQItem[] = [
       en: "Do you ship across Canada and internationally?",
     },
     answer: {
-      fr: "Oui. Novus Surfaces livre partout au Canada, aux Etats-Unis, en Europe et dans le monde entier par voie aerienne et maritime. Tous nos produits sont fabriques par SCI Coatings a Montreal, Quebec.",
-      en: "Yes. Novus Surfaces ships across Canada, the United States, Europe, and worldwide via air and sea freight. All our products are manufactured by SCI Coatings in Montreal, Quebec.",
+      fr: "Oui. Novus Epoxy livre partout au Canada, aux Etats-Unis, en Europe et dans le monde entier par voie aerienne et maritime. Tous nos produits sont fabriques par SCI Coatings a Montreal, Quebec.",
+      en: "Yes. Novus Epoxy ships across Canada, the United States, Europe, and worldwide via air and sea freight. All our products are manufactured by SCI Coatings in Montreal, Quebec.",
     },
   },
   {
@@ -425,8 +425,8 @@ const faqItems: FAQItem[] = [
       en: "Can you install epoxy yourself (DIY)?",
     },
     answer: {
-      fr: "Novus Surfaces vend directement aux professionnels et aux proprietaires. Nos produits SCI sont de grade professionnel avec des instructions detaillees. Pour les meilleurs resultats, nous recommandons une installation par un professionnel certifie.",
-      en: "Novus Surfaces sells directly to professionals and property owners. Our SCI products are professional-grade with detailed instructions. For best results, we recommend installation by a certified professional.",
+      fr: "Novus Epoxy vend directement aux professionnels et aux proprietaires. Nos produits SCI sont de grade professionnel avec des instructions detaillees. Pour les meilleurs resultats, nous recommandons une installation par un professionnel certifie.",
+      en: "Novus Epoxy sells directly to professionals and property owners. Our SCI products are professional-grade with detailed instructions. For best results, we recommend installation by a certified professional.",
     },
   },
   {
@@ -491,7 +491,7 @@ export function getPromoOfferSchema(locale: "fr" | "en") {
       locale === "fr" ? "Revetements de plancher" : "Floor Coatings",
     seller: {
       "@type": "Organization",
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
       url: BASE_URL,
     },
     eligibleRegion: [
@@ -520,7 +520,7 @@ export function getServiceSchema(locale: "fr" | "en") {
     provider: {
       "@type": "Organization",
       "@id": `${BASE_URL}/#organization`,
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
     },
     serviceType: locale === "fr" ? "Revetements de plancher" : "Floor Coatings",
     areaServed: [

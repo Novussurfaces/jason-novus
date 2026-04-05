@@ -191,7 +191,7 @@ export function Navbar() {
               <div className="relative rounded-lg">
                 <Image
                   src="/logo-icon.svg"
-                  alt="Novus Surfaces"
+                  alt="Novus Epoxy"
                   width={36}
                   height={36}
                   className="relative z-10 transition-transform duration-300 group-hover:scale-105"
@@ -200,7 +200,7 @@ export function Navbar() {
               </div>
               <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold tracking-tight text-foreground">
                 Novus
-                <span className="text-accent ml-0.5">Surfaces</span>
+                <span className="text-accent ml-0.5">Epoxy</span>
               </span>
             </Link>
 

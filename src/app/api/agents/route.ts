@@ -1,7 +1,7 @@
 import { NextRequest, NextResponse } from "next/server";
 import { promises as fs } from "fs";
 import path from "path";
-import { exec } from "child_process";
+import { execFile } from "child_process";
 
 // ─── AGENT CONTROL API ─────────────────────────────────────────────
 // GET  /api/agents         → List all agents + status
@@ -134,9 +134,24 @@ export async function POST(req: NextRequest) {
 
     if (action === "run" || action === "test") {
       const isDryRun = action === "test";
-      const command = isDryRun
-        ? agent.command.replace(/--batch \d+/, "--batch 1") + " --dry-run"
-        : agent.command;
+
+      // Validate script exists and is within SCRIPTS_DIR (prevent path traversal)
+      const scriptPath = path.resolve(SCRIPTS_DIR, agent.script);
+      if (!scriptPath.startsWith(path.resolve(SCRIPTS_DIR))) {
+        return NextResponse.json({ error: "Invalid script path" }, { status: 400 });
+      }
+
+      try {
+        await fs.access(scriptPath);
+      } catch {
+        return NextResponse.json({ error: `Script not found: ${agent.script}` }, { status: 404 });
+      }
+
+      // Build safe argument list (no shell interpretation)
+      const args = [scriptPath];
+      if (isDryRun) {
+        args.push("--batch", "1", "--dry-run");
+      }
 
       // Update status to running
       statusMap[agentId] = {
@@ -152,10 +167,11 @@ export async function POST(req: NextRequest) {
 
       const startTime = Date.now();
 
-      // Execute in background
-      exec(
-        `cd "${SCRIPTS_DIR}" && ${command}`,
-        { timeout: 300000, maxBuffer: 10 * 1024 * 1024 },
+      // Execute safely — execFile does NOT spawn a shell (no injection)
+      execFile(
+        "python",
+        args,
+        { timeout: 300000, maxBuffer: 10 * 1024 * 1024, cwd: SCRIPTS_DIR },
         async (error, stdout, stderr) => {
           const duration = Math.round((Date.now() - startTime) / 1000);
           const currentStatus = await loadStatus();
@@ -187,7 +203,7 @@ export async function POST(req: NextRequest) {
         ok: true,
         message: `Agent ${agent.name} ${isDryRun ? "test" : "run"} started`,
         agentId,
-        command,
+        script: agent.script,
       });
     }
 

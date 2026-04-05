@@ -7,6 +7,11 @@ export const ChatBot = dynamic(
   { ssr: false }
 );
 
+export const FloatingCall = dynamic(
+  () => import("@/components/ui/FloatingCall").then((m) => m.FloatingCall),
+  { ssr: false }
+);
+
 export const FilmGrain = dynamic(
   () => import("@/components/three/FilmGrain").then((m) => m.FilmGrain),
   { ssr: false }

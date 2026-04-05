@@ -10,6 +10,7 @@ import { products } from "@/lib/products";
 import { cn } from "@/lib/cn";
 import { validateEmail } from "@/lib/email-validation";
 import { trackLead } from "@/lib/fb-pixel";
+import { trackQuoteSubmission } from "@/lib/gtag";
 
 const inputClasses =
   "w-full bg-white/[0.04] border border-white/[0.10] rounded-xl px-4 py-3 text-sm text-foreground placeholder:text-foreground/30 focus:border-accent/50 focus:outline-none focus:ring-1 focus:ring-accent/30 backdrop-blur-sm transition-colors duration-300";
@@ -91,6 +92,7 @@ export function QuoteForm() {
       if (response.ok) {
         setStatus("success");
         trackLead({ content_name: formData.product || "quote_form" });
+        trackQuoteSubmission();
         setFormData({
           name: "", email: "", phone: "", company: "",
           projectType: "", surfaceArea: "", product: "", message: "",

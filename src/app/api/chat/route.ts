@@ -180,7 +180,7 @@ export async function POST(request: Request) {
       if (provider === "openrouter") {
         headers["Authorization"] = `Bearer ${OPENROUTER_API_KEY}`;
         headers["HTTP-Referer"] = "https://novusepoxy.ca";
-        headers["X-Title"] = "Nova - Novus Surfaces";
+        headers["X-Title"] = "Nova - Novus Epoxy";
       } else if (provider === "openai") {
         headers["Authorization"] = `Bearer ${OPENAI_API_KEY}`;
       }

@@ -81,7 +81,7 @@ Pour les environnements les plus exigeants : fonderies, zones de chariots élév
 
 ## Les rabais volume
 
-Chez Novus Surfaces, nous offrons les rabais volume les plus agressifs du marché :
+Chez Novus Epoxy, nous offrons les rabais volume les plus agressifs du marché :
 
 - **1 000+ pi²** : rabais de **5%**
 - **2 500+ pi²** : rabais de **10%**
@@ -130,7 +130,7 @@ Le moyen le plus rapide d'obtenir une estimation pour votre projet :
 
 ---
 
-*Novus Surfaces — Revêtements de surfaces haut de gamme. Fabriqué au Canada, livraison mondiale.*`,
+*Novus Epoxy — Revêtements de surfaces haut de gamme. Fabriqué au Canada, livraison mondiale.*`,
       en: `## Epoxy Floor Cost in Quebec in 2026
 
 If you're looking for epoxy floor coating prices in Quebec, you've probably noticed numbers vary wildly from site to site. That's normal — cost depends on several factors. This guide gives you real numbers based on our experience with 13 professional coating systems.
@@ -187,7 +187,7 @@ For the most demanding environments: foundries, forklift zones, receiving docks.
 
 ## Volume Discounts
 
-At Novus Surfaces, we offer discounts for larger projects:
+At Novus Epoxy, we offer discounts for larger projects:
 
 - **2,500+ sq ft**: **10%** discount
 - **5,000+ sq ft**: **15%** discount
@@ -227,7 +227,7 @@ The fastest way to get an estimate for your project:
 
 ---
 
-*Novus Surfaces — Premium surface coatings. Made in Canada, shipped worldwide.*`,
+*Novus Epoxy — Premium surface coatings. Made in Canada, shipped worldwide.*`,
     },
   },
   {
@@ -639,7 +639,7 @@ Votre garage mérite mieux qu'un plancher de béton gris qui tache et craquelle.
 **Prix:** 2.85 à 4.75 $/pi²
 **Durée de vie:** 10 à 20 ans
 
-Le système **SCI-Flake** de Novus Surfaces est notre recommandation #1 pour les garages résidentiels.
+Le système **SCI-Flake** de Novus Epoxy est notre recommandation #1 pour les garages résidentiels.
 
 **Avantages:**
 - Résistance chimique (huile, essence, sel de déglaçage)
@@ -743,7 +743,7 @@ Your garage deserves better than a gray concrete floor that stains and cracks. B
 **Price:** $3 to $5/sqft
 **Lifespan:** 10 to 20 years
 
-The **SCI-Flake** system from Novus Surfaces is our #1 recommendation for residential garages.
+The **SCI-Flake** system from Novus Epoxy is our #1 recommendation for residential garages.
 
 **Pros:**
 - Chemical resistance (oil, gasoline, road salt)
@@ -1009,7 +1009,7 @@ Un entrepôt de 50 000 pi² avec des chariots élévateurs qui roulent 16 heures
 - **Impacts** — chute d'outils et de matériaux lourds
 - **Température** — variations saisonnières dans les entrepôts non chauffés
 
-## Les systèmes industriels Novus Surfaces
+## Les systèmes industriels Novus Epoxy
 
 ### SCI-100 — L'époxy haute performance
 
@@ -1080,7 +1080,7 @@ A 50,000 sqft warehouse with forklifts running 16 hours a day doesn't have the s
 - **Impacts** — dropped tools and heavy materials
 - **Temperature** — seasonal variations in unheated warehouses
 
-## Novus Surfaces Industrial Systems
+## Novus Epoxy Industrial Systems
 
 ### SCI-100 — High-Performance Epoxy
 
@@ -1316,7 +1316,7 @@ Au Québec, le sel de déglaçage et le chlorure de calcium sont les ennemis #1 
 
 ---
 
-*Novus Surfaces — Revêtements de surfaces haut de gamme. Fabriqué au Canada par SCI Coatings Inc., livraison mondiale.*`,
+*Novus Epoxy — Revêtements de surfaces haut de gamme. Fabriqué au Canada par SCI Coatings Inc., livraison mondiale.*`,
       en: `## How Much Does an Epoxy Floor Cost in Quebec in 2026?
 
 Looking for real floor coating prices in Quebec? Not the vague estimates you find on Google — real numbers, system by system, with concrete examples. This guide covers all **13 professional SCI Coatings systems** that we install and distribute across Quebec and Canada.
@@ -1475,7 +1475,7 @@ In Quebec, road salt and calcium chloride are the #1 enemies of garage floors. O
 
 ---
 
-*Novus Surfaces — Premium surface coatings. Made in Canada by SCI Coatings Inc., shipped worldwide.*`,
+*Novus Epoxy — Premium surface coatings. Made in Canada by SCI Coatings Inc., shipped worldwide.*`,
     },
   },
   {
@@ -2029,7 +2029,7 @@ Ne prenez pas de risque avec votre investissement. Nos systèmes SCI sont instal
 
 ---
 
-*Novus Surfaces — Revêtements de surfaces haut de gamme. Tous nos produits sont fabriqués à Montréal par SCI Coatings Inc. Livraison mondiale.*`,
+*Novus Epoxy — Revêtements de surfaces haut de gamme. Tous nos produits sont fabriqués à Montréal par SCI Coatings Inc. Livraison mondiale.*`,
       en: `## 10 Mistakes to Avoid When Installing an Epoxy Floor Coating
 
 Every year, thousands of homeowners and contractors in Quebec waste thousands of dollars on poorly installed floor coatings. The product is almost never the problem — it's the installation. Here are the 10 most common mistakes, how much they cost, and how to avoid them.
@@ -2221,7 +2221,7 @@ Don't risk your investment. Our SCI systems are installed by certified professio
 
 ---
 
-*Novus Surfaces — Premium surface coatings. All our products are manufactured in Montreal by SCI Coatings Inc. Worldwide shipping.*`,
+*Novus Epoxy — Premium surface coatings. All our products are manufactured in Montreal by SCI Coatings Inc. Worldwide shipping.*`,
     },
   },
 ];

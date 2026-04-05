@@ -2,6 +2,7 @@ import { NextResponse } from "next/server";
 import { triggerN8nWebhook } from "@/lib/n8n";
 import { pushLeadToCommandCenter } from "@/lib/command-center";
 import { triggerInstantResponse } from "@/lib/instant-response";
+import { notifyAllTelegram } from "@/lib/telegram-notify";
 
 export async function POST(request: Request) {
   try {
@@ -23,10 +24,13 @@ export async function POST(request: Request) {
       userAgent,
     };
 
-    // Forward to n8n + Command Center + instant response (non-blocking)
-    triggerN8nWebhook("contact", payload);
-    pushLeadToCommandCenter({ ...payload, type: "contact" });
-    triggerInstantResponse({ ...payload, type: "contact" });
+    // All notifications fire in parallel, non-blocking
+    Promise.allSettled([
+      triggerN8nWebhook("contact", payload),
+      pushLeadToCommandCenter({ ...payload, type: "contact" }),
+      triggerInstantResponse({ ...payload, type: "contact" }),
+      notifyAllTelegram(payload),
+    ]).catch(() => {});
 
     return NextResponse.json({ success: true });
   } catch {

@@ -46,7 +46,7 @@ export function Footer() {
           {/* Col 1 — Brand */}
           <div>
             <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold tracking-tight">
-              Novus<span className="text-accent ml-0.5">Surfaces</span>
+              Novus<span className="text-accent ml-0.5">Epoxy</span>
             </span>
             <p className="mt-3 text-sm text-foreground/50 leading-relaxed max-w-xs">
               {t("footer.tagline")}
@@ -101,7 +101,7 @@ export function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center gap-2 text-sm text-foreground/50">
                 <Phone size={14} className="shrink-0 text-accent/60" />
-                <a href="tel:+15149077722" className="hover:text-foreground/70 transition-colors">
+                <a href="tel:+15813072678" className="hover:text-foreground/70 transition-colors">
                   {t("footer.phone")}
                 </a>
               </li>

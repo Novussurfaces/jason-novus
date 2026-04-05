@@ -1,15 +1,15 @@
 {
   "metadata": {
-    "title": "Novus Surfaces — Premium Surface Coatings | Worldwide Delivery",
-    "description": "Novus Surfaces offers industrial-grade epoxy, polyurea, and quartz coating systems for residential, commercial, and industrial applications. Made in Canada, shipped worldwide."
+    "title": "Novus Epoxy — Premium Surface Coatings | Worldwide Delivery",
+    "description": "Novus Epoxy offers industrial-grade epoxy, polyurea, and quartz coating systems for residential, commercial, and industrial applications. Made in Canada, shipped worldwide."
   },
   "pagesMeta": {
     "about": {
-      "title": "About Novus Surfaces — Our Story & Mission",
-      "description": "Discover Novus Surfaces: premium industrial-grade coating systems crafted in Canada. Learn about our partnership with SCI Coatings and our commitment to quality."
+      "title": "About Novus Epoxy — Our Story & Mission",
+      "description": "Discover Novus Epoxy: premium industrial-grade coating systems crafted in Canada. Learn about our partnership with SCI Coatings and our commitment to quality."
     },
     "contact": {
-      "title": "Contact Novus Surfaces — Get Expert Advice",
+      "title": "Contact Novus Epoxy — Get Expert Advice",
       "description": "Reach our coating specialists for product questions, project guidance, or wholesale inquiries. Serving Canada and shipping worldwide."
     },
     "products": {
@@ -26,7 +26,7 @@
     },
     "portfolio": {
       "title": "Our Work — Before & After Transformations",
-      "description": "See real coating transformations by Novus Surfaces. Before and after photos of residential garages, commercial floors, and industrial facilities."
+      "description": "See real coating transformations by Novus Epoxy. Before and after photos of residential garages, commercial floors, and industrial facilities."
     },
     "blog": {
       "title": "Coating Tips & Industry Insights — Novus Blog",
@@ -221,11 +221,11 @@
     "promo": "APRIL PROMO — 20% off all projects!"
   },
   "about": {
-    "title": "About Novus Surfaces",
+    "title": "About Novus Epoxy",
     "subtitle": "Your premium surface coatings distributor — Worldwide delivery",
     "story": {
       "title": "Our Story",
-      "p1": "Novus Surfaces was born from the belief that every surface deserves an exceptional coating. Founded in Quebec, our company is the result of a passion for high-performance materials and a strategic partnership with SCI Coatings, a Montreal-based manufacturer recognized for over 15 years.",
+      "p1": "Novus Epoxy was born from the belief that every surface deserves an exceptional coating. Founded in Quebec, our company is the result of a passion for high-performance materials and a strategic partnership with SCI Coatings, a Montreal-based manufacturer recognized for over 15 years.",
       "p2": "Our mission is clear: to make industrial-grade coatings accessible to every project, whether residential, commercial, or industrial. From your garage to your factory floor, we bring the same level of excellence.",
       "p3": "Our model is simple: we select the best products, provide impeccable technical support, and deliver directly from the factory to your job site, anywhere in the world."
     },
@@ -233,7 +233,7 @@
       "title": "SCI Coatings Partnership",
       "subtitle": "Proudly Made in Montreal",
       "description": "SCI Coatings Inc., based in Anjou (Montreal), is a Canadian leader in manufacturing industrial surface coatings since 2011. Their state-of-the-art facilities produce systems tested and certified for the most demanding environments.",
-      "description2": "As an exclusive distributor, Novus Surfaces gives you direct access to the full SCI range — from residential to heavy industrial — with personalized technical support.",
+      "description2": "As an exclusive distributor, Novus Epoxy gives you direct access to the full SCI range — from residential to heavy industrial — with personalized technical support.",
       "location": "Anjou, Montreal, QC",
       "experience": "15+ years of expertise",
       "madeIn": "Made in Canada",
@@ -246,7 +246,7 @@
       "jason": {
         "name": "Jason Lanthier",
         "role": "Founder",
-        "bio": "A visionary entrepreneur, Jason founded Novus Surfaces with the ambition of making premium coatings accessible worldwide."
+        "bio": "A visionary entrepreneur, Jason founded Novus Epoxy with the ambition of making premium coatings accessible worldwide."
       },
       "michael": {
         "name": "Michael",
@@ -313,7 +313,7 @@
         },
         "novus": {
           "year": "2023",
-          "title": "Novus Surfaces is Born",
+          "title": "Novus Epoxy is Born",
           "description": "Strategic partnership to distribute SCI worldwide."
         },
         "international": {
@@ -404,13 +404,13 @@
     "products": "Products",
     "company": "Company",
     "contactHeading": "Contact",
-    "phone": "514-907-7722",
+    "phone": "581-307-2678",
     "email": "info@novusepoxy.ca",
     "address": "Montreal, QC, Canada",
     "legal": "Legal",
     "privacy": "Privacy",
     "terms": "Terms",
-    "copyright": " {year} Novus Surfaces. All rights reserved.",
+    "copyright": " {year} Novus Epoxy. All rights reserved.",
     "madeIn": "Proudly made in Canada"
   },
   "cta": {
@@ -525,7 +525,7 @@
   "testimonials": {
     "badge": "Client Reviews",
     "title": "What Our Clients Say",
-    "subtitle": "Contractors and owners who chose Novus Surfaces",
+    "subtitle": "Contractors and owners who chose Novus Epoxy",
     "item1": {
       "quote": "The SCI Metallic system completely transformed our showroom. Customers are impressed the moment they walk in. Flawless installation.",
       "name": "Marc Tremblay",
@@ -553,7 +553,7 @@
     }
   },
   "chatbot": {
-    "greeting": "Hi! I'm Nova, your Novus Surfaces assistant. How can I help you with your coating project?",
+    "greeting": "Hi! I'm Nova, your Novus Epoxy assistant. How can I help you with your coating project?",
     "error": "Sorry, I'm momentarily unavailable. Contact us at info@novusepoxy.ca!",
     "online": "Online",
     "placeholder": "Ask your question..."
@@ -603,7 +603,7 @@
     "review3": "3 years later, the floor still looks brand new. Best home investment.",
     "review3Name": "Jean-François R.",
     "review3City": "Quebec City",
-    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Epoxy. Made in Canada. Worldwide delivery."
   },
   "lpCommercial": {
     "b2b": "B2B",
@@ -683,7 +683,7 @@
     "review3": "3 retail locations done with Novus. Volume pricing saved us over 15%. Flawless service.",
     "review3Name": "Philippe M.",
     "review3City": "Quebec City",
-    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Epoxy. Made in Canada. Worldwide delivery."
   },
   "lpGym": {
     "badge": "Fitness",
@@ -736,7 +736,7 @@
     "review3": "The colors we chose to mark different zones give an ultra-professional look. Our members are impressed.",
     "review3Name": "Patrick T.",
     "review3City": "Quebec City",
-    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Epoxy. Made in Canada. Worldwide delivery."
   },
   "lpRestaurant": {
     "badge": "Food-grade",
@@ -789,7 +789,7 @@
     "review3": "The anti-slip is remarkable. Even with water and oil on the floor, our employees feel safe.",
     "review3Name": "Sylvie G.",
     "review3City": "Gatineau",
-    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Epoxy. Made in Canada. Worldwide delivery."
   },
   "lpEntrepot": {
     "badge": "Industrial",
@@ -842,7 +842,7 @@
     "review3": "We had constant concrete dust problems. Since the epoxy, the air is cleaner and maintenance is minimal.",
     "review3Name": "Francois B.",
     "review3City": "Laval",
-    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Epoxy. Made in Canada. Worldwide delivery."
   },
   "lpCondo": {
     "badge": "Condominiums",
@@ -895,7 +895,7 @@
     "review3": "Installation was done in phases, residents were barely inconvenienced. Very professional from start to finish.",
     "review3Name": "Caroline L.",
     "review3City": "Quebec City",
-    "footerText": " 2026 Novus Surfaces. Made in Canada. Worldwide delivery."
+    "footerText": " 2026 Novus Epoxy. Made in Canada. Worldwide delivery."
   },
   "shipping": {
     "badge": "Global Delivery",
@@ -926,7 +926,7 @@
         "phone": "514-907-7722"
       },
       "novusMTL": {
-        "name": "Novus Surfaces — Office",
+        "name": "Novus Epoxy — Office",
         "address": "Montreal, QC",
         "phone": "514-907-7722"
       }
@@ -983,13 +983,18 @@
     "action6": "is browsing our products"
   },
   "exitIntent": {
-    "title": "Wait! 10% off",
-    "subtitle": "Get 10% off your first order. Enter your email below.",
+    "title": "Become a Novus Partner",
+    "subtitle": "Refer clients and earn 10% commission on every closed project. Contractors, real estate agents, designers — join our partner network.",
     "placeholder": "Your email",
-    "cta": "Get my discount",
+    "cta": "Become a partner",
     "dismiss": "No thanks",
-    "success": "Discount activated!",
-    "successSub": "Check your email for the promo code."
+    "success": "Request sent!",
+    "successSub": "We'll contact you within 24h to activate your partner code."
+  },
+  "floatingCall": {
+    "label": "Call us",
+    "jason": "Jason — Founder",
+    "luca": "Luca — Sales"
   },
   "stickyCta": {
     "text": "Free Quote →"
@@ -1013,9 +1018,9 @@
     "logout": "Sign out",
     "myConversations": "My conversations",
     "loginTitle": "Sign In",
-    "loginSubtitle": "Access your Novus Surfaces account",
+    "loginSubtitle": "Access your Novus Epoxy account",
     "registerTitle": "Create Account",
-    "registerSubtitle": "Join Novus Surfaces to track your projects",
+    "registerSubtitle": "Join Novus Epoxy to track your projects",
     "welcomeBack": "Welcome back!",
     "accountCreated": "Account created!",
     "redirecting": "Redirecting...",
@@ -1325,7 +1330,7 @@
   "reviews": {
     "badge": "Client Reviews",
     "title": "What Our Clients Think",
-    "subtitle": "Contractors and property owners across Quebec who trust Novus Surfaces",
+    "subtitle": "Contractors and property owners across Quebec who trust Novus Epoxy",
     "statsAverage": "4.9/5 average",
     "statsCount": "50+ reviews",
     "statsSatisfaction": "98% satisfaction",
@@ -1339,7 +1344,7 @@
     "ctaTitle": "Your project starts here",
     "ctaSubtitle": "Get a free quote and join our satisfied clients",
     "ctaButton": "Request a quote",
-    "seoTitle": "Client Reviews — Novus Surfaces",
+    "seoTitle": "Client Reviews — Novus Epoxy",
     "seoDescription": "Discover what our satisfied clients have to say. 4.9/5 stars, 50+ verified reviews for our epoxy, polyurea and quartz coatings in Quebec.",
     "item1": {
       "quote": "The SCI Metallic system completely transformed our showroom. Customers are impressed the moment they walk in. Flawless installation and mirror finish.",
@@ -1478,7 +1483,7 @@
       },
       "q4": {
         "question": "How long does an epoxy floor last?",
-        "answer": "A professional Novus Surfaces epoxy floor lasts between 10 and 20 years depending on the system, traffic, and maintenance. Quartz systems like the SCI-Quartz Broadcast have a 15+ year lifespan even in very high-traffic areas. Cementitious polyurethane systems are the most durable with 20+ years of useful life.",
+        "answer": "A professional Novus Epoxy epoxy floor lasts between 10 and 20 years depending on the system, traffic, and maintenance. Quartz systems like the SCI-Quartz Broadcast have a 15+ year lifespan even in very high-traffic areas. Cementitious polyurethane systems are the most durable with 20+ years of useful life.",
         "category": "durability"
       },
       "q5": {
@@ -1498,7 +1503,7 @@
       },
       "q8": {
         "question": "Do you ship across Canada and internationally?",
-        "answer": "Yes. Novus Surfaces ships across Canada, the United States, Europe, and worldwide via air and sea freight. All our products are manufactured by SCI Coatings in Montreal, Quebec. Delivery within Canada typically takes 3-7 business days, and 7-14 days for international.",
+        "answer": "Yes. Novus Epoxy ships across Canada, the United States, Europe, and worldwide via air and sea freight. All our products are manufactured by SCI Coatings in Montreal, Quebec. Delivery within Canada typically takes 3-7 business days, and 7-14 days for international.",
         "category": "shipping"
       },
       "q9": {
@@ -1518,7 +1523,7 @@
       },
       "q12": {
         "question": "Can you install epoxy yourself (DIY)?",
-        "answer": "Novus Surfaces sells directly to professionals and property owners. Our SCI products are professional-grade with detailed instructions. One gallon of SCI-100 ($89) covers 80-120 sqft. For best results, we recommend installation by a certified professional -- concrete preparation is critical for long-term adhesion.",
+        "answer": "Novus Epoxy sells directly to professionals and property owners. Our SCI products are professional-grade with detailed instructions. One gallon of SCI-100 ($89) covers 80-120 sqft. For best results, we recommend installation by a certified professional -- concrete preparation is critical for long-term adhesion.",
         "category": "diy"
       },
       "q13": {
@@ -1543,7 +1548,7 @@
       },
       "q17": {
         "question": "Are SCI products manufactured in Canada?",
-        "answer": "Yes. All coating systems are manufactured by SCI Coatings Inc. in Anjou, Montreal (Quebec). SCI is a Canadian manufacturer specializing in high-performance floor coatings for over 15 years. Novus Surfaces is the exclusive brand distributor, with worldwide shipping.",
+        "answer": "Yes. All coating systems are manufactured by SCI Coatings Inc. in Anjou, Montreal (Quebec). SCI is a Canadian manufacturer specializing in high-performance floor coatings for over 15 years. Novus Epoxy is the exclusive brand distributor, with worldwide shipping.",
         "category": "products"
       }
     }

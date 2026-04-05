@@ -123,7 +123,7 @@ export function GymLanding() {
         <div className="relative z-10 max-w-6xl mx-auto px-4 pt-12 pb-20 sm:px-6">
           {/* Logo */}
           <div className="flex items-center gap-2.5 mb-10">
-            <Image src="/logo-icon.svg" alt="Novus Surfaces" width={36} height={36} className="rounded-xl" />
+            <Image src="/logo-icon.svg" alt="Novus Epoxy" width={36} height={36} className="rounded-xl" />
             <span className="font-[family-name:var(--font-cabinet)] text-xl font-bold">
               Novus<span className="text-accent ml-0.5">Surfaces</span>
             </span>

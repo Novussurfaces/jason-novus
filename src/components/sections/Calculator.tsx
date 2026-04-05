@@ -40,6 +40,7 @@ import {
 import { generateEstimatePDF } from "@/lib/generate-pdf";
 import { cn } from "@/lib/cn";
 import { trackInitiateCheckout } from "@/lib/fb-pixel";
+import { trackCalculatorSubmission } from "@/lib/gtag";
 
 /* ──────────────────────────────────────────────
    CONSTANTS & TYPES
@@ -415,6 +416,7 @@ export function CalculatorSection() {
       // Non-blocking — lead capture failure shouldn't block price reveal
     }
 
+    trackCalculatorSubmission(Number(sqft), result?.totalMin || 0);
     setSubmitting(false);
     setShowCelebration(true);
     goToStep(4);

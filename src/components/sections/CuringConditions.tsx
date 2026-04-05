@@ -173,7 +173,7 @@ export function CuringConditions() {
           )}+Canada&format=json&limit=1`,
           {
             headers: {
-              "User-Agent": "NovusSurfaces/1.0 (info@novusepoxy.ca)",
+              "User-Agent": "NovusEpoxy/1.0 (info@novusepoxy.ca)",
             },
           }
         );

@@ -45,12 +45,12 @@ export default async function BlogPostPage({ params }: Props) {
     url: `https://novusepoxy.ca/${loc}/blog/${post.slug}`,
     author: {
       "@type": "Organization",
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
       url: "https://novusepoxy.ca",
     },
     publisher: {
       "@type": "Organization",
-      name: "Novus Surfaces",
+      name: "Novus Epoxy",
       url: "https://novusepoxy.ca",
       logo: {
         "@type": "ImageObject",
