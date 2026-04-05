@@ -9,8 +9,10 @@ const LeadPipeline = dynamic(() => import("@/components/hq/LeadPipeline"), { ssr
 const AgiEngine = dynamic(() => import("@/components/hq/AgiEngine"), { ssr: false });
 const AgentGrid = dynamic(() => import("@/components/hq/AgentGrid"), { ssr: false });
 const ClawFleet = dynamic(() => import("@/components/hq/ClawFleet"), { ssr: false });
+const Terminal = dynamic(() => import("@/components/hq/Terminal"), { ssr: false });
+const QuickActions = dynamic(() => import("@/components/hq/QuickActions"), { ssr: false });
 
-type Tab = "warroom" | "pipeline" | "engine" | "agents";
+type Tab = "warroom" | "actions" | "pipeline" | "engine" | "agents" | "terminal";
 
 interface HQData {
   stats: {
@@ -44,9 +46,11 @@ interface HQData {
 
 const TABS: { key: Tab; label: string; icon: string }[] = [
   { key: "warroom", label: "WAR ROOM", icon: "\u{1F3AF}" },
+  { key: "actions", label: "ACTIONS", icon: "\u{26A1}" },
   { key: "pipeline", label: "PIPELINE", icon: "\u{1F4CA}" },
   { key: "engine", label: "AGI ENGINE", icon: "\u{1F9E0}" },
   { key: "agents", label: "16 AGENTS", icon: "\u{2694}" },
+  { key: "terminal", label: "TERMINAL", icon: "\u{1F4BB}" },
 ];
 
 export default function HQPage() {
@@ -125,7 +129,7 @@ export default function HQPage() {
         </div>
 
         {/* Tab bar */}
-        <div className="max-w-[1600px] mx-auto px-6 flex gap-1">
+        <div className="max-w-[1600px] mx-auto px-6 flex gap-1 overflow-x-auto scrollbar-thin">
           {TABS.map((t) => (
             <button
               key={t.key}
@@ -165,6 +169,7 @@ export default function HQPage() {
               transition={{ duration: 0.3 }}
             >
               {tab === "warroom" && <WarRoom data={data} />}
+              {tab === "actions" && <QuickActions />}
               {tab === "pipeline" && (
                 <LeadPipeline
                   recentEmails={data.recentEmails}
@@ -198,6 +203,7 @@ export default function HQPage() {
                   </div>
                 </div>
               )}
+              {tab === "terminal" && <Terminal />}
             </motion.div>
           </AnimatePresence>
         ) : null}
