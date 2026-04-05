@@ -70,5 +70,9 @@ export const routing = defineRouting({
       fr: "/inscription",
       en: "/sign-up",
     },
+    "/hq": {
+      fr: "/hq",
+      en: "/hq",
+    },
   },
 });
